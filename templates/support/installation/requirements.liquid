@@ -1,0 +1,22 @@
+{% extends 'parent' %}
+
+{% block inner %}
+
+  <h3 class="bullet">Ruby</h3>
+  <p>Of course :-)</p>
+  <p>We tested it with both ruby 1.8.7 (2009-06-12 patchlevel 174) and ruby 1.9.2.p0 which are two of ruby versions Heroku supports.</p>
+  <p>Please note that performances are way better with ruby 1.9.2 and the stability seems okay (no bugs found for now).</p>
+
+  <h3 class="bullet">Mongodb</h3>
+  <p>Locomotive <span class="caps">CMS</span> does not use a classic sql database such as mysql or postgresql but rather a nosql database named mongodb.</p>
+  <p>Mongodb is available on many OS. Check this <a href="http://www.mongodb.org/downloads">link</a> out for more information.</p>
+  <p>Note: We suggest you to take a version from 1.6.0.</p>
+
+  <h3 class="bullet">ImageMagick</h3>
+  <p>Uploaded images for asset collections are cropped for instance and Locomotive uses ImageMagick for this purpose. And again, ImageMagick is available on a large set of OS.</p>
+
+  <h3 class="bullet">Browsers (back-office)</h3>
+  <p>We haven't had time to test the IE versions. So for now, we ask you to use the Locomotive back-office with the following browsers: <b>Safari</b>, <b>Firefox</b> and <b>Chrome</b>.</p>
+
+
+{% endblock %}

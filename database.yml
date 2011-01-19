@@ -1,0 +1,157 @@
+site:
+  name: "Locomotive"
+  locale: en
+  meta_keywords: "some meta keywords"
+  meta_description: "some meta description"
+
+  pages:
+    - index:
+        published: true
+    - 404:
+        published: true
+    - 'support':
+        redirect_url: '/support/installation'
+    - 'support/installation':
+        title: 'Installation guide'
+    - 'support/installation/requirements':
+        title: 'Requirements'
+    - 'support/installation/source':
+        title: 'From source installation'
+    - 'support/installation/engine':
+        title: 'Engine installation'
+    - 'support/installation/heroku':
+        title: 'Heroku deployment'
+    - 'support/themes':
+        title: 'Themes'
+    - 'support/howto':
+        title: "How-To's"
+    - 'support/liquid':
+        title: 'Liquid Syntax'
+
+  assets:
+    whitelist: ['/stylesheets/application.css', '/javascripts/application.js', '^/images/([^/]+)$']
+
+  content_types:
+    "Crew":
+      description: Members of the Locomotive team
+      slug: crew # mandatory
+      order_by: manually # manually / date / field slug #1, ...etc
+      highlighted_field_name: name # mandatory
+      fields:
+        - name:
+            hint: full name of the member
+        - title:
+            hint: position in the team
+        - company:
+            hint: company she/he works for
+        - company_url:
+            hint: Url of the company above
+        - bio:
+            kind: text
+            hint: Short biography
+        - plate:
+            kind: file
+            hint: Image
+      contents:
+        - "Didier Lafforgue":
+            title: "Rails developement, CMS coding"
+            company: "NoCoffee"
+            company_url: "http://www.nocoffee.fr"
+            bio: "<p>Didier (<a href='http://www.twitter.com/dinedine31'>@Didier</a>) is the founder of Locomotive, he speaks, thinks, eats, sleeps CMS. His family and friends thank him to have created a simple system to edit their websites.</p>"
+            plate: "/samples/contents/didier_plate.png"
+        - "Jacques Crocker":
+            title: "Rails developement, CMS coding"
+            company: "RailsJedi.com"
+            company_url: "http://www.railsjedi.com"
+            bio: "<p>Jacques (<a href='http://twitter.com/railsjedi'>@railsjedi</a>) is a seasoned Rails developer with a passion for front end development. He loves using HAML, SASS, and Javascript to put together stunning user interfaces.</p>"
+            plate: "/samples/contents/jacques_plate.png"
+        - "Sacha Greif":
+            title: "Design, User experience"
+            company: "SachaGreif.com"
+            company_url: "http://www.sachagreif.com"
+            bio: "<p>Sacha (<a href='http://twitter.com/sachagreif'>@SachaGreif</a>) is a french web and user experience designer. By the way, the fireman is in charge of shovelling coal into the engine.</p>"
+            plate: "/samples/contents/sacha_plate.png"
+
+    "Themes":
+      description: List of built-in themes
+      slug: themes
+      order_by: manually
+      highlighted_field_name: name
+      fields:
+        - name:
+            hint: Name of the theme
+        - author:
+            hint: Company or person who built this theme
+        - description:
+            kind: text
+            hint: Short description
+        - license:
+            hint: "Creative Commons Attribution 2.5 License, Commercial, ...etc"
+        - url:
+            hint: Original template url
+        - screenshot:
+            kind: file
+            hint: Image (320px width)
+        - zipfile:
+            kind: file
+            hint: Zip file people will use for the import
+      contents:
+        - "Html5/Css3 Portfolio":
+            author: Tom Kenny
+            description: "This is a simple portfolio website built with some HTML5 / CSS3 goodness. It comes from an excellent tutorial written by Tom Kenny."
+            license: "-"
+            url: http://inspectelement.com/tutorials/code-a-backwards-compatible-one-page-portfolio-with-html5-and-css3/
+            screenshot: "/samples/contents/themes/html5_portfolio.png"
+            zipfile: "/samples/contents/themes/html5_portfolio.zip"
+        - "Lawyer&Attorney":
+            author: Solucija
+            description: "A sample website for a lawyer & attorney office."
+            license: Creative Commons Attribution 2.5 License
+            url: http://www.solucija.com/template/lawyerattorney
+            screenshot: "/samples/contents/themes/lawyer.png"
+            zipfile: "/samples/contents/themes/lawyer.zip"
+
+  asset_collections:
+    "Features screenshots":
+      slug: features
+      fields:
+        - short_description:
+            kind: text
+        - thumb:
+            label: "Thumb screenshot"
+            kind: file
+        - popup:
+            label: "Popup"
+            kind: boolean
+            hint: "Enable the popup used to display the large screenshot"
+      assets:
+        - "Custom content":
+            url: "/samples/asset_collections/cc_large.jpg"
+            thumb: "/samples/asset_collections/cc_thumb.png"
+            short_description: "Define your own content types: posts, events, videos..."
+            popup: true
+        - "Multiple Sites":
+            url: "/samples/asset_collections/ms_large.jpg"
+            thumb: "/samples/asset_collections/ms_thumb.png"
+            short_description: "Manage multiple sites with only one Locomotive install."
+            popup: true
+        - "Sexy UI":
+            url: "/samples/asset_collections/ui_large.jpg"
+            thumb: "/samples/asset_collections/ui_thumb.png"
+            short_description: "Enjoy using a simple, clear and beautiful user interface."
+            popup: true
+        - "Inline Editing":
+            url: "/samples/asset_collections/coming_soon.png"
+            thumb: "/samples/asset_collections/coming_soon.png"
+            short_description: "Browse your site and edit a page at the same time."
+            popup: false
+        - "Ruby On Rails":
+            url: "/samples/asset_collections/rails.png"
+            thumb: "/samples/asset_collections/rails.png"
+            short_description: "Locomotive runs on the most powerful web framework."
+            popup: false
+        - "In The Cloud":
+            url: "/samples/asset_collections/heroku.png"
+            thumb: "/samples/asset_collections/heroku.png"
+            short_description: "Host Locomotive with Heroku, S3 and MongoHQ!"
+            popup: false

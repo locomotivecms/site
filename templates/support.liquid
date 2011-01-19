@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    {% include 'head' %}
+
+    {{ 'code_highlighter' | stylesheet_tag }}
+    {{ 'code_highlighter/code_highlighter' | javascript_tag }}
+    {{ 'code_highlighter/ruby' | javascript_tag }}
+
+    {{ 'application' | javascript_tag }}
+  </head>
+
+  <body id="{{ page.slug | dasherize }}-page" class="support">
+    {% include 'forkme' %}
+
+    <div class="wrapper">
+      <div class="container">
+        <div id="header">
+          <h1><a href="/"><img src="{{ 'title.jpg' | theme_image_url }}" alt="Locomotive"/></a></h1>
+        </div>
+
+        <div id="support-box">
+          {% nav 'support' %}
+
+          <div class="inner">
+            <div class="content">
+              <h2>{{ page.title }}</h2>
+              {% block inner %}
+                <p>Coming soon</p>
+              {% endblock %}
+            </div>
+          </div>
+
+          <div class="footer">&nbsp;</div>
+        </div>
+
+        <div id="footer">{% include 'footer' %}</div>
+      </div>
+    </div>
+    {% google_analytics 'UA-17355243-1' %}
+  </body>
+</html>
+​

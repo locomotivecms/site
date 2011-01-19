@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    {% include 'head' %}
+
+    {{ 'code_highlighter' | stylesheet_tag }}
+    {{ 'code_highlighter/code_highlighter' | javascript_tag }}
+    {{ 'code_highlighter/ruby' | javascript_tag }}
+
+    {{ 'application' | javascript_tag }}
+  </head>
+
+  <body id="{{ page.slug | dasherize }}-page" class="page">
+    {% include 'forkme' %}
+
+    <div class="wrapper">
+      <div class="container">
+        <div id="header">
+          <h1><a href="/"><img src="{{ 'title.jpg' | theme_image_url }}" alt="Locomotive"/></a></h1>
+        </div>
+
+        <div id="page-wrapper">
+          <div id="nav">
+            {% block sidebar %}
+            <a href="http://demo.locomotivecms.com/admin" class="btn" id="see-demo">&nbsp;</a>
+            <a href="/support/installation" class="btn" id="get-started">&nbsp;</a>
+            {% endblock %}
+          </div>
+
+          <div class="inner">
+            <div class="content">
+              {% block inner %}
+
+              <h2>{{ page.title }}</h2>
+
+              <h3>We've got a couple very good reasons why you should learn yet another CMS</h3>
+
+              <div id="technical-specs">
+                &nbsp;
+                <!-- TODO -->
+              </div>
+
+              {% endblock %}
+            </div>
+          </div>
+
+          <div class="footer">&nbsp;</div>
+        </div>
+
+        <div id="footer">{% include 'footer' %}</div>
+      </div>
+    </div>
+    {% google_analytics 'UA-17355243-1' %}
+  </body>
+</html>
+​

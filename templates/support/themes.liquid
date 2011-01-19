@@ -1,0 +1,34 @@
+{% extends parent %}
+
+{% block inner %}
+
+  <p>In order to show you what Locomotive is capable of, we found some cool templates and converted them into Locomotive themes.</p>
+
+  <ul id="themes">
+    {% for theme in contents.themes %}
+      <li>
+        <div class="image">
+          {{ theme.screenshot.url | image_tag }}
+        </div>
+        <div class="info">
+          <h3>{{ theme.name }}</h3>
+          <dl>
+            <dd>Author:</dd>
+            <dt>{{ theme.author }}</dt>
+            <dd>Url:</dd>
+            <dt><a href="{{ theme.url }}">Original template</a></dt>
+            <dd>License:</dd>
+            <dt>{{ theme.license }}</dt>
+            <dd>Description:</dd>
+            <dt>{{ theme.description }}</dt>
+          </dl>
+          <p class="download">
+            <a href="{{ theme.zipfile.url }}" class="awesome">Download zip file</a>
+          </p>
+        </div>
+        <div class="clear"></div>
+      </li>
+    {% endfor %}
+  </ul>
+
+{% endblock %}

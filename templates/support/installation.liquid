@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    {% include 'head' %}
+
+    {{ 'code_highlighter' | stylesheet_tag }}
+    {{ 'code_highlighter/code_highlighter' | javascript_tag }}
+    {{ 'code_highlighter/ruby' | javascript_tag }}
+
+    {{ 'application' | javascript_tag }}
+  </head>
+
+  <body id="{{ page.slug | dasherize }}-page" class="support sidebar">
+    {% include 'forkme' %}
+
+    <div class="wrapper">
+      <div class="container">
+        <div id="header">
+          <h1><a href="/"><img src="{{ 'title.jpg' | theme_image_url }}" alt="Locomotive"/></a></h1>
+        </div>
+
+        <div id="support-box">
+          {% nav 'support' %}
+
+          <div class="inner">
+            <div class="sidebar">
+              {% if page.depth == 2 %}
+                {% nav page, id: 'sidebar-nav' %}
+              {% else %}
+                {% nav parent, id: 'sidebar-nav' %}
+              {% endif %}
+            </div>
+
+            <div class="content">
+              <h2>{{ page.title }}</h2>
+              {% block inner %}
+                <p>
+                  <b><span class="caps">WARNING</span></b>: Locomotive is in beta but already used in production with success. Want a proof ? This website is served by Locomotive !
+                </p>
+
+                <p>
+                  We suggest you to start to read the <a href="/support/installation/requirements">requirements</a> section. Then choose one of the installation methods.<br/> If you want to test Locomotive and sneak into the code, we recommend you the <a href="/support/installation/source">from source</a> installation.
+                </p>
+
+                <p>
+                  Let us know if you have any <a href="http://locomotive.vanillaforums.com/categories/requested-features">suggestions</a> or if you find <a href="http://locomotive.vanillaforums.com/categories/problems">bugs</a>.
+                </p>
+              {% endblock %}
+            </div>
+
+            <div class="clear"></div>
+          </div>
+
+          <div class="footer">&nbsp;</div>
+        </div>
+
+        <div id="footer">{% include 'footer' %}</div>
+      </div>
+    </div>
+    {% google_analytics 'UA-17355243-1' %}
+  </body>
+</html>
