@@ -52,9 +52,9 @@
   <p class="step"><em>8.</em> Configure DelayedJob <b><span class="caps">(OPTIONAL)</span></b>. Locomotive needs DJ for the theme import module in order to avoid the application to slow down when an user uploads a new theme. If you do not have a lot of traffic, we suggest you to disable DJ (disabled by default actually). Anyway, if you do want it, apply the following instructions.</p>
   <pre class="shell"><code class="shell">mate Gemfile</code></pre>
   <p>Add the lines</p>
-  <pre class="shell"><code class="ruby">gem 'memcache-client'<br/>gem 'memcached-northscale', :require => 'memcached'</code></pre>
+  <pre class="shell"><code class="ruby">gem 'dalli'<br/></code></pre>
   <pre class="shell"><code class="shell">mate config/environments/production.rb</code></pre>
-  <pre class="shell"><code class="ruby">config.cache_store = :mem_cache_store, Memcached::Rails.new</code></pre>
+  <pre class="shell"><code class="ruby">config.cache_store = :dalli_store</code></pre>
 
   <p class="step"><em>9.</em> Launch it !</p>
   <pre class="shell"><code class="shell">git add .<br/>git commit -am "launch it"<br/>git push heroku master</code></pre>

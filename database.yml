@@ -1,8 +1,8 @@
 site:
   name: "Locomotive"
   locale: en
-  meta_keywords: "some meta keywords"
-  meta_description: "some meta description"
+  meta_keywords: "cms open source ruby on rails heroku liquid rails3 cloud amazon S3 inline editing"
+  meta_description: "LOCOMOTIVE is an open source CMS for Rails. It's super flexible and integrates with Heroku and Amazon S3."
 
   pages:
     - index:
