@@ -10,7 +10,7 @@
     {{ 'application' | javascript_tag }}
   </head>
 
-  <body id="{{ page.slug | dasherize }}-page" class="support">
+  <body id="{{ page.slug | dasherize }}-page" class="page">
     {% include 'forkme' %}
 
     <div class="wrapper">
@@ -19,14 +19,23 @@
           <h1><a href="/"><img src="{{ 'title.jpg' | theme_image_url }}" alt="Locomotive"/></a></h1>
         </div>
 
-        <div id="support-box">
-          {% nav 'support' %}
+        <div id="page-wrapper" class="{% block page_wrapper_class %}support{% endblock %}">
+          <div class="header">
+            {% block page_header %}
+              {% nav 'support' %}
+            {% endblock %}
+          </div>
 
           <div class="inner">
+            {% block page_sidebar %}{% endblock %}
+
             <div class="content">
               <h2>{{ page.title }}</h2>
-              {% block inner %}
-                <p>Coming soon</p>
+
+              {% block page_inner %}
+
+              <p>Coming soon</p>
+
               {% endblock %}
             </div>
           </div>
@@ -40,4 +49,3 @@
     {% google_analytics 'UA-17355243-1' %}
   </body>
 </html>
-​

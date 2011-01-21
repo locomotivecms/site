@@ -33,22 +33,28 @@
             <div id="features">
               <ul>
                 {% for feature in asset_collections.features %}
-                <li class="feature {% cycle ' ', ' ', 'last' %}">
-                  <div class="image">
-                    {% if feature.popup %}
-                    <a href="{{ feature.url }}" target="_blank">
+                  {% if feature.home %}
+                  <li class="feature {% cycle ' ', ' ', 'last' %}">
+                    <div class="image">
+                      {% if feature.popup %}
+                      <a href="{{ feature.url }}" target="_blank">
+                        <img src="{{ feature.thumb.url }}" alt="{{ feature.name }}" />
+                      </a>
+                      {% else %}
                       <img src="{{ feature.thumb.url }}" alt="{{ feature.name }}" />
-                    </a>
-                    {% else %}
-                    <img src="{{ feature.thumb.url }}" alt="{{ feature.name }}" />
-                    {% endif %}
-                  </div>
-                  <h3>{{ feature.name }}</h3>
-                  <div class="text">{{ feature.short_description }}</div>
-                </li>
+                      {% endif %}
+                    </div>
+                    <h3>{{ feature.name }}</h3>
+                    <div class="text">{{ feature.short_description }}</div>
+                  </li>
+                  {% endif %}
                 {% endfor %}
                 <li class="clear"></li>
               </ul>
+            </div>
+            <div id="more-features">
+              <p>Want more? How about custom content, multiple sites support, inline editing, and much more…</p>
+              <a href="/features">See all features &rarr;</a>
             </div>
             <div id="support">
               <a href="http://twitter.com/#!/locomotiveapp" class="twitter"><em></em><span>Follow us on Twitter to learn about updates</span></a>
@@ -78,7 +84,7 @@
               <li class="clear"></li>
             </ul>
 
-            <a href="http://blog.locomotiveapp.org" class="more-posts"><img src="{{ 'moreposts.png' | theme_image_url }}" title="more posts" /></a>
+            <a href="http://blog.locomotiveapp.org" class="more-posts"><img src="{{ 'buttons/moreposts.png' | theme_image_url }}" title="more posts" /></a>
           </div>
 
           <div id="crew" class="box">

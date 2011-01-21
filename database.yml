@@ -117,6 +117,8 @@ site:
       fields:
         - short_description:
             kind: text
+        - long_description:
+            kind: text
         - thumb:
             label: "Thumb screenshot"
             kind: file
@@ -124,34 +126,88 @@ site:
             label: "Popup"
             kind: boolean
             hint: "Enable the popup used to display the large screenshot"
+        -  home:
+            label: "Home page"
+            kind: boolean
+            hint: "Is this feature displayed in the home page ?"
+        -  no_screenshot:
+            label: "No screenshot"
+            kind: boolean
+            hint: "In case we do not have a vignette for this feature"
       assets:
         - "Custom content":
             url: "/samples/asset_collections/cc_large.jpg"
             thumb: "/samples/asset_collections/cc_thumb.png"
             short_description: "Define your own content types: posts, events, videos..."
+            long_description: |
+              With most CMS, you're constrained by the initial vision of the developers: everything has to be blog posts (or pages, or articles) and building anything else requires hacks and plug-ins.
+              Locomotive is different: it doesn't impose any specific data structure or content type. Want to build a portfolio? Just define your new "projet" content type, with a title, description, and image gallery.
+              <br/>Need a page for your band's discography? Create a new "recording" type with a title, year, album cover, and track listing.
+              <br/>Our custom content types are even enough flexible to build a contact form.
             popup: true
+            home: true
         - "Multiple Sites":
             url: "/samples/asset_collections/ms_large.jpg"
             thumb: "/samples/asset_collections/ms_thumb.png"
             short_description: "Manage multiple sites with only one Locomotive install."
+            long_description: |
+              Locomotive natively supports multiple sites. What does this mean exactly ?
+              <br/>With a single instance of Locomotive, you can manage as many websites as your server can physically handle.
+              <br/>On top of that, deploying a website becomes just a matter of pointing your website domain to your Locomotive server.
+              No webserver tweaking, no application rebooting at all.
             popup: true
+            home: true
+        - "Templates":
+            url: "/samples/asset_collections/coming_soon.png"
+            short_description: "Liquid templating language"
+            long_description: |
+              No need to learn one more weird syntax. We just picked up <a href="http://www.liquidmarkup.org/">Liquid</a>, the most used templating language in Ruby.
+              With Liquid, the templates your users write will not affect the security of your platform, and its syntax is simple to learn and very similar to Smarty (well known by PHP developers).
+              <br/>Of course, since we are always looking for ways to improve things, we also tweaked it a lot.
+              <br/>For instance, we added the notion of template inheritance that we took from <a href="http://docs.djangoproject.com/en/dev/topics/templates/">Python</a>.
+              And we wrote a large collection of useful helper tags covering a large number of needs: google analytics snippet, pagination snippet for collections,
+              helper to reach an external webservice and display contents from it, etc.
+            no_screenshot: true
+            popup: false
+            home: false
         - "Sexy UI":
             url: "/samples/asset_collections/ui_large.jpg"
             thumb: "/samples/asset_collections/ui_thumb.png"
             short_description: "Enjoy using a simple, clear and beautiful user interface."
+            long_description: |
+              We strongly believe that user experience should not be get the short end of the stick in an open source application.
+              So we put a lot of time into the user interface and global experience. And since we are our own first clients, we often tweak things until they're just right.
+              <br/>For instance, we recently added the CTRL+S shortcut to save a page in AJAX without refreshing.
             popup: true
+            home: true
         - "Inline Editing":
             url: "/samples/asset_collections/coming_soon.png"
             thumb: "/samples/asset_collections/coming_soon.png"
             short_description: "Browse your site and edit a page at the same time."
+            long_description: |
+              When we discovered <a href="http://www.aloha-editor.org/">Aloha-Editor</a>, a very powerful and promising browser editor named, it was instantly clear for us that we had to integrate it into Locomotive !
+              <br/>So Locomotive users can now define editable regions in their templates, and those regions can be edited by the end user directly from the page he's viewing.
             popup: false
+            home: true
         - "Ruby On Rails":
             url: "/samples/asset_collections/rails.png"
             thumb: "/samples/asset_collections/rails.png"
             short_description: "Locomotive runs on the most powerful web framework."
+            long_description: |
+              We know that most people just want something that works, and don't care if it's written in Python, PHP, or Cobol.
+              But in the case of Locomotive, we think its language is a huge asset.
+              <br/>We built Locomotive with <a href="http://www.rubyonrails.org">Ruby on Rails 3</a>, which gives developers the ability to build their own application on top of the Locomotive engine.
+              <br/>This means that Locomotive can be integrated in a wide range of applications Want to develop your own hosting websites platform? No problem!
             popup: false
+            home: true
         - "In The Cloud":
             url: "/samples/asset_collections/heroku.png"
             thumb: "/samples/asset_collections/heroku.png"
             short_description: "Host Locomotive with Heroku, S3 and MongoHQ!"
+            long_description: |
+              Since we wanted people to be able to install Locomotive without setting up a server, we decided that Locomotive would run on <a href="http://www.heroku.com/">Heroku</a>, the famous ruby cloud platform.
+              What's more, the database can also be hosted in the cloud (thanks to <a href="https://mongohq.com/">MongoHQ</a>),
+              and all the files uploaded from Locomotive are stored on <a href="http://aws.amazon.com/s3/">Amazon S3</a>.
+              <br/>With a such combination of powerful cloud services, we are able to host several websites for a couple of cents per month! But, of course, you are free to install on your server too !
             popup: false
+            home: true
