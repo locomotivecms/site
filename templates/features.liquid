@@ -62,7 +62,7 @@
   <div class="list">
     <ul>
       {% for feature in asset_collections.features %}
-      <li class="feature">
+      <li class="feature {% if feature.no_screenshot == true %}no-screenshot{% endif %}">
         {% if feature.no_screenshot != true %}
         <div class="image">
           {% if feature.popup %}
@@ -74,7 +74,7 @@
           {% endif %}
         </div>
         {% endif %}
-        <h4>{{ feature.name }}</h4>
+        <h4>{% if feature.long_name %}{{ feature.long_name }}{% else %}{{ feature.name }}{% endif %}</h4>
         <div class="text">{{ feature.long_description }}</div>
         <div class="clear"></div>
       </li>

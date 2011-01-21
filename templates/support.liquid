@@ -3,11 +3,14 @@
   <head>
     {% include 'head' %}
 
+    {{ 'fancybox' | javascript_tag }}
     {{ 'code_highlighter' | stylesheet_tag }}
     {{ 'code_highlighter/code_highlighter' | javascript_tag }}
     {{ 'code_highlighter/ruby' | javascript_tag }}
 
     {{ 'application' | javascript_tag }}
+
+    {{ 'fancybox' | stylesheet_tag }}
   </head>
 
   <body id="{{ page.slug | dasherize }}-page" class="page">

@@ -98,10 +98,13 @@ body#features-page .inner .list { float: left; width: 530px; }
 body#features-page .inner .list ul { list-style: none; margin: 0px; padding: 0px; }
 body#features-page .inner .list li.feature { margin-bottom: 40px; }
 body#features-page .inner .list li.feature .image { float: left; margin-right: 10px; }
+body#features-page .inner .list li.feature h4, body#features-page .inner .list li.feature .text { margin-left: 120px; }
 body#features-page .inner .list li.feature h4 { color: #444; font-size: 1.1em; }
 body#features-page .inner .list li.feature .text { color: #707380; }
 body#features-page .inner .list li.feature .text a { color: #1F82BC; text-decoration: none; }
 body#features-page .inner .list li.feature .text a:hover { text-decoration: underline; }
+
+body#features-page .inner .list li.feature.no-screenshot h4, body#features-page .inner .list li.feature.no-screenshot .text { margin-left: 0px; }
 
 /* ___ [Themes] ___ */
 
