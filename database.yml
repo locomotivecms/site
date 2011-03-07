@@ -7,7 +7,8 @@ site:
   pages:
     - index:
         published: true
-    - 404:
+    - '404':
+        title: "Page not found"
         published: true
     - 'support':
         redirect_url: '/support/installation'
@@ -32,6 +33,31 @@ site:
     whitelist: ['/stylesheets/application.css', '/javascripts/application.js', '^/images/([^/]+)$']
 
   content_types:
+    "News":
+      description: Locomotive in the news
+      slug: news
+      order_by: posted_at
+      highlighted_field_name: site_name
+      fields:
+        - site_name:
+            hint: "Origin of the news (Techcrunch, WebAppers, ...etc)"
+        - posted_at:
+            hint: "Date of the news (mm d, yyyy)"
+            kind: Date
+        - sentence:
+            hint: "The piece of the article about Locomotive. Needs to be catchy"
+        - url:
+            hint: "The full url where the sentence comes from"
+      contents:
+          - "WebAppers":
+              posted_at: "2011/01/18"
+              sentence: "Locomotive is a powerful new Ruby on Rails CMS"
+              url: http://www.webappers.com
+          - "Techcrunch":
+              posted_at: "2011/01/07"
+              sentence: "Introducing Locomotive: the best CMS in the world"
+              url: "http://www.techcrunch.com"
+
     "Crew":
       description: Members of the Locomotive team
       slug: crew # mandatory
@@ -52,25 +78,37 @@ site:
         - plate:
             kind: file
             hint: Image
+        - small_plate:
+            kind: file
+            hint: Image (in the about us page)
+        - picture:
+            kind: file
+            hint: "Image (in the about us pagem), 154px x 180px"
       contents:
         - "Didier Lafforgue":
-            title: "Rails developement, CMS coding"
+            title: "Rails developement"
             company: "NoCoffee"
             company_url: "http://www.nocoffee.fr"
             bio: "<p>Didier (<a href='http://www.twitter.com/dinedine31'>@Didier</a>) is the founder of Locomotive, he speaks, thinks, eats, sleeps CMS. His family and friends thank him to have created a simple system to edit their websites.</p>"
             plate: "/samples/contents/didier_plate.png"
+            small_plate: "/samples/contents/didier_small_plate.png"
+            picture: "/samples/contents/conan.png"
         - "Jacques Crocker":
-            title: "Rails developement, CMS coding"
+            title: "Rails developement"
             company: "RailsJedi.com"
             company_url: "http://www.railsjedi.com"
             bio: "<p>Jacques (<a href='http://twitter.com/railsjedi'>@railsjedi</a>) is a seasoned Rails developer with a passion for front end development. He loves using HAML, SASS, and Javascript to put together stunning user interfaces.</p>"
             plate: "/samples/contents/jacques_plate.png"
+            small_plate: "/samples/contents/jacques_small_plate.png"
+            picture: "/samples/contents/conan.png"
         - "Sacha Greif":
-            title: "Design, User experience"
+            title: "Design & UI"
             company: "SachaGreif.com"
             company_url: "http://www.sachagreif.com"
             bio: "<p>Sacha (<a href='http://twitter.com/sachagreif'>@SachaGreif</a>) is a french web and user experience designer. By the way, the fireman is in charge of shovelling coal into the engine.</p>"
             plate: "/samples/contents/sacha_plate.png"
+            small_plate: "/samples/contents/sacha_small_plate.png"
+            picture: "/samples/contents/conan.png"
 
     "Themes":
       description: List of built-in themes

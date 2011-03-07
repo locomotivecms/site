@@ -1,0 +1,73 @@
+{% extends support %}
+
+{% block page_wrapper_class %}wo-sidebar{% endblock %}
+
+{% block page_header %}
+  <a href="/" class="btn" id="back-to-home">&nbsp;</a>
+  <a href="http://demo.locomotivecms.com/admin" class="btn" id="see-demo">&nbsp;</a>
+  <a href="/support/installation" class="btn" id="get-started">&nbsp;</a>
+{% endblock %}
+
+{% block page_inner %}
+  <h3>Learn all about Locomotive and its crew</h3>
+
+  <div id="contact-us">
+    <a href="mailto:info@locomotivecms.com" class="email">info@locomotivecms.com</a>
+    <a href="http://twitter.com/#!/locomotiveapp" class="twitter">@locomotiveapp</a>
+  </div>
+
+  <div class="unit size2of3">
+    <h4>The story</h4>
+
+    <div class="text">
+      <p>Define your own content types: posts, events, vides the founder of Locomotive, he speaks, thinks, eats, sleeps CMS. His family and friends thank him to have created a simple system to edit their websites.
+      </p>
+      <p>You’ll notice that I mentioned desktop downloads. Unlike Typekit, you can download fonts from Fonts.com to use in your mockups. Whether this is a big deal or not is left up to you. I would imagine that most of us will probably already have a desktop version of the font we would be using in the website we are developing anyway. But that will not always be the case.</p>
+    </div>
+
+    <div class="sep">&nbsp;</div>
+
+    <h4>Meet the crew</h4>
+
+    <ul id="crew">
+      {% for person in contents.crew %}
+      <li class="person {% cycle 'first', 'second', 'third' %}">
+        <div class="picture"><img src="{{ person.picture.url }}" /></div>
+        <div class="plate"><img src="{{ person.small_plate.url }}" /></div>
+        <h5>{{ person.title }}</h5>
+        <h6><a href="{{ person.company_url }}">{{ person.company }}</a></h6>
+        <div class="body">{{ person.bio }}</div>
+      </li>{% endfor %}
+      <li class="clear"></li>
+    </ul><div class="sep">&nbsp;</div>
+
+    <h4>Who is using LocomotiveCMS ?</h4>
+
+    <p>TODO</p>
+
+  </div>
+
+  <div class="unit size1of3 lastUnit">
+    <h4>Locomotive in the news</h4>
+
+    <ul id="news">
+      {% for news in contents.news %}
+      <li>
+        <h3><em>{{ news.site_name }}</em>, {{ news.posted_at | localized_date: '%B %d, %Y' }}</h3>
+        <p><a href="{{ news.url }}">"{{ news.sentence }}"</a></p>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <div class="sep">&nbsp;</div>
+
+    <h4>Jump on our bandwagon!</h4>
+
+    <div id="press-kit">
+      <a href="http://www.yahoo.fr"><img src="{{ 'buttons/presskit.png' | theme_image_url }}" alt="Download press kit"/></a>
+      <em>Logo and screenshots (.zip, 17 mo)</em>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+{% endblock %}
