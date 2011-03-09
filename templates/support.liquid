@@ -1,54 +1,27 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    {% include 'head' %}
+{% extends parent %}
 
-    {{ 'fancybox' | javascript_tag }}
-    {{ 'code_highlighter' | stylesheet_tag }}
-    {{ 'code_highlighter/code_highlighter' | javascript_tag }}
-    {{ 'code_highlighter/ruby' | javascript_tag }}
+{% block page_wrapper_class %}support{% endblock %}
 
-    {{ 'application' | javascript_tag }}
+{% block page_header %}
 
-    {{ 'fancybox' | stylesheet_tag }}
-  </head>
+  {% nav 'support' %}
 
-  <body id="{{ page.slug | dasherize }}-page" class="page">
-    {% include 'forkme' %}
+{% endblock %}
 
-    <div class="wrapper">
-      <div class="container">
-        <div id="header">
-          <h1><a href="/"><img src="{{ 'title.jpg' | theme_image_url }}" alt="Locomotive"/></a></h1>
-        </div>
+{% block page_title %}
 
-        <div id="page-wrapper" class="{% block page_wrapper_class %}support{% endblock %}">
-          <div class="header">
-            {% block page_header %}
-              {% nav 'support' %}
-            {% endblock %}
-          </div>
+  <h2>{{ page.title }}</h2>
 
-          <div class="inner">
-            {% block page_sidebar %}{% endblock %}
+{% endblock %}
 
-            <div class="content">
-              <h2>{{ page.title }}</h2>
+{% block page_inner %}
 
-              {% block page_inner %}
+  <p>Content goes here</p>
 
-              <p>Coming soon</p>
+{% endblock %}
 
-              {% endblock %}
-            </div>
-          </div>
+{% block page_footer %}
 
-          <div class="footer">&nbsp;</div>
-        </div>
+  <div class="footer">&nbsp;</div>
 
-        <div id="footer">{% include 'footer' %}</div>
-      </div>
-    </div>
-    {% google_analytics 'UA-17355243-1' %}
-  </body>
-</html>
+{% endblock %}

@@ -1,19 +1,19 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
     {% include 'head' %}
 
-    <link href="/fonts/adelle.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="/fonts/becker.css" media="screen" rel="stylesheet" type="text/css" />
-
     {{ 'fancybox' | javascript_tag }}
+    {{ 'code_highlighter' | stylesheet_tag }}
+    {{ 'code_highlighter/code_highlighter' | javascript_tag }}
+    {{ 'code_highlighter/ruby' | javascript_tag }}
+
     {{ 'application' | javascript_tag }}
 
     {{ 'fancybox' | stylesheet_tag }}
   </head>
 
-  <body class="home">
+  <body id="{{ page.slug | dasherize }}-page" class="page">
     {% include 'forkme' %}
 
     <div class="wrapper">
@@ -21,140 +21,184 @@
         <div id="header">
           <h1><a href="/"><img src="{{ 'title.jpg' | theme_image_url }}" alt="Locomotive"/></a></h1>
         </div>
-        <div id="content">
-          <div id="main">
-            <div id="tagline">
-              <p>
-                <em>Locomotive</em> is an open source CMS for <strong>Rails</strong>. It's super flexible and integrates with <strong>Heroku</strong> and <strong>Amazon S3</strong>.
-              </p>
-              <a href="http://demo.locomotivecms.com/admin" class="btn" id="see-demo">&nbsp;</a>
-              <a href="/support/installation" class="btn" id="get-started">&nbsp;</a>
-            </div>
-            <div id="features">
-              <ul>
-                {% for feature in asset_collections.features %}
-                  {% if feature.home %}
-                  <li class="feature {% cycle ' ', ' ', 'last' %}">
-                    <div class="image">
-                      {% if feature.popup %}
-                      <a href="{{ feature.url }}" target="_blank">
-                        <img src="{{ feature.thumb.url }}" alt="{{ feature.name }}" />
-                      </a>
-                      {% else %}
-                      <img src="{{ feature.thumb.url }}" alt="{{ feature.name }}" />
+
+        <div id="page-wrapper" class="{% block page_wrapper_class %}home wo-sidebar{% endblock %}">
+          <div class="header">
+            {% block page_header %}
+              {% nav %}
+            {% endblock %}
+          </div>
+
+          <div class="inner">
+            {% block page_sidebar %}{% endblock %}
+
+            <div class="content">
+              {% block page_title %}{% endblock %}
+
+              {% block page_inner %}
+              <div id="locomotive-picture">&nbsp;</div>
+              <div id="tagline">
+                <div class="text">
+                  <p>
+                    <b>Locomotive</b> is an open source CMS for <b>Rails</b>. It's super flexible and integrates with <b>Heroku</b> and <b>Amazon S3</b>.</p>
+                </div>
+                <div class="actions">
+                  <a href="http://demo.locomotivecms.com" class="btn">Try demo</a>
+                  <a href="/support/installation" class="btn">Get started</a>
+                </div>
+              </div>
+
+              <div class="padding50px">
+                <!-- technical specs -->
+                <div id="technical-specs" class="small">
+                  <div class="header">&nbsp;</div>
+                  <div class="inner">
+                    <h4>What's inside the engine ?</h4>
+
+                    <ul>
+                      <li>
+                        <a href="http://www.rubyonrails.org">Ruby on Rails 3</a>
+                        <em>Powerful web framework</em>
+                      </li>
+                      <li>
+                        <a href="http://www.mongoid.org">Mongoid</a>
+                        <em>Ruby ODM framework for MongoDB</em>
+                      </li>
+                      <li>
+                        <a href="http://blog.plataformatec.com.br/tag/devise/">Devise</a>
+                        <em>Flexible authentication solution with Warden</em>
+                      </li>
+                      <li>
+                        <a href="http://www.liquidmarkup.org/">Liquid</a>
+                        <em>Safe, customer facing template language</em>
+                      </li>
+                    </ul>
+
+                    <p class="more">
+                      <a href="/features">More features &rarr;</a>
+                    </p>
+
+                  </div>
+                  <div class="footer">&nbsp;</div>
+                </div>
+
+                <h2>Here's why we already know you'll love Locomotive:</h2>
+
+                <!-- features -->
+                <div id="features">
+                  <ul>
+                    {% for feature in asset_collections.features %}
+                      {% if feature.home %}
+                      <li class="feature {% cycle ' ', 'last' %}">
+                        <div class="image">
+                          {% if feature.popup %}
+                          <a href="{{ feature.url }}" target="_blank">
+                            <img src="{{ feature.thumb.url }}" alt="{{ feature.name }}" />
+                          </a>
+                          {% else %}
+                          <img src="{{ feature.thumb.url }}" alt="{{ feature.name }}" />
+                          {% endif %}
+                        </div>
+                        <h3>{{ feature.name }}</h3>
+                        <div class="text">{{ feature.short_description }}</div>
+                      </li>
                       {% endif %}
-                    </div>
-                    <h3>{{ feature.name }}</h3>
-                    <div class="text">{{ feature.short_description }}</div>
-                  </li>
-                  {% endif %}
-                {% endfor %}
-                <li class="clear"></li>
-              </ul>
-            </div>
-            <div id="more-features">
-              <p>Want more? Learn about custom content types, great user experience, template inheritance, and other great features</p>
-              <a href="/features">See all features &rarr;</a>
-            </div>
-            <div id="support">
-              <a href="http://twitter.com/#!/locomotiveapp" class="twitter"><em></em><span>Follow us on Twitter to learn about updates</span></a>
-              <a href="/support/installation" class="documentation"><em></em><span>Read the install guide and documentation</span></a>
-              <a href="http://locomotive.vanillaforums.com" class="help"><em></em><span>Ask your question in our support forums</span></a>
-              <a href="mailto:didier@nocoffee.fr" class="contact"><em></em><span>Send us a message, we'll answer quickly</span></a>
-            </div>
-          </div>
-          <div id="articles">
-            <h2>News</h2>
-            <ul>
-              {% consume blog from "http://blog.locomotiveapp.org/api/read/json?num=3&type=text", expires_in: 3000 %}
-                {% if blog == null %}
-                  <p class="error">We are sorry but the Tumblr API seems to be broken now. Click <a href="http://blog.locomotiveapp.org">here</a> to see the blog.</p>
-                {% else %}
-                  {% for article in blog.posts %}
-                  <li class="article {% cycle ' ', ' ', 'last' %}">
-                    <h3><a href="{{ article.url }}">{{ article.regular_title }}</a></h3>
-                    <p class="date">{{ article.date_gmt | localized_date: '%A %d %B %Y', 'en' }}</p>
-                    <div class="body">
-                      {{ article.regular_body | strip_html | truncate: 200 }}
-                    </div>
-                  </li>
-                  {% endfor %}
-                {% endif %}
-              {% endconsume %}
-              <li class="clear"></li>
-            </ul>
+                    {% endfor %}
+                    <li class="clear"></li>
+                  </ul>
 
-            <a href="http://blog.locomotiveapp.org" class="more-posts"><img src="{{ 'buttons/moreposts.png' | theme_image_url }}" title="more posts" /></a>
+                  <div class="more">
+                    <p>Want more? How about custom content, and much more...</p>
+                    <a href="/features">See all features &rarr;</a>
+                  </div>
+                </div>
+
+                <div class="sep">&nbsp;</div>
+
+                <!-- news -->
+                {% assign testimonial = contents.news.first %}
+
+                <div id="testimonial">
+                  <div class="text">{{ testimonial.sentence }}</div>
+                  <div class="who">
+                    <span>{{ testimonial.posted_at | localized_date: '%m/%d/%Y' }}</span>
+                    via {{ testimonial.site_name }}
+                  </div>
+                </div>
+
+                <div class="sep norightmargin">&nbsp;</div>
+
+                <div id="articles">
+                  <h2>The Blog</h2>
+                  <ul>
+                    <ul>
+
+
+
+                                  <!-- <li class="article  ">
+                                                                   <h3><a href="http://blog.locomotivecms.com/post/2594979158">Beta release out</a></h3>
+                                                                   <p class="date">Tuesday 04 January 2011</p>
+                                                                   <div class="body">
+                                                                     Hi folks,&nbsp;
+                                                   It’s been a long road to launch this beta. That was really tough to stop adding new features and to be focus to release something. Yes, I had to struggle against my nature but I ma...
+                                                                   </div>
+                                                                 </li>
+
+                                                                 <li class="article  ">
+                                                                   <h3><a href="http://blog.locomotivecms.com/post/1351634890">Big thanks to Nicholas Young !</a></h3>
+                                                                   <p class="date">Tuesday 19 October 2010</p>
+                                                                   <div class="body">
+                                                                     I’d like to thank Nicholas Young who gives us the domain name locomotivecms.com.
+                                                   We didn’t ask for anything, he just sent us an email and told us he wanted to help the project.&nbsp;
+                                                   That...
+                                                                   </div>
+                                                                 </li>
+
+                                                                 <li class="article last">
+                                                                   <h3><a href="http://blog.locomotivecms.com/post/893248924">A fresh coat of paint</a></h3>
+                                                                   <p class="date">Monday 02 August 2010</p>
+                                                                   <div class="body">
+                                                                     When Didier first approached me to work on a user interface for Locomotive, his content management system (at the time still called NoCoffeeCMS), I thought it was a great opportunity to finally des...
+                                                                   </div>
+                                                                 </li> -->
+
+                    {% consume blog from "http://blog.locomotiveapp.org/api/read/json?num=3&type=text", expires_in: 3000 %}
+                                          {% if blog == null %}
+                                            <p class="error">We are sorry but the Tumblr API seems to be broken now. Click <a href="http://blog.locomotiveapp.org">here</a> to see the blog.</p>
+                                          {% else %}
+                                            {% for article in blog.posts %}
+                                            <li class="article {% cycle ' ', ' ', 'last' %}">
+                                              <h3><a href="{{ article.url }}">{{ article.regular_title }}</a></h3>
+                                              <p class="date">{{ article.date_gmt | localized_date: '%A %d %B %Y', 'en' }}</p>
+                                              <div class="body">
+                                                {{ article.regular_body | strip_html | truncate: 200 }}
+                                              </div>
+                                            </li>
+                                            {% endfor %}
+                                          {% endif %}
+                                        {% endconsume %}
+                    <li class="clear"></li>
+                  </ul>
+
+                  <div class="more">
+                    <a href="http://blog.locomotiveapp.org">more posts &rarr;</a>
+                  </div>
+                </div>
+
+                <div class="clear"></div>
+              </div>
+              {% endblock %}
+            </div>
           </div>
 
-          <div id="crew" class="box">
-            <div class="box-middle">
-              <h2>Meet the crew</h2>
-              <ul>
-                {% for person in contents.crew %}
-                <li class="person {% cycle 'first', 'second', 'third' %}">
-                  <div class="plate"><img src="{{ person.plate.url }}" /></div>
-                  <h3><a href="{{ person.company_url }}">{{ person.company }}</a></h3>
-                  <h4>{{ person.title }}</h4>
-                  <div class="body">{{ person.bio }}</div>
-                </li>
-                {% endfor %}
-                <li class="clear"></li>
-              </ul>​
-            </div>
-            <div class="box-foot">&nbsp;</div>
+          {% block page_footer %}
+          <div id="support" class="footer">
+            <a href="http://twitter.com/#!/locomotiveapp" class="twitter"><em></em><span>Follow us on Twitter to learn about updates</span></a>
+            <a href="/support/installation" class="documentation"><em></em><span>Read the install guide and documentation</span></a>
+            <a href="http://locomotive.vanillaforums.com" class="help"><em></em><span>Ask your question in our support forums</span></a>
+            <a href="mailto:didier@nocoffee.fr" class="contact"><em></em><span>Send us a message, we'll answer quickly</span></a>
           </div>
-
-          <div id="engine" class="box">
-            <div class="box-middle">
-              <h2>What's inside the engine ?</h2>
-              <p>We used the best of the Ruby on Rails and open source components to build our CMS. Here is a non-comprehensive list: </p>
-              <ul class="unit size1of3">
-                <li>
-                  <a href="http://www.rubyonrails.org">Ruby on Rails 3</a>
-                  <em>Powerful web framework</em>
-                </li>
-                <li>
-                  <a href="http://www.mongoid.org">Mongoid</a>
-                  <em>Ruby ODM framework for MongoDB</em>
-                </li>
-                <li>
-                  <a href="http://blog.plataformatec.com.br/tag/devise/">Devise</a>
-                  <em>Flexible authentication solution with Warden</em>
-                </li>
-              </ul>
-              <ul class="unit size1of3">
-                <li>
-                  <a href="http://www.liquidmarkup.org/">Liquid</a>
-                  <em>Safe, customer facing template language</em>
-                </li>
-                <li>
-                  <a href="http://haml-lang.com">HAML</a>
-                  <em>HTML Abstraction Markup Language</em>
-                </li>
-                <li>
-                  <a href="https://github.com/justinfrench/formtastic">Formtastic</a>
-                  <em>Form builder with semantically rich / accessible markup</em>
-                </li>
-              </ul>
-              <ul class="unit size1of3 lastUnit">
-                <li>
-                  <a href="https://github.com/josevalim/inherited_resources">InheritedResources</a>
-                  <em>Makes controllers more powerful and cleaner</em>
-                </li>
-                <li>
-                  <a href="http://carrierwave.rubyforge.org">Carrierwave</a>
-                  <em>Classier solution for file uploads</em>
-                </li>
-                <li>
-                  <a href="https://github.com/railsjedi/jammit-s3">Jammit-S3</a>
-                  <em>Industrial Strength Asset Packaging</em>
-                </li>
-              </ul>
-              <div class="clear"></div>
-            </div>
-            <div class="box-foot">&nbsp;</div>
-          </div>
+          {% endblock %}
         </div>
 
         <div id="footer">{% include 'footer' %}</div>
@@ -163,5 +207,3 @@
     {% google_analytics 'UA-17355243-1' %}
   </body>
 </html>
-
-​

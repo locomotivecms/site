@@ -10,7 +10,16 @@ site:
     - '404':
         title: "Page not found"
         published: true
+    - 'about_us':
+    - 'features':
+    - 'hosting':
+    - 'blog':
+        redirect_url: 'http://blog.locomotivecms.com'
+    - 'demo':
+        tile: "Try demo"
+        redirect_url: 'http://demo.locomotivecms.com'
     - 'support':
+        title: 'Get started'
         redirect_url: '/support/installation'
     - 'support/installation':
         title: 'Installation guide'
@@ -78,9 +87,6 @@ site:
         - plate:
             kind: file
             hint: Image
-        - small_plate:
-            kind: file
-            hint: Image (in the about us page)
         - picture:
             kind: file
             hint: "Image (in the about us pagem), 154px x 180px"
@@ -91,7 +97,6 @@ site:
             company_url: "http://www.nocoffee.fr"
             bio: "<p>Didier (<a href='http://www.twitter.com/dinedine31'>@Didier</a>) is the founder of Locomotive, he speaks, thinks, eats, sleeps CMS. His family and friends thank him to have created a simple system to edit their websites.</p>"
             plate: "/samples/contents/didier_plate.png"
-            small_plate: "/samples/contents/didier_small_plate.png"
             picture: "/samples/contents/conan.png"
         - "Jacques Crocker":
             title: "Rails developement"
@@ -99,7 +104,6 @@ site:
             company_url: "http://www.railsjedi.com"
             bio: "<p>Jacques (<a href='http://twitter.com/railsjedi'>@railsjedi</a>) is a seasoned Rails developer with a passion for front end development. He loves using HAML, SASS, and Javascript to put together stunning user interfaces.</p>"
             plate: "/samples/contents/jacques_plate.png"
-            small_plate: "/samples/contents/jacques_small_plate.png"
             picture: "/samples/contents/conan.png"
         - "Sacha Greif":
             title: "Design & UI"
@@ -107,7 +111,6 @@ site:
             company_url: "http://www.sachagreif.com"
             bio: "<p>Sacha (<a href='http://twitter.com/sachagreif'>@SachaGreif</a>) is a french web and user experience designer. By the way, the fireman is in charge of shovelling coal into the engine.</p>"
             plate: "/samples/contents/sacha_plate.png"
-            small_plate: "/samples/contents/sacha_small_plate.png"
             picture: "/samples/contents/conan.png"
 
     "Themes":
@@ -223,7 +226,7 @@ site:
               and we often tweak things until they're just right.
               <br/>For instance, we recently added the CTRL+S shortcut to save a page in AJAX without refreshing.
             popup: true
-            home: true
+            home: false
 
         - "Inline Editing":
             url: "/samples/asset_collections/coming_soon.png"
@@ -258,4 +261,4 @@ site:
               and all the files uploaded from Locomotive are stored on <a href="http://aws.amazon.com/s3/">Amazon S3</a>.
               <br/>With a such combination of powerful cloud services, we are able to host several websites for a couple of cents per month! But, of course, you are free to install on your server too !
             popup: false
-            home: true
+            home: false

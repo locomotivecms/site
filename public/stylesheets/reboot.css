@@ -20,6 +20,7 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 .padding10px{padding:10px;}
 .padding15px{padding:15px;}
 .padding20px{padding:20px;}
+.padding50px{padding:50px;}
 .clear{clear:both;height:1px;line-height:1px;}
 
 /* **************** TYPOGRAPHY ***************** */
@@ -64,6 +65,7 @@ p {
 
 /* **************** MARGINS ***************** */
 .nomargin { margin: 0 !important; }
+.norightmargin { margin-right: 0 !important; }
 .mt30 { margin-top: 30px !important; }
 .mt20 { margin-top: 20px !important; }
 .mb20 { margin-bottom: 20px !important; }

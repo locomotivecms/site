@@ -3,9 +3,9 @@
 {% block page_wrapper_class %}wo-sidebar{% endblock %}
 
 {% block page_header %}
-  <a href="/" class="btn" id="back-to-home">&nbsp;</a>
-  <a href="http://demo.locomotivecms.com/admin" class="btn" id="see-demo">&nbsp;</a>
-  <a href="/support/installation" class="btn" id="get-started">&nbsp;</a>
+  <a href="/" id="back-to-home">&nbsp;</a>
+  <a href="http://demo.locomotivecms.com/admin" class="btn" id="see-demo">Try demo</a>
+  <a href="/support/installation" class="btn" id="get-started">Get started</a>
 {% endblock %}
 
 {% block page_inner %}
@@ -33,7 +33,7 @@
       {% for person in contents.crew %}
       <li class="person {% cycle 'first', 'second', 'third' %}">
         <div class="picture"><img src="{{ person.picture.url }}" /></div>
-        <div class="plate"><img src="{{ person.small_plate.url }}" /></div>
+        <div class="plate"><img src="{{ person.plate.url }}" /></div>
         <h5>{{ person.title }}</h5>
         <h6><a href="{{ person.company_url }}">{{ person.company }}</a></h6>
         <div class="body">{{ person.bio }}</div>
