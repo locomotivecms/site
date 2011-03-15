@@ -37,7 +37,16 @@ site:
         title: "How-To's"
     - 'support/liquid':
         title: 'Liquid Syntax'
-
+    - 'support/liquid/site':
+        title: 'Site'
+    - 'support/liquid/pages':
+        title: 'Pages'
+    - 'support/liquid/contents':
+        title: 'Contents'
+    - 'support/liquid/filters':
+        title: 'Filters'
+    - 'support/liquid/logic':
+        title: 'Logic'
   assets:
     whitelist: ['/stylesheets/application.css', '/javascripts/application.js', '^/images/([^/]+)$']
 
