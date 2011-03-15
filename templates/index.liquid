@@ -162,9 +162,9 @@
                                                                    </div>
                                                                  </li> -->
 
-                    {% consume blog from "http://blog.locomotiveapp.org/api/read/json?num=3&type=text", expires_in: 3000 %}
+                    {% consume blog from "http://blog.locomotivecms.com/api/read/json?num=3&type=text", expires_in: 3000 %}
                                           {% if blog == null %}
-                                            <p class="error">We are sorry but the Tumblr API seems to be broken now. Click <a href="http://blog.locomotiveapp.org">here</a> to see the blog.</p>
+                                            <p class="error">We are sorry but the Tumblr API seems to be broken now. Click <a href="http://blog.locomotivecms.com">here</a> to see the blog.</p>
                                           {% else %}
                                             {% for article in blog.posts %}
                                             <li class="article {% cycle ' ', ' ', 'last' %}">
