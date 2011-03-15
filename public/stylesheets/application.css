@@ -98,8 +98,8 @@ a.btn:active {
 #page-wrapper.support .content ul { margin-left: 25px } 
 #page-wrapper.support .content hr { border: 0; background-color: #888; margin: 20px 0; height: 1px }
 #page-wrapper.support .content em { font-style: italic }
-#page-wrapper.support .content code strong { color: #404249; }
-#page-wrapper.support .content code { font-family: Monaco, monospace; font-size: 13px }
+#page-wrapper.support .content code strong { color: #000; font-weight: normal }
+#page-wrapper.support .content code { font-family: Monaco, monospace; font-size: 13px; color: #555 }
 #page-wrapper.support .content code em { text-decoration: underline; font-style: normal; }
 /* ___ features page / about / etc... ___ */
 
