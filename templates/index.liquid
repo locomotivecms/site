@@ -132,51 +132,21 @@
                   <h2>The Blog</h2>
                   <ul>
                     <ul>
-
-
-
-                                  <!-- <li class="article  ">
-                                                                   <h3><a href="http://blog.locomotivecms.com/post/2594979158">Beta release out</a></h3>
-                                                                   <p class="date">Tuesday 04 January 2011</p>
-                                                                   <div class="body">
-                                                                     Hi folks,&nbsp;
-                                                   It’s been a long road to launch this beta. That was really tough to stop adding new features and to be focus to release something. Yes, I had to struggle against my nature but I ma...
-                                                                   </div>
-                                                                 </li>
-
-                                                                 <li class="article  ">
-                                                                   <h3><a href="http://blog.locomotivecms.com/post/1351634890">Big thanks to Nicholas Young !</a></h3>
-                                                                   <p class="date">Tuesday 19 October 2010</p>
-                                                                   <div class="body">
-                                                                     I’d like to thank Nicholas Young who gives us the domain name locomotivecms.com.
-                                                   We didn’t ask for anything, he just sent us an email and told us he wanted to help the project.&nbsp;
-                                                   That...
-                                                                   </div>
-                                                                 </li>
-
-                                                                 <li class="article last">
-                                                                   <h3><a href="http://blog.locomotivecms.com/post/893248924">A fresh coat of paint</a></h3>
-                                                                   <p class="date">Monday 02 August 2010</p>
-                                                                   <div class="body">
-                                                                     When Didier first approached me to work on a user interface for Locomotive, his content management system (at the time still called NoCoffeeCMS), I thought it was a great opportunity to finally des...
-                                                                   </div>
-                                                                 </li> -->
-
                     {% consume blog from "http://blog.locomotiveapp.org/api/read/json?num=3&type=text", expires_in: 3000 %}
-                                          {% if blog == null %}
-                                            <p class="error">We are sorry but the Tumblr API seems to be broken now. Click <a href="http://blog.locomotiveapp.org">here</a> to see the blog.</p>
-                                          {% else %}
-                                            {% for article in blog.posts %}
-                                            <li class="article {% cycle ' ', ' ', 'last' %}">
-                                              <h3><a href="{{ article.url }}">{{ article.regular_title }}</a></h3>
-                                              <p class="date">{{ article.date_gmt | localized_date: '%A %d %B %Y', 'en' }}</p>
-                                              <div class="body">
-                                                {{ article.regular_body | strip_html | truncate: 200 }}
-                                              </div>
-                                            </li>
-                                            {% endfor %}
-                                          {% endif %}
-                                        {% endconsume %}
+                      {% if blog == null %}
+                        <p class="error">We are sorry but the Tumblr API seems to be broken now. Click <a href="http://blog.locomotiveapp.org">here</a> to see the blog.</p>
+                      {% else %}
+                        {% for article in blog.posts %}
+                        <li class="article {% cycle ' ', ' ', 'last' %}">
+                          <h3><a href="{{ article.url }}">{{ article.regular_title }}</a></h3>
+                          <p class="date">{{ article.date_gmt | localized_date: '%A %d %B %Y', 'en' }}</p>
+                          <div class="body">
+                            {{ article.regular_body | strip_html | truncate: 200 }}
+                          </div>
+                        </li>
+                        {% endfor %}
+                      {% endif %}
+                    {% endconsume %}
                     <li class="clear"></li>
                   </ul>
 
