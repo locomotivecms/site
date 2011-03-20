@@ -93,9 +93,14 @@ a.btn:active {
 #page-wrapper.support .content h3 { background: transparent url("/images/bullet_1.png") no-repeat 0 3px; padding: 0 0 0 20px; outline: none; }
 #page-wrapper.support .content h3.bullet { background: transparent url("/images/bullet_2.png") no-repeat 0 8px; padding: 0 0 0 15px; }
 #page-wrapper.support .content p.step em { color: #1F82BC; font-weight: bold; font-size: 1.2em; }
-#page-wrapper.support .content p a { color: #1F82BC; text-decoration: none; }
-#page-wrapper.support .content p a:hover { text-decoration: underline; }
-
+#page-wrapper.support .content a  { color: #1F82BC; text-decoration: none; }
+#page-wrapper.support .content a:hover  { text-decoration: underline; }
+#page-wrapper.support .content ul { margin-left: 25px } 
+#page-wrapper.support .content hr { border: 0; background-color: #888; margin: 20px 0; height: 1px }
+#page-wrapper.support .content em { font-style: italic }
+#page-wrapper.support .content code strong { color: #000; font-weight: normal }
+#page-wrapper.support .content code { font-family: Monaco, monospace; font-size: 12px; color: #555 }
+#page-wrapper.support .content code em { text-decoration: underline; font-style: normal; }
 /* ___ features page / about / etc... ___ */
 
 /*#page-wrapper.wo-sidebar .header .btn {  }*/

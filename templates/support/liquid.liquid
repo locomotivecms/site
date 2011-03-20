@@ -1,1 +1,33 @@
 {% extends parent %}
+
+{% block page_wrapper_class %}{{ block.super }} sidebar{% endblock %}
+
+{% block page_sidebar %}
+  <div class="sidebar">
+    {% if page.depth == 2 %}
+      {% nav page, id: 'sidebar-nav' %}
+    {% else %}
+      {% nav parent, id: 'sidebar-nav' %}
+    {% endif %}
+  </div>
+{% endblock %}
+
+{% block page_inner %}
+
+<p>Page templates are created using the liquid templating system. Some base tags are retained, however many custom ones exist to compliment locomotive.</p>
+
+<p>These tags can be sorted into the following types</p>
+
+<h4><a href="/support/liquid/site">Site</a></h4>
+<p>Title, Seo, Navigation...</p>
+<h4><a href="/support/liquid/pages">Pages</a></h4>
+<p>Editable Content, Snippets...</li>
+<h4><a href="/support/liquid/content">Contents</a></h4>
+<p>Content Types, External Feeds...</p>
+<h4><a href="/support/liquid/filters">Filters</a></h4>
+<p>Underscore, Dasherize...</p>
+<h4><a href="/support/liquid/logic">Logic</a></h4>
+<p>If, Else, For..</p>
+</ul>
+
+{% endblock %}
