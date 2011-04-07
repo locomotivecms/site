@@ -1,9 +1,4 @@
-/*body#index-page h1 { text-align: left; }*/
 body#index-page .header { background-position: 0 0; }
-
-body#index-page #nav { float: right; margin-right: 25px; }
-body#index-page #nav li { display: inline-block; float: none; width: auto; margin-left: 20px; }
-body#index-page #nav li a { display: inline-block; color: #1f82bc; text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.65); font-size: 1.2em; z-index: 997; }
 
 body#index-page #page-wrapper .content { padding: 0px 4px; position: relative; margin-top: -1px; }
 
@@ -11,6 +6,27 @@ body#index-page #page-wrapper .content h2 {
   color: #686971;
   font-size: 1.3em;
   font-weight: 300;
+}
+
+body#index-page #page-wrapper .content h2 span {
+  color: #caccd5;
+}
+
+body#index-page .right-sidebar {
+  margin-top: 10px;
+}
+
+/* ___ bushido ___ */
+
+body#index-page #bushido {
+  margin: 0 auto;
+}
+
+/* ___ tech specs ___ */
+
+body#index-page #technical-specs {
+  float: none;
+  margin-top: 52px;
 }
 
 /* ___ tagline ___ */
@@ -31,7 +47,7 @@ body#index-page #tagline {
   height: 202px;
   background: #b41538;
   background: -webkit-gradient(linear, left top, left bottom, from(#e02655), to(#85041a));
-  background: -moz-linear-gradient(90deg, #ba89d1, #e02655);
+  background: -moz-linear-gradient(90deg, #85041a, #e02655);
   border-bottom: 1px solid #fff;
 }
 

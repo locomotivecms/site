@@ -25,7 +25,7 @@
         <div id="page-wrapper" class="{% block page_wrapper_class %}home wo-sidebar{% endblock %}">
           <div class="header">
             {% block page_header %}
-              {% nav %}
+              {% nav page, id: 'main-nav' %}
             {% endblock %}
           </div>
 
@@ -49,40 +49,49 @@
               </div>
 
               <div class="padding50px">
-                <!-- technical specs -->
-                <div id="technical-specs" class="small">
-                  <div class="header">&nbsp;</div>
-                  <div class="inner">
-                    <h4>What's inside the engine ?</h4>
+                <div class="right-sidebar">
+                  <!-- bushido -->
+                  {% include 'bushido' %}
 
-                    <ul>
-                      <li>
-                        <a href="http://www.rubyonrails.org">Ruby on Rails 3</a>
-                        <em>Powerful web framework</em>
-                      </li>
-                      <li>
-                        <a href="http://www.mongoid.org">Mongoid</a>
-                        <em>Ruby ODM framework for MongoDB</em>
-                      </li>
-                      <li>
-                        <a href="http://blog.plataformatec.com.br/tag/devise/">Devise</a>
-                        <em>Flexible authentication solution with Warden</em>
-                      </li>
-                      <li>
-                        <a href="http://www.liquidmarkup.org/">Liquid</a>
-                        <em>Safe, customer facing template language</em>
-                      </li>
-                    </ul>
+                  <!-- technical specs -->
+                  <div id="technical-specs">
+                    <div class="header">&nbsp;</div>
+                    <div class="inner">
+                      <h4>What's inside the engine ?</h4>
 
-                    <p class="more">
-                      <a href="/features">More features &rarr;</a>
-                    </p>
+                      <ul>
+                        <li>
+                          <a href="http://www.rubyonrails.org">Ruby on Rails 3</a>
+                          <em>Powerful web framework</em>
+                        </li>
+                        <li>
+                          <a href="http://www.mongoid.org">Mongoid</a>
+                          <em>Ruby ODM framework for MongoDB</em>
+                        </li>
+                        <!-- <li>
+                          <a href="http://blog.plataformatec.com.br/tag/devise/">Devise</a>
+                          <em>Flexible authentication solution with Warden</em>
+                        </li>
+                        <li>
+                          <a href="http://www.liquidmarkup.org/">Liquid</a>
+                          <em>Safe, customer facing template language</em>
+                        </li> -->
+                      </ul>
 
+                      <p class="more">
+                        <a href="/features">More features &rarr;</a>
+                      </p>
+
+                    </div>
+                    <div class="footer">&nbsp;</div>
                   </div>
-                  <div class="footer">&nbsp;</div>
                 </div>
 
-                <h2>Here's why we already know you'll love Locomotive:</h2>
+                <h2>
+                  <span>———</span>
+                  Here's why we already know you'll love Locomotive
+                  <span>———</span>
+                </h2>
 
                 <!-- features -->
                 <div id="features">
@@ -113,10 +122,10 @@
                   </div>
                 </div>
 
-                <div class="sep">&nbsp;</div>
+                <!-- <div class="sep">&nbsp;</div> -->
 
                 <!-- news -->
-                {% assign testimonial = contents.news.first %}
+                <!-- {% assign testimonial = contents.news.first %}
 
                 <div id="testimonial">
                   <div class="text">{{ testimonial.sentence }}</div>
@@ -124,7 +133,7 @@
                     <span>{{ testimonial.posted_at | localized_date: '%m/%d/%Y' }}</span>
                     via {{ testimonial.site_name }}
                   </div>
-                </div>
+                </div> -->
 
                 <div class="sep norightmargin">&nbsp;</div>
 

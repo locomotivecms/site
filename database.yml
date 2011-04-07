@@ -13,14 +13,21 @@ site:
     - 'about_us':
     - 'features':
     - 'hosting':
+    - 'modules':
+    - 'modules/template':
+        title: Template of a module
+        content_type: modules
+        published: true
     - 'blog':
         redirect_url: 'http://blog.locomotivecms.com'
     - 'demo':
         tile: "Try demo"
         redirect_url: 'http://demo.locomotivecms.com'
+        listed: false
     - 'support':
         title: 'Get started'
         redirect_url: '/support/installation'
+        listed: false
     - 'support/installation':
         title: 'Installation guide'
     - 'support/installation/requirements':
@@ -61,7 +68,7 @@ site:
             hint: "Origin of the news (Techcrunch, WebAppers, ...etc)"
         - posted_at:
             hint: "Date of the news (mm d, yyyy)"
-            kind: Date
+            kind: date
         - sentence:
             hint: "The piece of the article about Locomotive. Needs to be catchy"
         - url:
@@ -121,6 +128,96 @@ site:
             bio: "<p>Sacha (<a href='http://twitter.com/sachagreif'>@SachaGreif</a>) is a french web and user experience designer. By the way, the fireman is in charge of shovelling coal into the engine.</p>"
             plate: "/samples/contents/sacha_plate.png"
             picture: "/samples/contents/conan.png"
+
+    "Companies":
+      description: Companies using Locomotive on a daily basis
+      slug: companies
+      order_by: manually
+      highlighted_field_name: name
+      fields:
+        - name:
+            hint: Company name
+        - url:
+            hint: "Website url (without the http://)"
+        - logo:
+            kind: file
+            hint: "Image max width: 240px"
+      contents:
+        - "The Frontier Group":
+            url: "www.thefrontiergroup.com.au"
+            logo: "/samples/contents/companies/tfg.png"
+        - "DesignHunger":
+            url: "www.designhunger.de"
+            logo: "/samples/contents/companies/designhunger.png"
+        - "Experia":
+            url: "www.experia.com.br"
+            logo: "/samples/contents/companies/experia.png"
+
+    "Modules":
+      description: List all the modules sold in the locomotive website
+      slug: modules
+      order_by: manually
+      highlighted_field_name: name
+      fields:
+        - name:
+            hint: Module name
+        - editor:
+            hint: Person or company selling the module
+        - price:
+            hint: Integer without the euro symbol
+        - short_description:
+            hint: Short text displayed in the modules list page
+        - description:
+            hint: Long text displayed in the module page
+            kind: text
+        - license:
+            hint: License options for the module
+        - url:
+            hint: "Link to the payment page without http://"
+        - logo:
+            kind: file
+            hint: "Image size: 90px by 90px"
+      contents:
+        - "Locomotive Editor":
+            editor: "Locomotive team"
+            price: 30
+            short_description: "Build your whole locomotive sites with your prefered IDE and import them once you are done."
+            description: >
+              The Locomotive editor is the perfect tool for your Locomotive websites. It lets you build fully Locomotive compliant websites with
+              your prefered IDE without installing the whole Locomotive CMS stack. Your efficiency will be increased by a lot, we garantee you !
+              <br/>
+              <br/>
+              We listed for you all the benefits of using our editor:
+              <ul>
+                <li><strong>Simple installation</strong>. MongoDB, RMagick, Rails, ...etc are not required. You only need Ruby.</li>
+                <li><strong>Work with any IDE</strong>. We are sure you will agree with us, editing templates in a web browser is a real pain.</li>
+                <li><strong>Define the custom content types</strong>. You create your content types in a YAML format.</li>
+                <li><strong>Write your CSS with SASS</strong>. You are looking for more efficiency ? We integrated <a href="http://sass-lang.com/">SASS</a> for you.</li>
+                <li><strong>Test your sites instantly</strong>. Just fire up your browser and you will see your changes.</li>
+                <li><strong>Export your sites easily</strong>. Once you are done with a site, simply zip the folder and import it to your Locomotive instance</li>
+                <li><strong>Version your work</strong>. Your templates and assets live now on your desktop so you can use GIT, SVN or any versionning tool.</li>
+                <li><strong>Get frequently updates</strong>. Since we also develop sites like you do, we are always looking for higher efficiency and we have got plenty of ideas to make this product much better than it is right now.</li>
+              </ul>
+              <br/>
+              <p>What does that include when you purchase our editor ?</p>
+              <ul>
+                <li>The editor itself packaged as a ruby gem</li>
+                <li>Free upgrades for 1 year</li>
+                <li>Free support for 1 year</li>
+              </ul>
+
+            license: "Licence valid for one user only.\n<a href='mailto:support@locomotivecms.com'>Contact us</a> for bulk orders."
+            url: "www.yahoo.fr"
+            logo: "/samples/contents/modules/editor.png"
+        - "Statistics":
+            editor: "Locomotive team"
+            short_description: "coming soon"
+            logo: "/samples/contents/modules/stats.png"
+        - "Recurring Billing":
+            editor: "Locomotive team"
+            short_description: "coming soon"
+            description: "Lorem ipsum"
+            logo: "/samples/contents/modules/recurly.png"
 
     "Themes":
       description: List of built-in themes
@@ -235,7 +332,7 @@ site:
               and we often tweak things until they're just right.
               <br/>For instance, we recently added the CTRL+S shortcut to save a page in AJAX without refreshing.
             popup: true
-            home: false
+            home: true
 
         - "Inline Editing":
             url: "/samples/asset_collections/coming_soon.png"
@@ -270,4 +367,4 @@ site:
               and all the files uploaded from Locomotive are stored on <a href="http://aws.amazon.com/s3/">Amazon S3</a>.
               <br/>With a such combination of powerful cloud services, we are able to host several websites for a couple of cents per month! But, of course, you are free to install on your server too !
             popup: false
-            home: false
+            home: true
