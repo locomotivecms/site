@@ -13,6 +13,7 @@ site:
     - 'about_us':
     - 'features':
     - 'hosting':
+        listed: false
     - 'modules':
     - 'modules/template':
         title: Template of a module
@@ -180,7 +181,7 @@ site:
       contents:
         - "Locomotive Editor":
             editor: "Locomotive team"
-            price: 30
+            # price: 30
             short_description: "Build your whole locomotive sites with your prefered IDE and import them once you are done."
             description: >
               The Locomotive editor is the perfect tool for your Locomotive websites. It lets you build fully Locomotive compliant websites with
@@ -207,7 +208,7 @@ site:
               </ul>
 
             license: "Licence valid for one user only.\n<a href='mailto:support@locomotivecms.com'>Contact us</a> for bulk orders."
-            url: "www.yahoo.fr"
+            # url: "www.yahoo.fr"
             logo: "/samples/contents/modules/editor.png"
         - "Statistics":
             editor: "Locomotive team"
