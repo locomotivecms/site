@@ -10,7 +10,7 @@
 
   <p class="step"><em>2.</em> You have to tell your Rails app that you want to include the Locomotive gem available on Gemcutter. Edit your application Gemfile and add these lines if missing.</p>
   <!-- <pre class="ruby"><code class="ruby">gem 'rails', '3.0.3'<br/>gem 'locomotive_cms', :require =&gt; 'locomotive/engine'<br/>gem 'unicorn', :group => 'development'</code></pre> -->
-  <pre class="ruby"><code class="ruby">gem 'rails', '3.0.3'<br/>gem 'locomotive_cms', :git =&gt; 'git://github.com/locomotivecms/engine.git', :require =&gt; 'locomotive/engine'<br/>gem 'unicorn', :group => 'development'</code></pre>
+  <pre class="ruby"><code class="ruby">gem 'rails', '3.0.6'<br/>gem 'locomotive_cms', :git =&gt; 'git://github.com/locomotivecms/engine.git', :require =&gt; 'locomotive/engine'<br/>gem 'unicorn', :group => 'development'</code></pre>
 
   <p class="step"><em>3.</em> Install gems</p>
   <pre class="shell"><code class="shell">bundle install</code></pre>
@@ -18,9 +18,8 @@
   <p class="step"><em>4.</em> Add the Locomotive config files and assets</p>
   <pre class="shell"><code class="shell">bundle exec rails g locomotive:install</code></pre>
 
-  <p class="step"><em>5.</em> Edit the locomotive settings in order to match your main domain name for instance.</p>
+  <p class="step"><em>5.</em> Edit the locomotive settings</p>
   <pre class="shell"><code class="shell">mate config/initializers/locomotive.rb</code></pre>
-  <p>Note: If you run Locomotive in local, do not forget to update your /etc/hosts file.</p>
 
   <p class="step"><em>6.</em> You also may want to change your mongodb connection settings</p>
   <pre class="shell"><code class="shell">mate config/mongoid.yml</code></pre>

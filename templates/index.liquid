@@ -43,7 +43,7 @@
                     <b>Locomotive</b> is an open source CMS for <b>Rails</b>. It's super flexible and integrates with <b>Heroku</b> and <b>Amazon S3</b>.</p>
                 </div>
                 <div class="actions">
-                  <a href="http://demo.locomotivecms.com" class="btn">Try demo</a>
+                  <a href="http://demo.locomotivecms.com/admin" class="btn">Try demo</a>
                   <a href="/support/installation" class="btn">Get started</a>
                 </div>
               </div>
@@ -140,7 +140,6 @@
                 <div id="articles">
                   <h2>The Blog</h2>
                   <ul>
-                    <ul>
                     {% consume blog from "http://blog.locomotivecms.com/api/read/json?num=3&type=text", expires_in: 3000 %}
                       {% if blog == null %}
                         <p class="error">We are sorry but the Tumblr API seems to be broken now. Click <a href="http://blog.locomotiveapp.org">here</a> to see the blog.</p>

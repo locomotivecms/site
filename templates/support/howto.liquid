@@ -1,1 +1,19 @@
 {% extends parent %}
+
+{% block page_wrapper_class %}{{ block.super }} sidebar{% endblock %}
+
+{% block page_sidebar %}
+  <div class="sidebar">
+    {% if page.depth == 2 %}
+      {% nav page, id: 'sidebar-nav' %}
+    {% else %}
+      {% nav parent, id: 'sidebar-nav' %}
+    {% endif %}
+  </div>
+{% endblock %}
+
+{% block page_inner %}
+
+<p>We compiled for you a list of useful tips for LocomotiveCMS. Feel free to email us your how-to's !</p>
+
+{% endblock %}

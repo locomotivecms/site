@@ -23,7 +23,7 @@ site:
         redirect_url: 'http://blog.locomotivecms.com'
     - 'demo':
         tile: "Try demo"
-        redirect_url: 'http://demo.locomotivecms.com'
+        redirect_url: 'http://demo.locomotivecms.com/admin'
         listed: false
     - 'support':
         title: 'Get started'
@@ -43,6 +43,10 @@ site:
         title: 'Themes'
     - 'support/howto':
         title: "How-To's"
+    - 'support/howto/editor':
+        title: "Locomotive editor"
+    - 'support/howto/import':
+        title: "Importing a site"
     - 'support/liquid':
         title: 'Liquid Syntax'
     - 'support/liquid/site':
@@ -208,7 +212,7 @@ site:
               </ul>
 
             license: "Licence valid for one user only.\n<a href='mailto:support@locomotivecms.com'>Contact us</a> for bulk orders."
-            # url: "www.yahoo.fr"
+            # url: "http://modules.locomotivecms.com/gems/locomotive_editor/buy"
             logo: "/samples/contents/modules/editor.png"
         - "Statistics":
             editor: "Locomotive team"
