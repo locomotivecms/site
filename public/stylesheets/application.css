@@ -240,6 +240,11 @@ body#about-us-page #press-kit em { color: #444; font-size: 0.9em; }
 #themes li .download a.awesome:hover { background-color: #111; color: #fff; text-decoration: none; }
 #themes li .download a.awesome:active { top: 1px; }
 
+/* ___ folders ___ */
+
+table.folders { border-collapse: collapse; margin: 0 20px 20px 20px; }
+table.folders th { width: 22%; font-weight: bold; }
+
 /* ___ Bushido ___ */
 
 #bushido {
