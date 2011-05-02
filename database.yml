@@ -169,7 +169,7 @@ site:
         - editor:
             hint: Person or company selling the module
         - price:
-            hint: Integer without the euro symbol
+            hint: Integer without the dollar symbol
         - short_description:
             hint: Short text displayed in the modules list page
         - description:
@@ -185,7 +185,7 @@ site:
       contents:
         - "Locomotive Editor":
             editor: "Locomotive team"
-            # price: 30
+            price: 30
             short_description: "Build your whole locomotive sites with your prefered IDE and import them once you are done."
             description: >
               The Locomotive editor is the perfect tool for your Locomotive websites. It lets you build fully Locomotive compliant websites with
@@ -212,7 +212,7 @@ site:
               </ul>
 
             license: "Licence valid for one user only.\n<a href='mailto:support@locomotivecms.com'>Contact us</a> for bulk orders."
-            # url: "http://modules.locomotivecms.com/gems/locomotive_editor/buy"
+            url: "modules.locomotivecms.com/gems/locomotive_editor/buy"
             logo: "/samples/contents/modules/editor.png"
         - "Statistics":
             editor: "Locomotive team"
