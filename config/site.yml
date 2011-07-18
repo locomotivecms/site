@@ -65,7 +65,7 @@ site:
       meta_description: "One click simple locomotive hosting with Bushido. "
       meta_keywords: hosting, locomotive, fast, easy
       published: true
-      title: Bushido Deployment
+      title: Bushido deployment
       listed: true
   - support/themes:
       published: true
@@ -80,7 +80,7 @@ site:
       published: true
       listed: true
   - support/editor/upgrade:
-      title: Upgrade
+      title: Upgrade to 0.1.3
       published: true
       listed: true
   - support/howto:
