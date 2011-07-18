@@ -1,0 +1,35 @@
+description: List of built-in themes
+name: Themes
+order_by: _position_in_list
+order_direction: asc
+slug: themes
+highlighted_field_name: name
+fields:
+- name:
+    label: Name
+    kind: string
+    hint: Name of the theme
+- author:
+    label: Author
+    kind: string
+    hint: Company or person who built this theme
+- description:
+    label: Description
+    kind: text
+    hint: Short description
+- license:
+    label: License
+    kind: string
+    hint: Creative Commons Attribution 2.5 License, Commercial, ...etc
+- url:
+    label: Url
+    kind: string
+    hint: Original template url
+- screenshot:
+    label: Screenshot
+    kind: file
+    hint: Image (320px width)
+- zipfile:
+    label: Zipfile
+    kind: file
+    hint: Zip file people will use for the import

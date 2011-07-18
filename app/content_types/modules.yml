@@ -1,0 +1,39 @@
+description: List all the modules sold in the locomotive website
+name: Modules
+order_by: _position_in_list
+order_direction: asc
+slug: modules
+highlighted_field_name: name
+fields:
+- name:
+    label: Name
+    kind: string
+    hint: Module name
+- editor:
+    label: Editor
+    kind: string
+    hint: Person or company selling the module
+- price:
+    label: Price
+    kind: string
+    hint: Integer without the dollar symbol
+- short_description:
+    label: Short description
+    kind: string
+    hint: Short text displayed in the modules list page
+- description:
+    label: Description
+    kind: text
+    hint: Long text displayed in the module page
+- license:
+    label: License
+    kind: string
+    hint: License options for the module
+- url:
+    label: Url
+    kind: string
+    hint: Link to the payment page without http://
+- logo:
+    label: Logo
+    kind: file
+    hint: "Image size: 90px by 90px"

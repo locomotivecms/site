@@ -1,0 +1,38 @@
+name: Features screenshots
+order_by: _position_in_list
+order_direction: asc
+slug: features
+highlighted_field_name: name
+fields:
+- long_name:
+    label: Long name
+    kind: string
+- short_description:
+    label: Short description
+    kind: text
+- long_description:
+    label: Long description
+    kind: text
+- thumb:
+    label: Thumb screenshot
+    kind: file
+- popup:
+    label: Popup
+    kind: boolean
+    hint: Enable the popup used to display the large screenshot
+- home:
+    label: Home page
+    kind: boolean
+    hint: Is this feature displayed in the home page ?
+- no_screenshot:
+    label: No screenshot
+    kind: boolean
+    hint: In case we do not have a vignette for this feature
+- name:
+    required: true
+    label: Name
+    kind: string
+- source:
+    required: true
+    label: Source
+    kind: file

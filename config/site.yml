@@ -1,0 +1,125 @@
+site:
+  locale: en
+  meta_description: LOCOMOTIVE is an open source CMS for Rails. It's super flexible and integrates with Heroku and Amazon S3.
+  meta_keywords: cms open source ruby on rails heroku liquid rails3 cloud amazon S3 inline editing
+  name: Locomotive
+  pages:
+  - index:
+      published: true
+      title: Index
+      listed: false
+  - about_us:
+      published: true
+      title: About us
+      listed: true
+  - features:
+      published: true
+      title: Features
+      listed: true
+  - hosting:
+      published: true
+      title: Hosting
+      listed: false
+  - modules:
+      published: true
+      title: Modules
+      listed: true
+  - modules/content_type_template:
+      published: true
+      title: Template of a module
+      listed: true
+      content_type: modules
+  - blog:
+      published: true
+      title: Blog
+      listed: true
+  - demo:
+      published: true
+      title: Demo
+      listed: false
+  - support:
+      published: true
+      title: Get started
+      listed: false
+  - support/installation:
+      published: true
+      title: Installation guide
+      listed: true
+  - support/installation/requirements:
+      published: true
+      title: Requirements
+      listed: true
+  - support/installation/source:
+      published: true
+      title: From source installation
+      listed: true
+  - support/installation/engine:
+      published: true
+      title: Engine installation
+      listed: true
+  - support/installation/heroku:
+      published: true
+      title: Heroku deployment
+      listed: true
+  - support/installation/bushido:
+      meta_description: "One click simple locomotive hosting with Bushido. "
+      meta_keywords: hosting, locomotive, fast, easy
+      published: true
+      title: Bushido Deployment
+      listed: true
+  - support/themes:
+      published: true
+      title: Themes
+      listed: true
+  - support/editor:
+      published: true
+      title: Editor
+      listed: true
+  - support/editor/installation:
+      title: Installation
+      published: true
+      listed: true
+  - support/editor/upgrade:
+      title: Upgrade
+      published: true
+      listed: true
+  - support/howto:
+      published: true
+      title: How-To's
+      listed: true
+  - support/howto/import:
+      published: true
+      title: Importing a site
+      listed: true
+  - support/howto/upgrade:
+      published: true
+      title: Upgrade to 1.0.0.rc1
+      listed: true
+  - support/liquid:
+      published: true
+      title: Liquid Syntax
+      listed: true
+  - support/liquid/site:
+      published: true
+      title: Site
+      listed: true
+  - support/liquid/pages:
+      published: true
+      title: Pages
+      listed: true
+  - support/liquid/contents:
+      published: true
+      title: Contents
+      listed: true
+  - support/liquid/filters:
+      published: true
+      title: Filters
+      listed: true
+  - support/liquid/logic:
+      published: true
+      title: Logic
+      listed: true
+  - "404":
+      published: true
+      title: Page not found
+      listed: true

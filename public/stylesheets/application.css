@@ -66,8 +66,9 @@ a.btn:active {
 
 #page-wrapper .header { background: transparent url("/images/page/menu_bg.png") no-repeat 0 0px; height: 65px; position: relative; }
 #page-wrapper .header ul { list-style: none; height: 65px; }
-#page-wrapper .header ul li { float: left; text-align: center; margin-top: 22px; width: 240px; }
-#page-wrapper .header ul li a { color: #707380; text-shadow: 0 1px 1px #000; font-size: 16px; text-decoration: none; }
+#page-wrapper .header ul li { float: left; text-align: center; margin-top: 5px; height: 43px; padding-top: 17px; width: 192px; background: transparent url(../images/page/menu_sep.png) no-repeat right 0; }
+#page-wrapper .header ul li:last-child { background: none; width: 193px; }
+#page-wrapper .header ul li a { display: inline-block; color: #707380; text-shadow: 0 1px 1px #000; font-size: 16px; text-decoration: none; }
 #page-wrapper .header ul li.on a, #page-wrapper #nav li a:hover { color: #fff; }
 
 #page-wrapper .header ul#main-nav { float: right; margin-right: 25px; }

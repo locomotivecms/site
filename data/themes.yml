@@ -1,0 +1,14 @@
+- Html5/Css3 Portfolio:
+    author: Tom Kenny
+    description: <p>This is a simple portfolio website built with some HTML5 / CSS3 goodness. It comes from an excellent tutorial written by Tom Kenny.</p>
+    license: "-"
+    url: http://inspectelement.com/tutorials/code-a-backwards-compatible-one-page-portfolio-with-html5-and-css3/
+    screenshot: /samples/themes/html5_portfolio.png
+    zipfile: /samples/themes/html5_portfolio.zip
+- Lawyer&Attorney:
+    author: Solucija
+    description: <p>A sample website for a lawyer &amp; attorney office.</p>
+    license: Creative Commons Attribution 2.5 License
+    url: http://www.solucija.com/template/lawyerattorney
+    screenshot: /samples/themes/lawyer.png
+    zipfile: /samples/themes/lawyer.zip

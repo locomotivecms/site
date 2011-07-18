@@ -1,0 +1,48 @@
+{% extends 'parent' %}
+
+{% block page_inner %}
+
+<p>The version 1.0.0.rc1 of the LocomotiveCMS includes some deep modifications which will break your previous version. To avoid problems, we strongly recommend to execute the following upgrade procedure.</p>
+
+<p><b>Notes:</b> We suggest you to backup your MongoDB instance before going further.</p>
+
+<br/>
+
+<p class="step"><em>1.</em> Add default roles</p>
+
+<p>The admin flag in the membership class has been replaced by a role attribute. Now, there are 3 kind of roles:</p>
+<ul>
+  <li><b>Administrator:</b> they can add / edit / remove websites as well as editing anything in all the sites</li>
+  <li><b>Designer:</b> almost the same abilities as the administrators except that they can <b>not</b> add / edit / delete websites</li>
+  <li><b>Author:</b> they can add edit pages and add / edit / delete items in content types</li>
+</ul>
+
+<pre class="shell"><code class="shell">bundle exec rake locomotive:upgrade:set_roles</code></pre>
+
+<p class="step"><em>2.</em> Remove asset collections</p>
+
+<p>Actually, we noticed that the assets tab was not relevant anymore because asset collections became more and more a special content type with a different display in the back-office. That is why we decided to convert them into content types. That is what the following rake task does.</p>
+
+<pre class="shell"><code class="shell">bundle exec rake locomotive:upgrade:remove_asset_collections</code></pre>
+
+<p><b>Note:</b> It will not change a lot of things in the liquid templates except that <b>asset.source</b> statements have to be replaced manually by <b>asset.source.url</b>.</p>
+
+<p class="step"><em>3.</em> Re-serialize the page templates</p>
+
+<pre class="shell"><code class="shell">bundle exec rake locomotive:rebuild_serialized_page_templates</code></pre>
+
+<hr/>
+
+<h4>Problem(s) during the upgrade:</h4>
+
+<ul>
+  <li>
+    Rails 3 engine has got a little problem with rake 0.9.2.<br/>
+    So if you meet the "uninitialized constant Rake::DSL" error, in your <b>Rakefile</b> file, just put:<br/>
+    <b>require 'rake/dsl_definition'</b><br/>
+    before<br/>
+    <b>require 'rake'</b>
+  </li>
+</ul>
+
+{% endblock %}

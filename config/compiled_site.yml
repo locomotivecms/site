@@ -1,0 +1,482 @@
+site:
+  locale: en
+  meta_description: LOCOMOTIVE is an open source CMS for Rails. It's super flexible and integrates with Heroku and Amazon S3.
+  meta_keywords: cms open source ruby on rails heroku liquid rails3 cloud amazon S3 inline editing
+  name: Locomotive
+  pages:
+  - index:
+      published: true
+      title: Index
+      listed: false
+  - about_us:
+      published: true
+      title: About us
+      listed: true
+  - features:
+      published: true
+      title: Features
+      listed: true
+  - hosting:
+      published: true
+      title: Hosting
+      listed: false
+  - modules:
+      published: true
+      title: Modules
+      listed: true
+  - modules/content_type_template:
+      published: true
+      title: Template of a module
+      listed: true
+      content_type: modules
+  - blog:
+      published: true
+      title: Blog
+      listed: true
+  - demo:
+      published: true
+      title: Demo
+      listed: false
+  - support:
+      published: true
+      title: Get started
+      listed: false
+  - support/installation:
+      published: true
+      title: Installation guide
+      listed: true
+  - support/installation/requirements:
+      published: true
+      title: Requirements
+      listed: true
+  - support/installation/source:
+      published: true
+      title: From source installation
+      listed: true
+  - support/installation/engine:
+      published: true
+      title: Engine installation
+      listed: true
+  - support/installation/heroku:
+      published: true
+      title: Heroku deployment
+      listed: true
+  - support/installation/bushido:
+      meta_description: "One click simple locomotive hosting with Bushido. "
+      meta_keywords: hosting, locomotive, fast, easy
+      published: true
+      title: Bushido Deployment
+      listed: true
+  - support/themes:
+      published: true
+      title: Themes
+      listed: true
+  - support/howto:
+      published: true
+      title: How-To's
+      listed: true
+  - support/howto/editor:
+      published: true
+      title: Locomotive editor
+      listed: true
+  - support/howto/import:
+      published: true
+      title: Importing a site
+      listed: true
+  - support/liquid:
+      published: true
+      title: Liquid Syntax
+      listed: true
+  - support/liquid/site:
+      published: true
+      title: Site
+      listed: true
+  - support/liquid/pages:
+      published: true
+      title: Pages
+      listed: true
+  - support/liquid/contents:
+      published: true
+      title: Contents
+      listed: true
+  - support/liquid/filters:
+      published: true
+      title: Filters
+      listed: true
+  - support/liquid/logic:
+      published: true
+      title: Logic
+      listed: true
+  - "404":
+      published: true
+      title: Page not found
+      listed: true
+  content_types:
+    News:
+      description: Locomotive in the news
+      name: News
+      order_by: custom_field_2
+      order_direction: asc
+      slug: news
+      highlighted_field_name: site_name
+      fields:
+      - site_name:
+          label: Site name
+          kind: string
+          hint: Origin of the news (Techcrunch, WebAppers, ...etc)
+      - posted_at:
+          label: Posted at
+          kind: date
+          hint: Date of the news (mm d, yyyy)
+      - sentence:
+          label: Sentence
+          kind: string
+          hint: The piece of the article about Locomotive. Needs to be catchy
+      - url:
+          label: Url
+          kind: string
+          hint: The full url where the sentence comes from
+      contents:
+      - WebAppers:
+          posted_at: 2011-01-18
+          sentence: Locomotive is a powerful new Ruby on Rails CMS
+          url: http://www.webappers.com
+      - Techcrunch:
+          posted_at: 2011-01-07
+          sentence: "Introducing Locomotive: the best CMS in the world"
+          url: http://www.techcrunch.com
+    Crew:
+      description: Members of the Locomotive team
+      name: Crew
+      order_by: _position_in_list
+      order_direction: asc
+      slug: crew
+      highlighted_field_name: name
+      fields:
+      - name:
+          label: Name
+          kind: string
+          hint: full name of the member
+      - title:
+          label: Title
+          kind: string
+          hint: position in the team
+      - company:
+          label: Company
+          kind: string
+          hint: company she/he works for
+      - company_url:
+          label: Company url
+          kind: string
+          hint: Url of the company above
+      - bio:
+          label: Bio
+          kind: text
+          hint: Short biography
+      - plate:
+          label: Plate
+          kind: file
+          hint: Image
+      - picture:
+          label: Picture
+          kind: file
+          hint: Image (in the about us pagem), 154px x 180px
+      contents:
+      - Didier Lafforgue:
+          title: Rails developement
+          company: NoCoffee
+          company_url: http://www.nocoffee.fr
+          bio: <p>Didier (<a href="http://www.twitter.com/dinedine31">@Didier</a>) is the founder of Locomotive. He speaks, thinks, eats and sleeps CMS. His family and friends thank him for creating a simple system to help them edit their websites.</p>
+          plate: /samples/crew/didier_plate.png
+          picture: /samples/crew/conan.png
+      - Jacques Crocker:
+          title: Rails developement
+          company: RailsJedi.com
+          company_url: http://www.railsjedi.com
+          bio: <p>Jacques (<a href='http://twitter.com/railsjedi'>@railsjedi</a>) is a seasoned Rails developer with a passion for front end development. He loves using HAML, SASS, and Javascript to put together stunning user interfaces.</p>
+          plate: /samples/crew/jacques_plate.png
+          picture: /samples/crew/conan.png
+      - Sacha Greif:
+          title: Design & UI
+          company: SachaGreif.com
+          company_url: http://www.sachagreif.com
+          bio: <p>Sacha (<a href="http://twitter.com/sachagreif">@SachaGreif</a>) is a French web and user experience designer. By the way, the fireman is in charge of shoveling coal into the engine.</p>
+          plate: /samples/crew/sacha_plate.png
+          picture: /samples/crew/conan.png
+    Companies:
+      description: Companies using Locomotive on a daily basis
+      name: Companies
+      order_by: _position_in_list
+      order_direction: asc
+      slug: companies
+      highlighted_field_name: name
+      fields:
+      - name:
+          label: Name
+          kind: string
+          hint: Company name
+      - url:
+          label: Url
+          kind: string
+          hint: Website url (without the http://)
+      - logo:
+          label: Logo
+          kind: file
+          hint: "Image max width: 240px"
+      contents:
+      - The Frontier Group:
+          url: www.thefrontiergroup.com.au
+          logo: /samples/companies/tfg.png
+      - DesignHunger:
+          url: www.designhunger.de
+          logo: /samples/companies/designhunger.png
+      - Experia:
+          url: www.experia.com.br
+          logo: /samples/companies/experia.png
+    Themes:
+      description: List of built-in themes
+      name: Themes
+      order_by: _position_in_list
+      order_direction: asc
+      slug: themes
+      highlighted_field_name: name
+      fields:
+      - name:
+          label: Name
+          kind: string
+          hint: Name of the theme
+      - author:
+          label: Author
+          kind: string
+          hint: Company or person who built this theme
+      - description:
+          label: Description
+          kind: text
+          hint: Short description
+      - license:
+          label: License
+          kind: string
+          hint: Creative Commons Attribution 2.5 License, Commercial, ...etc
+      - url:
+          label: Url
+          kind: string
+          hint: Original template url
+      - screenshot:
+          label: Screenshot
+          kind: file
+          hint: Image (320px width)
+      - zipfile:
+          label: Zipfile
+          kind: file
+          hint: Zip file people will use for the import
+      contents:
+      - Html5/Css3 Portfolio:
+          author: Tom Kenny
+          description: <p>This is a simple portfolio website built with some HTML5 / CSS3 goodness. It comes from an excellent tutorial written by Tom Kenny.</p>
+          license: "-"
+          url: http://inspectelement.com/tutorials/code-a-backwards-compatible-one-page-portfolio-with-html5-and-css3/
+          screenshot: /samples/themes/html5_portfolio.png
+          zipfile: /samples/themes/html5_portfolio.zip
+      - Lawyer&Attorney:
+          author: Solucija
+          description: <p>A sample website for a lawyer &amp; attorney office.</p>
+          license: Creative Commons Attribution 2.5 License
+          url: http://www.solucija.com/template/lawyerattorney
+          screenshot: /samples/themes/lawyer.png
+          zipfile: /samples/themes/lawyer.zip
+    Modules:
+      description: List all the modules sold in the locomotive website
+      name: Modules
+      order_by: _position_in_list
+      order_direction: asc
+      slug: modules
+      highlighted_field_name: name
+      fields:
+      - name:
+          label: Name
+          kind: string
+          hint: Module name
+      - editor:
+          label: Editor
+          kind: string
+          hint: Person or company selling the module
+      - price:
+          label: Price
+          kind: string
+          hint: Integer without the dollar symbol
+      - short_description:
+          label: Short description
+          kind: string
+          hint: Short text displayed in the modules list page
+      - description:
+          label: Description
+          kind: text
+          hint: Long text displayed in the module page
+      - license:
+          label: License
+          kind: string
+          hint: License options for the module
+      - url:
+          label: Url
+          kind: string
+          hint: Link to the payment page without http://
+      - logo:
+          label: Logo
+          kind: file
+          hint: "Image size: 90px by 90px"
+      contents:
+      - Locomotive Editor:
+          editor: Locomotive team
+          price: "23"
+          short_description: Build your Locomotive sites with your preferred IDE and import them once you are done.
+          description: |-
+            <p>The Locomotive editor is the perfect tool for your Locomotive websites. It lets you build fully Locomotive compliant websites with your prefered IDE without installing the whole Locomotive CMS stack. Your efficiency will be increased by a lot, we garantee you ! <br /> <br /> We listed for you all the benefits of using our editor:</p>
+            <ul>
+            <li><strong>Simple installation</strong>. MongoDB, RMagick, Rails, etc. are not required. You only need Ruby.</li>
+            <li><strong>Work with any IDE</strong>. We are sure you will agree with us that editing templates in a web browser can be a pain.</li>
+            <li><strong>Define the custom content types</strong>. You create your content types in a YAML format.</li>
+            <li><strong>Write your CSS with SASS</strong>. Are you looking for more efficiency? We integrated <a href="http://sass-lang.com/">SASS</a> for you.</li>
+            <li><strong>Test your sites instantly</strong>. Just fire up your browser and you will see your changes.</li>
+            <li><strong>Export your sites easily</strong>. Once you are done with a site, simply zip the folder and import it to your Locomotive instance.</li>
+            <li><strong>Version your work</strong>. Your templates and assets live now on your desktop so you can use GIT, SVN or any versionning tool.</li>
+            <li><strong>Get frequently updates</strong>. Since we also develop sites like you do, we are always looking to improve and we have plenty of ideas to make this product even better in the future.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <p>What does that include when you purchase our editor ?</p>
+            <ul>
+            <li>The editor itself packaged as a Ruby gem</li>
+            <li>Free upgrades for 1 year</li>
+            <li>Free support for 1 year</li>
+            </ul>
+          license: Licence valid for one user only. <a href='mailto:support@locomotivecms.com'>Contact us</a> for bulk orders.
+          url: modules.locomotivecms.com/gems/locomotive_editor/buy
+          logo: /samples/modules/editor.png
+      - Statistics:
+          editor: Locomotive team
+          short_description: coming soon
+          logo: /samples/modules/stats.png
+      - Recurring Billing:
+          editor: Locomotive team
+          short_description: coming soon
+          description: Lorem ipsum
+          logo: /samples/modules/recurly.png
+    Features screenshots:
+      name: Features screenshots
+      order_by: _position_in_list
+      order_direction: asc
+      slug: features
+      highlighted_field_name: name
+      fields:
+      - long_name:
+          label: Long name
+          kind: string
+      - short_description:
+          label: Short description
+          kind: text
+      - long_description:
+          label: Long description
+          kind: text
+      - thumb:
+          label: Thumb screenshot
+          kind: file
+      - popup:
+          label: Popup
+          kind: boolean
+          hint: Enable the popup used to display the large screenshot
+      - home:
+          label: Home page
+          kind: boolean
+          hint: Is this feature displayed in the home page ?
+      - no_screenshot:
+          label: No screenshot
+          kind: boolean
+          hint: In case we do not have a vignette for this feature
+      - name:
+          required: true
+          label: Name
+          kind: string
+      - source:
+          required: true
+          label: Source
+          kind: file
+      contents:
+      - Custom content:
+          source: /samples/features/cc_large.jpg
+          long_name: Custom content types
+          short_description: "Define your own content types: posts, events, videos..."
+          long_description: |
+            With most CMS, everything has to be blog posts (or pages, or articles) and building anything else requires hacks and plug-ins.
+            <br/>Locomotive is different: it doesn't impose any specific data structure. Need a page for your band's discography?
+            <br/>Create a new "recording" content type with a title, year, album cover, and track listing.
+            <br/>Our custom content types are even enough flexible to build a contact form.
+
+          thumb: /samples/features/cc_thumb.png
+          popup: true
+          home: true
+      - Multiple Sites:
+          source: /samples/features/ms_large.jpg
+          long_name: Multi sites support
+          short_description: Manage multiple sites with only one Locomotive install.
+          long_description: |
+            With a single instance of Locomotive, you can manage as many websites as your server can physically handle.
+            <br/>Deploying a website becomes just a matter of pointing your website domain to your Locomotive server. No webserver tweaking, no application rebooting at all.
+
+          thumb: /samples/features/ms_thumb.png
+          popup: true
+          home: true
+      - Templates:
+          source: /samples/features/coming_soon.png
+          long_name: Template inheritance with Liquid
+          short_description: Liquid templating language
+          long_description: |
+            No need to learn one more weird syntax. We use Liquid, the most common templating language in Ruby. With <a href="http://www.liquidmarkup.org/">Liquid</a>, templates won't affect the security of your platform, and its syntax is simple to learn.
+            <br/>Of course, since we are always looking for ways to improve things, we also tweaked it a lot.
+            For instance, we added the notion of template inheritance that we took from <a href="http://docs.djangoproject.com/en/dev/topics/templates/">Python</a>.
+            And we wrote a large collection of useful helper tags covering a large number of needs: google analytics snippet, pagination snippet for collections, helper to reach an
+            external webservice and display contents from it, etc.
+
+          no_screenshot: true
+      - Sexy UI:
+          source: /samples/features/ui_large.jpg
+          long_name: Great user experience
+          short_description: Enjoy using a simple, clear and beautiful user interface.
+          long_description: |
+            We believe that user experience should not be get the short end of the stick in an open source application. So we put a lot of time into the user interface and global experience,
+            and we often tweak things until they're just right.
+            <br/>For instance, we recently added the CTRL+S shortcut to save a page in AJAX without refreshing.
+
+          thumb: /samples/features/ui_thumb.png
+          popup: true
+          home: true
+      - Inline Editing:
+          source: /samples/features/coming_soon.png
+          long_name: Inline front-end editing
+          short_description: Browse your site and edit a page at the same time.
+          long_description: |
+            When we discovered <a href="http://www.aloha-editor.org/">Aloha-Editor</a>, a very powerful and promising browser editor named, it was instantly clear for us that we had to integrate it into Locomotive !
+            <br/>So Locomotive users can now define editable regions in their templates, and those regions can be edited by the end user directly from the page he's viewing.
+
+          thumb: /samples/features/coming_soon.png
+          home: true
+      - Ruby On Rails:
+          source: /samples/features/rails.png
+          short_description: Locomotive runs on the most powerful web framework.
+          long_description: |
+            We know that most people just want something that works, and don't care if it's written in Python, PHP, or Cobol.
+            But in the case of Locomotive, we think its language is a huge asset.
+            <br/>We built Locomotive with <a href="http://www.rubyonrails.org">Ruby on Rails 3</a>, which gives developers the ability to build their own application on top of the Locomotive engine.
+            <br/>This means that Locomotive can be integrated in a wide range of applications Want to develop your own hosting websites platform? No problem!
+
+          thumb: /samples/features/rails.png
+          home: true
+      - In The Cloud:
+          source: /samples/features/heroku.png
+          short_description: Host Locomotive with Heroku, S3 and MongoHQ!
+          long_description: |
+            Since we wanted people to be able to install Locomotive without setting up a server, we decided that Locomotive would run on <a href="http://www.heroku.com/">Heroku</a>, the famous ruby cloud platform.
+            What's more, the database can also be hosted in the cloud (thanks to <a href="https://mongohq.com/">MongoHQ</a>),
+            and all the files uploaded from Locomotive are stored on <a href="http://aws.amazon.com/s3/">Amazon S3</a>.
+            <br/>With a such combination of powerful cloud services, we are able to host several websites for a couple of cents per month! But, of course, you are free to install on your server too !
+
+          thumb: /samples/features/heroku.png
+          home: true

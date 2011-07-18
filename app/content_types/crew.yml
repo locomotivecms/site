@@ -1,0 +1,35 @@
+description: Members of the Locomotive team
+name: Crew
+order_by: _position_in_list
+order_direction: asc
+slug: crew
+highlighted_field_name: name
+fields:
+- name:
+    label: Name
+    kind: string
+    hint: full name of the member
+- title:
+    label: Title
+    kind: string
+    hint: position in the team
+- company:
+    label: Company
+    kind: string
+    hint: company she/he works for
+- company_url:
+    label: Company url
+    kind: string
+    hint: Url of the company above
+- bio:
+    label: Bio
+    kind: text
+    hint: Short biography
+- plate:
+    label: Plate
+    kind: file
+    hint: Image
+- picture:
+    label: Picture
+    kind: file
+    hint: Image (in the about us pagem), 154px x 180px

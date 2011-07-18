@@ -1,0 +1,59 @@
+{% extends 'parent' %}
+
+{% block page_inner %}
+
+<h4>Assigns</h4>
+
+<p>Used to assign a value to a variable.</p>
+
+<pre><code><strong>&#123;&#37; assign article = contents.news.first &#125;&#125;</strong>
+&lt;h3&gt;<strong>&#123;&#123; article.title &#125;&#125;</strong>&lt;/h3&gt;
+&lt;p&gt;<strong>&#123;&#123; article.body &#125;&#125;</strong>&lt;/p&gt;</code></pre>
+
+<hr />
+
+<h4>If, Else, Unless</h4>
+
+<p>Boolean logic operations are available on all objects.</p>
+
+<pre><code><strong>&#123;&#37; if feature.title &#37;&#125;</strong> 
+  <strong>&#123;&#123; feature.title &#125;&#125;</strong>
+<strong>&#123;&#37; unless feature.body &#37;&#125;</strong>
+  feature has no content
+<strong>&#123;&#37; else &#37;&#125;</strong>
+  <strong>&#123;&#123; feature.body &#125;&#125;</strong>
+<strong>&#123;&#37; endif &#37;&#125;</strong></code></pre>
+
+<hr />
+
+<h4>For</h4>
+
+<p>Loop over a collection.</p>
+
+<pre><code><strong>&#123;&#37; for item in array &#37;&#125;</strong> 
+  <strong>&#123;&#123; item &#125;&#125;</strong>
+<strong>&#123;&#37; endfor &#37;&#125;</strong></code></pre>
+
+<hr />
+
+<h4>Cycle</h4>
+
+<p>Output the next option in a group on each call.</p>
+
+<pre><code>
+<strong><em>input</em></strong>
+  <strong>&#123;&#37; cycle 'group 1': 'blue', 'green', 'red' &#37;&#125;</strong>&lt;br/&gt;
+  <strong>&#123;&#37; cycle 'group 1': 'blue', 'green', 'red' &#37;&#125;</strong>&lt;br/&gt; 
+  <strong>&#123;&#37; cycle 'group 2': 'blue', 'green', 'red' &#37;&#125;</strong>&lt;br/&gt; 
+  <strong>&#123;&#37; cycle 'group 1': 'blue', 'green', 'red' &#37;&#125;</strong>
+
+<strong><em>result</em></strong>
+  blue
+  green
+  blue
+  red
+</code></pre>
+
+<hr />
+
+{% endblock %}

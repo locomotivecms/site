@@ -1,0 +1,19 @@
+description: Companies using Locomotive on a daily basis
+name: Companies
+order_by: _position_in_list
+order_direction: asc
+slug: companies
+highlighted_field_name: name
+fields:
+- name:
+    label: Name
+    kind: string
+    hint: Company name
+- url:
+    label: Url
+    kind: string
+    hint: Website url (without the http://)
+- logo:
+    label: Logo
+    kind: file
+    hint: "Image max width: 240px"
