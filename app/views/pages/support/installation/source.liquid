@@ -16,6 +16,8 @@ cd locomotive</code></pre>
 <p class="step"><em>3.</em> Edit the Locomotive settings.</p>
 <pre class="shell"><code class="shell">mate config/initializers/locomotive.rb</code></pre>
 <p>Note: If you run Locomotive in local and with the multi-sites mode on, do not forget to update your /etc/hosts file accordingly.</p>
+<p>By default, Locomotive uses Amazon S3 in production. To change it, modify the carrierwave initialization file.</p>
+<pre class="shell"><code class="shell">mate config/initializers/carrierwave.rb</code></pre>
 
 <p class="step"><em>4.</em> You also may want to change your mongodb connection settings.</p>
 <pre class="shell"><code class="shell">mate config/mongoid.yml</code></pre>
