@@ -22,7 +22,7 @@
     uri: &lt;%= ENV['MONGOHQ_URL'] %&gt;</code></pre>
 
 <p class="step"><em>4.</em> Locomotive needs to send emails and Heroku provides a nice way to send emails for free without configuring a whole mail server on your own. You can find more information <a href="http://docs.heroku.com/sendgrid">here</a></p>
-<pre class="shell"><code class="shell">heroku addons:add sendgrid:free</code></pre>
+<pre class="shell"><code class="shell">heroku addons:add sendgrid:starter</code></pre>
 <p>Add the following lines in your <b>config/production.rb</b> file.
   <pre class="shell"><code class="ruby">ActionMailer::Base.smtp_settings = {
     :address        => "smtp.sendgrid.net",
