@@ -23,46 +23,66 @@
 
 <p class="step"><em>4.</em> Locomotive needs to send emails and Heroku provides a nice way to send emails for free without configuring a whole mail server on your own. You can find more information <a href="http://docs.heroku.com/sendgrid">here</a></p>
 <pre class="shell"><code class="shell">heroku addons:add sendgrid:starter</code></pre>
-<p>Add the following lines in your <b>config/production.rb</b> file.
+<p>Add the following lines in your <b>config/environments/production.rb</b> file.
   <pre class="shell"><code class="ruby">ActionMailer::Base.smtp_settings = {
     :address        => "smtp.sendgrid.net",
     :port           => "25",
     :authentication => :plain,
     :user_name      => ENV['SENDGRID_USERNAME'],
     :password       => ENV['SENDGRID_PASSWORD'],
-    :domain         => ENV['SENDGRID_DOMAIN']
-  }</code></pre>
-  
+    :domain         => 'heroku.com'
+  }
+  ActionMailer::Base.delivery_method = :smtp</code></pre>
+
   <p class="step"><em>5.</em> Configure Heroku to work with your Amazon S3 credentials</p>
   <pre class="shell"><code class="shell">heroku config:add S3_KEY_ID=&lt;your s3 key id&gt;<br/>heroku config:add S3_SECRET_KEY=&lt;your s3 secret key&gt;<br/>heroku config:add S3_BUCKET=&lt;your s3 bucket name&gt;</code></pre>
-  
+
   <p class="step"><em>6.</em> Push the assets used by the Locomotive back-office to Amazon S3 for better performances (<a href="https://github.com/railsjedi/jammit-s3">Jammit-S3</a>).</p>
   <pre class="shell"><code class="shell">export S3_KEY_ID=&lt;your s3 key id&gt;<br/>export S3_SECRET_KEY=&lt;your s3 secret key&gt;<br/>export S3_BUCKET=&lt;your s3 bucket name&gt;</code></pre>
   <pre class="shell"><code class="shell">jammit-s3 --force</code></pre>
   <p>If you do not want to push the assets in S3 but leave them in your application instead, remove the lines about S3 in the <b>config/assets.yml</b> file and run the following command</p>
   <pre class="shell"><code class="shell">jammit --force</code></pre>
-  
+
   <p class="step"><em>7.</em> Edit your Locomotive config file.</p>
   <pre class="shell"><code class="shell">mate config/initializers/locomotive.rb</code></pre>
   <p>Uncomment the following lines</p>
   <pre class="shell"><code class="ruby">config.heroku = { :login => '&lt;my heroku login&gt;', :password => '&lt;my heroku password&gt;' }</code></pre>
-  
+
   <p><b>Note:</b> the following configuration is in the case you host a single website. If you want to use Locomotive as a multi-sites platform, you have to uncomment the lines relative to the multi-sites option and set your main domain name (ex: mycmsplatform.com). Also, do not forget to enable the wildcard domains option in Heroku ($5/mo): <a href="http://docs.heroku.com/custom-domains">http://docs.heroku.com/custom-domains</a>.
-    
-    <p class="step"><em>8.</em> Configure DelayedJob <b><span class="caps">(OPTIONAL)</span></b>. Locomotive needs DJ for the theme import module in order to avoid the application to slow down when an user uploads a new theme. If you do not have a lot of traffic, we suggest you to disable DJ (disabled by default actually). Anyway, if you do want it, apply the following instructions.</p>
-    <pre class="shell"><code class="shell">mate Gemfile</code></pre>
-    <p>Add the lines</p>
-    <pre class="shell"><code class="ruby">gem 'dalli'<br/></code></pre>
-    <pre class="shell"><code class="shell">mate config/environments/production.rb</code></pre>
-    <pre class="shell"><code class="ruby">config.cache_store = :dalli_store</code></pre>
-    
-    <p class="step"><em>9.</em> Launch it !</p>
-    <pre class="shell"><code class="shell">git add .<br/>git commit -am "launch it"<br/>git push heroku master</code></pre>
-    
-    <p>Then, visit your application</p>
-    <pre class="shell"><code class="shell">heroku open</code></pre>
-    
-    <p>Follow the instructions.</p>
-    
-    {% endblock %}
-    
+
+  <p class="step"><em>8.</em> Remove X-Sendfile from your <strong>config/environments/production.rb</strong></p>
+
+  <p>Comment out the <strong>x_sendfile_header</strong> lines like so...
+
+  <pre class="code"><code class="ruby">
+    Locomotive::Application.configure do
+      #.........
+         # Specifies the header that your server uses for sending files
+         #config.action_dispatch.x_sendfile_header = "X-Sendfile"
+
+         # For nginx:
+         # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
+
+         # If you have no front-end server that supports something like X-Sendfile,
+         # just comment this out and Rails will serve the files
+      #.........
+    end  
+  </code></pre>
+
+  <p class="step"><em>9.</em> Configure DelayedJob <b><span class="caps">(OPTIONAL)</span></b>. Locomotive needs DJ for the theme import module in order to avoid the application to slow down when an user uploads a new theme. If you do not have a lot of traffic, we suggest you to disable DJ (disabled by default actually). Anyway, if you do want it, apply the following instructions.</p>
+  <pre class="shell"><code class="shell">mate Gemfile</code></pre>
+  <p>Add the lines</p>
+  <pre class="shell"><code class="ruby">gem 'dalli'<br/></code></pre>
+  <pre class="shell"><code class="shell">mate config/environments/production.rb</code></pre>
+  <pre class="shell"><code class="ruby">config.cache_store = :dalli_store</code></pre>
+
+  <p class="step"><em>10.</em> Launch it !</p>
+  <pre class="shell"><code class="shell">git add .<br/>git commit -am "launch it"<br/>git push heroku master</code></pre>
+
+  <p>Then, visit your application</p>
+  <pre class="shell"><code class="shell">heroku open</code></pre>
+
+  <p>Follow the instructions.</p>
+
+  {% endblock %}
+
