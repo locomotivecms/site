@@ -22,12 +22,16 @@ Allow a website user to create a content type.</p>
 <pre><code>&lt;form action="<strong>&#123;&#123; contents.somethings.api.create &#125;&#125;</strong>" method="post">
   &lt;fieldset&gt;
     &lt;ol&gt;
+      &lt;li&gt;&lt;input type="hidden" name="success_callback" value="/" /&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;input type="hidden" name="error_callback" value="/" /&gt;&lt;/li&gt;
       &lt;li&gt;&lt;input name="content[name]"  id="somethings_name" /&gt;&lt;/li&gt;
       &lt;li&gt;&lt;input name="content[email]" id="somethings_email" /&gt;&lt;/li&gt;
       &lt;li&gt;&lt;input type="submit" value="Save" /&gt;&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/fieldset&gt;
 &lt;/form&gt;</code></pre>
+
+<p>The <strong>success_callback</strong> and <strong>error_callback</strong> point to where one should be redirected if the resource (<em>somethings</em> in this case) is created or if an error occurs on creation.</p>
 
 <p><em>Match this form up with javascript to complete the experience (<a href="https://gist.github.com/870126" title="contact Gist">check out this gist</a>)</em></p>
 
