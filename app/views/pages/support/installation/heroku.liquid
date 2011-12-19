@@ -30,8 +30,10 @@
     :authentication => :plain,
     :user_name      => ENV['SENDGRID_USERNAME'],
     :password       => ENV['SENDGRID_PASSWORD'],
-    :domain         => ENV['SENDGRID_DOMAIN']
-  }</code></pre>
+    :domain         => 'heroku.com'
+  }
+  ActionMailer::Base.delivery_method = :smtp
+  </code></pre>
   
   <p class="step"><em>5.</em> Configure Heroku to work with your Amazon S3 credentials</p>
   <pre class="shell"><code class="shell">heroku config:add S3_KEY_ID=&lt;your s3 key id&gt;<br/>heroku config:add S3_SECRET_KEY=&lt;your s3 secret key&gt;<br/>heroku config:add S3_BUCKET=&lt;your s3 bucket name&gt;</code></pre>
