@@ -33,18 +33,25 @@
     :domain         => ENV['SENDGRID_DOMAIN']
   }</code></pre>
   
-  <p class="step"><em>5.</em> Configure Heroku to work with your Amazon S3 credentials</p>
-  <pre class="shell"><code class="shell">heroku config:add S3_KEY_ID=&lt;your s3 key id&gt;<br/>heroku config:add S3_SECRET_KEY=&lt;your s3 secret key&gt;<br/>heroku config:add S3_BUCKET=&lt;your s3 bucket name&gt;</code></pre>
+  <p class="step"><em>5.</em> Configure Heroku to work with your Amazon S3 credentials <br/><br/>
+  (5.1) First, store your S3 credentials in your locals var (you might use it again next step):
+  </p>
   
-  <p class="step"><em>6.</em> Push the assets used by the Locomotive back-office to Amazon S3 for better performances (<a href="https://github.com/railsjedi/jammit-s3">Jammit-S3</a>).</p>
   <pre class="shell"><code class="shell">export S3_KEY_ID=&lt;your s3 key id&gt;<br/>export S3_SECRET_KEY=&lt;your s3 secret key&gt;<br/>export S3_BUCKET=&lt;your s3 bucket name&gt;</code></pre>
+  <p>You can check typing 'echo $S3_KEY_ID'.<br/> (5.2) Then, push these credentials to Heroku :</p>
+  <pre class="shell"><code class="shell">heroku config:add S3_KEY_ID=$S3_KEY_ID<br/>heroku config:add S3_SECRET_KEY=$S3_SECRET_KEY<br/>heroku config:add S3_BUCKET=$S3_BUCKET</code></pre>
+  
+  <p class="step"><em>6.</em> Generate the assets ( and push them to S3 )<br/>
+    As long as Heroku file system <a href="http://devcenter.heroku.com/articles/read-only-filesystem">is read-only limited</a>, pushing assets to AWS S3 is required for inline customisation feature. Furthermore, S3 will enhance your locomotivecms performances with <a href="https://github.com/railsjedi/jammit-s3">Jammit-S3</a>.</p>
+  
   <pre class="shell"><code class="shell">jammit-s3 --force</code></pre>
+  <p>Notice that this command use your S3 credentials exported in 5.1</p>
   <p>If you do not want to push the assets in S3 but leave them in your application instead, remove the lines about S3 in the <b>config/assets.yml</b> file and run the following command</p>
   <pre class="shell"><code class="shell">jammit --force</code></pre>
   
   <p class="step"><em>7.</em> Edit your Locomotive config file.</p>
   <pre class="shell"><code class="shell">mate config/initializers/locomotive.rb</code></pre>
-  <p>Uncomment the following lines</p>
+  <p>Uncomment the following line and replace your Heroku id and password</p>
   <pre class="shell"><code class="ruby">config.heroku = { :login => '&lt;my heroku login&gt;', :password => '&lt;my heroku password&gt;' }</code></pre>
   
   <p><b>Note:</b> the following configuration is in the case you host a single website. If you want to use Locomotive as a multi-sites platform, you have to uncomment the lines relative to the multi-sites option and set your main domain name (ex: mycmsplatform.com). Also, do not forget to enable the wildcard domains option in Heroku ($5/mo): <a href="http://docs.heroku.com/custom-domains">http://docs.heroku.com/custom-domains</a>.
