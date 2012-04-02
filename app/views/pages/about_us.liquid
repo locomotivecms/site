@@ -1,11 +1,20 @@
-{% extends support %}
+{% extends parent %}
 
 {% block page_wrapper_class %}wo-sidebar{% endblock %}
 
 {% block page_header %}
-<a href="http://demo.locomotivecms.com/admin" class="btn" id="see-demo">Try demo</a>
-<a href="/support/installation" class="btn" id="get-started">Get started</a>
-{% nav 'index', id: 'main-nav' %}
+
+  <!-- <a href="http://demo.locomotivecms.com/admin" class="btn" id="see-demo">Try demo</a> -->
+  <a href="http://doc.locomotivecms.com" class="btn" id="get-started">Get started</a>
+
+  {% nav 'index', id: 'main-nav' %}
+
+{% endblock %}
+
+{% block page_title %}
+
+  <h2>{{ page.title }}</h2>
+
 {% endblock %}
 
 {% block page_inner %}
@@ -18,32 +27,32 @@
 
 <div class="unit size2of3">
   <h4>The story</h4>
-  
+
   <div class="text">
     <p>Like many open source projects, Locomotive began as a way of scratching our own itch. As developers in web agencies, we were frustrated by the lack of options for creating small, static sites. The options were either to use plain HTML files or create a whole new Rails project.</p>
-    
+
     <br/>
-    
+
     <p>So we began to think about a new kind of CMS. We coded a lot of different solutions, spent a lot of time trying out many concepts, and in the process learned a lot about what the perfect CMS should look like.</p>
-    
+
     <br/>
-    
+
     <p>Our dream CMS would allow us to organize data without creating Rails models and would handle multiple sites without setting up a new server or a new environment each time we needed a website. And when we heard about NoSQL databases, it was a kind of a revelation for us, so we decided to use MongoDB for Locomotive.</p>
-    
+
     <br/>
-    
+
     <p>Since then, we've polished the user interface, added internationalization (and many other features), and implemented a module system to make Locomotive even more flexible.</p>
-    
+
     <br/>
-    
+
     <p>So that's our story and, hopefully, that's just the start of it !</p>
-    
+
   </div>
-  
+
   <div class="sep">&nbsp;</div>
-  
+
   <h4>Meet the crew</h4>
-  
+
   <ul id="crew">
     {% for person in contents.crew %}
     <li class="person {% cycle 'first', 'second', 'third' %}">
@@ -52,19 +61,21 @@
       <h5>{{ person.title }}</h5>
       <h6><a href="{{ person.company_url }}">{{ person.company }}</a></h6>
       <div class="body">{{ person.bio }}</div>
-    </li>{% endfor %}
+    </li>
+    {% cycle separator: '', '', '<li class="clear"></li>' %}
+    {% endfor %}
     <li class="clear"></li>
   </ul><div class="sep">&nbsp;</div>
-  
+
   <!-- <h4>Who is using LocomotiveCMS ?</h4>
-  
+
   <p>TODO</p> -->
-  
+
 </div>
 
 <div class="unit size1of3 lastUnit">
   <!-- <h4>Locomotive in the news</h4> -->
-  
+
   <!-- <ul id="news">
   {% for news in contents.news %}
   <li>
@@ -73,9 +84,9 @@
 </li>
   {% endfor %}
 </ul> -->
-  
+
   <h4>Who is using our CMS ?</h4>
-  
+
   <ul id="companies">
     {% for company in contents.companies %}
     <li>
@@ -83,11 +94,11 @@
     </li>
     {% endfor %}
   </ul>
-  
+
   <!-- <div class="sep">&nbsp;</div>
-  
+
   <h4>Jump on our bandwagon!</h4>
-  
+
   <div id="press-kit">
   <a href="http://www.yahoo.fr"><img src="{{ 'buttons/presskit.png' | theme_image_url }}" alt="Download press kit"/></a>
   <em>Logo and screenshots (.zip, 17 mo)</em>
@@ -95,4 +106,10 @@
 </div>
 
 <div class="clear"></div>
+{% endblock %}
+
+{% block page_footer %}
+
+  <div class="footer">&nbsp;</div>
+
 {% endblock %}

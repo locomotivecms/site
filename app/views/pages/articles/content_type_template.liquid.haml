@@ -1,0 +1,31 @@
+{% extends 'about_us' %}
+
+{% block page_title %}
+
+%h2
+  Blog
+
+{% endblock %}
+
+{% block page_inner %}
+
+%h3 Stay up to date on the LocomotiveCMS news.
+
+.full-article
+
+  %h3
+    {{ article.title }}
+
+    %small
+      %a{ :href => '/articles' } Back to the articles
+
+
+  %p.date
+    {{ article.posted_at | localized_date: '%A %d %B %Y', 'en' }}
+
+  .body
+    {{ article.body }}
+
+  {% include 'disqus' %}
+
+{% endblock %}

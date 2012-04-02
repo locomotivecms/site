@@ -1,0 +1,423 @@
+Meet us on IRC !:
+  :_permalink: meet-us-on-irc
+  :body: ! '<p>Great news! So many of you have been looking to connect in real time
+    with the Locomotive team and community, we really wanted to create a centralized
+    place for it.</p>
+
+    <p>So, now we have the official IRC channel <strong>#locomotivecms</strong> at
+    <a href="http://irc.freenode.net/">irc.freenode.net</a>! Here&#8217;s a link to
+    chat right now: <a href="http://webchat.freenode.net/"><a href="http://webchat.freenode.net/">http://webchat.freenode.net/</a></a></p>
+
+    <p>We&#8217;ll generally have someone in there to answer questions, and we encourage
+    you to do the same. Stop by, chat, get help, and help other Locomotive users!</p>
+
+    <p>See you there!</p>'
+  :posted_at: 2011-07-22
+  :tumblr_id: '7927822953'
+! 'Changelog #1':
+  :_permalink: changelog-1
+  :body: ! '<p>Here is a pretty exhaustive list of what the BIG MERGE includes:</p>
+
+    <ul><li>upgrade the list of gems: Rails 3.0.9, Devise 1.3.4, Rake 0.9.2, &#8230;etc </li>
+
+    <li>roles with the CanCan gem<br/><em>note</em>: 3 kind of roles. <strong>Administrator</strong>
+    (they can do everything), <strong>Designer</strong> (like Administrator but applied
+    on a single website), <strong>Author</strong> (only edit pages and contents) </li>
+
+    <li>resizing images on the fly (ticket #79)</li>
+
+    <li>tinyMCE enhancements (ticket #99):<br/>- the locomotive image plugin has been
+    replaced by the locomotive media plugin which allows you to upload any kind of
+    files<br/>-  fullscreen mode, very convenient to edit a long text </li>
+
+    <li>remove asset_collections<br/><em>note</em>: the asset collections tab was
+    confusing for users (and me too). Actually, it&#8217;s like a content type with
+    a different kind of view in the back-office (the galery view is not implemented
+    yet)</li>
+
+    <li>use dashes instead of underscores (ticket #56):<br/> <em>note</em>: pages
+    (slug) and contents (permalink) uses the parameterize String method.</li>
+
+    <li>SEO (tickets #57 &amp; #90):<br/> - index and index/ are the same page now
+    (301 redirection)<br/> - add a seo_title for both the site, the page and content
+    objects.<br/> - write a {% seo %} liquid tag to display the title, meta (description
+    and keywords) tags depending on the context</li>
+
+    <li>fix issue about httparty (ticket #91)</li>
+
+    <li>check if custom contents are organized in a category when displaying the select
+    box for the has_one / has_many fields</li>
+
+    <li>add 2 liquid global variables in the page conext: current time and date. Dates
+    from a custom content are now comparable</li>
+
+    <li>site export (but editable_elements inside a page are not correctly handled
+    for now)</li>
+
+    <li>rake task to import a remote template</li>
+
+    <li>UI tweaks, a quick list of some of them:<br/>- better hints for the theme
+    asset new/edit action<br/>- slight modifications on forms: separator between fields,
+    text shadow, error message redesigned, &#8230;etc<br/>- quick link to edit directly
+    a model from the submenu </li>
+
+    <li>new sites picker (if the multi_sites mode is enabled and correctly set up)</li>
+
+    <li>the robots.txt can be edited directly from the back-office (site settings)
+    (ticket #57)</li>
+
+    <li>2 new languages:<br/>- dutch (#92)<br/> - spanish (#103)</li>
+
+    <li>a lot of internal refactoring as well as a ton of bug corrections</li>
+
+    </ul><p>Checkout the following link for the upgrade procedure:<br/><a href="http://www.locomotivecms.com/support/howto/upgrade"><a
+    href="http://www.locomotivecms.com/support/howto/upgrade">http://www.locomotivecms.com/support/howto/upgrade</a></a> </p>
+
+    <p>I&#8217;d like to thank all the contributors, users and developers who reported
+    bugs / problems or just simply suggested relevant improvements. Seriously folks,
+    <strong>THANK YOU SO MUCH&#160;!</strong></p>
+
+    <p>A very special and big thank to 2 companies. The first one, a german company
+    (<a href="http://www.designhunger.de/">designhunger</a>) run by Bernd Hauser,
+    funded the has_one / has_many feature. If you are in touch with him, please thank
+    him, he deserves it :-) </p>
+
+    <p>The other one is a startup from San Francisco named <a href="http://bushi.do">Bushi.do</a>.
+    Sean and Kevin, the 2 owners behind this company, have been helping us so much
+    for a couple of months now. They provide us a financial support so that we can
+    be focused as much as possible on the CMS. On top of that, they provide us a great
+    help for the documentation (believe me they are working hard to deliver a top
+    notch FAQ) and they also advise us on the commercial side of LocomotiveCMS. <br/>Working
+    with them led, in a first time, to the update to the demo section. Before our
+    partnership, the demo section was just a simple application with the same credentials
+    for everyone and without the ability to edit the demo website. Now, anyone can
+    launch as many LocomotiveCMS websites as they want and do everything possible
+    with them&#160;!<br/>The bushi.do people rock and I love their product&#160;! </p>
+
+    <p>To sum up things, I feel so great about LocomotiveCMS&#160;!</p>'
+  :posted_at: 2011-07-20
+  :tumblr_id: '7820932774'
+Introducing our modules platform:
+  :_permalink: introducing-our-modules-platform
+  :body: ! '<p>LocomotiveCMS is a very young open source project but it gets more
+    and more users each week. More users also means that we have to deal with more
+    work like answering questions, look into feature requests, fixing bugs of course,
+    &#8230;etc. That&#8217;s the price of fame&#160;! </p>
+
+    <p>Unfortunately, all of these tasks take a lot of time. At the end, we spend
+    more time on LocomotiveCMS than on our other (paid) projects which can compromise
+    the future of our CMS.</p>
+
+    <p>That being said, the situation also made us think about how we were going to
+    monetize LocomotiveCMS. We had in mind a couple of obvious ideas like providing
+    a hosting platform for example. <br/>In fact, we are already collaborating with
+    a startup (<a title="bushi.do" href="http://bushi.do">bushi.do</a>) which its
+    activity is to who offers hosting solutions for any open source project. We&#8217;ll
+    talk about it very soon. Believe us, it i&#8217;s going to be huge&#160;!</p>
+
+    <p>Since we already developed a <a title="Locomotive Editor" href="http://www.locomotivecms.com/modules/locomotive_editor">command
+    line tool</a> to quickly build Locomotive websites, we came to the conclusion
+    that it would be simpler for us, in terms of development, to sell it.<br/>Moreover,
+    our tool was used successfully by a couple of early adopters. Besides, it became
+    obvious we were going to sell other tools or modules, for the reason that our
+    philosophy on this project is to keep the core engine as simple as possible. One
+    thing leading to another, we ended up with the modules marketplace solution.</p>
+
+    <p>The concept behind is quite simple. Let&#8217;s say, as a developer and LocomotiveCMS
+    user, you miss a functionality which has a business value for you and certainly
+    for other people / companies. No problem&#160;! You develop it with our help (that
+    way we validate your idea), we sell it directly from the LocomotiveCMS official
+    website and we share the revenues. The percentage will depend on our contribution
+    to each module&#8217;s development.</p>
+
+    <p>Does our modules marketplace break the spirit of the open source&#160;? We
+    don&#8217;t think so.<br/> First, there is nothing preventing people to use LocomotiveCMS,
+    the core engine remaining free of charge and we won&#8217;t force developers to
+    sell their modules if they want them to be free. <br/>Secondly, we do need revenues
+    to regularly continue the development of Locomotive.<br/> And lastly, we do like
+    the idea to imply developers in the whole business environment.</p>
+
+    <p>One more thing :-) We looked for a way to sell ruby gems because all our modules
+    will be ruby gems but we didn&#8217;t find anything. <br/>So yes, we built our
+    own platform named <a title="GemForSale" href="http://www.gemforsale.com">gemforsale</a>&#160;!
+    For now, the marketplace functionality is not totally implemented but the basic
+    functionalities are here.</p>
+
+    <p>We strongly believe that selling gems will help a lot of open source projects
+    to generate revenues.</p>
+
+    <p>We are pretty excited by the way Locomotive is growing and we believe it&#8217;s
+    going to be a major CMS soon, thanks to our users and contributors&#160;!</p>
+
+    <p>By the way, we&#8217;d be glad to get feedback and ideas from you.</p>'
+  :posted_at: 2011-05-04
+  :tumblr_id: '5189901417'
+Locomotive status:
+  :_permalink: locomotive-status
+  :body: ! '<p>First of all, I would to thank all of you who sent us very kind and
+    encouraging messages, helped us to fix issues (a lot, let&#8217;s face the truth&#160;!)
+    or developed new features. Actually, we were not expecting such a positive wave.
+    For instance, the Locomotive back-office has been translated in German (thanks
+    Bernd&#160;!), French and Brazilian Portuguese (thanks Raphael&#160;!). Believe
+    me, it is always a great moment when you see your app in another language.</p>
+
+    <p>More than that, some companies adopted Locomotive on a daily basis. <a href="http://www.thefrontiergroup.com.au/">The
+    Frontier Group</a>, a web design and development company, built many websites
+    powered by our engine. The feedbacks given by 3 of their employees (Dirk, Mario
+    and Karl) were tremendous helpful for our CMS. They did an amazing job by fixing
+    a lot of issues and answering questions from the community. <br/>I also could
+    name John, Bernd, Raphael, Benjamin for their great help. I hope actually I don&#8217;t
+    forget someone :-) </p>
+
+    <p>By the way, folks, if you built a site with Locomotive and you want to show
+    proudly your work, send us an email, we will feature you on our blog (+ twitter
+    as well).</p>
+
+    <p><strong>Will there be a roadmap&#160;?</strong></p>
+
+    <p>I don&#8217;t think so. At first, I tried to release specific versions of the
+    Locomotive gem. But, pretty quickly, it seemed clear to me that it does make any
+    sense since, unfortunately, there still were bugs to be fixed the day after, making
+    the release quickly outdated. That is mainly because Locomotive is still a young
+    project.</p>
+
+    <p>Anyway, I keep up-to-date a todo list for tasks / issues / new features. Let
+    me share the main ones with you. By the way, the order does not reflect the priority:</p>
+
+    <ul><li>documentation. [UPDATE] documentation about the liquid syntax is coming
+    soon.</li>
+
+    <li>duostack version. LocomotiveCMS should work with both Heroku and Duostack
+    only by specifying it in the locomotive.rb config file.</li>
+
+    <li>associations in the custom content types. simple at the beginning: belongs_to/has_many</li>
+
+    <li>internationalization. Pages, content types, assets have a different version
+    depending on the locale (specified in the url or the domain).</li>
+
+    <li>enhancement of the inline editing module. Uploading images is not implemented
+    for now for instance, &#8230;etc.</li>
+
+    <li>a better way to install locomotive in a mono-site mode.</li>
+
+    <li>dynamic image resizing. Only by using a special liquid tag, the image (images
+    from asset collections and content types) will be resized. {{ &#8216;foo.png&#8217;
+    | transform: &#8216;500x400#&#8217; | image_tag }}. Varnish + Rack.</li>
+
+    <li>moving all the Locomotive models into a brand new namespace. (Locomotive::Site,
+    Locomotive::Page, &#8230;etc). Crucial for a better integration in another Rails
+    app.</li>
+
+    <li>convert css into scss.</li>
+
+    <li>integration with an existing rails app. I wish Locomotive could be used as
+    the cms module of any Rails app.</li>
+
+    </ul><p>As you can see, nothing major (except for the &#8220;Internationalization&#8221;)
+    because I am following the same rules I apply since the beginning. Keep the core
+    as simple / light as possible and refine / refactor as often as possible. Besides,
+    I pay attention to the delivered code, or at least I try to.</p>
+
+    <p>My mojo&#160;? The development of new features should be only driven by the
+    need of them.</p>
+
+    <p><strong>Want to contribute&#160;?</strong></p>
+
+    <p>A lot of people asked me what was the best way to contribute to the project
+    and how they could help. My answer is quite simple. Use Locomotive for your websites
+    for real&#160;!!! If you need a feature or if you run into a bug, fork the project,
+    fix or implement and then submit your pull request on github.</p>
+
+    <p>Anyway, again, thanks to all of you who were enough patient to check Locomotive
+    despite the bugs and saw its great potential&#160;!</p>
+
+    <p><strong>What&#8217;s next&#160;?</strong></p>
+
+    <p>It seems that some people get worried about the durability of LocomotiveCMS
+    which is, in my point of view, a very pertinent question. <br/>First, as I mentioned
+    it at the beginning of the post, a lot of companies are using Locomotive meaning
+    that you will always find someone who can help you.<br/>Then and that&#8217;s
+    the beauty of the open source, you are not an hostage of a product. I mean, the
+    code is clear and can be easily modified.<br/>Lastly, things are moving fast for
+    Locomotive and we are going to announce some big news in the next weeks. I will
+    talk more about it in my next post. </p>
+
+    <p>choo-choo :-)</p>'
+  :posted_at: 2011-03-16
+  :tumblr_id: '3888198082'
+Beta release out:
+  :_permalink: beta-release-out
+  :body: ! '<p>Hi folks, </p>
+
+    <p>It&#8217;s been a long road to launch this beta. That was really tough to stop
+    adding new features and to be focus to release something. Yes, I had to struggle
+    against my nature but I managed at the end&#160;!</p>
+
+    <p>I spent a lot of time writing a good installation guide, especially for the
+    Heroku part. I hope it is clear enough. If it is not, feel free to send me your
+    suggestions at info@locomotivecms.com.</p>
+
+    <p>Besides, I added the <a href="http://www.locomotivecms.com/support/themes">themes
+    section</a>, which is useful if you want to try Locomotive with a real example.
+    <br/>I just took some nice templates from different gallery templates or blog
+    (thanks <a href="http://inspectelement.com/tutorials/code-a-backwards-compatible-one-page-portfolio-with-html5-and-css3/">Tom</a>
+    by the way&#160;!) and converted them for Locomotive. I suggest you to take a
+    look at them because you will understand how the Locomotive templates and the
+    other modules work.<br/>Actually, it is pretty easy to convert a html template
+    since I have a special tool for that. I call it the Locomotive Editor (fancy name,
+    isn&#8217;t it&#160;?). Basically, it is based on the locomotive engine bundled
+    in a Sinatra app but without mongodb and other stuff like the back-office for
+    instance. The edition of templates, contents and other assets can be done with
+    a simple text editor, Textmate in my case. Once I&#8217;m done with a theme, I
+    simply zip the folder and import it in Locomotive.<br/>For now, I don&#8217;t
+    plan to open source the editor. It depends on the way I&#8217;m going to &#8220;monetize&#8221;
+    Locomotive. Even if I&#8217;ve got several ideas, I&#8217;ve not taken a decision
+    yet.</p>
+
+    <p><strong>What are the next steps for Locomotive&#160;?</strong></p>
+
+    <p>First of all, I expect a lot from developers. I&#8217;m looking for feedbacks
+    and even for bugs to solve&#160;! <br/>On my side, I&#8217;m going to write tutorials.
+    The first one will be probably about how to create a custom content and use it
+    in a liquid template. </p>
+
+    <p><strong>You are a company and you want to use Locomotive to host a couple of
+    websites&#160;?</strong></p>
+
+    <p>Even if you build super sexy and big apps, you always have to manage some simple
+    websites for small clients. That&#8217;s not a problem anymore&#160;! I&#8217;m
+    willing to help companies which want Locomotive as their website hosting solution
+    for their clients. Locomotive is definitely a good fit for you&#160;! For instance,
+    I&#8217;ve got a single Locomotive instance running on Heroku and serving 3 websites
+    (<a href="http://www.locomotivecms.com"><a href="http://www.locomotivecms.com">http://www.locomotivecms.com</a></a>
+    is one of them).</p>
+
+    <p>I&#8217;m very excited to see how Locomotive&#8217;s going to turn out&#160;!
+    I&#8217;m sure it will help people a lot to build and edit websites. That&#8217;s
+    the reason why I created it.</p>'
+  :posted_at: 2011-01-04
+  :tumblr_id: '2594979158'
+Big thanks to Nicholas Young !:
+  :_permalink: big-thanks-to-nicholas-young
+  :body: ! '<p>I&#8217;d like to thank Nicholas Young who gives us the domain name
+    <a title="LocomotiveCMS" target="_blank" href="http://www.locomotivecms.com">locomotivecms.com</a>.</p>
+
+    <p>We didn&#8217;t ask for anything, he just sent us an email and told us he wanted
+    to help the project. </p>
+
+    <p>That&#8217;s very kind to him.</p>'
+  :posted_at: 2010-10-19
+  :tumblr_id: '1351634890'
+A fresh coat of paint:
+  :_permalink: a-fresh-coat-of-paint
+  :body: ! '<p>When Didier first approached me to work on a user interface for <a
+    href="http://www.locomotiveapp.org">Locomotive</a>, his content management system
+    (at the time still called NoCoffeeCMS), I thought it was a great opportunity to
+    finally design my ideal CMS interface. I’ve worked with Joomla, Wordpress, Textpattern,
+    and Expression Engine, and none of them had that perfect mix of features, flexibility,
+    and good design (although Wordpress and Expression Engine came pretty close).</p>
+
+    <!--more-->
+
+    <p>I was inspired by the tabs of <a href="http://www.potionfactory.com/thehitlist/">The
+    Hit List</a>, a Mac to-do app, and quickly came up with a first mockup, which
+    ended up being pretty close to the final product.</p>
+
+    <p><a href="http://sachagreif.com/wp-content/locomotive/lc-1-big.png"><img height="200"
+    width="500" src="http://www.sachagreif.com/wp-content/uploads/2010/08/lc-1.png"
+    title="lc-1" class="size-full wp-image-388 aligncenter"/></a></p>
+
+    <p>We tweaked the colors and buttons some more, and came up with the idea of assigning
+    a different color to each tab.</p>
+
+    <p><a href="http://sachagreif.com/wp-content/locomotive/lc-2-big.png"><img height="200"
+    width="500" src="http://www.sachagreif.com/wp-content/uploads/2010/08/lc-2.png"
+    title="lc-2" class="size-full wp-image-389 aligncenter"/></a></p>
+
+    <p>Around that time, we also came up with the name “Locomotive”. We liked how
+    it related to the Rails world, and evokes something powerful enough to pull a
+    lot of weight. I remember how I used to play Railroad Tycoon (now renamed <a href="http://www.2kgames.com/railroads/railroads.html">Railroads</a>)
+    as a kid, and went looking for locomotive inspiration. The <a href="http://www.steamlocomotive.com/northern/sp.shtml">Golden
+    State Locomotive</a> was a perfect mascot: sleek, powerful, and has a beautiful
+    retro art-deco feel.</p>
+
+    <p><a href="http://sachagreif.com/wp-content/locomotive/lc-3-big.jpg"><img height="300"
+    width="500" src="http://www.sachagreif.com/wp-content/uploads/2010/08/lc-3.png"
+    title="lc-3" class="size-full wp-image-390 aligncenter"/></a></p>
+
+    <p>Since I can’t draw anything more complex than a modal pop-up, the very talented
+    <a href="http://www.grardesign.com/">Emmanuel Grard</a> did the actual vector
+    rendering of the locomotive.  For the front-end site, we knew that we wanted something
+    that matched the back-end’s colors and style. But I went too far in trying to
+    keep things simple, and the result looked uninspired and dry.</p>
+
+    <p><a href="http://sachagreif.com/wp-content/locomotive/lc-4-big.png"><img height="200"
+    width="500" src="http://www.sachagreif.com/wp-content/uploads/2010/08/lc-4.png"
+    title="lc-4" class="size-full wp-image-391 aligncenter"/></a></p>
+
+    <p>Thankfully Didier wasn’t afraid to call me out on it and push me harder, and
+    so the second version was completely different, and much more promising.</p>
+
+    <p><a href="http://sachagreif.com/wp-content/locomotive/lc-5-big.png"><img height="200"
+    width="500" src="http://www.sachagreif.com/wp-content/uploads/2010/08/lc-5.png"
+    title="lc-5" class="size-full wp-image-392 aligncenter"/></a></p>
+
+    <p>But something was still missing. The design felt flat and lacking impact, and
+    more importantly my girlfriend didn’t like it (<a href="http://dribbble.com/">Dribbble</a>
+    might be nice, but no one beats girlfriends when it comes to giving out criticism)  It
+    was also clear that the site didn’t evoke the Ruby universe enough. It was time
+    for a bold move.</p>
+
+    <p><a href="http://sachagreif.com/wp-content/locomotive/lc-6-big.png"><img height="200"
+    width="500" src="http://www.sachagreif.com/wp-content/uploads/2010/08/lc-6.png"
+    title="lc-6" class="size-full wp-image-393 aligncenter"/></a></p>
+
+    <p>Applying a single gradient turned out to make a huge difference, and all the
+    other elements started falling into place. A few tweaks later, Locomotive’s home
+    page was finally good to go.  By the way, you might have noticed that the site
+    doesn’t have any navigation. I liked the idea of the homepage being self-contained.
+    I think it encourages people to scroll down the page, while reassuring them that
+    they won’t need to browse through dozens of pages to find the info they need.  So
+    there you go. I encourage you to give Locomotive a try, and await your feedback
+    on the design and general user experience.</p>'
+  :posted_at: 2010-08-02
+  :tumblr_id: '893248924'
+Jacques Crocker got on board !:
+  :_permalink: jacques-crocker-got-on-board
+  :body: ! '<p>We are exciting to announce you that Jacques (aka Railsjedi in the
+    Ruby on Rails community) joined us two weeks ago on Locomotive.</p>
+
+    <p>He is a great developer and has a clear vision about how has to be managed
+    an open source project. Want a proof&#160;? Look at his amazing job on <a title="Mongoid"
+    href="http://github.com/durran/mongoid">Mongoid</a>&#160;!</p>
+
+    <p>The big first feature he is going to work on is the inline editing. But for
+    now, his job is to clean the code and to build a solid tests suite. I should say
+    I&#8217;m super astonished by his work and his efficiency.</p>
+
+    <p>And more than that, we are on the same page and we are <strike>pretty</strike> so
+    sure Locomotive CMS is going to rock&#160;! </p>
+
+    <p>Stay stuned.</p>
+
+
+    <p>p.s.: By the way, thank you so much Jacques&#160;!</p>'
+  :posted_at: 2010-08-02
+  :tumblr_id: '893152116'
+A new Rails CMS on board !:
+  :_permalink: a-new-rails-cms-on-board
+  :body: ! '<p>At last, I launched it, thanks to <a target="_blank" href="http://www.sachagreif.com">Sacha</a>&#8217;s
+    help&#160;! Of course, it is not as perfect as I wish. But, I think it represents
+    a good start and I have a ton of new features to add. There are so many things
+    to say about the CMS and how I see its future&#8230;</p>
+
+    <p>The documentation section looks empty but do not worry, I&#8217;m working hard
+    on it.</p>
+
+    <p>&#8220;First come, first serve&#8221;. My CMS has been &#8220;approved&#8221;
+    (by me) since I used it to run 3 websites including this one on Heroku (Heroku/MongoHQ
+    are so awesome). I will post urls and some screenshots about them later.</p>
+
+    <p>I&#8217;d be very pleased to hear your ideas, comments and even critics.</p>'
+  :posted_at: 2010-07-09
+  :tumblr_id: '789449075'

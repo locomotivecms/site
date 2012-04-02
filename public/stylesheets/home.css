@@ -176,6 +176,7 @@ body#index-page #articles ul li.article h3 { font-size: 1.2em; margin: 0 0 6px 0
 body#index-page #articles ul li.article h3 a { color: #1f82bc; text-shadow: 0px 1px 0px #fff; text-decoration: none; }
 body#index-page #articles ul li.article p.date { font-weight: 400; font-size: 0.8em; color: #8b8d9a; text-shadow: 0px 1px 1px #fff; margin: 0 0 6px 0; }
 body#index-page #articles ul li.article div.body { font-size: 1em; color: #707380; text-shadow: 0px 1px 1px #fff; margin: 0px; }
+body#index-page #articles ul li.article p.read-more { display: none; }
 body#index-page #articles .more {
   margin-top: 10px;
   text-align: right;

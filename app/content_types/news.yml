@@ -3,21 +3,21 @@ name: News
 order_by: custom_field_2
 order_direction: asc
 slug: news
-highlighted_field_name: site_name
+label_field_name: site_name
 fields:
 - site_name:
     label: Site name
-    kind: string
+    type: string
     hint: Origin of the news (Techcrunch, WebAppers, ...etc)
 - posted_at:
     label: Posted at
-    kind: date
+    type: date
     hint: Date of the news (mm d, yyyy)
 - sentence:
     label: Sentence
-    kind: string
+    type: string
     hint: The piece of the article about Locomotive. Needs to be catchy
 - url:
     label: Url
-    kind: string
+    type: string
     hint: The full url where the sentence comes from

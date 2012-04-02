@@ -4,10 +4,6 @@
     {% include 'head' %}
 
     {{ 'fancybox' | javascript_tag }}
-    {{ 'code_highlighter' | stylesheet_tag }}
-    {{ 'code_highlighter/code_highlighter' | javascript_tag }}
-    {{ 'code_highlighter/ruby' | javascript_tag }}
-
     {{ 'application' | javascript_tag }}
 
     {{ 'fancybox' | stylesheet_tag }}
@@ -43,7 +39,7 @@
                     <b>Locomotive</b> is an open source CMS for <b>Rails</b>. It's super flexible and integrates with <b>Heroku</b> and <b>Amazon S3</b>.</p>
                 </div>
                 <div class="actions">
-                  <a href="http://demo.locomotivecms.com/admin" class="btn">Try demo</a>
+                  <a href='#' class="btn"><s>Try demo</s></a>
                   <a href="/support/installation" class="btn">Get started</a>
                 </div>
               </div>
@@ -51,10 +47,10 @@
               <div class="padding50px">
                 <div class="right-sidebar">
                   <!-- bushido -->
-                  {% include 'bushido' %}
+                  <!-- {% include 'bushido' %} -->
 
                   <!-- technical specs -->
-                  <div id="technical-specs">
+                  <div id="technical-specs" style="margin-top: 0px;">
                     <div class="header">&nbsp;</div>
                     <div class="inner">
                       <h4>What's inside the engine ?</h4>
@@ -68,14 +64,14 @@
                           <a href="http://www.mongoid.org">Mongoid</a>
                           <em>Ruby ODM framework for MongoDB</em>
                         </li>
-                        <!-- <li>
-                        <a href="http://blog.plataformatec.com.br/tag/devise/">Devise</a>
-                        <em>Flexible authentication solution with Warden</em>
-                      </li>
                         <li>
-                        <a href="http://www.liquidmarkup.org/">Liquid</a>
-                        <em>Safe, customer facing template language</em>
-                      </li> -->
+                          <a href="http://blog.plataformatec.com.br/tag/devise/">Devise</a>
+                          <em>Flexible authentication solution with Warden</em>
+                        </li>
+                        <li>
+                          <a href="http://www.liquidmarkup.org/">Liquid</a>
+                          <em>Safe, customer facing template language</em>
+                        </li>
                       </ul>
 
                       <p class="more">
@@ -140,26 +136,16 @@
                 <div id="articles">
                   <h2>The Blog</h2>
                   <ul>
-                    {% consume blog from "http://blog.locomotivecms.com/api/read/json?num=3&type=text", expires_in: 3000 %}
-                    {% if blog == null %}
-                    <p class="error">We are sorry but the Tumblr API seems to be broken now. Click <a href="http://blog.locomotiveapp.org">here</a> to see the blog.</p>
-                    {% else %}
-                    {% for article in blog.posts %}
-                    <li class="article {% cycle ' ', ' ', 'last' %}">
-                      <h3><a href="{{ article.url }}">{{ article.regular_title }}</a></h3>
-                      <p class="date">{{ article.date_gmt | localized_date: '%A %d %B %Y', 'en' }}</p>
-                      <div class="body">
-                        {{ article.regular_body | strip_html | truncate: 200 }}
-                      </div>
-                    </li>
-                    {% endfor %}
-                    {% endif %}
-                    {% endconsume %}
+                    {% paginate models.articles by 3 %}
+                      {% for article in paginate.collection %}
+                        {% include 'article_summary' with article %}
+                      {% endfor %}
+                    {% endpaginate %}
                     <li class="clear"></li>
                   </ul>
 
                   <div class="more">
-                    <a href="http://blog.locomotiveapp.org">more posts &rarr;</a>
+                    <a href="/articles">more posts &rarr;</a>
                   </div>
                 </div>
 
@@ -172,8 +158,8 @@
           {% block page_footer %}
           <div id="support" class="footer">
             <a href="http://twitter.com/#!/locomotiveapp" class="twitter"><em></em><span>Follow us on Twitter to learn about updates</span></a>
-            <a href="/support/installation" class="documentation"><em></em><span>Read the install guide and documentation</span></a>
-            <a href="http://locomotive.vanillaforums.com" class="help"><em></em><span>Ask your question in our support forums</span></a>
+            <a href="http://doc.locomotivecms.com/" class="documentation"><em></em><span>Read the install guide and documentation</span></a>
+            <a href="https://groups.google.com/forum/?fromgroups#!forum/locomotivecms" class="help"><em></em><span>Ask your question in our support forums</span></a>
             <a href="mailto:didier@nocoffee.fr" class="contact"><em></em><span>Send us a message, we'll answer quickly</span></a>
           </div>
           {% endblock %}

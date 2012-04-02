@@ -3,37 +3,37 @@ name: Modules
 order_by: _position_in_list
 order_direction: asc
 slug: modules
-highlighted_field_name: name
+label_field_name: name
 fields:
 - name:
     label: Name
-    kind: string
+    type: string
     hint: Module name
 - editor:
     label: Editor
-    kind: string
+    type: string
     hint: Person or company selling the module
 - price:
     label: Price
-    kind: string
+    type: string
     hint: Integer without the dollar symbol
 - short_description:
     label: Short description
-    kind: string
+    type: string
     hint: Short text displayed in the modules list page
 - description:
     label: Description
-    kind: text
+    type: text
     hint: Long text displayed in the module page
 - license:
     label: License
-    kind: string
+    type: string
     hint: License options for the module
 - url:
     label: Url
-    kind: string
+    type: string
     hint: Link to the payment page without http://
 - logo:
     label: Logo
-    kind: file
+    type: file
     hint: "Image size: 90px by 90px"

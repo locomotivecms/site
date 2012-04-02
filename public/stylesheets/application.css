@@ -17,7 +17,7 @@ body { background: #000 url("/images/bg.png") repeat 0 0; color: #fff; font-fami
 #footer p { text-align: center; color: #e6e6e6; font-size: 1.1em; }
 #footer p a { color: #1f82bc; text-decoration: none; }
 #footer p a:hover { text-decoration: underline; }
-#footer p a#nocoffee { background: url("http://www.locomotivehosting.fr/images/admin/nocoffee.png") no-repeat scroll right 0 transparent; color: #B0B4C0 !important; line-height: 20px; margin: 0 4px; padding-right: 20px; }
+#footer p a#nocoffee { background: url(/images/nocoffee.png) no-repeat scroll right 0 transparent; color: #B0B4C0 !important; line-height: 20px; margin: 0 4px; padding-right: 20px; }
 
 #forkme { position: fixed; top: 0px; right: 0px; width: 185px; height: 185px; z-index: 998; }
 
@@ -78,6 +78,9 @@ a.btn:active {
 
 #page-wrapper .inner { background: transparent url("/images/page/inner_bg.png") repeat-y 0 0; padding: 1px 0px 1px 0px; min-height: 400px; }
 #page-wrapper .inner h2 { color: #2a2b33; }
+#page-wrapper .inner h2 small { font-size: 12px; }
+#page-wrapper .inner h2 small a { color: #1F82BC; text-decoration: none; }
+#page-wrapper .inner h2 small a:hover { text-decoration: underline; }
 
 #page-wrapper .content { font-size: 1.2em; color: #333; text-shadow: 0px 1px 1px #fff; padding: 6px 15px 0 20px; }
 
@@ -186,7 +189,7 @@ body#about-us-page #contact-us a.email { background: transparent url("/images/ic
 body#about-us-page #contact-us a.twitter { background: transparent url("/images/icons/twitter.png") no-repeat left 3px; }
 
 body#about-us-page #crew { list-style: none; margin: 0px; padding: 0px; }
-body#about-us-page #crew li.person { float: left; width: 167px; margin-right: 45px; }
+body#about-us-page #crew li.person { float: left; width: 167px; margin-right: 45px; margin-bottom: 10px; }
 body#about-us-page #crew li.person.third { margin-right: 0px; }
 body#about-us-page #crew li.person .picture { background: transparent url("/images/crew/frame.png") no-repeat 0 0; height: 188px; padding: 5px 5px 0px 5px; overflow: hidden; z-index: 999; }
 body#about-us-page #crew li.person .picture img { display: block; z-index: 998; }

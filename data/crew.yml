@@ -5,17 +5,25 @@
     bio: <p>Didier (<a href="http://www.twitter.com/dinedine31">@Didier</a>) is the founder of Locomotive. He speaks, thinks, eats and sleeps CMS. His family and friends thank him for creating a simple system to help them edit their websites.</p>
     plate: /samples/crew/didier_plate.png
     picture: /samples/crew/conan.png
-- Jacques Crocker:
+- Mario Visic:
     title: Rails developement
-    company: RailsJedi.com
-    company_url: http://www.railsjedi.com
-    bio: <p>Jacques (<a href='http://twitter.com/railsjedi'>@railsjedi</a>) is a seasoned Rails developer with a passion for front end development. He loves using HAML, SASS, and Javascript to put together stunning user interfaces.</p>
+    company: MarioVisic.com
+    company_url: http://www.mariovisic.com
+    bio: <p>Mario (<a href="http://www.twitter.com/mariovisic">@mariovisic</a>) is an Croatian Australian ruby developer by day. In his spare time, he enjoys eating cheese and playing sports.</p>
     plate: /samples/crew/jacques_plate.png
     picture: /samples/crew/conan.png
+
 - Sacha Greif:
     title: Design & UI
     company: SachaGreif.com
     company_url: http://www.sachagreif.com
     bio: <p>Sacha (<a href="http://twitter.com/sachagreif">@SachaGreif</a>) is a French web and user experience designer. By the way, the fireman is in charge of shoveling coal into the engine.</p>
     plate: /samples/crew/sacha_plate.png
+    picture: /samples/crew/conan.png
+- Jacques Crocker:
+    title: Rails developement
+    company: RailsJedi.com
+    company_url: http://www.railsjedi.com
+    bio: <p>Jacques (<a href='http://twitter.com/railsjedi'>@railsjedi</a>) is a seasoned Rails developer with a passion for front end development. He loves using HAML, SASS, and Javascript to put together stunning user interfaces.</p>
+    plate: /samples/crew/jacques_plate.png
     picture: /samples/crew/conan.png

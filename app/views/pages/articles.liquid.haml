@@ -1,0 +1,21 @@
+{% extends 'about_us' %}
+
+{% block page_inner %}
+
+%h3 Stay up to date on the LocomotiveCMS news.
+
+{% paginate models.articles by 5 %}
+
+%ul.articles
+  {% for article in paginate.collection %}
+  {% include 'article_summary' with article %}
+  %li.sep
+  {% endfor %}
+
+  %li.clear
+
+{{ paginate | default_pagination }}
+
+{% endpaginate %}
+
+{% endblock %}
