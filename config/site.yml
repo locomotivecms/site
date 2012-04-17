@@ -26,6 +26,11 @@ site:
       published: true
       title: Modules
       listed: false
+  - modules/rss:
+      published: true
+      title: rss feed
+      listed: false
+      format: rss
   - modules/content_type_template:
       templatized: true
       published: true
