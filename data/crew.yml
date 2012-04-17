@@ -20,6 +20,7 @@
     bio: <p>Sacha (<a href="http://twitter.com/sachagreif">@SachaGreif</a>) is a French web and user experience designer. By the way, the fireman is in charge of shoveling coal into the engine.</p>
     plate: /samples/crew/sacha_plate.png
     picture: /samples/crew/conan.png
+
 - Jacques Crocker:
     title: Rails developement
     company: RailsJedi.com

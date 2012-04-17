@@ -1,7 +1,7 @@
 name: Articles
 description: Just a simple blog module
 order_by: posted_at
-order_direction: dec
+order_direction: desc
 slug: articles
 label_field_name: title
 fields:
@@ -16,6 +16,7 @@ fields:
 - body:
     label: Body
     type: text
+    text_formatting: html
     hint: The body of the article
 - excerpt:
     label: Exceprt

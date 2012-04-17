@@ -1,7 +1,6 @@
 description: List all the modules sold in the locomotive website
 name: Modules
-order_by: _position_in_list
-order_direction: asc
+order_by: manually
 slug: modules
 label_field_name: name
 fields:

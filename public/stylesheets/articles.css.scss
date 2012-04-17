@@ -56,10 +56,27 @@
     }
   }
 
+  #disqus_thread {
+
+    padding-top: 30px;
+
+    h3 {
+      font-size: 16px !important;
+      margin-bottom: 10px !important;
+    }
+
+    .dsq-subscribe-email, .dsq-subscribe-rss, #dsq-account-dropdown a {
+      font-size: 12px;
+      color: #1F82BC;
+    }
+
+  }
+
   .dsq-brlink {
     font-size: 12px;
     color: #1F82BC;
   }
+
 
 }
 

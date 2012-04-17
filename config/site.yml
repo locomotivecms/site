@@ -27,6 +27,7 @@ site:
       title: Modules
       listed: false
   - modules/content_type_template:
+      templatized: true
       published: true
       title: Template of a module
       listed: true
@@ -36,11 +37,17 @@ site:
       title: Documentation
       listed: true
       redirect_url: http://doc.locomotivecms.com
+  - editor:
+      published: true
+      title: Editor
+      listed: true
+      redirect_url: /modules/locomotive-editor
   - articles:
       title: Blog
       published: true
       listed: true
   - articles/content_type_template:
+      templatized: true
       published: true
       title: Template of an article
       model: articles

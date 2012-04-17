@@ -46,16 +46,40 @@
     thumb: /samples/features/ui_thumb.png
     popup: true
     home: true
+
 - Inline Editing:
-    source: /samples/features/coming_soon.png
+    source: /samples/features/ie_large.jpg
     long_name: Inline front-end editing
     short_description: Browse your site and edit a page at the same time.
     long_description: |
       When we discovered <a href="http://www.aloha-editor.org/">Aloha-Editor</a>, a very powerful and promising browser editor named, it was instantly clear for us that we had to integrate it into Locomotive !
       <br/>So Locomotive users can now define editable regions in their templates, and those regions can be edited by the end user directly from the page he's viewing.
 
-    thumb: /samples/features/coming_soon.png
+    thumb: /samples/features/ie_thumb.png
+    popup: true
     home: true
+
+- I18n:
+    source: /samples/features/i18n_large.jpg
+    long_name: I18n
+    short_description: Make your sites speak many languages.
+    long_description: |
+      That is probably one of the most wanted features, especially for a majority of non-american freelancers / agencies. Just define the languages your site will speak and you are good to go.
+      We make it easy for editors to edit all the content of their sites in the different languages.
+    thumb: /samples/features/i18n_thumb.png
+    popup: true
+    home: true
+
+- Restful API:
+    long_name: Restful API
+    short_description: Access all the content of your sites from a third-party app.
+    long_description: |
+      The LocomotiveEditor application already takes benefits of the new API system by giving the ability to push a theme to any LocomotiveCMS engines. <br/>
+      Be inspirational, we are sure you will find plenty another ways to use the built-in API.
+    thumb: /samples/features/api.png
+    popup: false
+    home: true
+
 - Ruby On Rails:
     source: /samples/features/rails.png
     short_description: Locomotive runs on the most powerful web framework.
