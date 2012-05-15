@@ -3,7 +3,7 @@
     long_name: Custom content types
     short_description: "Define your own content types: posts, events, videos..."
     long_description: |
-      With most CMS, everything has to be blog posts (or pages, or articles) and building anything else requires hacks and plug-ins.
+      With most CMS's everything has to be blog posts (or pages, or articles) and building anything else requires hacks and plug-ins.
       <br/>Locomotive is different: it doesn't impose any specific data structure. Need a page for your band's discography?
       <br/>Create a new "recording" content type with a title, year, album cover, and track listing.
       <br/>Our custom content types are even enough flexible to build a contact form.
@@ -52,7 +52,7 @@
     long_name: Inline front-end editing
     short_description: Browse your site and edit a page at the same time.
     long_description: |
-      When we discovered <a href="http://www.aloha-editor.org/">Aloha-Editor</a>, a very powerful and promising browser editor named, it was instantly clear for us that we had to integrate it into Locomotive !
+      When we discovered a very powerful and promising browser editor named <a href="http://www.aloha-editor.org/">Aloha-Editor</a>, it was instantly clear for us that we had to integrate it into Locomotive!
       <br/>So Locomotive users can now define editable regions in their templates, and those regions can be edited by the end user directly from the page he's viewing.
 
     thumb: /samples/features/ie_thumb.png
@@ -87,7 +87,7 @@
       We know that most people just want something that works, and don't care if it's written in Python, PHP, or Cobol.
       But in the case of Locomotive, we think its language is a huge asset.
       <br/>We built Locomotive with <a href="http://www.rubyonrails.org">Ruby on Rails 3</a>, which gives developers the ability to build their own application on top of the Locomotive engine.
-      <br/>This means that Locomotive can be integrated in a wide range of applications Want to develop your own hosting websites platform? No problem!
+      <br/>This means that Locomotive can be integrated in a wide range of applications. Want to develop your own hosting websites platform? No problem!
 
     thumb: /samples/features/rails.png
     home: true
