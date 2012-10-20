@@ -1,0 +1,76 @@
+// Home
+#home-tagline
+  background-color: $banner-bg
+  color: white
+  text-align: center
+  .inner-container
+    +four-cols-grid
+  header
+    +span-columns($total-columns omega, $total-columns)
+    h1
+      +proximanova-semi-bold
+      font-size: 46px
+      line-height: 30px
+    blockquote
+      +proximanova-light
+      font-size:  20px
+      line-height: 27px
+      .quote-author
+        +span-columns($total-columns omega, $total-columns)
+        +margin-trailer(1)
+        color: $home-quote-author
+        font-size: 14px
+        +proximanova-semi-bold
+  .button
+    +big-button
+    +span-columns($total-columns omega, $total-columns)
+  #try-out
+    +span-columns($total-columns omega, $total-columns)
+    margin: 10px 0 10px 0
+    +proximanova-semi-bold
+    font-size: 14px
+  @media #{$desktop}
+    header
+      +span-columns(3, $total-columns)
+      text-align: left
+    .button,
+    #try-out
+      +span-columns(1 omega, $total-columns)
+
+#home-strip
+  // temp !
+  margin-top: 50px
+  border-top: 1px solid white
+  border-bottom: 1px solid $blue-border
+  +box-shadow(0px -4px 6px $light-black)
+  background: url(/images/home-strip-bg.png) repeat
+  .inner-container
+    +four-cols-grid
+    border-bottom: 1px solid white
+    padding-top: 30px
+    padding-bottom: 30px
+    header
+      +span-columns($total-columns omega, $total-columns)
+      h1
+        //Creampuff
+        //Bello Pro
+        font-size: 18px
+        color: $menu-background
+        margin: 0
+        em
+          display: block
+          +adjust-font-size-to(30px)
+          color: $home-strip-text
+    .button
+      +big-button
+      +span-columns($total-columns omega, $total-columns)
+
+.home-column
+  +span-columns($total-columns omega, $total-columns)
+  margin-top: 40px
+  text-align: center
+  +adjust-font-size-to(13px)
+  +open-sans-regular
+  header
+    +adjust-font-size-to(17px)
+    +proximanova-semi-bold

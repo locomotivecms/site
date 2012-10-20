@@ -1,0 +1,50 @@
+#gallery-container
+  +four-cols-grid
+
+.gallery-item
+  +span-columns(4 omega, 4)
+  +shadowed-border
+  margin-top: 40px
+  position: relative
+  cursor: pointer
+  img
+    +border-radius(5px)
+  .gallery-item-hover
+    display: none
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: $gallery-hover
+    background-color: rgba($gallery-hover, 0.7)
+    +border-radius(5px)
+    padding: 40px 20px
+    +open-sans-regular
+    font-size: 13px
+    p
+      color: white
+    a
+      position: absolute
+      bottom: 40px
+      +gallery-button
+      width: 40%
+    .link-to-site
+      left: 20px
+      background-color: red
+    .link-to-preview
+      right: 20px
+      background-color: red
+    header
+      margin-bottom: 20px
+      h1
+        font-size: 20px
+        +proximanova-regular
+        margin: 0
+      .site-category
+        +proximanova-semi-bold
+        color: $gallery-site-category
+        font-size: 10px
+  &:hover
+    .gallery-item-hover
+      display: block

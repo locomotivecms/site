@@ -1,7 +1,89 @@
-- rss feed
-- Mario's plate
-- new features
-- archived posts
-- showcase
-- list of companies
-- paid support ?
+- head
+- home > find out how > link to ?
+- home > tagline > background gris de separation avec le reste
+- home > strip > missing fonts : Creampuff + Bello Pro
+- home > 4 cols > slice images properly
+- home > below 4 cols : what content ?
+- buttons : outset shadow
+- page head : close button ?
+- main nav :
+  * mobile version
+  * button to improve
+
+
+- see v1.0 issues & pull requests
+
+### Footer
+
+- how include tweeter feed ?
+- newsletter input : mailchimp ?
+
+### Home
+
+- display page head image ?s
+- missing fonts : Creampuff + Bello Pro
+- what is it after 4 cols thing ? (messy psd)
+
+### Feature page
+
+- page head : button install now ?
+- subnav : in mobile ?
+- feature element : image + icon display ?
+- feature : model ?
+
+### 404 page
+
+- slice images (ask b)
+- could we display only the little image in mobile ?
+
+
+### Blog page
+
+- page head : button install now ?
+- post meta : inline or not ?
+- check if readme colors are ok
+- email updates : mailchimp ?
+- put twitter script in bottom or ?
+- pagination
+
+### Blog item page
+
+- to do
+
+
+### Company
+
+- model
+- 2 columns paragraphs
+- images : ??
+- bottom page links : yes or no ?
+
+### Contact page : ??
+
+### Gallery
+
+- preview : ???
+- hover : there aint such a thing in mobile
+- WHAT VERSION OF GALLERY ?
+- pagination
+
+### License : ??
+
+### Pricing
+
+- paypal button
+- faq : model ?
+- faq : the same foreach pricing detail ?
+- subnav : mobile
+- pricing detail : model ? 
+- pricing detail : slideshow
+- paypal button with paypal icon
+
+### Resources
+
+explain content
+
+### Privacy policy : ???
+
+### Terms of use : ???
+

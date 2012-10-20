@@ -1,0 +1,83 @@
+// Main navigation
+#main-nav
+  background-color: $banner-bg
+  padding-top: 30px
+  padding-bottom: 30px
+  .inner-container
+    +five-cols-grid
+    // logo
+    h1
+      color: white
+      font-family: Futura
+      font-size: 20px
+      a
+        background: url(/images/logo-locomotive.png) no-repeat 0px 5px
+        padding-left: 32px
+        &:hover
+          color: white
+          text-decoration: none
+      @media #{$desktop}
+        float: left
+        width: 30%
+    // nav
+    ul
+      li
+        display: block
+        color: white
+        background: none
+        font-size: 16px
+        +proximanova-light
+        padding: 2px 20px
+        margin: 10px
+      li.active
+        +menu-button
+      @media #{$desktop}
+        float: right
+        width: 70%
+        li
+          float: right
+
+        
+      
+      
+
+
+
+#main
+  +four-cols-grid
+
+
+// Site footer
+#footer
+  background-color: $footer-blue
+  padding-top: 1px
+  margin-top: 50px
+  #inner-footer
+    +four-cols-grid
+    border-top: 1px solid white
+    padding-top: 20px
+    padding-bottom: 30px
+  .back-to-top
+    +open-sans-semi-bold
+    font-size: 10px
+    color: $footer-back-to-top
+    display: block
+    float: left
+    width: 100%
+    text-align: center
+    margin-top: 100px
+    margin-bottom: 100px
+  .footer-item
+    +span-columns($total-columns omega, $total-columns)
+    +margin-trailer(1)
+    header
+      +proximanova-semi-bold
+      +adjust-font-size-to(17px)
+      
+      color: $dark-black
+    +open-sans-regular
+    font-size: 13px
+    color: $footer-font-blue
+    ul
+      +pretty-bullets("/images/bullet-blue.png", 4px, 6px)
+      

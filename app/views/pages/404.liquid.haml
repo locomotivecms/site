@@ -1,7 +1,16 @@
-{% extends 'about_us' %}
+{% extends 'index' %}
 
-{% block page_inner %}
-
-%h3 You may have mistyped the address or the page may have moved.
+{% block 'main' %}
+%section#page-404
+  %header
+    %h1
+      {% editable_short_text "page-title", priority: 10 %}
+      Sorry, you must have taken a wrong turn somewhere
+      {% endeditable_short_text %}
+    {% editable_short_text "page-content", priority: 9 %}
+    404 Error page
+    {% endeditable_short_text %}
+  %img{ :src => "" }
+  %img{ :src => "" }
 
 {% endblock %}

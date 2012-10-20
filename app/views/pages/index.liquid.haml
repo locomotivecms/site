@@ -1,0 +1,187 @@
+!!!
+/ paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+/[if lt IE 7] <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en">
+/[if IE 7] <html class="no-js lt-ie9 lt-ie8" lang="en">
+/[if IE 8] <html class="no-js lt-ie9" lang="en">
+/ Consider adding a manifest.appcache: h5bp.com/d/Offline
+/ [if gt IE 8]><!
+%html.no-js{:lang => "en"}
+  / <![endif]
+  
+  %head
+    %meta{ :charset => "utf-8" }
+    %meta{ "http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }
+    %meta{ :name => "viewport", :content => "initial-scale=1, width=device-width" }
+    
+    %title {{ page.title }}
+    %meta{ :content => "{{ page.meta_description }}", :name => "description" }
+    %meta{ :content => "{{ page.meta_keywords }}", :name => "keywords" }
+    
+    {{ 'screen' | stylesheet_tag }} 
+
+  %body
+
+    %nav#main-nav
+      .inner-container
+        %h1
+          %a{ :href => "/" }
+            LOCOMOTIVECMS
+        %ul
+          %li{ :class => '{% if page.fullpath == "blog" %}active{% endif %}'}
+            %a{ :href => "/blog" }
+              Blog
+          %li{ :class => '{% if page.fullpath == "company" %}active{% endif %}'}
+            %a{ :href => "/company" }
+              Company
+          %li{ :class => '{% if page.fullpath == "features" %}active{% endif %}'}
+            %a{ :href => "/features" }
+              Features
+          %li{ :class => '{% if page.fullpath == "gallery" %}active{% endif %}'}
+            %a{ :href => "/gallery" }
+              Gallery
+          %li{ :class => '{% if page.fullpath == "pricing" %}active{% endif %}'}
+            %a{ :href => "/pricing" }
+              Pricing
+          %li{ :class => '{% if page.fullpath == "resources" %}active{% endif %}'}
+            %a{ :href => "/resources" }
+              Resources
+          %li{ :class => '{% if page.fullpath == "index" %}active{% endif %}'}
+            %a{ :href => "/" }
+              Home
+    
+    {% block 'main' %}
+
+    %section#home-tagline
+      .inner-container
+        %header
+          %h1
+            {% editable_short_text "tagline-title", priority: 10 %}
+            Develop your website 50% faster
+            {% endeditable_short_text %}
+          %blockquote
+            {% editable_long_text "tagline-quote-content", priority: 9 %}
+            Locomotive is so easy to develop with. It has helped speed up my dev time by two fold, and reduce my hair pulling time by 100%.
+            {% endeditable_long_text %}
+            %span.quote-author
+              {% editable_short_text "tagline-quote-author", priority: 8 %}
+              Johnny Appleseed, developer
+              {% endeditable_short_text %}
+        %a{ :href => "#", :class => "button" }
+          FIND OUT HOW
+        %a{ :href => "#", :id => "try-out" }
+          or Try the Demo
+        %img{ :src => "{{ 'home-tagline-screenshot.png' | theme_image_url }}", :alt => "" }
+    %section#home-strip
+      .inner-container
+        %header
+          %h1
+            %em What is
+            LocomotiveCMS
+        .content
+          {% editable_long_text "strip-text", priority: 7 %}
+          %p
+            LocomotiveCMS is an open source CMS solution for Rails
+          %p
+            It's super flexible and integrates with Heroku and Amazon S3
+          {% endeditable_long_text %}
+        %a{ :href => "#", :class => "button" }
+          TRY THE DEMO
+    %section#main
+      %section.home-column
+        %img{ :alt => "", :src => "{{ 'home-build.png' | theme_image_url }}" }
+        %header
+          {% editable_long_text "first-col-title", priority: 6 %}
+          Build your website locally.
+          %br 
+          Deploy it instantly
+          {% endeditable_long_text %}
+        {% editable_long_text "first-col-content", priority: 5 %}
+        %p 
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sollicitudin dolor vitae est tincidunt congue. Curabitur suscipit, mauris sed aliquam auctor, justo eros varius arcu, in suscipit sem dui nec lorem.
+        {% endeditable_long_text %}
+    %section#main
+      %section.home-column
+        %img{ :alt => "", :src => "{{ 'home-build.png' | theme_image_url }}" }
+        %header
+          {% editable_long_text "first-col-title", priority: 6 %}
+          Build your website locally.
+          %br 
+          Deploy it instantly
+          {% endeditable_long_text %}
+        {% editable_long_text "first-col-content", priority: 5 %}
+        %p 
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sollicitudin dolor vitae est tincidunt congue. Curabitur suscipit, mauris sed aliquam auctor, justo eros varius arcu, in suscipit sem dui nec lorem.
+        {% endeditable_long_text %}
+    %section#main
+      %section.home-column
+        %img{ :alt => "", :src => "{{ 'home-build.png' | theme_image_url }}" }
+        %header
+          {% editable_long_text "first-col-title", priority: 6 %}
+          Build your website locally.
+          %br 
+          Deploy it instantly
+          {% endeditable_long_text %}
+        {% editable_long_text "first-col-content", priority: 5 %}
+        %p 
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sollicitudin dolor vitae est tincidunt congue. Curabitur suscipit, mauris sed aliquam auctor, justo eros varius arcu, in suscipit sem dui nec lorem.
+        {% endeditable_long_text %}
+    %section#main
+      %section.home-column
+        %img{ :alt => "", :src => "{{ 'home-build.png' | theme_image_url }}" }
+        %header
+          {% editable_long_text "first-col-title", priority: 6 %}
+          Build your website locally.
+          %br 
+          Deploy it instantly
+          {% endeditable_long_text %}
+        {% editable_long_text "first-col-content", priority: 5 %}
+        %p 
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sollicitudin dolor vitae est tincidunt congue. Curabitur suscipit, mauris sed aliquam auctor, justo eros varius arcu, in suscipit sem dui nec lorem.
+        {% endeditable_long_text %}
+
+
+    {% endblock %}
+    %footer#footer
+      #inner-footer
+        %section.footer-item
+          %header
+            Locomotive Quick Links
+          %ul
+            %li
+              %a{ :href => "/company" }
+                Company
+            %li
+              %a{ :href => "/privacy-policy" }
+                Privacy Policy
+            %li
+              %a{ :href => "/terms-of-use" }
+                Terms of use
+            %li
+              %a{ :href => "/license" }
+                License Agreement
+            %li
+              %a{ :href => "/contact" }
+                Contact us
+
+        %section.footer-item
+          %header
+            Follow 
+            %a{ :href => "https://twitter.com/locomotivecms" }
+              @locomotivecms
+        %section.footer-item
+          %header
+            Locomotive News
+          %p
+            Stay on top of Locomotive updates, subscribe to our news.
+          %form
+            %input
+            %input{ :type => :submit, :value => "SUBSCRIBE" }
+        %section.footer-item
+          %header
+            LOCOMOTIVECMS
+          %p
+            %em LocomotiveCMS is developed by NoCoffee. LocomotiveCMS is free software under the MIT license.
+          %p
+            %strong © {{ today | localized_date: '%Y' }} Locomotive CMS
+        %a.back-to-top{ :href => "#" }
+          BACK TO TOP

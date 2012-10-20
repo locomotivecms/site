@@ -1,0 +1,48 @@
+{% extends 'index' %}
+
+{% block 'main' %}
+
+{% include 'page_head' %}
+
+%nav.subnav
+  %ul
+    %li
+      %a{ :href => "#" }
+        Custom content
+    %li
+      %a{ :href => "#" }
+        Custom content
+    %li
+      %a{ :href => "#" }
+        Custom content
+    %li
+      %a{ :href => "#" }
+        Custom content
+
+
+%section.feature
+  %header
+    %h1 Custom content types
+  .feature-description
+    %p 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae ante sit amet mi vehicula suscipit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+    %p 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae ante sit amet mi vehicula suscipit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+
+  %img{ :src => "", :class => "feature-icon" }
+  %img{ :src => "", :class => "feature-illustrations" }
+
+%section.feature
+  %header
+    %h1 Custom content types
+  .feature-description
+    %p 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae ante sit amet mi vehicula suscipit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+    %p 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae ante sit amet mi vehicula suscipit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+
+  %img{ :src => "", :class => "feature-icon" }
+  %img{ :src => "", :class => "feature-illustrations" }
+
+
+{% endblock %}
