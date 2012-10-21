@@ -18,7 +18,7 @@
           text-decoration: none
       @media #{$desktop}
         float: left
-        width: 30%
+        width: 24%
     // nav
     ul
       li
@@ -33,7 +33,7 @@
         +menu-button
       @media #{$desktop}
         float: right
-        width: 70%
+        width: 76%
         li
           float: right
 
@@ -72,12 +72,20 @@
     +margin-trailer(1)
     header
       +proximanova-semi-bold
-      +adjust-font-size-to(17px)
-      
+      font-size: 17px
       color: $dark-black
+      margin-bottom: 20px
     +open-sans-regular
     font-size: 13px
     color: $footer-font-blue
     ul
-      +pretty-bullets("/images/bullet-blue.png", 4px, 6px)
+      +pretty-bullets("/images/bullet-blue.png", 4px, 5px, 25px)
+      li
+        line-height: 25px
+        
+  @media #{$desktop}
+    .footer-item
+      +span-columns(1, $total-columns)
+      +nth-omega(4)
+
       

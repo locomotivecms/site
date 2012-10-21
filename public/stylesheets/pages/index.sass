@@ -5,6 +5,8 @@
   text-align: center
   .inner-container
     +four-cols-grid
+  img
+    margin-top: 60px
   header
     +span-columns($total-columns omega, $total-columns)
     h1
@@ -15,12 +17,14 @@
       +proximanova-light
       font-size:  20px
       line-height: 27px
+      margin-top: 15px
       .quote-author
         +span-columns($total-columns omega, $total-columns)
-        +margin-trailer(1)
+        margin-bottom: 20px
+        margin-top: 10px
         color: $home-quote-author
         font-size: 14px
-        +proximanova-semi-bold
+        +proximanova-light
   .button
     +big-button
     +span-columns($total-columns omega, $total-columns)
@@ -29,7 +33,9 @@
     margin: 10px 0 10px 0
     +proximanova-semi-bold
     font-size: 14px
+  
   @media #{$desktop}
+    padding-bottom: 320px
     header
       +span-columns(3, $total-columns)
       text-align: left
@@ -37,9 +43,24 @@
     #try-out
       +span-columns(1 omega, $total-columns)
 
+#home-image
+  background-color: $home-before-strip
+  
+  .inner-container
+    +four-cols-grid
+    position: relative
+    height: 150px
+  img
+    position: absolute
+    bottom: 0
+    left: 0
+    z-index: 1
+
+
 #home-strip
   // temp !
-  margin-top: 50px
+  margin-top: 0px
+  z-index: 9999
   border-top: 1px solid white
   border-bottom: 1px solid $blue-border
   +box-shadow(0px -4px 6px $light-black)
@@ -52,25 +73,59 @@
     header
       +span-columns($total-columns omega, $total-columns)
       h1
-        //Creampuff
-        //Bello Pro
         font-size: 18px
+        +proximanova-light
         color: $menu-background
         margin: 0
         em
+          //Creampuff
+          //Bello Pro
+          +creampuff
           display: block
-          +adjust-font-size-to(30px)
+          font-size: 30px
+          line-height: 28px
           color: $home-strip-text
+    .content
+      p
+        font-size: 19px
+        color: $home-strip-text
+        +proximanova-light
+        &:first-child
+          +proximanova-semi-bold
+          color: $menu-background
     .button
       +big-button
       +span-columns($total-columns omega, $total-columns)
+  
+    @media #{$desktop}
+      header
+        +span-columns(1, $total-columns)
+      .content
+        +span-columns(2, $total-columns)
+      .button
+        +span-columns(1 omega, $total-columns)
+
 
 .home-column
   +span-columns($total-columns omega, $total-columns)
+  +nth-omega(4)
   margin-top: 40px
   text-align: center
-  +adjust-font-size-to(13px)
-  +open-sans-regular
+  p
+    font-size: 13px
+    line-height: 22px
+    +open-sans-regular
+    color: $light-black
   header
-    +adjust-font-size-to(17px)
+    font-size: 17px
+    line-height: 22px
     +proximanova-semi-bold
+    color: $dark-black
+    margin-bottom: 20px
+    margin-top: 20px
+
+
+  @media #{$desktop}
+    +span-columns(1, $total-columns)
+
+
