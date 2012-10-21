@@ -14,12 +14,22 @@
     font-size: 13px
     +open-sans-regular
 
+.company-crew
+  +four-cols-grid
+  border-bottom: 1px solid $blue-border
+  padding-top: 40px
+  padding-bottom: 40px
+  header
+    color: $dark-black
+    font-size: 20px
+    +proximanova-semi-bold
+    line-height: 22px
+    margin-bottom: 10px
 
 
 .company-crew-person
   +span-columns(4 omega, 4)
   text-align: center
-  img
   p
     +open-sans-regular
     color: $light-black
@@ -34,7 +44,13 @@
       +open-sans-bold
       color: $light-black
       font-size: 13px
-
+@media #{$desktop}
+  .content
+    +column-count(2)
+    +column-gap(20px)
+  .company-crew-person
+    +span-columns(1, 4)
+    +nth-omega(4)
     
 
 

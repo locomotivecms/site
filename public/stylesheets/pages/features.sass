@@ -1,16 +1,30 @@
 // Feature page
+#features-container
+  +five-cols-grid
 .feature
-  +four-cols-grid
+  +span-columns(5 omega, 5)
   border-bottom: 1px solid $blue-border
   padding-top: 50px
   padding-bottom: 50px
   header
-    +span-columns(4 omega,4)
+    +span-columns(5 omega,5)
     font-size: 20px
     color: $dark-black
     +proximanova-semi-bold
   p
-    +span-columns(4 omega,4)
+    +span-columns(5 omega,5)
     font-size: 13px
     color: $light-black
     +open-sans-regular
+
+@media #{$desktop}
+  .feature
+    header
+      +span-columns(5 omega,5)
+    .feature-description
+      +span-columns(2,5)
+    .feature-icon
+      +span-columns(1,5)
+    .feature-illustrations
+      +span-columns(2 omega,5)
+  

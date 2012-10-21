@@ -23,6 +23,13 @@
     margin-top: 10px
     a
       +big-button
+  @media #{$desktop}
+    header,
+    p
+      +span-columns(3,4)
+    aside
+      +span-columns(1 omega,4)
+
 nav.subnav
   +four-cols-grid
   border-bottom: 1px solid $blue-border
@@ -49,6 +56,8 @@ nav.subnav
 #main-blog
   +three-cols-grid
 
+
+
 article
   +span-columns(3 omega,3)
   margin-top: 35px
@@ -68,12 +77,21 @@ article
     +open-sans-regular
   .bottom
     margin-top: 20px
+    .meta
+      color: $blog-meta
     a
       +readmore-button
+      margin-right: 20px
+  @media #{$desktop}
+    +span-columns(2,3)
+
 
 .sidebar
   +span-columns(3 omega,3)
   margin-top: 50px
+  @media #{$desktop}
+    +span-columns(1 omega,3)
+    margin-top: 35px
 
 
 
