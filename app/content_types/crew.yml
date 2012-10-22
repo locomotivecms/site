@@ -12,23 +12,11 @@ fields:
     label: Title
     type: string
     hint: position in the team
-- company:
-    label: Company
-    type: string
-    hint: company she/he works for
-- company_url:
-    label: Company url
-    type: string
-    hint: Url of the company above
 - bio:
     label: Bio
     type: text
     hint: Short biography
-- plate:
-    label: Plate
-    type: file
-    hint: Image
 - picture:
     label: Picture
     type: file
-    hint: Image (in the about us pagem), 154px x 180px
+    hint: Image (in the about us pagem), 200px x 200px

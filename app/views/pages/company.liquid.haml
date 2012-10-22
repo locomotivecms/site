@@ -8,7 +8,7 @@
   %header
     {% editable_short_text "company-story-title", priority: 10 %}
     The story behind LocomotiveCMS
-    {% endeditable_short_text %}
+    {% endeditable_short_text %}  
   .content
     {% editable_long_text "company-story-content", priority: 9 %}
     %p Like many open source projects, Locomotive began as a way of scratching our own itch. As developers in web agencies, we were frustrated by the lack of options for creating small, static sites. The options were either to use plain HTML files or create a whole new Rails project.
@@ -25,13 +25,9 @@
     {% editable_short_text "company-crew-title", priority: 9 %}
     Meet the crew behind LocomotiveCMS
     {% endeditable_short_text %}
-    
-
-
-  {% include 'company_crew' %}
-  {% include 'company_crew' %}
-  {% include 'company_crew' %}
-  {% include 'company_crew' %}
-
+  
+  {% for person in contents.crew %}
+  {% include 'company_person' %}
+  {% endfor %}
 
 {% endblock %}
