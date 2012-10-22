@@ -5,15 +5,10 @@
 {% include 'page_head' %}
 
 #gallery-container
+  {% for company in contents.companies %}
   {% include 'gallery_item' %}
-  {% include 'gallery_item' %}
-  {% include 'gallery_item' %}
-  {% include 'gallery_item' %}
-  {% include 'gallery_item' %}
-  {% include 'gallery_item' %}
-  {% include 'gallery_item' %}
-  {% include 'gallery_item' %}
-  {% include 'gallery_item' %}
+  {% endfor %}
+
 
 
 {% endblock %}

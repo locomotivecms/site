@@ -1,14 +1,15 @@
 #gallery-container
-  +four-cols-grid
+  +three-cols-grid
 
 .gallery-item
-  +span-columns(4 omega, 4)
+  +span-columns(3 omega, 3)
   +shadowed-border
   margin-top: 40px
   position: relative
   cursor: pointer
   img
     +border-radius(5px)
+    width: 100%
   .gallery-item-hover
     display: none
     position: absolute
@@ -22,6 +23,7 @@
     padding: 40px 20px
     +open-sans-regular
     font-size: 13px
+    color: white
     p
       color: white
     a
@@ -48,3 +50,9 @@
   &:hover
     .gallery-item-hover
       display: block
+
+@media #{$desktop}
+  .gallery-item
+    +span-columns(1, 3)
+    +nth-omega(3n)
+          

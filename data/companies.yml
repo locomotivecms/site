@@ -1,9 +1,42 @@
-- The Frontier Group:
+- Example 1:
+    category:
+      Rental
+    description: Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit sit amet non magna.
     url: www.thefrontiergroup.com.au
-    logo: /samples/companies/tfg.png
-- DesignHunger:
-    url: www.designhunger.de
-    logo: /samples/companies/designhunger.png
-- Experia:
-    url: www.experia.com.br
-    logo: /samples/companies/experia.png
+    screenshot: /samples/companies/test.png
+- Example 2:
+    category:
+      Rental
+    description: Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit sit amet non magna.
+    url: www.thefrontiergroup.com.au
+    screenshot: /samples/companies/test.png
+- Example 3:
+    category:
+      Rental
+    description: Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit sit amet non magna.
+    url: www.thefrontiergroup.com.au
+    screenshot: /samples/companies/test.png
+- Example 4:
+    category:
+      Rental
+    description: Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit sit amet non magna.
+    url: www.thefrontiergroup.com.au
+    screenshot: /samples/companies/test.png
+- Example 5:
+    category:
+      Rental
+    description: Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit sit amet non magna.
+    url: www.thefrontiergroup.com.au
+    screenshot: /samples/companies/test.png
+- Example 6:
+    category:
+      Rental
+    description: Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit sit amet non magna.
+    url: www.thefrontiergroup.com.au
+    screenshot: /samples/companies/test.png
+- Example 7:
+    category:
+      Rental
+    description: Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit sit amet non magna.
+    url: www.thefrontiergroup.com.au
+    screenshot: /samples/companies/test.png

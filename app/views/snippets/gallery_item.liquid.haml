@@ -1,12 +1,11 @@
 %section.gallery-item
-  %img{ :src => "http://placehold.it/350x350", :alt => "" }
+  %img{ :src => "{{ company.screenshot.url }}", :alt => "{{ company.name }}" }
   .gallery-item-hover
     %header
-      %h1 Name of the site
-      %span.site-category CATEGORY : RETAIL
-    %p
-      Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit sit amet non magna.
-    %a{ :href => "#", :class => "link-to-site"  }
+      %h1 {{ company.name }}
+      %span.site-category CATEGORY : {{ company.category }}
+    {{ company.description }}
+    %a{ :href => "http://{{ company.url }}", :class => "link-to-site"  }
       Visit site
     %a{ :href => "#", :class => "link-to-preview"  }
       Preview

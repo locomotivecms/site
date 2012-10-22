@@ -8,11 +8,23 @@ fields:
     label: Name
     type: string
     hint: Company name
+- category:
+    label: Category of company
+    type: select
+    hint: The type of the category
+    select_options: 
+      - 'Rental'
+      - 'Trips'
+      - 'Else'
+- description:
+    label: Description
+    type: text
+    hint: Very short description of the company (max ?? chars)
 - url:
     label: Url
     type: string
     hint: Website url (without the http://)
-- logo:
-    label: Logo
+- screenshot:
+    label: Screenshot
     type: file
-    hint: "Image max width: 240px"
+    hint: Screenshot image 300x300 of the company's website
