@@ -32,6 +32,18 @@
     img
       +border-radius(5px)
 
+@media #{$desktop}
+  .pricing-detail-item
+    section
+      +span-columns(3, 5)
+    aside
+      +span-columns(2 omega, 5)
+      .paypal
+        +span-columns(4 omega, 5)
+
+@media #{$desktop}
+  .princing-faq-container
+    +two-columns
 
 .pricing-faq-item
   +span-columns(4 omega, 4)
@@ -42,3 +54,4 @@
   p
     color: $light-black
     font-size: 13px
+

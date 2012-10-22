@@ -17,17 +17,19 @@
 
 %section.princing-detail-container
   %section.pricing-detail-item
-    %header
-      %h1 Locomotive Editor, Desktop version
-      %span.tagline Chances are you charge your clients somewhere between $75 and $120/hour. 
-    %p
-      Remember, The Editor will help you develop your website up to 70% faster than other CMS. That means that at $69 per year, you have your return on investment after  1 hour only! 
-    %p
-      3 other reasons blabla
-    %a{ :href => "#", :class => "paypal" }
-      BUY NOW 39$ : PAYPAL
-    .slideshow
-      %img{ :src => "http://placehold.it/350x350", :alt => "" }
+    %section
+      %header
+        %h1 Locomotive Editor, Desktop version
+        %span.tagline Chances are you charge your clients somewhere between $75 and $120/hour. 
+      %p
+        Remember, The Editor will help you develop your website up to 70% faster than other CMS. That means that at $69 per year, you have your return on investment after  1 hour only! 
+      %p
+        3 other reasons blabla
+    %aside
+      %a{ :href => "#", :class => "paypal" }
+        BUY NOW 39$ : PAYPAL
+      .slideshow
+        %img{ :src => "http://placehold.it/350x350", :alt => "" }
 %section.princing-faq-container
   {% include 'pricing_faq_item' %}
   {% include 'pricing_faq_item' %}
