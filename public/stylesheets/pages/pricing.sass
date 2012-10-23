@@ -12,6 +12,8 @@
 
 .pricing-detail-item
   +span-columns(5 omega, 5)
+  img
+    float: right
   header
     margin-bottom: 20px
     h1
@@ -23,7 +25,7 @@
       color: $light-black
       +open-sans-bold
   .paypal
-    +span-columns(5 omega, 5)
+    +span-columns(3 omega, 5)
     +small-button
     margin-bottom: 30px
   .slideshow
@@ -31,6 +33,9 @@
     +shadowed-border
     img
       +border-radius(5px)
+      width: 100%
+
+
 
 @media #{$desktop}
   .pricing-detail-item

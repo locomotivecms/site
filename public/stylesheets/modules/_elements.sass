@@ -37,8 +37,11 @@ nav.subnav
   border-bottom: 1px solid $blue-border
   padding-top: 15px
   padding-bottom: 15px
+  ul
+    margin: 0
   li
     display: inline-block
+    background: none
     padding-left: 0
   a
     float: left
@@ -52,6 +55,18 @@ nav.subnav
       color: $main-blue
       background-color: $subnav-button-bg
       text-decoration: none
+
+// pagination
+.pagination
+  +span-columns($total-columns omega,$total-columns)
+  margin-top: 40px
+  color: $third-blue
+  +proximanova-semi-bold
+  font-size: 14px
+  #pagination-left
+    float: left
+  #pagination-right
+    float: right
 
 
 // blog 

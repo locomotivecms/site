@@ -5,10 +5,27 @@
 {% include 'page_head' %}
 
 #gallery-container
-  {% for company in contents.companies %}
+  {% paginate contents.companies by 9 %}
+  {% for company in paginate.collection %}
   {% include 'gallery_item' %}
   {% endfor %}
-
-
+  %section.pagination
+    #pagination-left
+      Page {{ paginate.current_page }} of {{ paginate.total_pages }}
+    #pagination-right
+      {% for part in paginate.parts %}
+      // display page number as a link or not
+      {% if part.is_link %}
+      %a{ :href => "{{ part.url }}" }
+        {{ part.title }}
+      {% else %}
+      {{ part.title }}
+      {% endif %}
+      // display "/" between page numbers
+      {% unless forloop.last %}
+      = "/"
+      {% endunless %}
+      {% endfor %}
+  {% endpaginate %}
 
 {% endblock %}

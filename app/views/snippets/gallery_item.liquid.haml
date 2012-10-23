@@ -4,7 +4,7 @@
     %header
       %h1 {{ company.name }}
       %span.site-category CATEGORY : {{ company.category }}
-    {{ company.description }}
+    {{ company.description | truncate: 170 }}
     %a{ :href => "http://{{ company.url }}", :class => "link-to-site"  }
       Visit site
     %a{ :href => "#", :class => "link-to-preview"  }

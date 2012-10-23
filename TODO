@@ -1,89 +1,47 @@
-- head
-- home > find out how > link to ?
+## NOTA BENE
+
+- dans chaque page content un 'page_head', tous les editable text ont une priority commencant a 8 et inferieur
+- pagination : paginate contents.company and not paginate content_type.company
+- add to reference : if you do an "unless" loop, end it with "endunless"
+
+## TO DO DIDIER
+
+- exporter formulaire mailchimp AJAX
+- me donner l'acces au compte disqus pour recuperer le script de comment count
+
+## TO DO GENERAL
+
+- config site.yml
+- company : images rounded
+- voir avec kenny la font de semi bold, notamment pour le titre de la home (en 40px)
+- blog : pas d'image
+- pricing : pas de slideshopw, 30 days float right a voir
+- pricing : faq => content type en deux colonnes
+- blog : quote float right a tester
+- tour : content type + boolean timesaver qui affiche ou non la petite icone
+- home gradient
 - home > tagline > background gris de separation avec le reste
-- home > strip > missing fonts : Creampuff + Bello Pro
 - home > 4 cols > slice images properly
-- home > below 4 cols : what content ?
+- home > extract 2 background patterns (strip and before strip)
 - buttons : outset shadow
-- page head : close button ?
+- pricing : tab
+- pricing : faq model / two cols
+- pricing : icon paypal
+- 404 : - slice images (ask benj)
+- blog > check if readme colors are ok
+- blog > put twitter script in bottom or what ?
+- blog > pagination : see gallery
+
 - main nav :
   * mobile version
   * button to improve
 
-
 - see v1.0 issues & pull requests
 
-### Footer
+## QUESTIONS
 
-- how include tweeter feed ?
-- newsletter input : mailchimp ?
-
-### Home
-
-- display page head image ?s
-- what is it after 4 cols thing ? (messy psd)
-- extract 2 background patterns (strip and before strip)
-
-### Feature page
-
-- page head : button install now ?
-- subnav : in mobile ?
-- feature element : image + icon display ?
-- feature : model ?
-
-### 404 page
-
-- slice images (ask b)
-- could we display only the little image in mobile ?
+- home > "find out how" > link to what ?
+- gallery > item > preview button ? what is a preview ?
 
 
-### Blog page
-
-- page head : button install now ?
-- post meta : inline or not ?
-- check if readme colors are ok
-- email updates : mailchimp ?
-- put twitter script in bottom or ?
-- pagination
-
-### Blog item page
-
-- to do
-
-
-### Company
-
-- model
-- 2 columns paragraphs
-- images : ??
-- bottom page links : yes or no ?
-
-### Contact page : ??
-
-### Gallery
-
-- preview : ???
-- hover : there aint such a thing in mobile
-- WHAT VERSION OF GALLERY ?
-- pagination
-
-### License : ??
-
-### Pricing
-
-- paypal button
-- faq : model ?
-- faq : the same foreach pricing detail ?
-- subnav : mobile
-- pricing detail : model ? 
-- pricing detail : slideshow
-- paypal button with paypal icon
-
-### Resources
-
-explain content
-
-### Privacy policy : ???
-
-### Terms of use : ???
 

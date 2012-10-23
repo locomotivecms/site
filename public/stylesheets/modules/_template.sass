@@ -28,7 +28,9 @@
         font-size: 16px
         +proximanova-light
         padding: 2px 20px
-        margin: 10px
+        margin: 5px
+        a:hover
+          color: white
       li.active
         +menu-button
       @media #{$desktop}
@@ -36,6 +38,14 @@
         width: 76%
         li
           float: right
+
+// generic container
+#main-four
+  +three-cols-grid
+  #terms-of-use, #license, #privacy-policy
+    +span-columns(2,3)
+    margin-top: 35px
+
 
         
       

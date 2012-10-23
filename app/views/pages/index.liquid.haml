@@ -45,9 +45,9 @@
           %li{ :class => '{% if page.fullpath == "resources" %}active{% endif %}'}
             %a{ :href => "/resources" }
               Resources
-          %li{ :class => '{% if page.fullpath == "index" %}active{% endif %}'}
-            %a{ :href => "/" }
-              Home
+          %li{ :class => '{% if page.fullpath == "tour" %}active{% endif %}'}
+            %a{ :href => "/tour" }
+              Tour
     
     {% block 'main' %}
 
@@ -95,8 +95,6 @@
         %header
           {% editable_long_text "first-col-title", priority: 6 %}
           Build your website locally
-          %br 
-          Deploy it instantly
           {% endeditable_long_text %}
         {% editable_long_text "first-col-content", priority: 5 %}
         %p 
@@ -108,8 +106,6 @@
         %header
           {% editable_long_text "first-col-title", priority: 6 %}
           Super friendly content editing interface
-          %br 
-          Deploy it instantly
           {% endeditable_long_text %}
         {% editable_long_text "first-col-content", priority: 5 %}
         %p 
@@ -121,8 +117,6 @@
         %header
           {% editable_long_text "first-col-title", priority: 6 %}
           Don't let your client mess up with your  layout
-          %br 
-          Deploy it instantly
           {% endeditable_long_text %}
         {% editable_long_text "first-col-content", priority: 5 %}
         %p 
@@ -134,8 +128,6 @@
         %header
           {% editable_long_text "first-col-title", priority: 6 %}
           Open Source optimized
-          %br 
-          Deploy it instantly
           {% endeditable_long_text %}
         {% editable_long_text "first-col-content", priority: 5 %}
         %p 
@@ -163,7 +155,7 @@
               %a{ :href => "/license" }
                 License Agreement
             %li
-              %a{ :href => "/contact" }
+              %a{ :href => "mailto:didier@nocoffee.fr" }
                 Contact us
 
         %section.footer-item

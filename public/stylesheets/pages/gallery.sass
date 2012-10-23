@@ -2,14 +2,17 @@
   +three-cols-grid
 
 .gallery-item
+  $b-radius: 2px
   +span-columns(3 omega, 3)
-  +shadowed-border
+  +shadowed-border(8px,$b-radius)
   margin-top: 40px
   position: relative
   cursor: pointer
   img
-    +border-radius(5px)
+    +border-radius($b-radius)
     width: 100%
+  +curl-shadow
+
   .gallery-item-hover
     display: none
     position: absolute
@@ -18,17 +21,17 @@
     width: 100%
     height: 100%
     background-color: $gallery-hover
-    background-color: rgba($gallery-hover, 0.7)
-    +border-radius(5px)
-    padding: 40px 20px
+    background-color: rgba(white, 0.7)
+    +border-radius($b-radius)
+    padding: 20px 20px
     +open-sans-regular
     font-size: 13px
-    color: white
+    color: $fourth-black
     p
-      color: white
+      color: $gallery-hover-text
     a
       position: absolute
-      bottom: 40px
+      bottom: 20px
       +gallery-button
       width: 40%
     .link-to-site
@@ -38,7 +41,7 @@
       right: 20px
       background-color: red
     header
-      margin-bottom: 20px
+      margin-bottom: 10px
       h1
         font-size: 20px
         +proximanova-regular
@@ -47,9 +50,11 @@
         +proximanova-semi-bold
         color: $gallery-site-category
         font-size: 10px
+        text-transform: uppercase
   &:hover
     .gallery-item-hover
       display: block
+
 
 @media #{$desktop}
   .gallery-item
