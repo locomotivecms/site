@@ -1,13 +1,11 @@
 %article
   %header
-    %h1 Meet us on IRC !
+    %h1 {{ article.title }}
     %time{ :datetime => "..." }
-    Monday 16 April 2012
-  %p
-    Great news! So many of you have been looking to connect in real time with the Locomotive team and community, we really wanted to create a centralized place for it. So, now we have the official IRC channel #locomotivecms at irc.freenode.net! Here’s a link to chat right now: http://webchat.freenode.net/
-
+    {{ article.posted_at }}
+  {{ article.body | truncate: 400 }}
   .bottom
-    %a{ :href => "#" }
+    %a{ :href => "/blog/{{ article._permalink }}" }
       Read More
     %span.meta
-      Posted by Estelle - 3 comments
+      Posted by {{ article.author }}

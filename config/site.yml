@@ -8,55 +8,55 @@ site:
   pages:
   - index:
       published: true
-      title: Index
+      title: Home
       listed: false
-  - about_us:
+  - blog:
       published: true
-      title: About us
+      title: Blog
+      listed: true
+  - blog/content_type_template:
+      templatized: true
+      published: true
+      title: Template of a blog post
+      listed: true
+      model: articles
+  - company:
+      published: true
+      title: Company
       listed: true
   - features:
       published: true
       title: Features
       listed: true
-  - hosting:
+  - gallery:
       published: true
-      title: Hosting
-      listed: false
-  - modules:
-      published: true
-      title: Modules
-      listed: false
-  - modules/rss:
-      published: true
-      title: rss feed
-      listed: false
-      format: rss
-  - modules/content_type_template:
-      templatized: true
-      published: true
-      title: Template of a module
+      title: Gallery of Locomotive sites
       listed: true
-      model: modules
-  - documentation:
+  - license:
       published: true
-      title: Documentation
+      title: License
       listed: true
-      redirect_url: http://doc.locomotivecms.com
-  - editor:
+  - pricing:
       published: true
-      title: Editor
+      title: Pricing
       listed: true
-      redirect_url: /modules/locomotive-editor
-  - articles:
-      title: Blog
+  - privacy-policy:
       published: true
+      title: Privacy Policy
       listed: true
-  - articles/content_type_template:
-      templatized: true
+  - resources:
       published: true
-      title: Template of an article
-      model: articles
-  - "404":
+      title: Resources
+      listed: true
+  - terms-of-use:
+      published: true
+      title: Terms Of Use
+      listed: true
+  - tour:
+      published: true
+      title: Tour
+      listed: true
+  - 404:
       published: true
       title: Page not found
       listed: true

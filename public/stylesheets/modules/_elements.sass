@@ -43,6 +43,7 @@ nav.subnav
     display: inline-block
     background: none
     padding-left: 0
+    margin-right: 10px
   a
     float: left
     display: block
@@ -55,6 +56,10 @@ nav.subnav
       color: $main-blue
       background-color: $subnav-button-bg
       text-decoration: none
+  a.current
+    color: $main-blue
+    background-color: $subnav-button-bg
+
 
 // pagination
 .pagination
@@ -73,7 +78,10 @@ nav.subnav
 #main-blog
   +three-cols-grid
 
-
+.full-article 
+  blockquote
+    float: right
+    color: red
 
 article
   +span-columns(3 omega,3)

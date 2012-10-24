@@ -24,31 +24,20 @@
       font-size: 13px
       color: $light-black
       +open-sans-bold
+  b
+    color: $light-blue
+    font-size: 14px
   .paypal
     +span-columns(3 omega, 5)
-    +small-button
+    +paypal-button
     margin-bottom: 30px
+    
   .slideshow
     +span-columns(5 omega, 5)
     +shadowed-border
     img
       +border-radius(5px)
       width: 100%
-
-
-
-@media #{$desktop}
-  .pricing-detail-item
-    section
-      +span-columns(3, 5)
-    aside
-      +span-columns(2 omega, 5)
-      .paypal
-        +span-columns(4 omega, 5)
-
-@media #{$desktop}
-  .princing-faq-container
-    +two-columns
 
 .pricing-faq-item
   +span-columns(4 omega, 4)
@@ -60,3 +49,22 @@
     color: $light-black
     font-size: 13px
 
+
+
+
+@media #{$desktop}
+  .pricing-detail-item
+    section
+      +span-columns(3, 5)
+    aside
+      +span-columns(2 omega, 5)
+      .paypal
+        //+span-columns(4 omega, 5)
+        float: right
+
+@media #{$desktop}
+  .princing-faq-container
+    .pricing-faq-item
+      +span-columns(2, 4)
+      +nth-omega(2n)
+    

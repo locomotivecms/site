@@ -1,0 +1,20 @@
+%section.project-item
+  %section
+    %header
+      %h1 {{ project.title }}
+      %span.tagline {{ project.tagline }}
+    {{ project.description }}
+  %aside
+    .floating-panel
+      .inner-floating-panel
+        %header
+          %h1
+            Project status
+        %p This development project is shceduled for completion in approximatley
+        .project-due-date
+          %span.number 2
+          %span.number 3
+          %span.word Days
+          %span.number 1
+          %span.number 6
+          %span.word Hours

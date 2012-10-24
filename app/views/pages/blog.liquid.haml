@@ -6,11 +6,11 @@
 
 #main-blog
   {% include 'blog_sidebar' %}
+  {% paginate contents.articles by 4 %}
+  {% for article in paginate.collection %}
   {% include 'post_preview' %}
-  {% include 'post_preview' %}
-  {% include 'post_preview' %}
-    
-
-  
+  {% endfor %}
+  {% include 'pagination' %}
+  {% endpaginate %}
 
 {% endblock %}

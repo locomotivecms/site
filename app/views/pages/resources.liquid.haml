@@ -6,11 +6,31 @@
 %nav.subnav
   %ul
     %li
-      %a{ :href => "#" }
+      %a{ :href => "http://github.com/locomotivecms/engine/" }
         Source Code
     %li
       %a{ :href => "#" }
         Quick start guide
-    
+    %li
+      %a{ :href => "#" }
+        Documentation
+    %li
+      %a{ :href => "https://groups.google.com/forum/?fromgroups#!forum/locomotivecms" }
+        Forum
+    %li
+      %a{ :href => "#" }
+        FAQ
+    %li
+      %a.current{ :href => "#" }
+        In the Works
+
+
+{% for project in contents.projects %}
+{% include 'project_item' %}
+{% endfor %}
+ 
+
+
+
 
 {% endblock %}

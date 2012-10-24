@@ -1,0 +1,36 @@
+- One:
+    title: Install the locomotive Editor
+    description: <p><b>Either in command line :</b><p><ul><li>blablabla</li><li>or blablablabla</li></ul></p></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque at arcu ut urna tempor feugiat. Donec vel neque sed neque dictum elementum id non arcu. Sed sit amet adipiscing nulla. Donec sed arcu at est molestie ornare. Integer ut felis tortor. Nulla facilisi. Pellentesque quam nunc, cursus ac venenatis tincidunt, sodales a est. Morbi ultrices venenatis ante, et molestie metus congue vitae. Duis ante nisi, molestie vel consequat non, molestie ac sem.</p>
+    picture: /samples/steps/step.png
+    time_saver: true
+    paypal_link: http://www.paypal.com
+    paypal_amount: 35
+- Two:
+    title: Install the locomotive Editor
+    description: <p><b>Either in command line :</b><p><ul><li>blablabla</li><li>or blablablabla</li></ul></p></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque at arcu ut urna tempor feugiat. Donec vel neque sed neque dictum elementum id non arcu. Sed sit amet adipiscing nulla. Donec sed arcu at est molestie ornare. Integer ut felis tortor. Nulla facilisi. Pellentesque quam nunc, cursus ac venenatis tincidunt, sodales a est. Morbi ultrices venenatis ante, et molestie metus congue vitae. Duis ante nisi, molestie vel consequat non, molestie ac sem.</p>
+    picture: /samples/steps/step.png
+    time_saver: false
+    paypal_link:
+    paypal_amount:
+- Three:
+    title: Install the locomotive Editor
+    description: <p><b>Either in command line :</b><p><ul><li>blablabla</li><li>or blablablabla</li></ul></p></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque at arcu ut urna tempor feugiat. Donec vel neque sed neque dictum elementum id non arcu. Sed sit amet adipiscing nulla. Donec sed arcu at est molestie ornare. Integer ut felis tortor. Nulla facilisi. Pellentesque quam nunc, cursus ac venenatis tincidunt, sodales a est. Morbi ultrices venenatis ante, et molestie metus congue vitae. Duis ante nisi, molestie vel consequat non, molestie ac sem.</p>
+    picture: /samples/steps/step.png
+    time_saver: false
+    paypal_link:
+    paypal_amount:
+- Four:
+    title: Install the locomotive Editor
+    description: <p><b>Either in command line :</b><p><ul><li>blablabla</li><li>or blablablabla</li></ul></p></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque at arcu ut urna tempor feugiat. Donec vel neque sed neque dictum elementum id non arcu. Sed sit amet adipiscing nulla. Donec sed arcu at est molestie ornare. Integer ut felis tortor. Nulla facilisi. Pellentesque quam nunc, cursus ac venenatis tincidunt, sodales a est. Morbi ultrices venenatis ante, et molestie metus congue vitae. Duis ante nisi, molestie vel consequat non, molestie ac sem.</p>
+    picture: /samples/steps/step.png
+    time_saver: false
+    paypal_link:
+    paypal_amount:
+- Five:
+    title: Install the locomotive Editor
+    description: <p><b>Either in command line :</b><p><ul><li>blablabla</li><li>or blablablabla</li></ul></p></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque at arcu ut urna tempor feugiat. Donec vel neque sed neque dictum elementum id non arcu. Sed sit amet adipiscing nulla. Donec sed arcu at est molestie ornare. Integer ut felis tortor. Nulla facilisi. Pellentesque quam nunc, cursus ac venenatis tincidunt, sodales a est. Morbi ultrices venenatis ante, et molestie metus congue vitae. Duis ante nisi, molestie vel consequat non, molestie ac sem.</p>
+    picture: /samples/steps/step.png
+    time_saver: false
+    paypal_link:
+    paypal_amount:
+

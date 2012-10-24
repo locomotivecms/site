@@ -3,39 +3,39 @@
 - dans chaque page content un 'page_head', tous les editable text ont une priority commencant a 8 et inferieur
 - pagination : paginate contents.company and not paginate content_type.company
 - add to reference : if you do an "unless" loop, end it with "endunless"
+- fix reference typo : cycle => {% cycle 'group 1': 'blue', 'green', 'red' }}
 
 ## TO DO DIDIER
 
 - exporter formulaire mailchimp AJAX
 - me donner l'acces au compte disqus pour recuperer le script de comment count
+- voir le probleme de tabs dans pricing : hosting solution est un lien mais son comportement de lien est desactive puisque dans le groupe des tabs. J'ai utilise jquery tools.
+- retrouver le psd page Tour (pour slicer correctement l'image timesaver)
 
 ## TO DO GENERAL
 
-- config site.yml
 - company : images rounded
 - voir avec kenny la font de semi bold, notamment pour le titre de la home (en 40px)
-- blog : pas d'image
-- pricing : pas de slideshopw, 30 days float right a voir
-- pricing : faq => content type en deux colonnes
-- blog : quote float right a tester
-- tour : content type + boolean timesaver qui affiche ou non la petite icone
 - home gradient
 - home > tagline > background gris de separation avec le reste
 - home > 4 cols > slice images properly
 - home > extract 2 background patterns (strip and before strip)
-- buttons : outset shadow
-- pricing : tab
-- pricing : faq model / two cols
-- pricing : icon paypal
 - 404 : - slice images (ask benj)
-- blog > check if readme colors are ok
-- blog > put twitter script in bottom or what ?
-- blog > pagination : see gallery
 
+- blog : 
+  * localized date
+  * longueur du truncate a voir en preview + strip html
+  * Disqus
+  * check if readme colors are ok
+  * blockquote a styliser
+- sidebar : script twitter button a placer quelque part
+- resources : due date calculated
+- resources : balise time + ARIA value
+- tour : if paypal, if timesaver doesn't work
+- tour : go to subsection with link in subnav
 - main nav :
   * mobile version
   * button to improve
-
 - see v1.0 issues & pull requests
 
 ## QUESTIONS

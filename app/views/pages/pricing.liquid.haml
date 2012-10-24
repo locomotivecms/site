@@ -4,18 +4,18 @@
 
 {% include 'page_head' %}
 %nav.subnav
-  %ul
+  %ul.tabs
     %li
-      %a{ :href => "#editor" }
+      %a{ :href => "#" }
         Locomotive Editor
     %li
-      %a{ :href => "http://www.google.com" }
+      %a{ :href => "http://www.google.fr" }
         Hosting Solution
     %li
-      %a{ :href => "#paud" }
+      %a{ :href => "#" }
         Paid Support
 
-%section.princing-detail-container
+%section.princing-detail-container.panes
   %section.pricing-detail-item
     %section
       %header
@@ -24,7 +24,7 @@
       %p
         Remember, The Editor will help you develop your website up to 70% faster than other CMS. That means that at $69 per year, you have your return on investment after  1 hour only! 
       %p
-        3 Reasons to purchase the Locomotive Editor :
+        %b 3 Reasons to purchase the Locomotive Editor :
       %img{ :src => "{{ 'thirty_days_guaranteed.png' | theme_image_url }}" }
       %ul
         %li Unordered List item example
@@ -36,17 +36,30 @@
       %p Have you been referred by an enthusiastic friend? Don’t forget to enter your coupon code at checkout.
     %aside
       %a{ :href => "#", :class => "paypal" }
-        BUY NOW 39$ : PAYPAL
+        BUY NOW 39$ 
+        = "|"
+        %img{ :src => "{{ 'paypal.png' | theme_image_url }}" }
       .slideshow
         %img{ :src => "http://placehold.it/350x350", :alt => "" }
-%section.princing-faq-container
-  {% include 'pricing_faq_item' %}
-  {% include 'pricing_faq_item' %}
-  {% include 'pricing_faq_item' %}
-  {% include 'pricing_faq_item' %}
-  {% include 'pricing_faq_item' %}
-  {% include 'pricing_faq_item' %}
-  {% include 'pricing_faq_item' %}
 
+  %section.pricing-detail-item
+    %section
+      %header
+        %h1 Hosting solution
+        %span.tagline Problem to make this a real link and not a tab
+
+  %section.pricing-detail-item
+    %section
+      %header
+        %h1 Paid support
+        %span.tagline Tagline blablabla
+      %p
+        Text blablabla
+
+%section.princing-faq-container
+  {% for question in contents.questions %}
+  {% include 'pricing_faq_item' %}
+  {{ forloop.length/2 }}
+  {% endfor %}
 
 {% endblock %}

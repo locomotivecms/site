@@ -1,0 +1,19 @@
+{% extends 'index' %}
+
+{% block 'main' %}
+
+{% include 'page_head' %}
+
+#main-blog
+  {% include 'blog_sidebar' %}
+  %article.full-article
+    %header
+      %h1 {{ article.title }}
+      %time{ :datetime => "..." }
+      {{ article.posted_at }}
+    {{ article.body }}
+    .bottom
+      %span.meta
+        Posted by {{ article.author }}
+  
+{% endblock %}

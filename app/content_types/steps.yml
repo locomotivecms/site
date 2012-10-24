@@ -1,0 +1,32 @@
+description: Steps in tour page
+name: steps
+order_by: manually
+slug: steps
+label_field_name: number
+fields:
+- number:
+    label: Step number
+    type: string
+    hint: Step number in letters
+- title:
+    label: Step title
+    type: string
+- description:
+    label: Description
+    type: text
+    hint: Full description of the step
+- picture:
+    label: Picture
+    type: file
+- time_saver:
+    label: Is time saver
+    type: boolean
+    hint: Display or not the time saver icon
+- paypal_link:
+    label: Paypal url
+    type: string
+    hint: Fill with Paypal url if you want display the buy button
+- paypal_amount:
+    label: Paypal amount
+    type: string
+    hint: Fill with Paypal amount if you want display the buy button

@@ -1,0 +1,22 @@
+description: Projects in the works
+name: projects
+order_by: manually
+slug: projects
+label_field_name: title
+fields:
+- title:
+    label: Project title
+    type: string
+    hint: The title of the project
+- tagline:
+    label: Tagline
+    type: string
+    hint: The punchline of the project
+- description:
+    label: description
+    type: text
+    hint: Full description of the project
+- due_date:
+    label: Due Date
+    type: date
+    hint: The deadline of the project

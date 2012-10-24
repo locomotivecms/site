@@ -1,0 +1,35 @@
+{% extends 'index' %}
+
+{% block 'main' %}
+
+{% include 'page_head' %}
+%nav.subnav
+  %ul
+    {% for step in contents.steps %}
+    %li
+      %a{ :href => "#" }
+        Step {{ step.number }}
+    {% endfor %}
+
+{% for step in contents.steps %}
+{% include 'step_item' %}
+{% endfor %}
+ 
+%section.tour-footer-container
+  %section
+    %header
+      %h1
+        {% editable_short_text "footer-title", priority: 8 %}
+        Where do these numbers come from ?
+        {% endeditable_short_text %}
+    .description
+      %img.time-saver{ :src => "{{ 'time-saver.png' | theme_image_url }}" }
+      {% editable_long_text "tagline-quote-content", priority: 9 %}
+      %p Blablablablablabla
+      %p Blablablablablabla
+      {% endeditable_long_text %}
+    %a{ :href => "#" }
+      PURCHASE THE LOCOMOTIVE EDITOR
+
+
+{% endblock %}
