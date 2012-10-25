@@ -1,12 +1,14 @@
 %section#page-head
-  %header
-    {% editable_short_text "page-head-title", priority: 10 %}
-    {{ page.title }}
-    {% endeditable_short_text %}
-  %p
-    {% editable_long_text "page-head-content", priority: 9 %}
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae ante sit amet mi vehicula suscipit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-    {% endeditable_long_text %}
+  %section#page-head-content
+    %header
+      {% editable_short_text "page-head-title", priority: 10 %}
+      Create beautiful sites
+      -#{{ page.title }}
+      {% endeditable_short_text %}
+    %p
+      {% editable_long_text "page-head-content", priority: 9 %}
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae ante sit amet mi vehicula suscipit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+      {% endeditable_long_text %}
   %aside
     %a{ :href => "#" }
       Install now

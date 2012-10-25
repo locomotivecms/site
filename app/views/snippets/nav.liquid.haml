@@ -1,0 +1,27 @@
+%nav#main-nav
+  .inner-container
+    %h1
+      %a{ :href => "/" }
+        LOCOMOTIVECMS
+    %ul
+      %li{ :class => '{% if page.fullpath == "blog" %}active{% endif %}'}
+        %a{ :href => "/blog" }
+          Blog
+      %li{ :class => '{% if page.fullpath == "company" %}active{% endif %}'}
+        %a{ :href => "/company" }
+          Company
+      %li{ :class => '{% if page.fullpath == "features" %}active{% endif %}'}
+        %a{ :href => "/features" }
+          Features
+      %li{ :class => '{% if page.fullpath == "gallery" %}active{% endif %}'}
+        %a{ :href => "/gallery" }
+          Gallery
+      %li{ :class => '{% if page.fullpath == "pricing" %}active{% endif %}'}
+        %a{ :href => "/pricing" }
+          Pricing
+      %li{ :class => '{% if page.fullpath == "resources" %}active{% endif %}'}
+        %a{ :href => "/resources" }
+          Resources
+      %li{ :class => '{% if page.fullpath == "tour" %}active{% endif %}'}
+        %a{ :href => "/tour" }
+          Tour

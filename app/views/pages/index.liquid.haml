@@ -25,49 +25,22 @@
 
   %body
 
-    %nav#main-nav
-      .inner-container
-        %h1
-          %a{ :href => "/" }
-            LOCOMOTIVECMS
-        %ul
-          %li{ :class => '{% if page.fullpath == "blog" %}active{% endif %}'}
-            %a{ :href => "/blog" }
-              Blog
-          %li{ :class => '{% if page.fullpath == "company" %}active{% endif %}'}
-            %a{ :href => "/company" }
-              Company
-          %li{ :class => '{% if page.fullpath == "features" %}active{% endif %}'}
-            %a{ :href => "/features" }
-              Features
-          %li{ :class => '{% if page.fullpath == "gallery" %}active{% endif %}'}
-            %a{ :href => "/gallery" }
-              Gallery
-          %li{ :class => '{% if page.fullpath == "pricing" %}active{% endif %}'}
-            %a{ :href => "/pricing" }
-              Pricing
-          %li{ :class => '{% if page.fullpath == "resources" %}active{% endif %}'}
-            %a{ :href => "/resources" }
-              Resources
-          %li{ :class => '{% if page.fullpath == "tour" %}active{% endif %}'}
-            %a{ :href => "/tour" }
-              Tour
-    
-    {% block 'main' %}
+    {% include 'nav' %}
 
+    {% block 'main' %}
     %section#home-tagline
       .inner-container
         %header
           %h1
-            {% editable_short_text "tagline-title", priority: 10 %}
+            {% editable_short_text "tagline-title", priority: 14 %}
             Develop your website 50% faster
             {% endeditable_short_text %}
           %blockquote
-            {% editable_long_text "tagline-quote-content", priority: 9 %}
+            {% editable_long_text "tagline-quote-content", priority: 13 %}
             Locomotive is so easy to develop with. It has helped speed up my dev time by two fold, and reduce my hair pulling time by 100%.
             {% endeditable_long_text %}
             %span.quote-author
-              {% editable_short_text "tagline-quote-author", priority: 8 %}
+              {% editable_short_text "tagline-quote-author", priority: 12 %}
               Johnny Appleseed, developer
               {% endeditable_short_text %}
         %a{ :href => "#", :class => "button" }
@@ -83,8 +56,8 @@
           %h1
             %em What is
             LocomotiveCMS
-        .content
-          {% editable_long_text "strip-text", priority: 7 %}
+        #home-strip-content
+          {% editable_long_text "strip-text", priority: 11 %}
           %p
             LocomotiveCMS is an open source CMS solution for Rails
           %p
@@ -92,30 +65,27 @@
           {% endeditable_long_text %}
         %a{ :href => "#", :class => "button" }
           TRY THE DEMO
-    %section#main
-
+    %section#home-container
       %section.home-column
         %img{ :alt => "", :src => "{{ 'icon-tools.png' | theme_image_url }}" }
         %header
-          {% editable_long_text "first-col-title", priority: 6 %}
+          {% editable_long_text "first-col-title", priority: 10 %}
           Build your website locally
           {% endeditable_long_text %}
-        {% editable_long_text "first-col-content", priority: 5 %}
+        {% editable_long_text "first-col-content", priority: 9 %}
         %p 
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sollicitudin dolor vitae est tincidunt congue. Curabitur suscipit, mauris sed aliquam auctor, justo eros varius arcu, in suscipit sem dui nec lorem.
         {% endeditable_long_text %}
-    
       %section.home-column
         %img{ :alt => "", :src => "{{ 'icon-edit.png' | theme_image_url }}" }
         %header
-          {% editable_long_text "first-col-title", priority: 6 %}
+          {% editable_long_text "first-col-title", priority: 8 %}
           Super friendly content editing interface
           {% endeditable_long_text %}
-        {% editable_long_text "first-col-content", priority: 5 %}
+        {% editable_long_text "first-col-content", priority: 7 %}
         %p 
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sollicitudin dolor vitae est tincidunt congue. Curabitur suscipit, mauris sed aliquam auctor, justo eros varius arcu, in suscipit sem dui nec lorem.
         {% endeditable_long_text %}
-    
       %section.home-column
         %img{ :alt => "", :src => "{{ 'icon-validate.png' | theme_image_url }}" }
         %header
@@ -126,61 +96,23 @@
         %p 
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sollicitudin dolor vitae est tincidunt congue. Curabitur suscipit, mauris sed aliquam auctor, justo eros varius arcu, in suscipit sem dui nec lorem.
         {% endeditable_long_text %}
-    
       %section.home-column
         %img{ :alt => "", :src => "{{ 'icon-open-source.png' | theme_image_url }}" }
         %header
-          {% editable_long_text "first-col-title", priority: 6 %}
+          {% editable_long_text "first-col-title", priority: 4 %}
           Open Source optimized
           {% endeditable_long_text %}
-        {% editable_long_text "first-col-content", priority: 5 %}
+        {% editable_long_text "first-col-content", priority: 3 %}
         %p 
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sollicitudin dolor vitae est tincidunt congue. Curabitur suscipit, mauris sed aliquam auctor, justo eros varius arcu, in suscipit sem dui nec lorem.
         {% endeditable_long_text %}
+    %section#home-container
+      %header#home-bottom
+        {% editable_short_text "tagline-title", priority: 2 %}
+        Create beautiful sites with LocomotiveCMS
+        {% endeditable_short_text %}
 
 
     {% endblock %}
-    %footer#footer
-      #inner-footer
-        %section.footer-item
-          %header
-            Locomotive Quick Links
-          %ul
-            %li
-              %a{ :href => "/company" }
-                Company
-            %li
-              %a{ :href => "/privacy-policy" }
-                Privacy Policy
-            %li
-              %a{ :href => "/terms-of-use" }
-                Terms of use
-            %li
-              %a{ :href => "/license" }
-                License Agreement
-            %li
-              %a{ :href => "mailto:didier@nocoffee.fr" }
-                Contact us
 
-        %section.footer-item
-          %header
-            Follow 
-            %a{ :href => "https://twitter.com/locomotivecms" }
-              @locomotivecms
-        %section.footer-item
-          %header
-            Locomotive News
-          %p
-            Stay on top of Locomotive updates, subscribe to our news.
-          %form
-            %input
-            %input{ :type => :submit, :value => "SUBSCRIBE" }
-        %section.footer-item
-          %header
-            LOCOMOTIVECMS
-          %p
-            %em LocomotiveCMS is developed by NoCoffee. LocomotiveCMS is free software under the MIT license.
-          %p
-            %strong © {{ today | localized_date: '%Y' }} Locomotive CMS
-        %a.back-to-top{ :href => "#" }
-          BACK TO TOP
+    {% include "footer" %}

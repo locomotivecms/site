@@ -4,31 +4,32 @@
   padding-top: 40px
   padding-bottom: 40px
   +proximanova-light
-  header
+  #page-head-content
     +span-columns(4 omega,4)
-    font-size: 30px
-    line-height: 36px
-    color: $fourth-black
-  p
-    +span-columns(4 omega,4)
-    font-size: 16px
-    line-height: 27px
-    color: $third-blue
-    +proximanova-light
-    margin: 0
-    a
-      color: $dark-black
+    header  
+      font-size: 36px
+      line-height: 30px
+      color: $fourth-black
+    p
+      +span-columns(4 omega,4)
+      font-size: 20px
+      line-height: 27px
+      color: $third-blue
+      +proximanova-light
+      margin: 0
+      a
+        color: $dark-black
   aside
     +span-columns(4 omega,4)
     margin-top: 10px
     a
       +big-button
   @media #{$desktop}
-    header,
-    p
+    #page-head-content
       +span-columns(3,4)
     aside
       +span-columns(1 omega,4)
+      margin-top: 0
       a
         width: 100%
 

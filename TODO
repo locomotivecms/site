@@ -16,12 +16,8 @@
 
 - company : images rounded
 - voir avec kenny la font de semi bold, notamment pour le titre de la home (en 40px)
-- home gradient
-- home > tagline > background gris de separation avec le reste
 - home > 4 cols > slice images properly
 - home > extract 2 background patterns (strip and before strip)
-- 404 : - slice images (ask benj)
-
 - blog : 
   * localized date
   * longueur du truncate a voir en preview + strip html
@@ -37,6 +33,8 @@
   * mobile version
   * button to improve
 - see v1.0 issues & pull requests
+- Creampuf.otf
+- installer fonts dans photoshop et revoir tailles line heights
 
 ## QUESTIONS
 
@@ -44,4 +42,12 @@
 - gallery > item > preview button ? what is a preview ?
 
 
+## 
+
+Bigger text – Make text larger for readability, with a minimum font size of 14 pixels.
+Better padding – Increase padding and line-height of densely packed links to increase touch accuracy. This applies especially to form elements and calendar dropdowns.
+Removed hovers – Remove mouse hover interactions wherever possible. If you want to keep them, extend hover to support tap-and-hold interactions as well as mouse hover.
+Content fluidity – Consider making the design flexible to cover the full range of tablet screen sizes – from 600px to 1000px wide – instead of fixing page widths in stone.
+Banished Flash – With iPads clinching such a big portion of the tablet market, Flash elements must be removed.
+Faster positioning – Remove elements using the declaration (real or simulated) “position:fixed” because they slow down page scrolling on tablets much more than on desktop.
 

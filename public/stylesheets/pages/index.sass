@@ -1,5 +1,6 @@
 // Home
 #home-tagline
+  background: url(/images/home_halo.png) bottom center no-repeat
   background-color: $banner-bg
   color: white
   text-align: center
@@ -42,10 +43,10 @@
     .button,
     #try-out
       +span-columns(1 omega, $total-columns)
-
 #home-image
   background-color: $home-before-strip
-  
+  +box-shadow( inset 0px -4px 6px $light-black)
+  z-index: -10
   .inner-container
     +four-cols-grid
     position: relative
@@ -54,16 +55,12 @@
     position: absolute
     bottom: 0
     left: 0
-    z-index: 1
-
-
+    
+    +box-shadow( 0px -4px 6px $light-black)
 #home-strip
-  // temp !
   margin-top: 0px
-  z-index: 9999
   border-top: 1px solid white
   border-bottom: 1px solid $blue-border
-  +box-shadow(0px -4px 6px $light-black)
   background: url(/images/home-strip-bg.png) repeat
   .inner-container
     +four-cols-grid
@@ -78,14 +75,12 @@
         color: $menu-background
         margin: 0
         em
-          //Creampuff
-          //Bello Pro
           +creampuff
           display: block
           font-size: 30px
           line-height: 28px
           color: $home-strip-text
-    .content
+    #home-strip-content
       p
         font-size: 19px
         color: $home-strip-text
@@ -100,11 +95,13 @@
     @media #{$desktop}
       header
         +span-columns(1, $total-columns)
-      .content
+      #home-strip-content
         +span-columns(2, $total-columns)
       .button
         +span-columns(1 omega, $total-columns)
 
+#home-container
+  +four-cols-grid
 
 .home-column
   +span-columns($total-columns omega, $total-columns)
@@ -127,5 +124,7 @@
 
   @media #{$desktop}
     +span-columns(1, $total-columns)
+
+#home-bottom
 
 

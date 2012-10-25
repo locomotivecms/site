@@ -4,13 +4,12 @@
 %section#page-404
   %header
     %h1
-      {% editable_short_text "page-title", priority: 10 %}
+      {% editable_short_text "404-title", priority: 8 %}
       Sorry, you must have taken a wrong turn somewhere
       {% endeditable_short_text %}
-    {% editable_short_text "page-content", priority: 9 %}
+    {% editable_short_text "404-content", priority: 7 %}
     404 Error page
     {% endeditable_short_text %}
-  %img{ :src => "" }
-  %img{ :src => "" }
+  %img{ :src => "{{ '404.png' | theme_image_url }}" }
 
 {% endblock %}

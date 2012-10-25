@@ -2,9 +2,9 @@
   %section
     %header
       %h1 {{ forloop.index }}.{{ step.title }}
-      {{ if step.time_saver }}
-      %img.time-saver{ :src => "{{ 'time-saver.png' | theme_image_url }}" }
-      {{ endif }}
+    {{ if step.time_saver }}
+    %img.time-saver{ :src => "{{ 'time-saver.png' | theme_image_url }}" }
+    {{ endif }}
     {{ step.description }}
     {{ if step.paypal_link }}
     %a{ :href => "{{ step.paypal_link }}", :class => "paypal" }
