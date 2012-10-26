@@ -4,6 +4,11 @@
 - pagination : paginate contents.company and not paginate content_type.company
 - add to reference : if you do an "unless" loop, end it with "endunless"
 - fix reference typo : cycle => {% cycle 'group 1': 'blue', 'green', 'red' }}
+- pour tous les content entries, je pars du principe que chaque bout de texte est contenu dans un <p> parce que
+je considere que l'editeur de txt en ajoute forcement
+- features page : le pointille vertical a une largeur de 2px mais est dans une image de 103px de large pour le padding right (pas d'autre solution trouvee)
+- company crew pictures : redimmensionner les images en 154px par 154px pour avoir une bordure ombree.
+- page pricing : subnav : des liens qui ouvrent un tab et un lien "hosting solution" qui doit etre un vrai lien. Le probleme est que le jquery tools tabs desactive le comportement des liens et "hosting solution" ouvre forcement un tab. La solution trouvee est de placer ce lien en dernier, dans un nouvel <ul>
 
 ## TO DO DIDIER
 
@@ -11,43 +16,37 @@
 - me donner l'acces au compte disqus pour recuperer le script de comment count
 - voir le probleme de tabs dans pricing : hosting solution est un lien mais son comportement de lien est desactive puisque dans le groupe des tabs. J'ai utilise jquery tools.
 - retrouver le psd page Tour (pour slicer correctement l'image timesaver)
+- voir comment avoir le nombre de jours restants avant la fin d'un projet, je n'arrive pas a soustraire deux dates
 
 ## TO DO GENERAL
 
-- company : images rounded
 - voir avec kenny la font de semi bold, notamment pour le titre de la home (en 40px)
-- home > 4 cols > slice images properly
 - home > extract 2 background patterns (strip and before strip)
 - blog : 
-  * localized date
-  * longueur du truncate a voir en preview + strip html
   * Disqus
-  * check if readme colors are ok
-  * blockquote a styliser
-- sidebar : script twitter button a placer quelque part
-- resources : due date calculated
-- resources : balise time + ARIA value
-- tour : if paypal, if timesaver doesn't work
-- tour : go to subsection with link in subnav
 - main nav :
   * mobile version
-  * button to improve
-- see v1.0 issues & pull requests
 - Creampuf.otf
 - installer fonts dans photoshop et revoir tailles line heights
+- see v1.0 issues & pull requests
 
 ## QUESTIONS
 
 - home > "find out how" > link to what ?
 - gallery > item > preview button ? what is a preview ?
 
+## ETAT D'AVANCEMENT
 
-## 
-
-Bigger text – Make text larger for readability, with a minimum font size of 14 pixels.
-Better padding – Increase padding and line-height of densely packed links to increase touch accuracy. This applies especially to form elements and calendar dropdowns.
-Removed hovers – Remove mouse hover interactions wherever possible. If you want to keep them, extend hover to support tap-and-hold interactions as well as mouse hover.
-Content fluidity – Consider making the design flexible to cover the full range of tablet screen sizes – from 600px to 1000px wide – instead of fixing page widths in stone.
-Banished Flash – With iPads clinching such a big portion of the tablet market, Flash elements must be removed.
-Faster positioning – Remove elements using the declaration (real or simulated) “position:fixed” because they slow down page scrolling on tablets much more than on desktop.
+- 404         ok
+- blog        ok
+- company     ok
+- features
+- gallery     ok
+- index
+- license     ok
+- pricing     ok
+- privacy policy  ok
+- resources
+- terms of use  ok
+- Tour        ok
 

@@ -23,6 +23,14 @@
     {{ 'home' | javascript_tag }} 
 
 
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+      
+
+
+
+      
+
   %body
 
     {% include 'nav' %}
@@ -65,7 +73,7 @@
           {% endeditable_long_text %}
         %a{ :href => "#", :class => "button" }
           TRY THE DEMO
-    %section#home-container
+    %section#home-four-cols
       %section.home-column
         %img{ :alt => "", :src => "{{ 'icon-tools.png' | theme_image_url }}" }
         %header
@@ -107,10 +115,14 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sollicitudin dolor vitae est tincidunt congue. Curabitur suscipit, mauris sed aliquam auctor, justo eros varius arcu, in suscipit sem dui nec lorem.
         {% endeditable_long_text %}
     %section#home-container
-      %header#home-bottom
+      %h1#home-bottom
         {% editable_short_text "tagline-title", priority: 2 %}
         Create beautiful sites with LocomotiveCMS
         {% endeditable_short_text %}
+      %section#home-bottom-left
+
+      %section#home-bottom-right
+
 
 
     {% endblock %}

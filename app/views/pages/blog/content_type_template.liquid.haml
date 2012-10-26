@@ -9,8 +9,7 @@
   %article.full-article
     %header
       %h1 {{ article.title }}
-      %time{ :datetime => "..." }
-      {{ article.posted_at }}
+      {{ article.posted_at | localized_date: '%A %d %B %Y' }}
     {{ article.body }}
     .bottom
       %span.meta

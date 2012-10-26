@@ -2,7 +2,8 @@
 #main-nav
   background-color: $banner-bg
   padding-top: 30px
-  padding-bottom: 30px
+  padding-bottom: 20px
+  border-bottom: 2px solid rgba(255, 255, 255, 0.8)
   .inner-container
     +five-cols-grid
     // logo
@@ -26,9 +27,9 @@
         color: white
         background: none
         font-size: 16px
-        +proximanova-light
-        padding: 2px 20px
-        margin: 5px
+        +proximanova-semi-bold
+        padding: 6px 20px
+        margin: 3px 0
         a:hover
           color: white
       li.active
@@ -39,6 +40,14 @@
         li
           float: right
 
+@media #{$desktop}
+  #main-nav
+    background: url(/images/home_halo_small.png) no-repeat bottom center
+    background-color: $banner-bg
+  #main-nav.home-nav
+    background: none
+    background-color: $banner-bg
+    border-bottom: none
 // generic container
 #main-four
   +three-cols-grid

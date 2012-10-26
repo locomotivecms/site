@@ -1,15 +1,16 @@
+%a{ :name => '{{ step._permalink }}' }
 %section{ :class => "step-item {% cycle 'orientation': 'left', 'right' %}" }
   %section
     %header
       %h1 {{ forloop.index }}.{{ step.title }}
-    {{ if step.time_saver }}
+    {% if step.time_saver %}
     %img.time-saver{ :src => "{{ 'time-saver.png' | theme_image_url }}" }
-    {{ endif }}
+    {% endif %}
     {{ step.description }}
-    {{ if step.paypal_link }}
+    {% if step.paypal_link %}
     %a{ :href => "{{ step.paypal_link }}", :class => "paypal" }
       BUY NOW {{ step.paypal_amount }}$ 
       = "|"
       %img{ :src => "{{ 'paypal.png' | theme_image_url }}" }
-    {{ endif }}
+    {% endif %}
   %img.step-picture{ :src => "{{ step.picture.url }}", :alt => "" }

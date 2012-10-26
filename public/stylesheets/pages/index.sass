@@ -100,8 +100,9 @@
       .button
         +span-columns(1 omega, $total-columns)
 
-#home-container
+#home-four-cols
   +four-cols-grid
+
 
 .home-column
   +span-columns($total-columns omega, $total-columns)
@@ -125,6 +126,13 @@
   @media #{$desktop}
     +span-columns(1, $total-columns)
 
-#home-bottom
+#home-container
+  +four-cols-grid
+  margin-top: 50px
+  padding-bottom: 50px
+  text-align: center
 
+#home-bottom
+  margin-bottom: 50px
+  border-top: 1px solid $blue-border
 

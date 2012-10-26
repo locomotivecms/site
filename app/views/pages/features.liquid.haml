@@ -6,22 +6,14 @@
 
 %nav.subnav
   %ul
+    {% for feature in contents.features %}
     %li
-      %a{ :href => "#" }
-        Custom content
-    %li
-      %a{ :href => "#" }
-        Custom content
-    %li
-      %a{ :href => "#" }
-        Custom content
-    %li
-      %a{ :href => "#" }
-        Custom content
-
+      %a{ :href => '#{{ feature._permalink }}' }
+        {{ feature.short_name }}
+    {% endfor %}
 %section#features-container
-  {% for i in (1..4) %}
-  {% include 'feature' %}
+  {% for feature in contents.features %}
+  {% include 'feature_item' %}
   {% endfor %}
 
 

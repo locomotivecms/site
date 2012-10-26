@@ -4,8 +4,6 @@
 .feature
   +span-columns(5 omega, 5)
   border-bottom: 1px solid $blue-border
-  padding-top: 50px
-  padding-bottom: 50px
   header
     +span-columns(5 omega,5)
     font-size: 20px
@@ -16,15 +14,35 @@
     font-size: 13px
     color: $light-black
     +open-sans-regular
+  .feature-icon
+    text-align: center
+
 
 @media #{$desktop}
+  .feature.left
+    
+  .feature.right
+    
   .feature
-    header
-      +span-columns(5 omega,5)
-    .feature-description
-      +span-columns(2,5)
-    .feature-icon
-      +span-columns(1,5)
+    &:last-child
+      border-bottom: none
+    .feature-left
+      +span-columns(3,5)
+      
+      
+      header
+        padding-top: 50px
+        +span-columns(4,5)
+      .feature-description
+        +span-columns(4,5)
+        padding-bottom: 50px
+      .feature-icon
+        +span-columns(1 omega,5)
+        padding-top: 85px
+        min-height: 100%
+        background: url(/images/dotted_pattern.png) repeat-y top center
     .feature-illustrations
       +span-columns(2 omega,5)
-  
+      padding-top: 50px
+    &:first-child
+      

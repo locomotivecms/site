@@ -7,7 +7,7 @@
   %ul
     {% for step in contents.steps %}
     %li
-      %a{ :href => "#" }
+      %a{ :href => '#{{ step._permalink }}' }
         Step {{ step.number }}
     {% endfor %}
 

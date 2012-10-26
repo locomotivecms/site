@@ -2,7 +2,21 @@
     author: Didier
     _permalink: post-1
     posted_at: 2011-07-22
-    body: '<p>Great news! So many of you have been looking to connect in real time with the Locomotive team<blockquote>We strongly believe lorem ipsum</blockquote> and community, we really wanted to create a centralized place for it.</p>'
+    body: |
+      <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam, velit eget egestas facilisis, enim diam feugiat enim, vitae lacinia erat nunc at lacus. Ut ornare elit consectetur augue ultrices ultrices. Proin ultrices, mauris non ornare rhoncus, elit ligula sagittis risus, euismod tempor est augue vitae justo. Nunc non dui nec urna cursus rutrum. Duis ante lectus, tincidunt ac commodo eget, varius et tellus. Vestibulum erat enim, mollis molestie consectetur sed, molestie eget mi. Morbi consectetur semper lectus sed lacinia. Curabitur a libero arcu, sed hendrerit orci. Sed commodo pellentesque arcu eget sagittis.
+      </p>
+      <p>
+      <blockquote>
+      We strongly believe that selling gems will help a lot of open source projects to generate revenues.
+      </blockquote>
+      </p>
+      <p>
+      Aliquam et dui sed lacus cursus malesuada. Ut est eros, ultrices eget vestibulum at, porttitor ullamcorper velit. Aenean consequat turpis eget odio bibendum blandit. Fusce ac turpis id magna ultricies varius. Donec a metus velit, id fermentum risus. Sed id neque eget tortor tempor laoreet ac vel lacus. Sed mollis lacus eu justo fermentum ut aliquam eros molestie. Vestibulum consectetur aliquet ipsum quis semper.
+      </p>
+      <p>
+      Nunc malesuada augue vitae leo malesuada sit amet viverra elit elementum. Suspendisse justo metus, dictum id lacinia non, bibendum eget nisl. Nullam vitae metus urna. Curabitur leo nibh, gravida non fringilla non, ullamcorper condimentum velit. Suspendisse nunc sapien, facilisis quis vulputate non, egestas sit amet nunc. Suspendisse potenti. Nullam a nisl urna. Sed consequat dignissim placerat. Mauris diam quam, mollis iaculis imperdiet eu, euismod vel mi. Aliquam luctus urna ac tortor imperdiet ac ornare elit luctus. Nullam gravida interdum eros nec tristique. Nulla gravida, tortor sit amet eleifend sollicitudin, tortor magna faucibus justo, in cursus arcu massa id dui. Quisque vel dui id dolor dapibus venenatis nec id nulla. Integer ut eros in nulla dapibus venenatis. Nulla vel metus arcu, consequat consectetur arcu.
+      </p>
 - Post 2:
     author: Estelle
     _permalink: post-2

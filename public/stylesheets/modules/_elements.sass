@@ -40,6 +40,7 @@ nav.subnav
   padding-bottom: 15px
   ul
     margin: 0
+    float: left
   li
     display: inline-block
     background: none
@@ -81,14 +82,35 @@ nav.subnav
 
 .full-article 
   blockquote
+    width: 30%
     float: right
-    color: red
+    margin-left: 20px
+    color: $light-blue
+    font-size: 18px
+    line-height: 28px
+    +open-sans-regular
+    &:before
+      content: "“"
+      color: $light-blue
+      font-size: 30px
+      line-height: 28px
+      +open-sans-bold
+    &:after
+      content: "”"
+      color: $light-blue
+      font-size: 18px
+      line-height: 28px
+      +open-sans-regular
+
 
 article
   +span-columns(3 omega,3)
   margin-top: 35px
   padding-bottom: 35px
   border-bottom: 1px solid $blue-border
+  color: $light-black
+  font-size: 13px
+  +open-sans-regular
   header
     +proximanova-semi-bold
     font-size: 12px
@@ -101,6 +123,7 @@ article
     color: $light-black
     font-size: 13px
     +open-sans-regular
+  
   .bottom
     margin-top: 20px
     .meta

@@ -1,37 +1,20 @@
-name: Features screenshots
+name: Features
 order_by: manually
 slug: features
-label_field_name: name
+label_field_name: short_name
 fields:
+- short_name:
+    label: Short name
+    type: string
 - long_name:
     label: Long name
     type: string
-- short_description:
-    label: Short description
+- description:
+    label: Description
     type: text
-- long_description:
-    label: Long description
-    type: text
+- icon:
+    label: Icon of the feature
+    type: file
 - thumb:
     label: Thumb screenshot
-    type: file
-- popup:
-    label: Popup
-    type: boolean
-    hint: Enable the popup used to display the large screenshot
-- home:
-    label: Home page
-    type: boolean
-    hint: Is this feature displayed in the home page ?
-- no_screenshot:
-    label: No screenshot
-    type: boolean
-    hint: In case we do not have a vignette for this feature
-- name:
-    required: true
-    label: Name
-    type: string
-- source:
-    required: true
-    label: Source
     type: file

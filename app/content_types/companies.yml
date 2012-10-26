@@ -28,3 +28,7 @@ fields:
     label: Screenshot
     type: file
     hint: Screenshot image 300x300 of the company's website
+- logo:
+    label: Logo of the company
+    type: file
+    hint: Displayed in home page
