@@ -3,22 +3,13 @@
 {% block 'main' %}
 
 {% include 'page_head' %}
-
-%section#main-four
-  
+%section#main-generic
   %section#license
     {% editable_long_text "license-content", priority: 8 %}
-    
     %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus varius ante, at eleifend nisi pellentesque fermentum. Vivamus sodales, tortor at congue congue, velit sapien ullamcorper arcu, in tempor urna risus et justo. Curabitur aliquet sem a eros malesuada at commodo elit fringilla. Vivamus at gravida lectus. In ultricies, dui quis feugiat bibendum, risus lectus aliquet nunc, laoreet pellentesque nulla nibh vel augue. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum pellentesque venenatis elit ut lobortis.
-
     %p Fusce sed venenatis tellus. Pellentesque purus eros, bibendum eget consequat ut, porta sit amet purus. Sed turpis enim, porta a rutrum vel, sagittis vel tellus. Quisque justo enim, auctor vitae mollis eu, volutpat nec neque. Donec nec mattis orci. Mauris tincidunt tortor erat, eget gravida metus. Vivamus interdum est ut dui facilisis lobortis. Aenean cursus, mi sit amet egestas aliquam, justo ligula rutrum enim, quis tempus velit risus sit amet mauris.
-
     %p Integer eleifend eleifend pharetra. Vestibulum blandit suscipit urna eget iaculis. Donec rutrum vehicula suscipit. Phasellus sodales sodales purus, vitae facilisis risus commodo elementum. Fusce pellentesque tortor in magna ultrices sit amet sagittis nibh luctus. Phasellus in tellus urna, in mollis purus. Etiam vel nisi et felis vulputate convallis. Aliquam vehicula commodo faucibus. Proin imperdiet pretium turpis, at euismod ante facilisis et. Donec faucibus nulla dapibus tellus ultrices euismod. Etiam in sem arcu, ac commodo magna. In tortor lectus, elementum sit amet rhoncus et, sollicitudin eu massa. Pellentesque posuere elementum laoreet. Cras vitae neque sapien. Aenean faucibus mauris eu mauris elementum id pellentesque sem adipiscing. Suspendisse sollicitudin diam ac ligula facilisis feugiat.
-    
     {% endeditable_long_text %}
-  
-
-  {% include 'blog_sidebar' %}
-  
+  {% include 'sidebar' %}
 
 {% endblock %}

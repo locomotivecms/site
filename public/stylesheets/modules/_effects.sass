@@ -1,12 +1,15 @@
+// Shadow border around an element
 =shadowed-border($border-weight: 2px, $border-rad: 5px)
   border: #{$border-weight} solid white
   +border-radius($border-rad)
   +box-shadow(0px 0px 5px $blue-border)
 
+// Two columns text
 =two-columns
   +column-count(2)
   +column-gap(20px)
 
+// Shadow for gallery item
 =curl-shadow
   &:before, &:after
     +box-shadow(0px 15px 15px rgba($dark-black, 0.7))
@@ -24,6 +27,7 @@
     right: 5px
     +rotate(5deg)
 
+// Rounded picture shared style : a container with a border and a circle image
 .rounded-picture
   margin: 0 auto
   +border-radius(50%)

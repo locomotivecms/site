@@ -1,4 +1,4 @@
-// Main navigation
+// Navigation
 #main-nav
   background-color: $banner-bg
   padding-top: 30px
@@ -6,40 +6,42 @@
   border-bottom: 2px solid rgba(255, 255, 255, 0.8)
   .inner-container
     +five-cols-grid
-    // logo
-    h1
-      color: white
-      font-family: Futura
-      font-size: 20px
-      a
-        background: url(/images/logo-locomotive.png) no-repeat 0px 5px
-        padding-left: 32px
-        &:hover
-          color: white
-          text-decoration: none
-      @media #{$desktop}
-        float: left
-        width: 24%
-    // nav
-    ul
-      li
-        display: block
+  // Logo
+  h1
+    color: white
+    font-family: Futura
+    font-size: 20px
+    a
+      background: url(/images/logo-locomotive.png) no-repeat 0px 5px
+      padding-left: 32px
+      &:hover
         color: white
-        background: none
-        font-size: 16px
-        +proximanova-semi-bold
-        padding: 6px 20px
-        margin: 3px 0
-        a:hover
-          color: white
-      li.active
-        +menu-button
-      @media #{$desktop}
+        text-decoration: none
+    @media #{$desktop}
+      float: left
+      width: 24%
+  // Menu
+  ul
+    li
+      display: block
+      color: white
+      background: none
+      font-size: 16px
+      +proximanova-semi-bold
+      padding: 6px 20px
+      margin: 3px 0
+      a:hover
+        color: white
+    li.active
+      +menu-button
+    @media #{$desktop}
+      float: right
+      width: 76%
+      li
         float: right
-        width: 76%
-        li
-          float: right
-
+#main-nav.home-nav
+  border-bottom: none
+  
 @media #{$desktop}
   #main-nav
     background: url(/images/home_halo_small.png) no-repeat bottom center
@@ -47,26 +49,17 @@
   #main-nav.home-nav
     background: none
     background-color: $banner-bg
-    border-bottom: none
-// generic container
-#main-four
+    
+
+
+// Shared container
+#main-generic
   +three-cols-grid
   #terms-of-use, #license, #privacy-policy
     +span-columns(2,3)
     margin-top: 35px
 
-
-        
-      
-      
-
-
-
-#main
-  +four-cols-grid
-
-
-// Site footer
+// Footer
 #footer
   background-color: $footer-blue
   padding-top: 1px

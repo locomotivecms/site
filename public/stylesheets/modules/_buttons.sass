@@ -1,52 +1,57 @@
+// Orange button - Big
 =big-button
   +orange-button
   padding: 15px 30px
 
+// Orange button - Small
 =small-button
   +orange-button
   padding: 7px 15px
 
+// Orange button - Paypal
 =paypal-button
   +small-button
   img
     padding: 0 0 2px 3px
     float: none
 
+// Orange button - Mini
 =mini-button
   +orange-button
   padding: 1px 8px
   font-size: 12px
 
+// Shared Orange button mixin
 =orange-button
+  display: inline-block
+  color: #fff
+  text-align: center
+  text-shadow: 0 1px 1px $dark-black
+  +proximanova-light
+  font-size: 16px
   cursor: pointer
   +background-image( linear-gradient($orange-gradient-start, $orange-gradient-end) )
   border: 1px solid $orange-border
   border-bottom: 1px solid $orange-gradient-end
   border-radius: 5px
   +box-shadow(inset 0 1px 0 $orange-white, 0px 1px 2px $dark-black)
-  color: #fff
-  text-align: center
-  text-shadow: 0 1px 1px $dark-black
-  +proximanova-light
-  display: inline-block
-  font-size: 16px
-  //+box-shadow($dark-black 1px 1px 2px)
   &:hover
     +background-image( linear-gradient($orange-gradient-end, $orange-gradient-start) )
     border-bottom: 1px solid $orange-border
-    // overwrite classic a:hover styles
+    // overwrite basic a:hover styles
     color: white
     text-decoration: none
 
+// Active menu item
 =menu-button  
+  color: white
+  text-align: center
+  text-shadow: 0 1px 1px $dark-black
   cursor: pointer
   +background-image( linear-gradient($menu-gradient-start, $menu-gradient-end) )
   border: 1px solid $menu-border
   border-radius: 19px
   +box-shadow(inset 0 1px 0 0 $menu-white)
-  color: white
-  text-align: center
-  text-shadow: 0 1px 1px $dark-black
   a
     color: white
     &:hover
@@ -55,23 +60,24 @@
   &:hover
     +background-image( linear-gradient($menu-gradient-end, $menu-gradient-start) )
 
+// Blog Read more button
 =readmore-button
+  display: inline-block
   +proximanova-semi-bold
   font-size: 12px
-  display: inline-block
+  color: $read-more-text
   +border-radius(5px)
   cursor: pointer
   background-color: $read-more-bg
   padding: 5px 10px
-  color: $read-more-text
   &:hover
     background-color: $read-more-bg-hover
     color: $read-more-text-hover
     text-decoration: none
 
+// Gallery hover button
 =gallery-button
   background-color: $gallery-hover
-
   padding: 5px 20px
   cursor: pointer
   +background-image( linear-gradient($gallery-gradient-start, $gallery-gradient-end) )
@@ -89,6 +95,3 @@
     text-decoration: none
     +background-image( linear-gradient($gallery-gradient-end, $gallery-gradient-start) )
 
-
-.big-button
-  +big-button

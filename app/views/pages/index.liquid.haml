@@ -56,6 +56,7 @@
         %a{ :href => "#", :id => "try-out" }
           or Try the Demo
     %section#home-image
+      #shadow
       .inner-container
         %img{ :src => "{{ 'home-tagline-screenshot.png' | theme_image_url }}", :alt => "" }
     %section#home-strip
@@ -114,15 +115,26 @@
         %p 
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sollicitudin dolor vitae est tincidunt congue. Curabitur suscipit, mauris sed aliquam auctor, justo eros varius arcu, in suscipit sem dui nec lorem.
         {% endeditable_long_text %}
-    %section#home-container
-      %h1#home-bottom
+    %section#home-bottom-title
+      %h1
         {% editable_short_text "tagline-title", priority: 2 %}
         Create beautiful sites with LocomotiveCMS
         {% endeditable_short_text %}
+    %section#home-bottom-container
       %section#home-bottom-left
-
+        #home-bottom-testimonial-picture
+          .rounded-picture
+            %img{ :src => "/samples/crew/conan.png", :alt => "" }
+        #home-bottom-testimonial
+          {% editable_long_text "bottom-text", priority: 1 %}
+          %p Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui. “ 
+          %p John User. Developer, Frontier Group
+          {% endeditable_long_text %}
       %section#home-bottom-right
-
+        {% for company in contents.companies %}
+        %a{ :href => "http://{{ company.url }}" }
+          %img{ :src => "{{ company.logo.url }}", :alt => "{{ company.name }}"}
+        {% endfor %}
 
 
     {% endblock %}

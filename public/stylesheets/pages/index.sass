@@ -45,8 +45,16 @@
       +span-columns(1 omega, $total-columns)
 #home-image
   background-color: $home-before-strip
-  +box-shadow( inset 0px -4px 6px $light-black)
-  z-index: -10
+  position: relative
+  #shadow
+    width: 100%
+    position: absolute
+    z-index: 9999
+    bottom: -6px
+    left: 0
+    height: 6px
+    background: transparent
+    +box-shadow( 0px -4px 6px $light-black)
   .inner-container
     +four-cols-grid
     position: relative
@@ -55,8 +63,6 @@
     position: absolute
     bottom: 0
     left: 0
-    
-    +box-shadow( 0px -4px 6px $light-black)
 #home-strip
   margin-top: 0px
   border-top: 1px solid white
@@ -126,13 +132,31 @@
   @media #{$desktop}
     +span-columns(1, $total-columns)
 
-#home-container
+#home-bottom-title
   +four-cols-grid
   margin-top: 50px
-  padding-bottom: 50px
   text-align: center
-
-#home-bottom
+  border-bottom: 1px solid $blue-border
+  height: 16px
+  h1
+    display: inline-block
+    background-color: white
+    padding: 0 20px
+#home-bottom-container
+  +four-cols-grid
+  margin-top: 50px
   margin-bottom: 50px
-  border-top: 1px solid $blue-border
-
+  #home-bottom-left
+    +span-columns(2,4)
+    position: relative
+    #home-bottom-testimonial-picture
+      +span-columns(2,4)
+    #home-bottom-testimonial
+      +span-columns(2 omega,4)
+  #home-bottom-right
+    +span-columns(2 omega,4)
+    img
+      float: left
+      max-width: 28%
+      margin-bottom: 20px
+      margin-right: 2%
