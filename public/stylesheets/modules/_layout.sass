@@ -9,7 +9,8 @@
   // Logo
   h1
     color: white
-    font-family: Futura
+    +futura-lt
+    letter-spacing: 3px
     font-size: 20px
     a
       background: url(/images/logo-locomotive.png) no-repeat 0px 5px
@@ -27,8 +28,8 @@
       color: white
       background: none
       font-size: 16px
-      +proximanova-semi-bold
-      padding: 6px 20px
+      +proximanova-light
+      padding: 4px 20px
       margin: 3px 0
       a:hover
         color: white
@@ -89,7 +90,15 @@
       margin-bottom: 20px
     +open-sans-regular
     font-size: 13px
-    color: $footer-font-blue
+    p, em
+      color: $footer-font-blue
+    .logo
+      +futura-lt
+      letter-spacing: 2px
+      background: url(/images/logo-locomotive.png) no-repeat 0px 1px
+      padding-left: 32px
+      line-height: 20px
+      font-weight: bold
     ul
       +pretty-bullets("/images/bullet-blue.png", 4px, 5px, 25px)
       li
@@ -99,5 +108,6 @@
     .footer-item
       +span-columns(1, $total-columns)
       +nth-omega(4)
+      margin-top: 50px
 
       

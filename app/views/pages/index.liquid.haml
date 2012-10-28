@@ -40,15 +40,15 @@
       .inner-container
         %header
           %h1
-            {% editable_short_text "tagline-title", priority: 14 %}
+            {% editable_short_text "tagline-title", priority: 15 %}
             Develop your website 50% faster
             {% endeditable_short_text %}
           %blockquote
-            {% editable_long_text "tagline-quote-content", priority: 13 %}
+            {% editable_long_text "tagline-quote-content", priority: 14 %}
             Locomotive is so easy to develop with. It has helped speed up my dev time by two fold, and reduce my hair pulling time by 100%.
             {% endeditable_long_text %}
             %span.quote-author
-              {% editable_short_text "tagline-quote-author", priority: 12 %}
+              {% editable_short_text "tagline-quote-author", priority: 13 %}
               Johnny Appleseed, developer
               {% endeditable_short_text %}
         %a{ :href => "#", :class => "button" }
@@ -61,17 +61,21 @@
         %img{ :src => "{{ 'home-tagline-screenshot.png' | theme_image_url }}", :alt => "" }
     %section#home-strip
       .inner-container
-        %header
-          %h1
-            %em What is
-            LocomotiveCMS
         #home-strip-content
-          {% editable_long_text "strip-text", priority: 11 %}
-          %p
+          %header
+            %h1
+              %em What is
+              LocomotiveCMS
+          %span.first-line
+            {% editable_short_text "strip-first-line", priority: 12 %}
             LocomotiveCMS is an open source CMS solution for Rails
-          %p
+            {% endeditable_short_text %}
+          %span
+            {% editable_short_text "strip-second-line", priority: 11 %}
             It's super flexible and integrates with Heroku and Amazon S3
-          {% endeditable_long_text %}
+            {% endeditable_short_text %}
+            
+          
         %a{ :href => "#", :class => "button" }
           TRY THE DEMO
     %section#home-four-cols
@@ -79,7 +83,7 @@
         %img{ :alt => "", :src => "{{ 'icon-tools.png' | theme_image_url }}" }
         %header
           {% editable_long_text "first-col-title", priority: 10 %}
-          Build your website locally
+          Build your website locally. Deploy it instantly
           {% endeditable_long_text %}
         {% editable_long_text "first-col-content", priority: 9 %}
         %p 
@@ -127,8 +131,10 @@
             %img{ :src => "/samples/crew/conan.png", :alt => "" }
         #home-bottom-testimonial
           {% editable_long_text "bottom-text", priority: 1 %}
-          %p Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui. “ 
-          %p John User. Developer, Frontier Group
+          %p 
+            %em Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui. “ 
+          %p
+            %em John User. Developer, Frontier Group
           {% endeditable_long_text %}
       %section#home-bottom-right
         {% for company in contents.companies %}

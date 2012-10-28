@@ -1,5 +1,6 @@
 // Home
 #home-tagline
+  padding-top: 80px
   background: url(/images/home_halo.png) bottom center no-repeat
   background-color: $banner-bg
   color: white
@@ -10,15 +11,18 @@
     margin-top: 60px
   header
     +span-columns($total-columns omega, $total-columns)
+    background: url(/images/home-arrow.png) no-repeat
+    background-position: 100% 31px
     h1
-      +proximanova-semi-bold
-      font-size: 46px
+      +proximanova-regular
+      font-size: 43px
       line-height: 30px
     blockquote
       +proximanova-light
       font-size:  20px
       line-height: 27px
-      margin-top: 15px
+      margin-top: 25px
+      padding-right: 52px
       .quote-author
         +span-columns($total-columns omega, $total-columns)
         margin-bottom: 20px
@@ -31,8 +35,8 @@
     +span-columns($total-columns omega, $total-columns)
   #try-out
     +span-columns($total-columns omega, $total-columns)
-    margin: 10px 0 10px 0
-    +proximanova-semi-bold
+    margin: 25px 0 10px 0
+    +proximanova-light
     font-size: 14px
   
   @media #{$desktop}
@@ -54,7 +58,7 @@
     left: 0
     height: 6px
     background: transparent
-    +box-shadow( 0px -4px 6px $light-black)
+    +box-shadow( 0px -4px 6px $input-shadow)
   .inner-container
     +four-cols-grid
     position: relative
@@ -71,38 +75,51 @@
   .inner-container
     +four-cols-grid
     border-bottom: 1px solid white
-    padding-top: 30px
-    padding-bottom: 30px
-    header
-      +span-columns($total-columns omega, $total-columns)
-      h1
-        font-size: 18px
-        +proximanova-light
-        color: $menu-background
-        margin: 0
-        em
-          +creampuff
-          display: block
-          font-size: 30px
-          line-height: 28px
-          color: $home-strip-text
+    padding-top: 20px
+    padding-bottom: 20px
     #home-strip-content
-      p
+      
+      
+      +span-columns($total-columns omega, $total-columns)
+      header
+        background: url(/images/home_accolade.png) no-repeat
+        background-position: 90% center 
+        h1
+          padding-top: 10px
+          padding-bottom: 10px
+          font-size: 18px
+          +proximanova-light
+          color: $menu-background
+          margin: 0
+          em
+            +creampuff
+            display: block
+            font-size: 30px
+            line-height: 28px
+            color: $home-strip-text
+      span
         font-size: 19px
         color: $home-strip-text
         +proximanova-light
-        &:first-child
-          +proximanova-semi-bold
-          color: $menu-background
+        line-height: 23px
+      span.first-line
+        display: block
+        margin-top: 10px
+        +proximanova-semi-bold
+        color: $menu-background
     .button
       +big-button
       +span-columns($total-columns omega, $total-columns)
-  
+      margin-top: 10px
     @media #{$desktop}
-      header
-        +span-columns(1, $total-columns)
       #home-strip-content
-        +span-columns(2, $total-columns)
+        +span-columns(3, $total-columns)
+        header
+          float: left
+          width: 27%
+        p
+          float: left
+          width: 73%
       .button
         +span-columns(1 omega, $total-columns)
 
@@ -142,9 +159,11 @@
     display: inline-block
     background-color: white
     padding: 0 20px
+    +proximanova-light
+
 #home-bottom-container
   +four-cols-grid
-  margin-top: 50px
+  margin-top: 70px
   margin-bottom: 50px
   #home-bottom-left
     +span-columns(2,4)
@@ -157,6 +176,6 @@
     +span-columns(2 omega,4)
     img
       float: left
-      max-width: 28%
-      margin-bottom: 20px
-      margin-right: 2%
+      max-width: 25%
+      margin-bottom: 26px
+      margin-right: 7%
