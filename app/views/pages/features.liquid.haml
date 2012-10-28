@@ -12,9 +12,10 @@
         {{ feature.short_name }}
     {% endfor %}
 
-{% for feature in contents.features %}
-{% include 'feature_item' %}
-{% endfor %}
+%section#features
+  {% for feature in contents.features %}
+  {% include 'feature_item' %}
+  {% endfor %}
 
 
 {% endblock %}
