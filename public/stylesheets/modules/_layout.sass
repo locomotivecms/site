@@ -23,7 +23,7 @@
       width: 24%
   // Menu
   ul
-    display: none
+    //display: none
     li
       display: block
       color: white
@@ -58,14 +58,17 @@
 #main-generic
   +three-cols-grid
   #terms-of-use, #license, #privacy-policy
-    +span-columns(2,3)
+    +span-columns(3 omega,3)
     margin-top: 35px
+@media #{$desktop}
+  #main-generic
+    #terms-of-use, #license, #privacy-policy
+      +span-columns(2,3)
 
 // Footer
 #footer
   background-color: $footer-blue
   padding-top: 1px
-  margin-top: 50px
   #inner-footer
     +four-cols-grid
     border-top: 1px solid white
@@ -105,7 +108,9 @@
       li
         line-height: 25px
         
-  @media #{$desktop}
+@media #{$desktop}
+  #footer
+    margin-top: 50px
     .footer-item
       +span-columns(1, $total-columns)
       +nth-omega(4)

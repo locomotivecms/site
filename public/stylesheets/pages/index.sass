@@ -86,7 +86,7 @@
 .home-column
   +span-columns($total-columns omega, $total-columns)
   +nth-omega(4)
-  margin-top: 40px
+  margin-top: $section-padding
   text-align: center
   p
     text-align: left
@@ -100,7 +100,7 @@
 
 #home-bottom-title
   +four-cols-grid
-  margin-top: 50px
+  margin-top: $section-padding
   padding-top: 20px
   border-top: 1px solid $blue-border
   font-size: 17px
@@ -112,7 +112,6 @@
   margin-bottom: 20px
   #home-bottom-left
     +span-columns(4 omega,4)
-    margin-bottom: 50px
     #home-bottom-testimonial
       em 
         color: $em-blue

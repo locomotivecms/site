@@ -1,14 +1,12 @@
 .princing-detail-container
   +five-cols-grid
   border-bottom: 1px solid $blue-border
-  padding-top: 30px
-  padding-bottom: 50px
+  padding-top: $section-padding
 
 .princing-faq-container
   +four-cols-grid
   padding-top: 40px // minus h1 margin-top: 10px
-  padding-bottom: 50px
-
+  
 .pricing-detail-item
   +span-columns(5 omega, 5)
   img
@@ -38,12 +36,11 @@
     font-size: 13px
 
 
-
-
 @media #{$desktop}
   .pricing-detail-item
     section
       +span-columns(3, 5)
+      padding-bottom: 30px
     aside
       +span-columns(2 omega, 5)
       .paypal

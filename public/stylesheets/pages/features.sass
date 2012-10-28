@@ -2,8 +2,13 @@
 .feature
   +five-cols-grid
   border-bottom: 1px solid $blue-border
+  .feature-text
+    padding-top: $section-padding
+    padding-bottom: $section-padding
   .feature-icon
-    text-align: center
+    display: none  
+  .feature-illustrations
+    padding-bottom: $section-padding
 .feature.last
   border-bottom: none
 
@@ -13,16 +18,16 @@
   .feature
     .feature-text
       +span-columns(2,5)
-      padding-top: 50px
-      padding-bottom: 50px
+      padding-bottom: $section-padding
     .feature-icon
+      display: block
       +span-columns(1,5)
       padding-top: 85px
-      min-height: 100%
+      text-align: center
     .feature-illustrations
       +span-columns(2,5)
-      padding-top: 50px
-      padding-bottom: 50px
+      padding-top: $section-padding
+      
   // handle left right orientation
   .feature.left
     .feature-illustrations

@@ -23,7 +23,7 @@
         color: $dark-black
   aside
     +span-columns(4 omega,4)
-    margin-top: 10px
+    margin-top: 20px
     a
       text-transform: uppercase
       +big-button
@@ -75,6 +75,8 @@ nav.subnav
   color: $third-blue
   +proximanova-semi-bold
   font-size: 14px
+  .page
+
   #pagination-left
     float: left
   #pagination-right
@@ -83,7 +85,6 @@ nav.subnav
 // Sidebar
 .sidebar
   +span-columns(3 omega,3)
-  margin-top: 50px
   @media #{$desktop}
     +span-columns(1 omega,3)
     margin-top: 35px

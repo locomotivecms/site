@@ -3,7 +3,7 @@
 
 .full-article 
   blockquote
-    width: 30%
+    width: 100%
     float: right
     margin-left: 20px
     color: $light-blue
@@ -22,12 +22,14 @@
       font-size: 18px
       line-height: 28px
       +open-sans-regular
+    @media #{$desktop}
+      width: 30%
 
 
 article
   +span-columns(3 omega,3)
-  margin-top: 35px
-  padding-bottom: 35px
+  margin-top: $section-padding
+  padding-bottom: $section-padding
   border-bottom: 1px solid $blue-border
   color: $light-black
   font-size: 13px

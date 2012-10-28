@@ -3,13 +3,14 @@
     Page {{ paginate.current_page }} of {{ paginate.total_pages }}
   #pagination-right
     {% for part in paginate.parts %}
-    // display page number as a link or not
-    {% if part.is_link %}
-    %a{ :href => "{{ part.url }}" }
+    %span.page
+      // display page number as a link or not
+      {% if part.is_link %}
+      %a{ :href => "{{ part.url }}" }
+        {{ part.title }}
+      {% else %}
       {{ part.title }}
-    {% else %}
-    {{ part.title }}
-    {% endif %}
+      {% endif %}
     // display "/" between page numbers
     {% unless forloop.last %}
     = "/"
