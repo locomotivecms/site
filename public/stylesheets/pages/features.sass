@@ -1,8 +1,6 @@
 // Feature page
-#features-container
-  +five-cols-grid
 .feature
-  +span-columns(5 omega, 5)
+  +five-cols-grid
   border-bottom: 1px solid $blue-border
   header
     +span-columns(5 omega,5)
@@ -16,7 +14,8 @@
     +open-sans-regular
   .feature-icon
     text-align: center
-
+.feature.last
+  border-bottom: none
 
 @media #{$desktop}
   .feature.left
@@ -24,8 +23,6 @@
   .feature.right
     
   .feature
-    &:last-child
-      border-bottom: none
     .feature-left
       +span-columns(3,5)
       background: url(/images/dotted_pattern.png) repeat-y top right

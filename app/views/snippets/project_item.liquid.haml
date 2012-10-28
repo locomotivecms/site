@@ -1,15 +1,13 @@
-%section.project-item
+%section{ :class => "project-item {% if forloop.last %}last{% endif %}"}
   %section
-    %header
-      %h1 {{ project.title }}
-      %span.tagline {{ project.tagline }}
+    %h1 {{ project.title }}
+    %h5.tagline {{ project.tagline }}
     {{ project.description }}
   %aside
     .floating-panel
       .inner-floating-panel
         %header
-          %h1
-            Project status
+          Project status
         %p This development project is shceduled for completion in approximatley
         .project-due-date
           %span.number 2

@@ -1,4 +1,4 @@
-%section{ :class => "feature {% cycle 'orientation': 'left', 'right' %}"}
+%section{ :class => "feature {% cycle 'orientation': 'left', 'right' %} {% if forloop.last %}last{% endif %}"}
   .feature-left
     .feature-icon
       %img{ :src => "{{ feature.icon.url }}", :class => "" }
