@@ -71,7 +71,7 @@ nav.subnav
 // Pagination
 .pagination
   +span-columns($total-columns omega,$total-columns)
-  margin-top: 40px
+  margin-top: $section-padding
   color: $third-blue
   +proximanova-semi-bold
   font-size: 14px
@@ -85,9 +85,19 @@ nav.subnav
 // Sidebar
 .sidebar
   +span-columns(3 omega,3)
-  @media #{$desktop}
+  margin-top: $section-padding
+.sidebar.desktop
+  display: none
+.sidebar.mobile
+  display: block
+@media #{$desktop}
+  .sidebar
     +span-columns(1 omega,3)
     margin-top: 35px
+  .sidebar.desktop
+    display: block
+  .sidebar.mobile
+    display: none
 
 // Floating panel in sidebar
 .floating-panel

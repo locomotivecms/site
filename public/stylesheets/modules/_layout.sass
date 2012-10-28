@@ -112,6 +112,7 @@
 #footer
   background-color: $footer-blue
   padding-top: 1px
+  margin-top: $section-padding
   #inner-footer
     +four-cols-grid
     border-top: 1px solid white
@@ -153,7 +154,6 @@
         
 @media #{$desktop}
   #footer
-    margin-top: 50px
     .footer-item
       +span-columns(1, $total-columns)
       +nth-omega(4)

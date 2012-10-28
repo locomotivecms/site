@@ -5,12 +5,14 @@
 {% include 'page_head' %}
 
 #main-blog
-  {% include 'sidebar' %}
+  {% assign sidebar_class = 'desktop' %}
+  {% include 'sidebar' with sidebar_class %}
   {% paginate contents.articles by 4 %}
   {% for article in paginate.collection %}
   {% include 'post_preview' %}
   {% endfor %}
   {% include 'pagination' %}
   {% endpaginate %}
-
+  {% assign sidebar_class = 'mobile' %}
+  {% include 'sidebar' with sidebar_class %}
 {% endblock %}
