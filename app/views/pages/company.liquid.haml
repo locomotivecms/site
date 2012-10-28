@@ -6,6 +6,7 @@
 
 %section.company-section
   %header
+    %h1
     {% editable_short_text "company-story-title", priority: 10 %}
     The story behind LocomotiveCMS
     {% endeditable_short_text %}  
@@ -22,9 +23,10 @@
     {% endeditable_long_text %}
 %section.company-crew
   %header
-    {% editable_short_text "company-crew-title", priority: 9 %}
-    Meet the crew behind LocomotiveCMS
-    {% endeditable_short_text %}
+    %h1
+      {% editable_short_text "company-crew-title", priority: 9 %}
+      Meet the crew behind LocomotiveCMS
+      {% endeditable_short_text %}
   
   {% for person in contents.crew %}
   {% include 'company_person' %}

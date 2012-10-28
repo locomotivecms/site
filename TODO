@@ -7,7 +7,7 @@
 - pour tous les content entries, je pars du principe que chaque bout de texte est contenu dans un <p> parce que
 je considere que l'editeur de txt en ajoute forcement
 - gallery : images de 270 par 200 au MINIMUM (sinon on aura des disparites)
-- company crew pictures : redimmensionner les images en 154px par 154px pour avoir une bordure ombree.
+- company crew pictures : redimmensionner les images en 200px par 200px pour avoir une bordure ombree.
 - page pricing : subnav : des liens qui ouvrent un tab et un lien "hosting solution" qui doit etre un vrai lien. Le probleme est que le jquery tools tabs desactive le comportement des liens et "hosting solution" ouvre forcement un tab. La solution trouvee est de placer ce lien en dernier, dans un nouvel <ul>
 - Pricing page, Resources page : pour avoir du texte bleu dans la description, le mettre simplement en gras
 
