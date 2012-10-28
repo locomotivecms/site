@@ -2,8 +2,9 @@ $(function() {
   $("ul.tabs").tabs(".panes > section");
 
   // mobile 
-  $(".gallery-item").click(function(){
-  
+  $('#nav-toggle').on('click',function(e){
+    $('#main-nav').toggleClass('expanded');
+    $(this).toggleClass('expanded');
   });
   
 });

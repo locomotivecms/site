@@ -1,11 +1,14 @@
 // Navigation
 #main-nav
+  background: url(/images/home_halo_mob.png) no-repeat
+  background-position: 100% 20%
   background-color: $banner-bg
   padding-top: 30px
   padding-bottom: 20px
   border-bottom: 2px solid rgba(255, 255, 255, 0.8)
   .inner-container
     +five-cols-grid
+    position: relative  
   // Logo
   h1
     color: white
@@ -21,26 +24,60 @@
     @media #{$desktop}
       float: left
       width: 24%
+  // Nav toggle
+  #nav-toggle
+    position: absolute
+    top: 2px
+    right: 10px
+    height: 23px
+    width: 25px
+    cursor: pointer
+    &:before
+      content: '\2630'
+      color: white
+      font-family: 'fontello'
+      font-style: normal
+      font-weight: normal
+      speak: none
+      display: inline-block
+      text-decoration: inherit
+      width: 1em
+      margin-right: 0.2em
+      text-align: center
+      opacity: 0.7
+      text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3)
+      //line-height: 1em
+      font-size: 24px
+
   // Menu
   ul
-    //display: none
+    display: none
     li
       display: block
       color: white
       background: none
       font-size: 16px
       +proximanova-light
-      padding: 4px 20px
+      padding: 4px 32px
       margin: 3px 0
       a:hover
         color: white
     li.active
       +menu-button
+
     @media #{$desktop}
       float: right
       width: 76%
       li
         float: right
+#main-nav.expanded
+  background-position: 100% 100%
+  ul
+    display: block
+  #nav-toggle:before
+    content: '\2715'
+    font-size: 20px
+
 #main-nav.home-nav
   border-bottom: none
   
@@ -48,6 +85,10 @@
   #main-nav
     background: url(/images/home_halo_small.png) no-repeat bottom center
     background-color: $banner-bg
+    ul
+      display: block
+      li
+        padding: 4px 20px
   #main-nav.home-nav
     background: none
     background-color: $banner-bg
