@@ -17,6 +17,7 @@
       +proximanova-regular
       font-size: 43px
       line-height: 30px
+      color: white
     blockquote
       +proximanova-light
       font-size:  20px
@@ -167,11 +168,13 @@
   margin-bottom: 50px
   #home-bottom-left
     +span-columns(2,4)
-    position: relative
-    #home-bottom-testimonial-picture
-      +span-columns(2,4)
     #home-bottom-testimonial
-      +span-columns(2 omega,4)
+      em 
+        color: $em-blue
+      .rounded-picture
+        +rounded-picture(125px)
+        float: left
+        margin-right: 20px
   #home-bottom-right
     +span-columns(2 omega,4)
     img

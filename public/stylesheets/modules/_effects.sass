@@ -28,12 +28,12 @@
     +rotate(5deg)
 
 // Rounded picture shared style : a container with a border and a circle image
-.rounded-picture
+=rounded-picture($size: 200px)
   margin: 0 auto
   +border-radius(50%)
   +shadowed-border(2px, 50%)
-  width: 200px
-  height: 200px
+  width: $size
+  height: $size
   img
     +border-radius(50%)
   
