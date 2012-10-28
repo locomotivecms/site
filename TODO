@@ -24,32 +24,11 @@ NOK - features page : le pointille vertical a une largeur de 2px mais est dans u
 
 ## TO DO GENERAL
 
-- home > extract 2 background patterns (strip and before strip)
 - blog : 
   * Disqus
-- main nav :
-  * mobile version
-- Creampuf.otf
-- installer fonts dans photoshop et revoir tailles line heights
 - see v1.0 issues & pull requests
 
 ## QUESTIONS
 
 - home > "find out how" > link to what ?
 - gallery > item > preview button ? what is a preview ?
-
-## ETAT D'AVANCEMENT
-
-- 404         ok
-- blog        ok
-- company     ok
-- features
-- gallery     ok
-- index       ok
-- license     ok
-- pricing     ok
-- privacy policy  ok
-- resources
-- terms of use  ok
-- Tour        ok
-
