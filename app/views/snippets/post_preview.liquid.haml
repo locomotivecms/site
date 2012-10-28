@@ -2,7 +2,7 @@
   %header
     %h1 {{ article.title }}
     {{ article.posted_at | localized_date: '%A %d %B %Y' }}
-  {{ article.body | strip_html | truncate: 500 }}
+  %p {{ article.body | strip_html | truncate: 500 }}
   .bottom
     %a{ :href => "/blog/{{ article._permalink }}" }
       Read More

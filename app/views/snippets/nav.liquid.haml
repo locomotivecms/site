@@ -4,7 +4,12 @@
       %a{ :href => "/" }
         LOCOMOTIVECMS
     %ul
-      %li{ :class => '{% if blog_path == "blog" %}active{% elsif blog_path == "b..." %}active{% endif %}'}
+      // We add an "active" class to the current active nav element by simply matching the full path.
+      // For a 2nd level path like a blog item in /blog/title-of-the-post, it's less simple, so we truncate 
+      // the path and if the path is like "/blog/title-of-the-post" the truncate will return "b...". 
+      // So we match the truncated path for the blog nav item.
+      {% capture blog_path %}{{ page.fullpath | truncate: 4 }}{% endcapture %}
+      %li{ :class => '{% if page.fullpath == "blog" %}active{% elsif blog_path == "b..." %}active{% endif %}'}
         %a{ :href => "/blog" }
           Blog
       %li{ :class => '{% if page.fullpath == "company" %}active{% endif %}'}
