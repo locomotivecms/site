@@ -6,7 +6,6 @@
 
 .princing-faq-container
   +four-cols-grid
-  border-bottom: 1px solid $blue-border
   padding-top: 40px // minus h1 margin-top: 10px
   padding-bottom: 50px
 
@@ -14,21 +13,10 @@
   +span-columns(5 omega, 5)
   img
     float: right
-  header
-    margin-bottom: 20px
-    h1
-      color: $dark-black
-      +proximanova-semi-bold
-      font-size: 20x
-    .tagline
-      font-size: 13px
-      color: $light-black
-      +open-sans-bold
   b
     color: $light-blue
-    font-size: 14px
   .paypal
-    +span-columns(3 omega, 5)
+    //+span-columns(3 omega, 5)
     +paypal-button
     margin-bottom: 30px
     
@@ -59,7 +47,6 @@
     aside
       +span-columns(2 omega, 5)
       .paypal
-        //+span-columns(4 omega, 5)
         float: right
 
 @media #{$desktop}

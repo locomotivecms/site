@@ -2,14 +2,17 @@
 
 - dans chaque page content un 'page_head', tous les editable text ont une priority commencant a 8 et inferieur
 - pagination : paginate contents.company and not paginate content_type.company
-- add to reference : if you do an "unless" loop, end it with "endunless"
-- fix reference typo : cycle => {% cycle 'group 1': 'blue', 'green', 'red' }}
+- reference : add to reference : if you do an "unless" loop, end it with "endunless"
+- reference : fix reference typo : cycle => {% cycle 'group 1': 'blue', 'green', 'red' }}
 - pour tous les content entries, je pars du principe que chaque bout de texte est contenu dans un <p> parce que
 je considere que l'editeur de txt en ajoute forcement
-- features page : le pointille vertical a une largeur de 2px mais est dans une image de 103px de large pour le padding right (pas d'autre solution trouvee)
 - gallery : images de 270 par 200 au MINIMUM (sinon on aura des disparites)
 - company crew pictures : redimmensionner les images en 154px par 154px pour avoir une bordure ombree.
 - page pricing : subnav : des liens qui ouvrent un tab et un lien "hosting solution" qui doit etre un vrai lien. Le probleme est que le jquery tools tabs desactive le comportement des liens et "hosting solution" ouvre forcement un tab. La solution trouvee est de placer ce lien en dernier, dans un nouvel <ul>
+- Pricing page : pour avoir du texte bleu dans la description, le mettre simplement en gras
+
+NOK - features page : le pointille vertical a une largeur de 2px mais est dans une image de 103px de large pour le padding right (pas d'autre solution trouvee)
+
 
 ## TO DO DIDIER
 

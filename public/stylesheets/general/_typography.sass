@@ -2,17 +2,19 @@
 
 body
   color: $dark-black
-  font-size: 12px
+  font-size: 13px
   line-height: 15px
 
 h1, h2, h3, h4, h5, h6
-  margin-bottom: 10px
+  margin-bottom: 20px
   margin-top: 10px
   +proximanova-semi-bold
 
 h1
   font-size: 20px
-
+  color: $dark-black
+  +proximanova-semi-bold
+  
 h2
   font-size: 20px
   color: $third-black
@@ -41,7 +43,7 @@ a
 
 p
   color: $light-black
-  font-size: 12px
+  font-size: 13px
   line-height: 22px
   +open-sans-regular
   margin-bottom: 10px
@@ -60,12 +62,12 @@ strong
   +open-sans-bold
 
 ul
-  +pretty-bullets("/images/bullet.png", 5px, 5px)
+  +pretty-bullets("/images/bullet.png", 5px, 5px, 27px)
   +open-sans-regular
   color: $light-black
   margin-bottom: 10px
   li
-    line-height: 22px
+    line-height: 27px
 
 ol
   counter-reset: li
