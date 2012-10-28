@@ -27,7 +27,7 @@ fields:
 - screenshot:
     label: Screenshot
     type: file
-    hint: Screenshot image 300x300 of the company's website
+    hint: Screenshot image 270x200 of the company's website
 - logo:
     label: Logo of the company
     type: file
