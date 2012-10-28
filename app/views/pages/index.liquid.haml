@@ -78,13 +78,14 @@
           
         %a{ :href => "#", :class => "button" }
           TRY THE DEMO
-    %section#home-four-cols
+    %section#home-columns
       %section.home-column
         %img{ :src => "{% editable_file 'first-col-img', hint: 'Home screenshot, size: 980x430px', priority: 15 %}{{ 'icon-tools.png' | theme_image_url }}{% endeditable_file %}", :alt => ""}
         %header
-          {% editable_long_text "first-col-title", priority: 14 %}
-          Build your website locally. Deploy it instantly
-          {% endeditable_long_text %}
+          %h1
+            {% editable_long_text "first-col-title", priority: 14 %}
+            Build your website locally. Deploy it instantly
+            {% endeditable_long_text %}
         {% editable_long_text "first-col-content", priority: 13 %}
         %p 
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sollicitudin dolor vitae est tincidunt congue. Curabitur suscipit, mauris sed aliquam auctor, justo eros varius arcu, in suscipit sem dui nec lorem.
@@ -92,9 +93,10 @@
       %section.home-column
         %img{ :src => "{% editable_file 'second-col-img', hint: 'Home screenshot, size: 980x430px', priority: 12 %}{{ 'icon-edit.png' | theme_image_url }}{% endeditable_file %}", :alt => ""}
         %header
-          {% editable_long_text "second-col-title", priority: 11 %}
-          Super friendly content editing interface
-          {% endeditable_long_text %}
+          %h1
+            {% editable_long_text "second-col-title", priority: 11 %}
+            Super friendly content editing interface
+            {% endeditable_long_text %}
         {% editable_long_text "second-col-content", priority: 10 %}
         %p 
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sollicitudin dolor vitae est tincidunt congue. Curabitur suscipit, mauris sed aliquam auctor, justo eros varius arcu, in suscipit sem dui nec lorem.
@@ -102,9 +104,10 @@
       %section.home-column
         %img{ :src => "{% editable_file 'third-col-img', hint: 'Home screenshot, size: 980x430px', priority: 9 %}{{ 'icon-validate.png' | theme_image_url }}{% endeditable_file %}", :alt => ""}
         %header
-          {% editable_long_text "third-col-title", priority: 8 %}
-          Don't let your client mess up with your  layout
-          {% endeditable_long_text %}
+          %h1
+            {% editable_long_text "third-col-title", priority: 8 %}
+            Don't let your client mess up with your  layout
+            {% endeditable_long_text %}
         {% editable_long_text "third-col-content", priority: 7 %}
         %p 
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sollicitudin dolor vitae est tincidunt congue. Curabitur suscipit, mauris sed aliquam auctor, justo eros varius arcu, in suscipit sem dui nec lorem.
@@ -112,9 +115,10 @@
       %section.home-column
         %img{ :src => "{% editable_file 'fourth-col-img', hint: 'Home screenshot, size: 980x430px', priority: 6 %}{{ 'icon-open-source.png' | theme_image_url }}{% endeditable_file %}", :alt => ""}
         %header
-          {% editable_long_text "fourth-col-title", priority: 5 %}
-          Open Source optimized
-          {% endeditable_long_text %}
+          %h1
+            {% editable_long_text "fourth-col-title", priority: 5 %}
+            Open Source optimized
+            {% endeditable_long_text %}
         {% editable_long_text "fourth-col-content", priority: 4 %}
         %p 
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sollicitudin dolor vitae est tincidunt congue. Curabitur suscipit, mauris sed aliquam auctor, justo eros varius arcu, in suscipit sem dui nec lorem.
