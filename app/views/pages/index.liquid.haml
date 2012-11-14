@@ -7,31 +7,32 @@
 / [if gt IE 8]><!
 %html.no-js{:lang => "en"}
   / <![endif]
-  
+
   %head
     %meta{ :charset => "utf-8" }
     %meta{ "http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }
     %meta{ :name => "viewport", :content => "initial-scale=1, width=device-width" }
-    
+
     %title {{ page.title }}
     %meta{ :content => "{{ page.meta_description }}", :name => "description" }
     %meta{ :content => "{{ page.meta_keywords }}", :name => "keywords" }
-    
+
+    {{ '/fonts/all' | stylesheet_tag }}
     {{ 'screen' | stylesheet_tag }}
-    {{ 'jquery-1.8.2.min' | javascript_tag }} 
-    {{ 'jquery.tools.min' | javascript_tag }} 
-    {{ 'home' | javascript_tag }} 
+    {{ 'jquery-1.8.2.min' | javascript_tag }}
+    {{ 'jquery.tools.min' | javascript_tag }}
+    {{ 'home' | javascript_tag }}
 
 
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-      
+
     {% block 'head' %}
 
     {% endblock %}
 
 
-      
+
 
   %body
 
@@ -76,8 +77,8 @@
             {% editable_short_text "strip-second-line", priority: 16 %}
             It's super flexible and integrates with Heroku and Amazon S3
             {% endeditable_short_text %}
-            
-          
+
+
         %a{ :href => "#", :class => "button" }
           TRY THE DEMO
     %section#home-columns
@@ -89,7 +90,7 @@
             Build your website locally. Deploy it instantly
             {% endeditable_long_text %}
         {% editable_long_text "first-col-content", priority: 13 %}
-        %p 
+        %p
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sollicitudin dolor vitae est tincidunt congue. Curabitur suscipit, mauris sed aliquam auctor, justo eros varius arcu, in suscipit sem dui nec lorem.
         {% endeditable_long_text %}
       %section.home-column
@@ -100,7 +101,7 @@
             Super friendly content editing interface
             {% endeditable_long_text %}
         {% editable_long_text "second-col-content", priority: 10 %}
-        %p 
+        %p
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sollicitudin dolor vitae est tincidunt congue. Curabitur suscipit, mauris sed aliquam auctor, justo eros varius arcu, in suscipit sem dui nec lorem.
         {% endeditable_long_text %}
       %section.home-column
@@ -111,7 +112,7 @@
             Don't let your client mess up with your  layout
             {% endeditable_long_text %}
         {% editable_long_text "third-col-content", priority: 7 %}
-        %p 
+        %p
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sollicitudin dolor vitae est tincidunt congue. Curabitur suscipit, mauris sed aliquam auctor, justo eros varius arcu, in suscipit sem dui nec lorem.
         {% endeditable_long_text %}
       %section.home-column
@@ -122,7 +123,7 @@
             Open Source optimized
             {% endeditable_long_text %}
         {% editable_long_text "fourth-col-content", priority: 4 %}
-        %p 
+        %p
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sollicitudin dolor vitae est tincidunt congue. Curabitur suscipit, mauris sed aliquam auctor, justo eros varius arcu, in suscipit sem dui nec lorem.
         {% endeditable_long_text %}
     %section#home-bottom-title
@@ -132,13 +133,13 @@
         {% endeditable_short_text %}
     %section#home-bottom-container
       %section#home-bottom-left
-      
+
         #home-bottom-testimonial
           .rounded-picture
             %img{ :src => "{% editable_file 'bottom-testimonial-img', hint: 'Home screenshot, size: 980x430px', priority: 2 %}/samples/crew/jobs.png{% endeditable_file %}", :alt => ""}
           {% editable_long_text "bottom-testimonial-content", priority: 1 %}
           %p
-            %em Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui. “ 
+            %em Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui. “
           %p
             %em John User. Developer, Frontier Group
           {% endeditable_long_text %}
