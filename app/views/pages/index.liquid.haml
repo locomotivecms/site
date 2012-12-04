@@ -13,9 +13,11 @@
     %meta{ "http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }
     %meta{ :name => "viewport", :content => "initial-scale=1, width=device-width" }
 
-    %title {{ page.title }}
-    %meta{ :content => "{{ page.meta_description }}", :name => "description" }
-    %meta{ :content => "{{ page.meta_keywords }}", :name => "keywords" }
+    / %title {{ page.title }}
+    / %title {{ seo}}
+    / %meta{ :content => "{{ page.meta_description }}", :name => "description" }
+    / %meta{ :content => "{{ page.meta_keywords }}", :name => "keywords" }
+    {% seo %}
 
     {{ '/fonts/all' | stylesheet_tag }}
     {{ 'screen' | stylesheet_tag }}
@@ -30,10 +32,6 @@
     {% block 'head' %}
 
     {% endblock %}
-
-
-
-
   %body
 
     {% include 'nav' %}
@@ -41,94 +39,111 @@
     {% block 'main' %}
     %section#home-tagline
       .inner-container
+        {% block tagline %}
         %header
           %h1
-            {% editable_short_text "tagline-title", priority: 21 %}
+            {% editable_short_text "title", priority: 21 %}
             Develop your website 50% faster
             {% endeditable_short_text %}
           %blockquote
-            {% editable_long_text "tagline-quote-content", priority: 20 %}
-            Locomotive is so easy to develop with. It has helped speed up my dev time by two fold, and reduce my hair pulling time by 100%.
+            {% editable_long_text "quote-content", priority: 20 %}
+            LocomotiveCMS is so easy to develop with. It has helped speed up my dev time by two fold, and reduce my hair pulling time by 100%.
             {% endeditable_long_text %}
             %span.quote-author
-              {% editable_short_text "tagline-quote-author", priority: 19 %}
+              {% editable_short_text "quote-author", priority: 19 %}
               Johnny Appleseed, developer
               {% endeditable_short_text %}
-        %a{ :href => "#", :class => "button" }
+        %a{ :href => "/tour", :class => "button" }
           FIND OUT HOW
-        %a{ :href => "#", :id => "try-out" }
-          or Try the Demo
+        / %a{ :href => "#", :id => "try-out" }
+        /   or Try the Demo
+        {% endblock %}
     %section#home-image
       #shadow
       .inner-container
-        %img{ :src => "{% editable_file 'big-screenshot', hint: 'Home screenshot, size: 980x430px', priority: 18 %}{{ 'home-tagline-screenshot.png' | theme_image_url }}{% endeditable_file %}", :alt => "screenshot"}
+        %img{ :src => "{% editable_file 'big-screenshot', hint: 'Home screenshot, size: 980x430px', priority: 18 %}/samples/pages/home-tagline-screenshot.png{% endeditable_file %}", :alt => "screenshot"}
     %section#home-strip
       .inner-container
+        {% block strip %}
         #home-strip-content
           %header
             %h1
               %em What is
               LocomotiveCMS
           %span.first-line
-            {% editable_short_text "strip-first-line", priority: 17 %}
+            {% editable_short_text "first-line", priority: 17 %}
             LocomotiveCMS is an open source CMS solution for Rails
             {% endeditable_short_text %}
           %span
-            {% editable_short_text "strip-second-line", priority: 16 %}
+            {% editable_short_text "second-line", priority: 16 %}
             It's super flexible and integrates with Heroku and Amazon S3
             {% endeditable_short_text %}
+        {% endblock %}
 
+        %a{ :href => "/tour", :class => "button" }
+          TAKE THE TOUR
 
-        %a{ :href => "#", :class => "button" }
-          TRY THE DEMO
     %section#home-columns
+      {% block 'asset_1' %}
       %section.home-column
-        %img{ :src => "{% editable_file 'first-col-img', hint: 'Home screenshot, size: 980x430px', priority: 15 %}{{ 'icon-tools.png' | theme_image_url }}{% endeditable_file %}", :alt => ""}
+        %img{ :src => "{% editable_file 'image', hint: 'round icon, size: 154x154px', priority: 15 %}/samples/pages/icon-tools.png{% endeditable_file %}", :alt => ""}
         %header
           %h1
-            {% editable_long_text "first-col-title", priority: 14 %}
+            {% editable_long_text "title", priority: 14 %}
             Build your website locally. Deploy it instantly
             {% endeditable_long_text %}
-        {% editable_long_text "first-col-content", priority: 13 %}
+        {% editable_long_text "content", priority: 13 %}
         %p
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sollicitudin dolor vitae est tincidunt congue. Curabitur suscipit, mauris sed aliquam auctor, justo eros varius arcu, in suscipit sem dui nec lorem.
         {% endeditable_long_text %}
+      {% endblock %}
+
+      {% block 'asset_2' %}
       %section.home-column
-        %img{ :src => "{% editable_file 'second-col-img', hint: 'Home screenshot, size: 980x430px', priority: 12 %}{{ 'icon-edit.png' | theme_image_url }}{% endeditable_file %}", :alt => ""}
+        %img{ :src => "{% editable_file 'image', hint: 'round icon, size: 154x154px', priority: 12 %}/samples/pages/icon-edit.png{% endeditable_file %}", :alt => ""}
         %header
           %h1
-            {% editable_long_text "second-col-title", priority: 11 %}
+            {% editable_long_text "title", priority: 11 %}
             Super friendly content editing interface
             {% endeditable_long_text %}
-        {% editable_long_text "second-col-content", priority: 10 %}
+        {% editable_long_text "content", priority: 10 %}
         %p
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sollicitudin dolor vitae est tincidunt congue. Curabitur suscipit, mauris sed aliquam auctor, justo eros varius arcu, in suscipit sem dui nec lorem.
         {% endeditable_long_text %}
+      {% endblock %}
+
+      {% block 'asset_3' %}
       %section.home-column
-        %img{ :src => "{% editable_file 'third-col-img', hint: 'Home screenshot, size: 980x430px', priority: 9 %}{{ 'icon-validate.png' | theme_image_url }}{% endeditable_file %}", :alt => ""}
+        %img{ :src => "{% editable_file 'image', hint: 'round icon, size: 154x154px', priority: 9 %}/samples/pages/icon-validate.png{% endeditable_file %}", :alt => ""}
         %header
           %h1
-            {% editable_long_text "third-col-title", priority: 8 %}
+            {% editable_long_text "title", priority: 8 %}
             Don't let your client mess up with your  layout
             {% endeditable_long_text %}
-        {% editable_long_text "third-col-content", priority: 7 %}
+        {% editable_long_text "content", priority: 7 %}
         %p
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sollicitudin dolor vitae est tincidunt congue. Curabitur suscipit, mauris sed aliquam auctor, justo eros varius arcu, in suscipit sem dui nec lorem.
         {% endeditable_long_text %}
+      {% endblock %}
+
+      {% block 'asset_4' %}
       %section.home-column
-        %img{ :src => "{% editable_file 'fourth-col-img', hint: 'Home screenshot, size: 980x430px', priority: 6 %}{{ 'icon-open-source.png' | theme_image_url }}{% endeditable_file %}", :alt => ""}
+        %img{ :src => "{% editable_file 'image', hint: 'round icon, size: 154x154px', priority: 6 %}/samples/pages/icon-open-source.png{% endeditable_file %}", :alt => ""}
         %header
           %h1
-            {% editable_long_text "fourth-col-title", priority: 5 %}
+            {% editable_long_text "title", priority: 5 %}
             Open Source optimized
             {% endeditable_long_text %}
-        {% editable_long_text "fourth-col-content", priority: 4 %}
+        {% editable_long_text "content", priority: 4 %}
         %p
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sollicitudin dolor vitae est tincidunt congue. Curabitur suscipit, mauris sed aliquam auctor, justo eros varius arcu, in suscipit sem dui nec lorem.
         {% endeditable_long_text %}
+      {% endblock %}
+
+    {% block 'bottom' %}
     %section#home-bottom-title
       %h1
-        {% editable_short_text "bottom-title", priority: 3 %}
+        {% editable_short_text "title", priority: 3 %}
         Create beautiful sites with LocomotiveCMS
         {% endeditable_short_text %}
     %section#home-bottom-container
@@ -136,8 +151,8 @@
 
         #home-bottom-testimonial
           .rounded-picture
-            %img{ :src => "{% editable_file 'bottom-testimonial-img', hint: 'Home screenshot, size: 980x430px', priority: 2 %}/samples/crew/jobs.png{% endeditable_file %}", :alt => ""}
-          {% editable_long_text "bottom-testimonial-content", priority: 1 %}
+            %img{ :src => "{% editable_file 'testimonial-img', hint: 'Home screenshot, size: 980x430px', priority: 2 %}/samples/crew/jobs.png{% endeditable_file %}", :alt => ""}
+          {% editable_long_text "testimonial-content", priority: 1 %}
           %p
             %em Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui. “
           %p
@@ -148,6 +163,7 @@
         %a{ :href => "http://{{ company.url }}" }
           %img{ :src => "{{ company.logo.url }}", :alt => "{{ company.name }}"}
         {% endfor %}
+    {% endblock %}
 
 
     {% endblock %}

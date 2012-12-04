@@ -8,11 +8,13 @@
       .inner-floating-panel
         %header
           Project status
-        %p This development project is shceduled for completion in approximatley
+        %p This development project is scheduled for completion in approximatley
         .project-due-date
-          %span.number 2
-          %span.number 3
+
+          {% assign days = project.due_date | minus: today | divided_by: 86400 | rjust: 3, '0' %}
+
+          %span.number {{ days.first }}
+          %span.number {{ days | index: 1 }}
+          %span.number {{ days.last }}
+
           %span.word Days
-          %span.number 1
-          %span.number 6
-          %span.word Hours

@@ -3,18 +3,19 @@
 {% block 'main' %}
 
 {% include 'page_head' %}
-%nav.subnav
-  %ul
-    {% for step in contents.steps %}
-    %li
-      %a{ :href => '#{{ step._permalink }}' }
-        Step {{ step.number }}
-    {% endfor %}
+
+/ %nav.subnav
+/   %ul
+/     {% for step in contents.steps %}
+/     %li
+/       %a{ :href => '#{{ step._permalink }}' }
+/         Step {{ step.number }}
+/     {% endfor %}
 
 {% for step in contents.steps %}
 {% include 'tour_item' %}
 {% endfor %}
- 
+
 %section.tour-footer-container
   %section
     %header
@@ -29,7 +30,6 @@
       %p Blablablablablabla
       {% endeditable_long_text %}
     %a{ :href => "#" }
-      PURCHASE THE LOCOMOTIVE EDITOR
-
+      PURCHASE THE LOCOMOTIVECMS EDITOR
 
 {% endblock %}

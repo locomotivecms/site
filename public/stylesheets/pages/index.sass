@@ -37,20 +37,20 @@
     +proximanova-light
     font-size: 14px
     text-align: center
-  
+
 #home-image
   display: none
-  
+
 #home-strip
   margin-top: 0px
   border-top: 1px solid white
   border-bottom: 1px solid $blue-border
-  background: url(/images/home-strip-bg.png) repeat
+  background: url(/images/home-strip-bg.png) repeat-x top
   .inner-container
     +four-cols-grid
     border-bottom: 1px solid white
-    padding-top: 20px
-    padding-bottom: 30px
+    padding-top: 10px
+    padding-bottom: 20px
   #home-strip-content
     +span-columns($total-columns omega, $total-columns)
     h1
@@ -98,6 +98,9 @@
     +proximanova-semi-bold
     margin-bottom: 20px
     margin-top: 20px
+    h1
+      font-size: 16px
+      line-height: 20px
 
 #home-bottom-title
   +four-cols-grid
@@ -106,7 +109,7 @@
   border-top: 1px solid $blue-border
   font-size: 17px
   line-height: 22px
-  
+
 #home-bottom-container
   +four-cols-grid
   margin-top: 20px
@@ -114,7 +117,7 @@
   #home-bottom-left
     +span-columns(4 omega,4)
     #home-bottom-testimonial
-      em 
+      em
         color: $em-blue
       .rounded-picture
         +rounded-picture(125px)
@@ -130,7 +133,7 @@
 
 @media #{$desktop}
   #home-tagline
-    padding-top: 80px
+    padding-top: 50px
     padding-bottom: 320px
     background: url(/images/home_halo.png) bottom center no-repeat
     background-color: $banner-bg
@@ -156,7 +159,7 @@
       left: 0
       height: 6px
       background: transparent
-      +box-shadow( 0px -4px 6px $input-shadow)
+      +box-shadow( 0px -3px 4px rgba($fourth-black, 0.2))
     .inner-container
       +four-cols-grid
       position: relative
@@ -164,18 +167,18 @@
     img
       position: absolute
       bottom: 0
-      left: 0  
+      left: 0
 
   #home-strip
     .inner-container
-      padding-bottom: 20px
+      padding-bottom: 10px
     #home-strip-content
       +span-columns(3, $total-columns)
       header
         float: left
         width: 27%
         background: url(/images/home_accolade.png) no-repeat
-        background-position: 90% center 
+        background-position: 90% center
 
       p
         float: left

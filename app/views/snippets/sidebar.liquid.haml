@@ -6,9 +6,10 @@
           Email updates
       %p Never miss a LocomotiveCMS update again. Subscribe to our blog and receive your updates by email.
       #sidebar-newsletter
-        %form
-          %input#input{ :placeholder => "Email adress" }
-          %input#submit{ :type => :submit, :value => "JOIN" }
+        %form{ action: "http://locomotivecms.us6.list-manage.com/subscribe/post?u=bbf009a4e985171b092f240ab&amp;id=f469d6bd90", method: 'post', target: '_blank', novalidate: '' }
+          %input#input{ type: 'email', name: 'EMAIL', :placeholder => "Email address" }
+          %input#submit{ type: 'submit', name: 'subscribe', value: "JOIN" }
+
   .floating-panel
     .inner-floating-panel
       %header
@@ -17,4 +18,3 @@
       %p Connect with us on Twitter to keep your finger on the LocomotiveCMS pulse.
       %a.twitter-follow-button{ :href => "https://twitter.com/locomotivecms", "data-show-count" => "false" }
         Follow @locomotivecms
-      

@@ -4,32 +4,48 @@
 
 {% include 'page_head' %}
 
+{% block story %}
 %section.company-section
   %header
     %h1
-      {% editable_short_text "company-story-title", priority: 10 %}
+      {% editable_short_text "title", priority: 10 %}
       The story behind LocomotiveCMS
-      {% endeditable_short_text %}  
+      {% endeditable_short_text %}
   .content
-    {% editable_long_text "company-story-content", priority: 9 %}
-    %p Like many open source projects, Locomotive began as a way of scratching our own itch. As developers in web agencies, we were frustrated by the lack of options for creating small, static sites. The options were either to use plain HTML files or create a whole new Rails project.
+    {% editable_long_text "content", priority: 9 %}
+    %p Like many open source projects, LocomotiveCMS began as a way of scratching our own itch. As developers in web agencies, we were frustrated by the lack of options for creating small, static sites. The options were either to use plain HTML files or create a whole new Rails project.
 
     %p So we began to think about a new kind of CMS. We coded a lot of different solutions, spent a lot of time trying out many concepts, and in the process learned a lot about what the perfect CMS should look like.
 
-    %p Our dream CMS would allow us to organize data without creating Rails models and would handle multiple sites without setting up a new server or a new environment each time we needed a website. And when we heard about NoSQL databases, it was a kind of a revelation for us, so we decided to use MongoDB for Locomotive.
+    %p
+      %br
+
+    %p Our dream CMS would allow us to organize data without creating Rails models and would handle multiple sites without setting up a new server or a new environment each time we needed a website. And when we heard about NoSQL databases, it was a kind of a revelation for us, so we decided to use MongoDB for LocomotiveCMS.
 
     %p Since then, we've polished the user interface, added internationalization (and many other features), and implemented a module system to make Locomotive even more flexible. So that's our story and, hopefully, that's just the start of it !
 
     {% endeditable_long_text %}
+{% endblock %}
+
+{% block crew %}
 %section.company-crew
   %header
     %h1
-      {% editable_short_text "company-crew-title", priority: 9 %}
+      {% editable_short_text "title", priority: 9 %}
       Meet the crew behind LocomotiveCMS
       {% endeditable_short_text %}
-  
+
   {% for person in contents.crew %}
+  {% assign position_in_row = forloop.index | modulo: 4 %}
+
   {% include 'company_person' %}
+
+  {% if position_in_row == 0 %}
+  %hr.clear
+  {% endif %}
+
   {% endfor %}
+
+{% endblock %}
 
 {% endblock %}

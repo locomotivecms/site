@@ -9,7 +9,7 @@
   {% include 'sidebar' with sidebar_class %}
   {% paginate contents.articles by 4 %}
   {% for article in paginate.collection %}
-  {% include 'post_preview' %}
+  {% include 'article_preview' %}
   {% endfor %}
   {% include 'pagination' %}
   {% endpaginate %}

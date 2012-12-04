@@ -3,19 +3,26 @@
   border-bottom: 1px solid $blue-border
   padding-top: $section-padding
   padding-bottom: $section-padding
-  
+
 .company-crew
   +four-cols-grid
   padding-top: $section-padding
   padding-bottom: $section-padding
   header
-    h1 
-      margin-bottom: 40px
-
+    h1
+      margin-bottom: 20px
+  .clear
+    clear: both
+    border: none
+    height: 1px
+    background: transparent
+    margin: 0
+    padding: 0
 
 .company-crew-person
   +span-columns(4 omega, 4)
   text-align: center
+  margin-top: 20px
   margin-bottom: 20px
   .rounded-picture
     +rounded-picture
@@ -36,6 +43,5 @@
     +two-columns
   .company-crew-person
     +span-columns(1, 4)
-    +nth-omega(4)
+    +nth-omega(5n)
     margin-bottom: 0px
-    

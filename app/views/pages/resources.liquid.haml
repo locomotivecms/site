@@ -13,6 +13,7 @@
 {% block 'main' %}
 
 {% include 'page_head' %}
+
 %nav.subnav
   %ul
     %li
@@ -22,13 +23,13 @@
       %a{ :href => "#" }
         Quick start guide
     %li
-      %a{ :href => "#" }
+      %a{ :href => "http://doc.locomotivecms.com" }
         Documentation
     %li
       %a{ :href => "https://groups.google.com/forum/?fromgroups#!forum/locomotivecms" }
         Forum
     %li
-      %a{ :href => "#" }
+      %a{ :href => "http://doc.locomotivecms.com/faq" }
         FAQ
     %li
       %a.current{ :href => "#" }
@@ -37,9 +38,6 @@
 {% for project in contents.projects %}
 {% include 'project_item' %}
 {% endfor %}
- 
-
-
 
 
 {% endblock %}

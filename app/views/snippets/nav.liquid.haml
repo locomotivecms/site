@@ -6,29 +6,14 @@
     #nav-toggle
       %a.icon-th-list
     %ul
-      // We add an "active" class to the current active nav element by simply matching the full path.
-      // For a 2nd level path like a blog item in /blog/title-of-the-post, it's less simple, so we truncate 
-      // the path and if the path is like "/blog/title-of-the-post" the truncate will return "b...". 
-      // So we match the truncated path for the blog nav item.
-      {% capture blog_path %}{{ page.fullpath | truncate: 4 }}{% endcapture %}
-      %li{ :class => '{% if page.fullpath == "blog" %}active{% elsif blog_path == "b..." %}active{% endif %}'}
-        %a{ :href => "/blog" }
-          Blog
-      %li{ :class => '{% if page.fullpath == "company" %}active{% endif %}'}
-        %a{ :href => "/company" }
-          Company
-      %li{ :class => '{% if page.fullpath == "features" %}active{% endif %}'}
-        %a{ :href => "/features" }
-          Features
-      %li{ :class => '{% if page.fullpath == "gallery" %}active{% endif %}'}
-        %a{ :href => "/gallery" }
-          Gallery
-      %li{ :class => '{% if page.fullpath == "pricing" %}active{% endif %}'}
-        %a{ :href => "/pricing" }
-          Pricing
-      %li{ :class => '{% if page.fullpath == "resources" %}active{% endif %}'}
-        %a{ :href => "/resources" }
-          Resources
-      %li{ :class => '{% if page.fullpath == "tour" %}active{% endif %}'}
-        %a{ :href => "/tour" }
-          Tour
+      {% assign path_segments = path | split: '/' %}
+
+      {% for mainpage in site.index.children reversed %}
+      {% if mainpage.listed? %}
+
+      %li{ :class => '{% if mainpage.fullpath == path_segments[1] %}active{% endif %}'}
+        %a{ :href => "/{{ mainpage.fullpath }}" }
+          {{ mainpage.title }}
+
+      {% endif %}
+      {% endfor %}

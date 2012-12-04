@@ -1,3 +1,6 @@
+{% capture button_label %}{% editable_short_text button_label %}Install now{% endeditable_short_text %}{% endcapture %}
+{% capture button_url %}{% editable_short_text button_url %}/tour{% endeditable_short_text %}{% endcapture %}
+
 %section#page-head
   %section#page-head-content
     %header
@@ -7,6 +10,8 @@
     {% editable_long_text "page-head-content", priority: 9 %}
     %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae ante sit amet mi vehicula suscipit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
     {% endeditable_long_text %}
+
+  {% if button_label.size > 0 %}
   %aside
-    %a{ :href => "#" }
-      Install now
+    %a{ :href => "{{ button_url }}" } {{ button_label }}
+  {% endif %}

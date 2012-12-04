@@ -46,4 +46,4 @@
   @font-face {
     font-family: "Creampuff";
     src: url('font-weight(normal)');
-    src: url('font-weight(normal)?#iefix') format('eot'), url(Creampuf.otf) format('opentype'), url(Creampuf.ttf) format('truetype'), url(Creampuf.woff) format('woff'), url(Creampuf.svg) format('svg'); } }
+    src: url('font-weight(normal)?#iefix') format('eot'), url(Creampuf.ttf) format('truetype'), url(Creampuf.woff) format('woff'), url(Creampuf.svg) format('svg'); } }

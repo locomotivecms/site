@@ -1,4 +1,4 @@
-description: Companies using Locomotive on a daily basis
+description: Companies using LocomotiveCMS on a daily basis
 name: Companies
 order_by: manually
 slug: companies
@@ -12,7 +12,7 @@ fields:
     label: Category of company
     type: select
     hint: The type of the category
-    select_options: 
+    select_options:
       - 'Rental'
       - 'Trips'
       - 'Else'

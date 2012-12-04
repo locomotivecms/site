@@ -1,8 +1,7 @@
 %section.company-crew-person
   .rounded-picture
-    %img{ :src => "{{ person.picture.url }}", :alt => "" }
+    %img{ :src => "{{ person.picture.url | resize: '200x200#' }}", :alt => "{{ person.name }}" }
   %header
     %h1 {{ person.name }}
     %span.position {{ person.title }}
   {{ person.bio }}
-    
