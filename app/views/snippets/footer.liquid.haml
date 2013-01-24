@@ -39,18 +39,17 @@
         {% for tweet in tweets %}
 
         {% assign _date = tweet.created_at | split: ' ' %}
-        {% capture date %}{{ _date[0] }} {{ _date[1] }} {{ _date[2] }} {{ _date[3] }}{% endcapture %}
+        {% capture date %}{{ _date[0] }} {{ _date[1] }} {{ _date[2] }} {{ _date[3] }} {{ _date[5] }}{% endcapture %}
 
         %li
           %img{ :src => "{{ 'twitter.png' | theme_image_url }}", :width => '24px', :height => '20px' }
           %p.text {{ tweet.text }}
-          %p.date {{ date | format_date | distance_of_time_in_words }} ago
+          %p.date {{ date | format_date: '%Y-%m-%d' | distance_of_time_in_words }} ago
 
         {% endfor %}
 
       {% endif %}
       {% endconsume %}
-
 
     %section.footer-item
       %header

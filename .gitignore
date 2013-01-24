@@ -3,3 +3,5 @@ releases
 tmp/
 config/deploy.yml
 public/.sass-cache/
+.sass-cache
+log/

@@ -22,10 +22,9 @@ fields:
     label: Author of the Article
     type: select
     hint: The author of the article
-    select_options: 
+    select_options:
       - 'Didier'
       - 'Estelle'
 - picture:
     label: Picture
     type: file
-    
