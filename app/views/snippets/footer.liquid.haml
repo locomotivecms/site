@@ -5,20 +5,20 @@
         Quick Links
       %ul
         %li
-          %a{ :href => "/company" }
-            Company
+          %a{ :href => "http://www.locomotivehosting.com", :target => "_blank" }
+            LocomotiveHosting
         %li
-          %a{ :href => "/privacy-policy" }
-            Privacy Policy
+          %a{ :href => "http://doc.locomotivecms.com", :target => "_blank" }
+            Documentation
         %li
           %a{ :href => "/terms-of-use" }
             Terms of use
         %li
-          %a{ :href => "/license" }
-            License Agreement
+          %a{ :href => "/privacy-policy" }
+            Privacy Policy
         %li
           %a{ :href => "mailto:support@locomotivecms.com" }
-            Contact us
+            Contact
 
     %section.footer-item
       %header
@@ -26,45 +26,22 @@
         %a{ :href => "https://twitter.com/locomotivecms" }
           @locomotivecms
 
-      {% consume tweets from 'https://api.twitter.com/1/statuses/user_timeline.json?screen_name=locomotivecms&count=2' %}
 
-      {% if tweets.error %}
-      %p
-        %strong Error during connection to the Twitter API:
-        %br
-        %i reason:
-        %small {{ tweets.error }})
-      {% else %}
-      %ul.tweets
-        {% for tweet in tweets %}
-
-        {% assign _date = tweet.created_at | split: ' ' %}
-        {% capture date %}{{ _date[0] }} {{ _date[1] }} {{ _date[2] }} {{ _date[3] }} {{ _date[5] }}{% endcapture %}
-
-        %li
-          %img{ :src => "{{ 'twitter.png' | theme_image_url }}", :width => '24px', :height => '20px' }
-          %p.text {{ tweet.text }}
-          %p.date {{ date | format_date: '%Y-%m-%d' | distance_of_time_in_words }} ago
-
-        {% endfor %}
-
-      {% endif %}
-      {% endconsume %}
 
     %section.footer-item
       %header
         LocomotiveCMS News
       %p
         Stay on top of LocomotiveCMS updates, subscribe to our news.
-      %form{ action: "http://locomotivecms.us6.list-manage.com/subscribe/post?u=bbf009a4e985171b092f240ab&amp;id=f469d6bd90", method: 'post', target: '_blank', novalidate: '' }
-        %input{ type: 'email', name: 'EMAIL', :placeholder => "Email address" }
-        %input{ type: 'submit', name: 'subscribe', value: "SUBSCRIBE" }
+      %p.subscribe
+        %a{ href: "http://eepurl.com/uX8R9", target: "_blank", class: "btn" }
+          Subscribe
 
     %section.footer-item
       %header.logo
         LOCOMOTIVECMS
       %p
-        %em LocomotiveCMS is developed by NoCoffee. LocomotiveCMS is free software under the MIT license.
+        %em LocomotiveCMS is developed by NoCoffee. LocomotiveCMS is a free software under the MIT license.
       %p
         %strong © {{ today | localized_date: '%Y' }} LocomotiveCMS
     %a.back-to-top{ :href => "#" }

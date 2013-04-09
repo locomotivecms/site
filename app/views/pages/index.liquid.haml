@@ -48,15 +48,15 @@ listed: false
         %header
           %h1
             {% editable_short_text "title", priority: 21 %}
-            Develop your website 50% faster !
+            Develop your websites WAY faster
             {% endeditable_short_text %}
           %blockquote
-            {% editable_long_text "quote-content", priority: 20 %}
-            LocomotiveCMS is so easy to develop with. It has helped speed up my dev time by two fold, and reduce my hair pulling time by 100%.
-            {% endeditable_long_text %}
+            {% editable_short_text "quote-content", priority: 20 %}
+            <b>“</b>LocomotiveCMS is really genious. We are now able to take on projects we had to turn down before.<b>“</b>
+            {% endeditable_short_text %}
             %span.quote-author
               {% editable_short_text "quote-author", priority: 19 %}
-              Johnny Appleseed, developer
+              Miha, developer
               {% endeditable_short_text %}
         %a{ :href => "/tour", :class => "button" }
           FIND OUT HOW
@@ -77,11 +77,7 @@ listed: false
               LocomotiveCMS
           %span.first-line
             {% editable_short_text "first-line", priority: 17 %}
-            LocomotiveCMS is an open source CMS solution for Rails
-            {% endeditable_short_text %}
-          %span
-            {% editable_short_text "second-line", priority: 16 %}
-            It's super flexible and integrates with Heroku and Amazon S3
+            LocomotiveCMS is a free open source CMS in Rails that helps web developers create and manage websites faster than ever.
             {% endeditable_short_text %}
         {% endblock %}
 
@@ -95,11 +91,11 @@ listed: false
         %header
           %h1
             {% editable_long_text "title", priority: 14 %}
-            Build your website locally. Deploy it instantly
+            Build your website locally. Deploy it instantly.
             {% endeditable_long_text %}
         {% editable_long_text "content", priority: 13 %}
         %p
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sollicitudin dolor vitae est tincidunt congue. Curabitur suscipit, mauris sed aliquam auctor, justo eros varius arcu, in suscipit sem dui nec lorem.
+          Like to keep using your favorite IDE and development tricks? With LocomotiveCMS you work locally just like any web project. You deploy your site whenever you want and can keep track of your code in your SCM.
         {% endeditable_long_text %}
       {% endblock %}
 
@@ -113,7 +109,8 @@ listed: false
             {% endeditable_long_text %}
         {% editable_long_text "content", priority: 10 %}
         %p
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sollicitudin dolor vitae est tincidunt congue. Curabitur suscipit, mauris sed aliquam auctor, justo eros varius arcu, in suscipit sem dui nec lorem.
+          Your client should be able to edit the content without any training or any skills.
+          The author interface provides non-technical, simple and meaningful options, and most of the content can be edited directly inline. Just switch to editing mode.
         {% endeditable_long_text %}
       {% endblock %}
 
@@ -123,11 +120,11 @@ listed: false
         %header
           %h1
             {% editable_long_text "title", priority: 8 %}
-            Don't let your client mess up with your  layout
+            Don't let your client mess up with your layout
             {% endeditable_long_text %}
         {% editable_long_text "content", priority: 7 %}
         %p
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sollicitudin dolor vitae est tincidunt congue. Curabitur suscipit, mauris sed aliquam auctor, justo eros varius arcu, in suscipit sem dui nec lorem.
+          … and don’t mess up with the content. Designers can change design, authors can change content. You can keep your development methods, like source code tracking and local development. Don’t be afraid to modify the layout, it won’t affect the content.
         {% endeditable_long_text %}
       {% endblock %}
 
@@ -137,11 +134,11 @@ listed: false
         %header
           %h1
             {% editable_long_text "title", priority: 5 %}
-            Open Source optimized
+            Open Source with professional support
             {% endeditable_long_text %}
         {% editable_long_text "content", priority: 4 %}
         %p
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sollicitudin dolor vitae est tincidunt congue. Curabitur suscipit, mauris sed aliquam auctor, justo eros varius arcu, in suscipit sem dui nec lorem.
+          The community helps us build a secured and well-tested CMS. Extend the code to fit your needs, and rely on the community to get help on our forum. And if you need more help, we offer professional support.
         {% endeditable_long_text %}
       {% endblock %}
 
