@@ -3,6 +3,10 @@ title: Terms Of Use
 published: true
 listed: false
 position: 100
+
+editable_elements:
+  main/page-head-title: "TERMS OF USE"
+  main/page-head-content: "<p>Please read this Agreement carefully before proceeding with any use of our website or the Services. By checking the “I have read the LocomotiveCMS Agreement.I accept these terms and conditions” box on the Free Trial page or after logging in for the first time, you accept and agree to be bound by this Agreement.</p>"
 ---
 {% extends 'index' %}
 
@@ -103,8 +107,8 @@ position: 100
         %a{"data-mce-href" => "http://terms-of-service-generator.legalriver.com/", :href => "http://terms-of-service-generator.legalriver.com/"} Legal River's Terms of Service Generator
     {% endeditable_long_text %}
 
+  {% include 'sidebar' %}
 {% endblock %}
 
-{% include 'sidebar' %}
 
 {% endblock %}

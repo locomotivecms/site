@@ -18,10 +18,6 @@ listed: false
     %meta{ "http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }
     %meta{ :name => "viewport", :content => "initial-scale=1, width=device-width" }
 
-    / %title {{ page.title }}
-    / %title {{ seo}}
-    / %meta{ :content => "{{ page.meta_description }}", :name => "description" }
-    / %meta{ :content => "{{ page.meta_keywords }}", :name => "keywords" }
     {% seo %}
 
     {{ '/fonts/all' | stylesheet_tag }}
@@ -38,7 +34,6 @@ listed: false
 
     {% endblock %}
   %body
-
     {% include 'nav' %}
 
     {% block 'main' %}
