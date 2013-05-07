@@ -22,18 +22,16 @@ listed: false
 
     {{ '/fonts/all' | stylesheet_tag }}
     {{ 'screen' | stylesheet_tag }}
-    {{ 'jquery-1.8.2.min' | javascript_tag }}
-    {{ 'jquery.tools.min' | javascript_tag }}
+    {{ 'jquery-1.9.1.min' | javascript_tag }}
+    {{ 'bootstrap.min' | javascript_tag }}
     {{ 'home' | javascript_tag }}
 
-
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
 
     {% block 'head' %}
 
     {% endblock %}
-  %body
+  %body{ data: { spy: 'scroll', target: 'nav.subnav', offset: '300' } }
     {% include 'nav' %}
 
     {% block 'main' %}

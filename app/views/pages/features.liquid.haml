@@ -8,15 +8,14 @@ position: 1
 
 {% block 'main' %}
 
-{% include 'page_head' %}
-
-%nav.subnav
-  %ul
-    {% for feature in contents.features %}
-    %li
-      %a{ :href => '#{{ feature._permalink }}' }
-        {{ feature.short_name }}
-    {% endfor %}
+#features-nav-wrapper{ data: { spy: 'affix', 'offset-top' => '97' } }
+  %nav.subnav
+    %ul.nav
+      {% for feature in contents.features %}
+      %li
+        %a{ href: '#{{ feature._permalink }}' }
+          {{ feature.short_name }}
+      {% endfor %}
 
 %section#features
   {% for feature in contents.features %}

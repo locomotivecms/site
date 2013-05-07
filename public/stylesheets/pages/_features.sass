@@ -6,14 +6,19 @@
     padding-top: $section-padding
     padding-bottom: $section-padding
   .feature-icon
-    display: none  
+    display: none
   .feature-illustrations
     padding-bottom: $section-padding
 .feature.last
   border-bottom: none
 
+#features-nav-wrapper.affix
+  top: 0px
+  width: 100%
+  background: rgba(255, 255, 255, 0.95)
+
 @media #{$desktop}
-  #features  
+  #features
     background: url(/images/dotted_pattern.png) repeat-y center
   .feature
     .feature-text
@@ -27,7 +32,7 @@
     .feature-illustrations
       +span-columns(2,5)
       padding-top: $section-padding
-      
+
   // handle left right orientation
   .feature.left
     .feature-illustrations
@@ -40,10 +45,9 @@
   // hide the stripped background above icon for the first item
   .feature.first
     .feature-icon
-      background-color: white  
+      background-color: white
   // same principle for the last item
   .feature.last
-    background-color: white  
+    background-color: white
     .feature-icon
       background: url(/images/dotted_pattern.png) repeat-y center
-  

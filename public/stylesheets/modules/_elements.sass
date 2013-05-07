@@ -7,7 +7,7 @@
   +proximanova-light
   #page-head-content
     +span-columns(4 omega,4)
-    header  
+    header
       font-size: 36px
       line-height: 30px
       color: $fourth-black
@@ -16,7 +16,7 @@
       +span-columns(4 omega,4)
       font-size: 20px
       line-height: 27px
-      color: $third-blue
+      color: $third-black
       +proximanova-light
       margin: 0
       a
@@ -50,20 +50,24 @@ nav.subnav
     display: inline-block
     background: none
     padding-left: 0
-    margin-right: 10px
+    margin-right: 5px
   a
     float: left
     display: block
-    padding: 2px 23px
+    padding: 0px 6px
     color: $third-blue
     font-size: 14px
     +proximanova-semi-bold
-    +border-radius(20px)
+    +border-radius(12px)
     &:hover
       color: $main-blue
       background-color: $subnav-button-bg
       text-decoration: none
   a.current
+    color: $main-blue
+    background-color: $subnav-button-bg
+
+  li.active a
     color: $main-blue
     background-color: $subnav-button-bg
 
@@ -75,7 +79,7 @@ nav.subnav
   color: $third-blue
   +proximanova-semi-bold
   font-size: 14px
-  
+
   #pagination-left
     float: left
   #pagination-right
@@ -118,3 +122,6 @@ nav.subnav
       color: $light-black
       font-size: 12px
 
+// Affix
+.affix
+  position: fixed

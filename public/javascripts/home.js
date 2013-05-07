@@ -1,10 +1,10 @@
 $(function() {
-  $("ul.tabs").tabs(".panes > section");
+  // $("ul.tabs").tabs(".panes > section");
 
-  // mobile 
+  // mobile
   $('#nav-toggle').on('click',function(e){
     $('#main-nav').toggleClass('expanded');
     $(this).toggleClass('expanded');
   });
-  
+
 });
