@@ -20,6 +20,8 @@ listed: false
 
     {{ '/articles/rss.xml' | auto_discovery_link_tag }}
 
+    %link{ href: "{{ 'favicon.ico' | theme_image_url }}", rel: 'shortcut icon', type: 'image/vnd.microsoft.icon' }
+
     {% seo %}
 
     {{ '/fonts/all' | stylesheet_tag }}
@@ -35,6 +37,8 @@ listed: false
     {% endblock %}
 
     {% include mixpanel %}
+
+    {% inline_editor %}
 
   %body{ data: { spy: 'scroll', target: 'nav.subnav', offset: '300' } }
     {% include 'nav' %}
