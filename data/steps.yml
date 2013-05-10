@@ -1,36 +1,43 @@
 - One:
-    title: Install the locomotive Editor
-    description: <p><b>Either in command line :</b><p><ul><li>blablabla</li><li>or blablablabla</li></ul></p></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque at arcu ut urna tempor feugiat. Donec vel neque sed neque dictum elementum id non arcu. Sed sit amet adipiscing nulla. Donec sed arcu at est molestie ornare. Integer ut felis tortor. Nulla facilisi. Pellentesque quam nunc, cursus ac venenatis tincidunt, sodales a est. Morbi ultrices venenatis ante, et molestie metus congue vitae. Duis ante nisi, molestie vel consequat non, molestie ac sem.</p>
-    picture: /samples/steps/step.png
-    time_saver: true
-    paypal_link: http://www.paypal.com
-    paypal_amount: 35
+    title:  Install the LocomotiveCMS engine <u>ONCE AND FOR ALL</u>
+    description: |
+      <p>
+      Since our CMS integrates the multi-site functionality from day 1, a single instance of LocomotiveCMS can serve as many websites as your server can handle.
+      <br/>
+      Installing the engine is as simple as installing any other Ruby on Rails application.
+      </p>
+    picture: /samples/steps/installation.png
+    time_saver: false
 - Two:
-    title: Install the locomotive Editor
-    description: <p><b>Either in command line :</b><p><ul><li>blablabla</li><li>or blablablabla</li></ul></p></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque at arcu ut urna tempor feugiat. Donec vel neque sed neque dictum elementum id non arcu. Sed sit amet adipiscing nulla. Donec sed arcu at est molestie ornare. Integer ut felis tortor. Nulla facilisi. Pellentesque quam nunc, cursus ac venenatis tincidunt, sodales a est. Morbi ultrices venenatis ante, et molestie metus congue vitae. Duis ante nisi, molestie vel consequat non, molestie ac sem.</p>
-    picture: /samples/steps/step.png
-    time_saver: false
-    paypal_link:
-    paypal_amount:
+    title: Use Wagon to build your websites fast
+    description: |
+      <p>
+      <strong>Wagon</strong>  is our tool to build LocomotiveCMS sites on your local machine with your preferred text editor and without installing the full engine locally.
+      <br/>
+      No need to be a Ruby guru, just write your pages with our super simple templating
+      language, use <strong>Sass</strong> (with Compass) or <strong>Less</strong> to code your stylesheets.
+      You can even use <strong>HAML</strong> to avoid typing full HTML code.
+      <br/>
+      Moreover, you are free to organize your content without a database. You also get to decide which parts your client can edit on his own so he does not mess up with your layout.
+      <br/>
+      For instance, you need a page for your band's discography? All you need to do is to create a new "recording" content type with a title, year, album cover, and track listing.
+      </p>
+    picture: /samples/steps/wagon.png
+    time_saver: true
 - Three:
-    title: Install the locomotive Editor
-    description: <p><b>Either in command line :</b><p><ul><li>blablabla</li><li>or blablablabla</li></ul></p></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque at arcu ut urna tempor feugiat. Donec vel neque sed neque dictum elementum id non arcu. Sed sit amet adipiscing nulla. Donec sed arcu at est molestie ornare. Integer ut felis tortor. Nulla facilisi. Pellentesque quam nunc, cursus ac venenatis tincidunt, sodales a est. Morbi ultrices venenatis ante, et molestie metus congue vitae. Duis ante nisi, molestie vel consequat non, molestie ac sem.</p>
+    title: Finally, deploy your websites
+    description: |
+      <p>
+        Alright, your site looks good and you want your client to enter his or her content
+        <br/>
+        Thanks to our API, deploying your site built with Wagon to a LocomotiveCMS engine will generate a
+        <strong>fully customized back-office</strong> for your clients.
+        <br/>
+        <br/>
+        Don't feel like installing, managing and regularly upgrading your LocomotiveCMS engine? No problem, we can handle it for you.
+        <br/>
+        <br/>
+        <a href="http://www.locomotivehosting.com" class="button">Try our hosting solution</a>
+      </p>
     picture: /samples/steps/step.png
     time_saver: false
-    paypal_link:
-    paypal_amount:
-- Four:
-    title: Install the locomotive Editor
-    description: <p><b>Either in command line :</b><p><ul><li>blablabla</li><li>or blablablabla</li></ul></p></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque at arcu ut urna tempor feugiat. Donec vel neque sed neque dictum elementum id non arcu. Sed sit amet adipiscing nulla. Donec sed arcu at est molestie ornare. Integer ut felis tortor. Nulla facilisi. Pellentesque quam nunc, cursus ac venenatis tincidunt, sodales a est. Morbi ultrices venenatis ante, et molestie metus congue vitae. Duis ante nisi, molestie vel consequat non, molestie ac sem.</p>
-    picture: /samples/steps/step.png
-    time_saver: false
-    paypal_link:
-    paypal_amount:
-- Five:
-    title: Install the locomotive Editor
-    description: <p><b>Either in command line :</b><p><ul><li>blablabla</li><li>or blablablabla</li></ul></p></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque at arcu ut urna tempor feugiat. Donec vel neque sed neque dictum elementum id non arcu. Sed sit amet adipiscing nulla. Donec sed arcu at est molestie ornare. Integer ut felis tortor. Nulla facilisi. Pellentesque quam nunc, cursus ac venenatis tincidunt, sodales a est. Morbi ultrices venenatis ante, et molestie metus congue vitae. Duis ante nisi, molestie vel consequat non, molestie ac sem.</p>
-    picture: /samples/steps/step.png
-    time_saver: false
-    paypal_link:
-    paypal_amount:
-

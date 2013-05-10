@@ -11,11 +11,16 @@
       float: right
     b
       color: $light-blue
-    .paypal
+    .button
       +paypal-button
       margin-bottom: 30px
   .step-picture
     +span-columns(4 omega, 4)
+    text-align: center
+    min-height: 150px
+    line-height: 150px
+    img
+      vertical-align: middle
 
 .tour-footer-container
   +three-cols-grid
@@ -57,6 +62,5 @@
         +span-columns(2, 3)
       a
         +span-columns(1 omega, 3)
-    
-      
-  
+
+

@@ -22,11 +22,3 @@ fields:
     label: Is time saver
     type: boolean
     hint: Display or not the time saver icon
-- paypal_link:
-    label: Paypal url
-    type: string
-    hint: Fill with Paypal url if you want display the buy button
-- paypal_amount:
-    label: Paypal amount
-    type: string
-    hint: Fill with Paypal amount if you want display the buy button

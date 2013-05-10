@@ -1,43 +1,29 @@
 ---
 title: Tour
-published: false
-listed: false
+published: true
+listed: true
 position: 1
-editable_elements:
-  main/page-head-title: Install Wagon in just 60 seconds. It's free.
 ---
 {% extends 'index' %}
 
 {% block 'main' %}
 
-{% include 'page_head' %}
+%section#page-head
+  %section#page-head-content
+    %header
+      {% editable_short_text "page-head-title", priority: 1 %}
+      Find out why our CMS is so special!
+      {% endeditable_short_text %}
+    {% editable_long_text "page-head-content", priority: 2 %}
+    %p
+      LocomotiveCMS offers an innovative way to create and publish websites.
+    {% endeditable_long_text %}
 
-/ %nav.subnav
-/   %ul
-/     {% for step in contents.steps %}
-/     %li
-/       %a{ :href => '#{{ step._permalink }}' }
-/         Step {{ step.number }}
-/     {% endfor %}
+  %aside
+    %a{ href: "http://doc.locomotivecms.com/guides/get-started/requirements" } Get started
 
 {% for step in contents.steps %}
 {% include 'tour_item' %}
 {% endfor %}
-
-%section.tour-footer-container
-  %section
-    %header
-      %h1
-        {% editable_short_text "footer-title", priority: 8 %}
-        Where do these numbers come from ?
-        {% endeditable_short_text %}
-    .description
-      %img.time-saver{ :src => "{{ 'time-saver.png' | theme_image_url }}" }
-      {% editable_long_text "tagline-quote-content", priority: 9 %}
-      %p Blablablablablabla
-      %p Blablablablablabla
-      {% endeditable_long_text %}
-    %a{ :href => "#" }
-      PURCHASE THE LOCOMOTIVECMS EDITOR
 
 {% endblock %}

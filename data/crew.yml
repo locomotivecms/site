@@ -1,17 +1,32 @@
 - Didier Lafforgue:
-    title: Rails developement
+    title: Founder + Rails developement
     bio: <p>Didier (<a href="http://www.twitter.com/dinedine31">@Didier</a>) is the founder of Locomotive. He speaks, thinks, eats and sleeps CMS. His family and friends thank him for creating a simple system to help them edit their websites.</p>
     picture: /samples/crew/didier.jpg
+    email: did@locomotivecms.com
+
+- Estelle Lafforgue:
+    title: Business developement
+    bio: <p>Estelle quit her corporate job to join the team to help them take LocomotiveCMS to the next level. She is in charge of business development, partnerships and customer satisfaction.</p>
+    picture: /samples/crew/estelle.jpg
+    email: estelle@locomotivecms.com
 
 - Sacha Greif:
     title: Design & UI
     bio: <p>Sacha (<a href="http://twitter.com/sachagreif">@SachaGreif</a>) is a French web and user experience designer. By the way, the fireman is in charge of shoveling coal into the engine.</p>
     picture: /samples/crew/sacha.jpg
+    email: sacha357@gmail.com
 
-- Estelle Lafforgue:
-    title: Business developement
-    bio: <p>Estelle quit her corporate job to join Sacha and her husband Didier to help them take LocomotiveCMS to the next level. She is in charge of business development, partnerships and customer satisfaction.</p>
-    picture: /samples/crew/estelle.jpg
+- Rodrigo Alvarez:
+    title: Rails developement
+    bio: "<p>Rodrigo comes from the PHP world but hopefully, he is now our fantastic senior Rails developer. He is also married to a videoblogger that he met on IRC. He has a lovely child and a lovely dog. Olé.</p>"
+    picture: /samples/crew/rodrigo.jpg
+    email: "papipo@gmail.com"
+
+- Jérémie Loosfelt:
+    title: Documentation & Marketing
+    bio: "<p>Jérémie is one of the first LocomotiveCMS user. He built several LocomotiveCMS sites for his clients. And now, he works with us to improve the documentation and our product.</p>"
+    picture: /samples/crew/jeremie.jpg
+    email: "jeremie@locomotivecms.com"
 
 # - Mario Visic:
 #     title: Rails developement

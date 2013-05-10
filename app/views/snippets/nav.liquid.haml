@@ -1,7 +1,7 @@
-%nav#main-nav{ :class => '{% if page.fullpath == "index" %}home-nav{% endif %}'}
+%nav#main-nav{ class: '{% if page.fullpath == "index" %}home-nav{% endif %}'}
   .inner-container
     %h1
-      %a{ :href => "/" }
+      %a{ href: "/" }
         LOCOMOTIVECMS
     #nav-toggle
       %a.icon-th-list
@@ -11,8 +11,8 @@
       {% for mainpage in site.index.children reversed %}
       {% if mainpage.listed? %}
 
-      %li{ :class => '{% if mainpage.fullpath == path_segments[1] %}active{% endif %}'}
-        %a{ :href => "/{{ mainpage.fullpath }}" }
+      %li{ class: '{% if mainpage.fullpath == path_segments[1] %}active{% endif %}'}
+        %a{ href: "/{{ mainpage.fullpath }}", target: '{% if mainpage.redirect_url %}blank{% endif %}' }
           {{ mainpage.title }}
 
       {% endif %}

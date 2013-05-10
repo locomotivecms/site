@@ -10,13 +10,15 @@ listed: false
 /[if IE 8] <html class="no-js lt-ie9" lang="en">
 / Consider adding a manifest.appcache: h5bp.com/d/Offline
 / [if gt IE 8]><!
-%html.no-js{:lang => "en"}
+%html.no-js{lang: "en"}
   / <![endif]
 
   %head
-    %meta{ :charset => "utf-8" }
-    %meta{ "http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }
-    %meta{ :name => "viewport", :content => "initial-scale=1, width=device-width" }
+    %meta{ charset: "utf-8" }
+    %meta{ "http-equiv" => "X-UA-Compatible", content: "IE=edge,chrome=1" }
+    %meta{ name: "viewport", content: "initial-scale=1, width=device-width" }
+
+    {{ '/articles/rss.xml' | auto_discovery_link_tag }}
 
     {% seo %}
 
@@ -26,11 +28,14 @@ listed: false
     {{ 'bootstrap.min' | javascript_tag }}
     {{ 'home' | javascript_tag }}
 
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    {% include twitter %}
 
     {% block 'head' %}
 
     {% endblock %}
+
+    {% include mixpanel %}
+
   %body{ data: { spy: 'scroll', target: 'nav.subnav', offset: '300' } }
     {% include 'nav' %}
 
@@ -49,17 +54,17 @@ listed: false
             {% endeditable_short_text %}
             %span.quote-author
               {% editable_short_text "quote-author", priority: 19 %}
-              Miha, developer
+              Miha Kersic, developer
               {% endeditable_short_text %}
-        %a{ :href => "/tour", :class => "button" }
+        %a{ href: "/tour", class: "button" }
           FIND OUT HOW
-        / %a{ :href => "#", :id => "try-out" }
-        /   or Try the Demo
         {% endblock %}
     %section#home-image
       #shadow
       .inner-container
-        %img{ :src => "{% editable_file 'big-screenshot', hint: 'Home screenshot, size: 980x430px', priority: 18 %}/samples/pages/home-tagline-screenshot.png{% endeditable_file %}", :alt => "screenshot"}
+        .topbar
+          Open Source CMS for Rails
+        %img{ src: "{% editable_file 'big-screenshot', hint: 'Home screenshot, size: 980x430px', priority: 18 %}/samples/pages/home-tagline-screenshot.png{% endeditable_file %}", alt: "screenshot" }
     %section#home-strip
       .inner-container
         {% block strip %}
@@ -74,13 +79,13 @@ listed: false
             {% endeditable_short_text %}
         {% endblock %}
 
-        %a{ :href => "/tour", :class => "button" }
-          TAKE THE TOUR
+        %a{ href: "http://doc.locomotivecms.com/guides/get-started/requirements", class: "button" }
+          Get started
 
     %section#home-columns
       {% block 'asset_1' %}
       %section.home-column
-        %img{ :src => "{% editable_file 'image', hint: 'round icon, size: 154x154px', priority: 15 %}/samples/pages/icon-tools.png{% endeditable_file %}", :alt => ""}
+        %img{ src: "{% editable_file 'image', hint: 'round icon, size: 154x154px', priority: 15 %}/samples/pages/icon-tools.png{% endeditable_file %}", alt: ""}
         %header
           %h1
             {% editable_long_text "title", priority: 14 %}
@@ -94,7 +99,7 @@ listed: false
 
       {% block 'asset_2' %}
       %section.home-column
-        %img{ :src => "{% editable_file 'image', hint: 'round icon, size: 154x154px', priority: 12 %}/samples/pages/icon-edit.png{% endeditable_file %}", :alt => ""}
+        %img{ src: "{% editable_file 'image', hint: 'round icon, size: 154x154px', priority: 12 %}/samples/pages/icon-edit.png{% endeditable_file %}", alt: ""}
         %header
           %h1
             {% editable_long_text "title", priority: 11 %}
@@ -109,7 +114,7 @@ listed: false
 
       {% block 'asset_3' %}
       %section.home-column
-        %img{ :src => "{% editable_file 'image', hint: 'round icon, size: 154x154px', priority: 9 %}/samples/pages/icon-validate.png{% endeditable_file %}", :alt => ""}
+        %img{ src: "{% editable_file 'image', hint: 'round icon, size: 154x154px', priority: 9 %}/samples/pages/icon-validate.png{% endeditable_file %}", alt: ""}
         %header
           %h1
             {% editable_long_text "title", priority: 8 %}
@@ -123,7 +128,7 @@ listed: false
 
       {% block 'asset_4' %}
       %section.home-column
-        %img{ :src => "{% editable_file 'image', hint: 'round icon, size: 154x154px', priority: 6 %}/samples/pages/icon-open-source.png{% endeditable_file %}", :alt => ""}
+        %img{ src: "{% editable_file 'image', hint: 'round icon, size: 154x154px', priority: 6 %}/samples/pages/icon-open-source.png{% endeditable_file %}", alt: ""}
         %header
           %h1
             {% editable_long_text "title", priority: 5 %}
@@ -136,31 +141,96 @@ listed: false
       {% endblock %}
 
     {% block 'bottom' %}
-    %section#home-bottom-title
-      %h1
-        {% editable_short_text "title", priority: 3 %}
-        Create beautiful sites with LocomotiveCMS
-        {% endeditable_short_text %}
-    %section#home-bottom-container
-      %section#home-bottom-left
 
-        #home-bottom-testimonial
-          .rounded-picture
-            %img{ :src => "{% editable_file 'testimonial-img', hint: 'Home screenshot, size: 980x430px', priority: 2 %}/samples/crew/jobs.png{% endeditable_file %}", :alt => ""}
-          {% editable_long_text "testimonial-content", priority: 1 %}
-          %p
-            %em Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui. “
-          %p
-            %em John User. Developer, Frontier Group
-          {% endeditable_long_text %}
-      %section#home-bottom-right
-        {% for company in contents.companies %}
-        %a{ :href => "http://{{ company.url }}" }
-          %img{ :src => "{{ company.logo.url }}", :alt => "{{ company.name }}"}
-        {% endfor %}
-    {% endblock %}
+    %section.home-row
+      {% editable_long_text "text" %}
+      %h1 Beautiful code matters
+
+      %a{ href: 'https://codeclimate.com/github/locomotivecms/engine', style: 'float: left; margin-right: 100px' }
+        %img{ src: '/samples/pages/codeclimate.png', width: '240' }
+
+      %ul{ style: 'float: left' }
+        %li With each upgrade, we can make changes that are easier to accomodate.
+        %li It makes maintenance easier
+        %li You’ll enjoy reading it
+
+      %br{ style: 'clear: both' }
+      %br
+      %br
+
+      %h1 Why is LocomotiveCMS different from Wordpress?
+
+      %br
+
+      %ul
+        %li The design mindset is different. LocomotiveCMS gives you the freedom to make custom designs easily. It comes with a templating engine. All you have to do is build your pages and assets the exact same way you would with static pages. You already know how to do that. Then you make content manageable : all you need to learn is a very simple templating system.
+        %li LocomotiveCMS’s most popular feature is content types. They make it very easy to manage models, like “Books” or “Authors”. These can have relationships. You don't need to code anything. You don't need to teach your client how to manage data because the backoffice is very simple and only has meaningful options, like a "Books" menu.
+        %li With LocomotiveCMS, your development process can follow standards. You develop locally when you create your site and when you update it. You can have all your code in a Git or Svn repo and keep track of your evolutions.
+        %li LocomotiveCMS is natively multilingual and multisite. Anything can be translated including urls. You don't need to find and install plugins to make it work.
+
+      %br
+
+      %p{ style: 'text-align: center' }
+        %strong
+          LocomotiveCMS is designed to save your time and help you focus on what matters : front-end technology, standard development process and no-learning time for your client.
+
+      %br
+      %br
+      %br
+
+      %h1 Why is LocomotiveCMS different from proprietary solutions?
+
+      %br
+
+      %ul
+        %li LocomotiveCMS is an open source solution, which facilitates adoption by many more users. That means more people to share experiences and solutions with (Join our community on Gitub and Google Groups).
+        %li Developers, you have access to the source code, so you can tweak if to suit your needs.
+        %li Bugs are noticed and fixed more quickly since everyone in the community.
+        %li We’ll never make claims that you cannot check by yourselves. The visibility of the code behind our open source CMS means you can see for yourself and be confident.
+        %li If we all die in a plane accident (we hope you are not offended by black humor, well, LocomotiveCMS will outlive us. We all have the keys to make it an incredible CMS.
+        %li You have access to the same level of support that proprietary solutions offer.
+        %li We love to talk with you and hear about the great ideas you have for LocomotiveCMS. You can easily have access to the management team of our company.
+
+      %br
+      %br
+
+      %p{ style: 'text-align: center' }
+        %strong
+          LocomotiveCMS makes the best of both worlds.
+
+      {% endeditable_long_text %}
+    / %section#home-bottom-title
+    /   %h1 Beautiful code matters
+
+
+
+    / %section#home-bottom-title
+    /   %h1
+    /     {% editable_short_text "title", priority: 3 %}
+    /     Create beautiful sites with LocomotiveCMS
+    /     {% endeditable_short_text %}
+    / %section#home-bottom-container
+    /   %section#home-bottom-left
+
+    /     #home-bottom-testimonial
+    /       .rounded-picture
+    /         %img{ src: "{% editable_file 'testimonial-img', hint: 'Home screenshot, size: 980x430px', priority: 2 %}/samples/crew/jobs.png{% endeditable_file %}", alt: ""}
+    /       {% editable_long_text "testimonial-content", priority: 1 %}
+    /       %p
+    /         %em Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui. “
+    /       %p
+    /         %em John User. Developer, Frontier Group
+    /       {% endeditable_long_text %}
+    /   %section#home-bottom-right
+    /     {% for company in contents.companies %}
+    /     %a{ href: "http://{{ company.url }}" }
+    /       %img{ src: "{{ company.logo.url }}", alt: "{{ company.name }}"}
+    /     {% endfor %}
+    / {% endblock %}
 
 
     {% endblock %}
 
     {% include "footer" %}
+
+    {% google_analytics 'UA-17355243-1' %}

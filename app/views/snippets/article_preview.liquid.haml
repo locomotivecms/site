@@ -1,10 +1,12 @@
 %article
   %header
-    %h1 {{ article.title }}
-    {{ article.posted_at | localized_date: '%A %d %B %Y' }}
-  %p {{ article.body | strip_html | truncate: 500 }}
+    %h1
+      %a{ href: '/articles/{{ article._permalink }}' } {{ article.title }}
+    %span.meta.date {{ article.posted_at | localized_date: '%A %d %B %Y' }}
+    %span.meta.name
+      %img{ src: "{{ article.author.picture | resize: '30x30' }}" }
+      by {{ article.author.name }}
+  %p {{ article.excerpt }}
   .bottom
     %a{ :href => "/articles/{{ article._permalink }}" }
       Read More
-    %span.meta
-      Posted by {{ article.author }}

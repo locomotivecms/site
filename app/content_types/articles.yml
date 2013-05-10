@@ -13,6 +13,11 @@ fields:
     label: Posted at
     type: date
     hint: The date when the article has been or will be posted.
+- excerpt:
+    label: Exceprt
+    type: text
+    hint: It will be displayed on the articles page instead of the full body
+    required: true
 - body:
     label: Body
     type: text
@@ -20,11 +25,9 @@ fields:
     hint: The body of the article
 - author:
     label: Author of the Article
-    type: select
+    type: belongs_to
     hint: The author of the article
-    select_options:
-      - 'Didier'
-      - 'Estelle'
+    class_name: crew
 - picture:
     label: Picture
     type: file

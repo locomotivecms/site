@@ -4,12 +4,11 @@ templatized: true
 published: true
 listed: false
 content_type: articles
+position: 2
 ---
 {% extends 'index' %}
 
 {% block 'main' %}
-
-/ {% include 'page_head' %}
 
 #main-blog
   {% assign sidebar_class = 'desktop' %}
@@ -17,12 +16,22 @@ content_type: articles
   %article.full-article
     %header
       %h1 {{ article.title }}
-      {{ article.posted_at | localized_date: '%A %d %B %Y' }}
-    {{ article.body }}
-    .bottom
-      %span.meta
-        Posted by {{ article.author }}
+      %span.meta.date {{ article.posted_at | localized_date: '%A %d %B %Y' }}
+      %span.meta.name
+        %img{ src: "{{ article.author.picture | resize: '30x30' }}" }
+        by {{ article.author.name }}
+
+    {% include 'addthis' with url: url %}
+
+    .body
+      {{ article.body }}
+
+    / .bottom
+    /   %span.meta
+    /     Posted by {{ article.author.name }}
   {% assign sidebar_class = 'mobile' %}
   {% include 'sidebar' with sidebar_class %}
+
+  {% include 'disqus' %}
 
 {% endblock %}

@@ -1,50 +1,8 @@
 ---
-title: Documentation Site
+title: Documentation
 published: true
 listed: true
-position: 3
+position: 4
 redirect_url: http://doc.locomotivecms.com
 ---
-{% extends 'index' %}
-
-{% block 'head' %}
-%style
-  @font-face {
-  font-family: "Bebas";
-  src: url('/fonts/font-weight(normal)');
-  src: url('/fonts/font-weight(normal)?#iefix') format('eot'), url(/fonts/Bebas.ttf) format('truetype'), url(/fonts/Bebas.woff) format('woff'), url(/fonts/Bebas.svg) format('svg'); }
-
-{% endblock %}
-
-
-{% block 'main' %}
-
-{% include 'page_head' %}
-
-%nav.subnav
-  %ul
-    %li
-      %a{ :href => "http://github.com/locomotivecms/engine/" }
-        Source Code
-    %li
-      %a{ :href => "#" }
-        Quick start guide
-    %li
-      %a{ :href => "http://doc.locomotivecms.com" }
-        Documentation
-    %li
-      %a{ :href => "https://groups.google.com/forum/?fromgroups#!forum/locomotivecms" }
-        Forum
-    %li
-      %a{ :href => "http://doc.locomotivecms.com/faq" }
-        FAQ
-    %li
-      %a.current{ :href => "#" }
-        In the Works
-
-{% for project in contents.projects %}
-{% include 'project_item' %}
-{% endfor %}
-
-
-{% endblock %}
+/ empty

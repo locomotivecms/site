@@ -7,10 +7,5 @@
     %img.time-saver{ :src => "{{ 'time-saver.png' | theme_image_url }}" }
     {% endif %}
     {{ step.description }}
-    {% if step.paypal_link %}
-    %a{ :href => "{{ step.paypal_link }}", :class => "paypal" }
-      BUY NOW {{ step.paypal_amount }}$ 
-      = "|"
-      %img{ :src => "{{ 'paypal.png' | theme_image_url }}" }
-    {% endif %}
-  %img.step-picture{ :src => "{{ step.picture.url }}", :alt => "" }
+  .step-picture
+    %img{ :src => "{{ step.picture.url }}", :alt => "" }

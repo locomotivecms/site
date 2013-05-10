@@ -1,77 +1,81 @@
 - Wagon:
-    long_name: Designed for developpers
+    long_name: "Wagon: designed for developers and their clients"
     description: |
       <p>There is no proper development workflow when making a site with a CMS solutions. Contents, design and configuration are stored in a database, some CMS even let users modify files in production!
-      <br/>We are developers. We need to use our favorite IDE, to track our code in Git, and use efficient tools (HAML, Sass, Compass, ...etc.).
-      <br/>We know how much time we gain when using the right tools.
-      <br/>LocomotiveCMS is shipped with <strong>Wagon</strong>, a command line tool that makes it easy to develop a site locally the way you want.</p>
+      <br>We are developers. We need to use our favorite IDE, to track our code in Git, and use efficient tools (HAML, Sass, Compass, ...etc.).
+      <br>We know how much time we gain when using the right tools.
+      <br>LocomotiveCMS is shipped with <strong>Wagon</strong>, a command line tool that makes it easy to develop a site locally the way you want.
+      </p>
     thumb: /samples/features/wagon.png
     icon: /samples/features/wagon_icon.png
 - Custom content:
     long_name: Custom content types
     description: |
-      <p>With most CMS, everything has to be blog posts (or pages, or articles) and building anything else requires hacks and plug-ins.
-      <br/>LocomotiveCMS is different: it doesn't impose any specific data structure. Need a page for your band's discography?
-      <br/>Create a new "recording" content type with a title, year, album cover, and track listing. It only takes minutes!
-      <br/>Custom content types are even flexible enough to build a contact form.</p>
+      <p>With most CMS, everything has to be written in blog posts, pages, or articles. Building anything else requires hacks or plug-ins.
+      <br>LocomotiveCMS is different: it doesn't impose any specific data structure. Need a page for your band's discography?
+      <br>Create a new "recording" content type with a title, year, album cover, and track listing.
+      <br>Our custom content types are even flexible enough to build a contact form.</p>
     thumb: /samples/features/custom_content_types.png
     icon: /samples/features/custom_content_types_icon.png
-- Multi sites:
-    long_name: Multi sites support
+- Multi-site:
+    long_name: Multi-site support
     description: |
-      <p>With a single instance of LocomotiveCMS, you can manage as many websites as your server can physically handle.
-      <br/>Deploying a website becomes just a matter of pointing your website domain to your LocomotiveCMS server. No webserver tweaking, no application rebooting at all.</p>
+      <p>With a single instance of LocomotiveCMS, you can manage as many websites as your server can handle.
+      <br>Deploying a website becomes just a matter of pointing your website domain to your LocomotiveCMS server. No webserver tweaking, no application rebooting at all.</p>
     thumb: /samples/features/multi_sites.png
     icon: /samples/features/multi_sites_icon.png
 - Templates:
     long_name: Template inheritance with Liquid
     description: |
-      <p>No need to learn one more weird syntax. We use Liquid, the most common templating language in Ruby. With Liquid, templates won't affect the security of your platform, and its syntax is simple to learn.
-      <br/>Of course, since we are always looking for ways to improve things, we also tweaked it a lot. For instance, we added the notion of template inheritance that we took from Python. And we wrote a large collection of useful helper tags covering a large number of needs: google analytics snippet, pagination snippet for collections, helper to reach an external webservice and display contents from it, etc.</p>
+      <p>No need to learn any more unfamiliar syntax. We use Liquid, the most common templating language in Ruby. With Liquid, templates won't affect the security of your platform, and its syntax is simple to learn.
+      <br>Since we're always looking to improve things, we added our own tweaks - for example, we added the notion of template inheritance from Python. We also wrote a large collection of helper tags covering a wide array of needs: Google Analytics snippet, pagination snippet for collections, and a helper to reach and to display content from an external webservice.</p>
     thumb: /samples/features/template.png
     icon: /samples/features/template_icon.png
 - UI:
     long_name: Great user experience
     description: |
-      <p>We believe that user experience should not be get the short end of the stick in an open source application. So we put a lot of time into the user interface and global experience, and we often tweak things until they're just right.
-      <br/>For instance, CTRL+S will save a page in AJAX without refreshing. You will love how fast your clients learn to manage their sites.</p>
+      <p>We believe that user experience shouldn't get the short end of the stick in an open source application. We put a lot of time into the user interface and global experience, and we like to tweak things until they're just right.
+      <br> You'lll love how fast your clients learn to manage their sites.</p>
     thumb: /samples/features/ux.png
     icon: /samples/features/ux_icon.png
 - Inline editing:
     long_name: Inline front-end editing
     description: |
-      <p>When we discovered Aloha-Editor, a very powerful and promising browser editor named, it was instantly clear for us that we had to integrate it into LocomotiveCMS!
-      <br/>This is quick to implement: designers just need to define editable regions in their templates, and those regions become editable by authors directly from the page they’re viewing.</p>
+      <p>Aloha-Editor is a very powerful, very promising browser editor - when we discovered it, it was immediately clear to us that we had to integrate it into LocomotiveCMS.
+      <br/>
+      With Aloha-Editor, LocomotiveCMS users can now define editable regions in their templates, and those regions can be edited by the end user directly from the page they're viewing.</p>
     thumb: /samples/features/inline_editing.png
     icon: /samples/features/inline_editing_icon.png
-- Multi-Languages:
-    long_name: I18n Multi-Languages
+- Multi-Language:
+    long_name: I18n Multi-Language
     description: |
-      <p>Internationalization is probably one of the most wanted features, especially for a majority of non-american freelancers / agencies. Just define the languages your site will speak and you are good to go.
-      <br/>We make it easy for authors to edit all the content of their sites in the different languages.</p>
+      <p>Probably one of the most-wanted features, especially for the majority of non-American freelancers / agencies. Just define the languages your site will speak, and you're good to go.
+      <br>We make it easy for users to edit all the content of their sites in any language.</p>
     thumb: /samples/features/i18n.png
     icon: /samples/features/i18n_icon.png
 - API:
     long_name: Restful API
     description: |
-      <p>Wagon already takes benefits of the new API system by giving the ability to push a theme to any LocomotiveCMS engines.
-      <br/>Be creative, we are sure you will find plenty other ways to use the built-in API.</p>
+      <p>Wagon already takes advantage of the new API by giving users the ability to push a theme to any LocomotiveCMS engine.
+      <br>Be inspired! We're sure you'll find plenty of other ways to use the built-in API.</p>
     thumb: /samples/features/api.png
     icon: /samples/features/api_icon.png
 - Ruby On Rails:
     long_name: Ruby On Rails
     description: |
-      <p>We know that most people just want something that works, and don't care if it's written in Python, PHP, or Cobol. But in the case of LocomotiveCMS, we think its language is a huge asset.
-      We built Locomotive with Ruby on Rails 3, which gives developers the ability to build their own application on top of the LocomotiveCMS engine.
-      This means that Locomotive can be integrated in a wide range of applications. Want to develop your own hosting websites platform? No problem!</p>
+      <p>Most people just want something that works, and don't care if it's written in Python, PHP, or Cobol. In LocomotiveCMS's case, we believe its language is a huge asset. We built LocomotiveCMS with Ruby on Rails 3, which gives developers the ability to build their own applications on top of the LocomotiveCMS engine.
+      This means that LocomotiveCMS can be integrated into a wide range of applications. Want to develop your own hosting platform? No problem!</p>
     thumb: /samples/features/rails.png
     icon: /samples/features/rails_icon.png
 - In The Cloud:
     long_name: In The Cloud
     description: |
-      <p>Since we wanted people to be able to install LocomotiveCMS without setting up a server, we decided that LocomotiveCMS would run on Heroku, the famous Ruby cloud platform. What's more, the database can also be hosted in the cloud (thanks to MongoHQ), and all the files uploaded from LocomotiveCMS are stored on Amazon S3.
-      <br/>With a such combination of powerful cloud services, we are able to host several websites for a couple of cents per month! But, of course, you are free to install on your server too!
-      <br/>Looking for a hassle free solution? Save time by using <a href="http://www.locomotivehosting.com">LocomotiveHosting</a>, your site will be up in seconds!</p>
+      <p>Since we wanted people to be able to install LocomotiveCMS without setting up a server, we decided that Locomotive would run on Heroku, the famous Ruby cloud platform. The database can be hosted in the cloud thanks to MongoHQ, and all the files uploaded from Locomotive are stored on Amazon S3.
+      <br>With a such a powerful combination of cloud services, we're able to host several websites for a couple of cents per month! Of course, you are free to install on your server as well.
+      <br>Looking for a hassle free solution? Save time by using:
+      <br/>
+      <a href="http://www.locomotivehosting.com" class="button">LocomotiveHosting</a>, your site will be up in seconds!
+      </p>
     thumb: /samples/features/cloud.png
     icon: /samples/features/cloud_icon.png
 

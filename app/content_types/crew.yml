@@ -19,4 +19,8 @@ fields:
 - picture:
     label: Picture
     type: file
-    hint: Image (in the about us pagem), 200px x 200px
+    hint: "Image (in the about us pagem), 200px x 200px"
+- email:
+    label: E-mail
+    type: string
+    hint: Email used in the rss feed

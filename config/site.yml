@@ -1,9 +1,9 @@
-name: LocomotiveCMS v2
+name: LocomotiveCMS
 
 subdomain: v2
 
 locales: [en]
 
 seo_title: LocomotiveCMS is an open source CMS for Rails
-meta_description: LocomotiveCMS is an open source CMS for Rails. It's super flexible and integrates with Heroku and Amazon S3.
+meta_description: LocomotiveCMS is a free open source CMS in Rails that helps web developers create and manage websites faster than ever.
 meta_keywords: cms open source ruby on rails heroku liquid rails3 cloud amazon S3 inline editing
