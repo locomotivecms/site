@@ -16,6 +16,7 @@ fields:
 - excerpt:
     label: Exceprt
     type: text
+    text_formatting: html
     hint: It will be displayed on the articles page instead of the full body
     required: true
 - body:
