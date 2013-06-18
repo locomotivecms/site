@@ -6,8 +6,8 @@
     %span.meta.name
       %img{ src: "{{ article.author.picture.url | resize: '30x30' }}" }
       by {{ article.author.name }}
-    .body
-      {{ article.excerpt }}
+  .body
+    {{ article.excerpt }}
   .bottom
     %a{ :href => "/articles/{{ article._permalink }}" }
       Read More

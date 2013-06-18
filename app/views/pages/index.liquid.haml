@@ -24,6 +24,10 @@ listed: false
 
     {% seo %}
 
+    <!--[if lt IE 9]>
+    {{ 'html5shiv' | javascript_tag }}
+    <![endif]-->
+
     {{ '/fonts/all' | stylesheet_tag }}
     {{ 'screen' | stylesheet_tag }}
     {{ 'jquery-1.9.1.min' | javascript_tag }}
