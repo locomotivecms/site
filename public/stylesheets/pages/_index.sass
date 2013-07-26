@@ -9,25 +9,11 @@
     margin-top: 60px
   header
     +span-columns($total-columns omega, $total-columns)
-    background: url(/images/home-arrow.png) no-repeat
-    background-position: 100% 31px
     h1
       +proximanova-regular
       font-size: 29px
       line-height: 30px
       color: white
-    blockquote
-      +proximanova-light
-      font-size:  20px
-      line-height: 27px
-      margin-top: 25px
-      .quote-author
-        +span-columns($total-columns omega, $total-columns)
-        margin-bottom: 20px
-        margin-top: 10px
-        color: $home-quote-author
-        font-size: 14px
-        +proximanova-light
   .button
     +big-button
     +span-columns($total-columns omega, $total-columns)
@@ -73,7 +59,7 @@
       line-height: 23px
     span.first-line
       display: block
-      margin-top: 2px
+      margin-top: 11px
       +proximanova-semi-bold
       color: $menu-background
   .button
@@ -148,13 +134,15 @@
     header
       +span-columns(3, $total-columns)
       h1
-        font-size: 43px
+        margin-top: 0px
+        font-size: 29px
+        line-height: 45px
         +text-shadow(0px 2px 0px black)
-      blockquote
-        padding-right: 52px
     .button,
     #try-out
       +span-columns(1 omega, $total-columns)
+    .button
+      margin-top: 10px
 
   #home-image
     display: block

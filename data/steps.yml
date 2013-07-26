@@ -1,5 +1,5 @@
 - One:
-    title:  Install the LocomotiveCMS engine <u>ONCE AND FOR ALL</u>
+    title: Install the LocomotiveCMS engine once and for all
     description: |
       <p>
       Since our CMS integrates the multi-site functionality from day 1, a single instance of LocomotiveCMS can serve as many websites as your server can handle.

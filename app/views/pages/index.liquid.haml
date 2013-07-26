@@ -54,18 +54,10 @@ listed: false
         %header
           %h1
             {% editable_short_text "title", priority: 21 %}
-            Develop your websites WAY faster
+            What if you loved developing for your CMS as much as your clients loved using it?
             {% endeditable_short_text %}
-          %blockquote
-            {% editable_short_text "quote-content", priority: 20 %}
-            <b>“</b>LocomotiveCMS is really genius. We are now able to take on projects we had to turn down before.<b>“</b>
-            {% endeditable_short_text %}
-            %span.quote-author
-              {% editable_short_text "quote-author", priority: 19 %}
-              Miha Kersic, developer
-              {% endeditable_short_text %}
         %a{ href: "/tour", class: "button" }
-          FIND OUT HOW
+          GET STARTED
         {% endblock %}
     %section#home-image
       #shadow
@@ -83,7 +75,7 @@ listed: false
               LocomotiveCMS
           %span.first-line
             {% editable_short_text "first-line", priority: 17 %}
-            LocomotiveCMS is a free open source CMS in Rails that helps web developers create and manage websites faster than ever.
+            See how LocomotiveCMS, a free open source CMS built on Rails, can make your dream a reality.
             {% endeditable_short_text %}
         {% endblock %}
 
@@ -152,20 +144,6 @@ listed: false
 
     %section.home-row
       {% editable_long_text "text" %}
-      %h1 Beautiful code matters
-
-      %a{ href: 'https://codeclimate.com/github/locomotivecms/engine', style: 'float: left; margin-right: 100px' }
-        %img{ src: '/samples/pages/codeclimate.png', width: '240' }
-
-      %ul{ style: 'float: left' }
-        %li With each upgrade, we can make changes that are easier to accomodate.
-        %li It makes maintenance easier
-        %li You’ll enjoy reading it
-
-      %br{ style: 'clear: both' }
-      %br
-      %br
-
       %h1 Why is LocomotiveCMS different from Wordpress?
 
       %br
@@ -207,35 +185,8 @@ listed: false
           LocomotiveCMS makes the best of both worlds.
 
       {% endeditable_long_text %}
-    / %section#home-bottom-title
-    /   %h1 Beautiful code matters
 
-
-
-    / %section#home-bottom-title
-    /   %h1
-    /     {% editable_short_text "title", priority: 3 %}
-    /     Create beautiful sites with LocomotiveCMS
-    /     {% endeditable_short_text %}
-    / %section#home-bottom-container
-    /   %section#home-bottom-left
-
-    /     #home-bottom-testimonial
-    /       .rounded-picture
-    /         %img{ src: "{% editable_file 'testimonial-img', hint: 'Home screenshot, size: 980x430px', priority: 2 %}/samples/crew/jobs.png{% endeditable_file %}", alt: ""}
-    /       {% editable_long_text "testimonial-content", priority: 1 %}
-    /       %p
-    /         %em Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui. “
-    /       %p
-    /         %em John User. Developer, Frontier Group
-    /       {% endeditable_long_text %}
-    /   %section#home-bottom-right
-    /     {% for company in contents.companies %}
-    /     %a{ href: "http://{{ company.url }}" }
-    /       %img{ src: "{{ company.logo.url }}", alt: "{{ company.name }}"}
-    /     {% endfor %}
-    / {% endblock %}
-
+    {% endblock %}
 
     {% endblock %}
 
