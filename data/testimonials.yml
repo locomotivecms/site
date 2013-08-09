@@ -1,0 +1,28 @@
+- "Testifier Name":
+    body: "Magni et id nihil error ea. Illum dolorem id dolore. Quis occaecati esse nam."
+    credentials: "Testifier Position, Company"
+    url: http://www.example.com
+    page_link:
+    picture: /samples/pages/testifier.png
+
+- "Olivier Thereaux":
+    body: "After much testing we eventually settled on the powerful Locomotive system, an open source CMS with a knack for connecting things together and a nice back-end interface to manage both the content and its complex network of relationships."
+    credentials: "Senior Technologist, BBC R&D"
+    url: http://www.example.com
+    page_link: testimonials
+    picture: /samples/pages/testifier.png
+
+- "Miha":
+    body: "Setting up a new Rails app, development and production environments, git repositories etc. is just too much work and maintenance for small projects. Thanks to LocomotiveCMS, I no longer have to do all of that. We can now take on new projects we used to turn down before."
+    credentials: "CEO, Bitami Designs"
+    url: http://www.example.com
+    page_link: case-studies
+    picture: /samples/pages/testifier.png
+
+- "Sample 4":
+    body: "Delectus ea veritatis a expedita. Hic quibusdam laboriosam dolores maiores. Veritatis quasi aut non ratione et voluptatem. Modi distinctio odio ipsum veritatis nulla non illo. In earum non quia."
+    credentials: "Animi harum odio reprehenderit adipisci."
+    url:
+    page_link:
+    picture: /samples/pages/testifier.png
+

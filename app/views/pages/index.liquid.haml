@@ -30,8 +30,11 @@ listed: false
 
     / {{ '/fonts/all' | stylesheet_tag }}
     {{ 'screen' | stylesheet_tag }}
+    {{ 'jquery.bxslider' | stylesheet_tag }}
+
     {{ 'jquery-1.9.1.min' | javascript_tag }}
     {{ 'bootstrap.min' | javascript_tag }}
+    {{ 'jquery.bxslider.min' | javascript_tag }}
     {{ 'home' | javascript_tag }}
 
     {% include twitter %}
@@ -149,6 +152,61 @@ listed: false
       {% endblock %}
 
     {% block 'bottom' %}
+
+    %section#home-cred
+      {% block 'sponsors' %}
+
+      .sponsors
+        %h1
+          {% editable_short_text "sponsors-header", priority: 31 %}
+          They trust LocomotiveCMS.  Try if for yourself.
+          {% endeditable_short_text %}
+
+        .column
+          %img{ src: "{% editable_file 'sponsor-image1', hint: 'sponsor image, size: 200x50px', priority: 30 %}/samples/pages/sponsors-bbc-logo.png{% endeditable_file %}", alt: "BBC"}
+        .column
+          %img{ src: "{% editable_file 'sponsor-image2', hint: 'sponsor image, size: 200x50px', priority: 30 %}/samples/pages/sponsors-orange-logo.png{% endeditable_file %}", alt: "Orange"}
+        .column
+          %img{ src: "{% editable_file 'sponsor-image3', hint: 'sponsor image, size: 200x50px', priority: 30 %}/samples/pages/sponsors-wattman-logo.png{% endeditable_file %}", alt: "Wattman"}
+
+        %a{ href: "http://doc.locomotivecms.com/guides/get-started/requirements", class: "button" }
+          Try LocomotiveCMS Free!
+
+      {% endblock %}
+
+      {% block 'testimonials' %}
+
+      .testimonials
+        %h1
+          {% editable_short_text "testimonials-header", priority: 32 %}
+          See what delighted LocomotiveCMS users are saying:
+          {% endeditable_short_text %}
+
+        %ul.bxslider
+          {% for testimonial in contents.testimonials %}
+          {% assign position_in_row = forloop.index | modulo: 3 %}
+          %li.column
+            .rounded-picture
+              {% if testimonial.url != empty %}
+              %a{ href: "{{ testimonial.url }}", target: "_blank" }
+                %img{ :src => "{{ testimonial.picture.url | resize: '100x100#' }}", :alt => "{{ testimonial.name }}" }
+              {% else %}
+              %img{ :src => "{{ testimonial.picture.url | resize: '100x100#' }}", :alt => "{{ testimonial.name }}" }
+              {% endif %}
+
+            %blockquote {{ testimonial.body }}
+
+            %p.quote-author {{ testimonial.name }}
+
+            %p.quote-author-cred {{ testimonial.credentials }}
+
+            {% if testimonial.page_link != empty %}
+            %a.testimonial-link{ href: "{{ testimonial.page_link }}" }
+              Read more.
+            {% endif %}
+          {% endfor %}
+
+      {% endblock %}
 
     %section.home-row
       {% editable_long_text "text" %}
