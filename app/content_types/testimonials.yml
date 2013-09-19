@@ -1,0 +1,49 @@
+name: Testimonials
+slug: testimonials
+description: Testimonials about LocomotiveCMS
+label_field_name: name
+order_by: manually
+
+fields:
+- name:
+    label: Name
+    type: string
+    required: true
+    hint: Testifiers name
+    localized: false
+
+- body:
+    label: Body
+    type: text
+    required: true
+    hint: Testimonial full text
+    localized: false
+    text_formatting: text
+
+- credentials:
+    label: Credentials
+    type: string
+    required: false
+    hint: Position and Company of the testifier
+    localized: false
+
+- url:
+    label: Url
+    type: string
+    required: false
+    hint: Link to testifiers website (http://www.example.com)
+    localized: false
+
+- page_link:
+    label: Page Link
+    type: string
+    required: false
+    hint: Link to internal pages through slug routes (read full case study... = case-studies/name-of-case-study)
+    localized: false
+
+- picture:
+    label: Picture
+    type: file
+    required: false
+    hint: Image (on the homepage) 100px x 100px
+    localized: false

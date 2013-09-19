@@ -6,10 +6,23 @@ $(function() {
     $el.html('<span>' + $el.text() + '</span>')
   })
 
+  $('#home-cred h1').each(function(index) {
+    $el = $(this)
+    $el.html('<span>' + $el.text() + '</span>')
+  })
+
   // mobile
   $('#nav-toggle').on('click',function(e){
     $('#main-nav').toggleClass('expanded');
     $(this).toggleClass('expanded');
+  });
+
+  // BXSlider for Testimonials
+  $('.bxslider').bxSlider({
+    slideWidth: 295,
+    minSlides: 2,
+    maxSlides: 3,
+    slideMargin: 20
   });
 
 });

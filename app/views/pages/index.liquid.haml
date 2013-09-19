@@ -30,8 +30,11 @@ listed: false
 
     / {{ '/fonts/all' | stylesheet_tag }}
     {{ 'screen' | stylesheet_tag }}
+    {{ 'jquery.bxslider' | stylesheet_tag }}
+
     {{ 'jquery-1.9.1.min' | javascript_tag }}
     {{ 'bootstrap.min' | javascript_tag }}
+    {{ 'jquery.bxslider.min' | javascript_tag }}
     {{ 'home' | javascript_tag }}
 
     {% include twitter %}
@@ -64,7 +67,7 @@ listed: false
       .inner-container
         .topbar
           Open Source CMS for Rails
-        %img{ src: "{% editable_file 'big-screenshot', hint: 'Home screenshot, size: 980x430px', priority: 18 %}/samples/pages/home-tagline-screenshot.png{% endeditable_file %}", alt: "screenshot" }
+        %img{ src: "{% editable_file 'big-screenshot', hint: 'Home screenshot, size: 980x430px', priority: 18 %}/samples/pages/home-tagline-screenshot.jpg{% endeditable_file %}", alt: "screenshot" }
     %section#home-strip
       .inner-container
         {% block strip %}
@@ -142,49 +145,65 @@ listed: false
 
     {% block 'bottom' %}
 
-    %section.home-row
-      {% editable_long_text "text" %}
-      %h1 Why is LocomotiveCMS different from Wordpress?
+    %section#home-cred
+      {% block 'sponsors' %}
 
-      %br
+      .sponsors
+        %h1
+          %span
+            {% editable_short_text "sponsors-header", priority: 31 %}
+            They trust LocomotiveCMS.  Try if for yourself.
+            {% endeditable_short_text %}
 
-      %ul
-        %li The design mindset is different. LocomotiveCMS gives you the freedom to make custom designs easily. It comes with a templating engine. All you have to do is build your pages and assets the exact same way you would with static pages. You already know how to do that. Then you make content manageable : all you need to learn is a very simple templating system.
-        %li LocomotiveCMS’s most popular feature is content types. They make it very easy to manage models, like “Books” or “Authors”. These can have relationships. You don't need to code anything. You don't need to teach your client how to manage data because the backoffice is very simple and only has meaningful options, like a "Books" menu.
-        %li With LocomotiveCMS, your development process can follow standards. You develop locally when you create your site and when you update it. You can have all your code in a Git or Svn repo and keep track of your evolutions.
-        %li LocomotiveCMS is natively multilingual and multisite. Anything can be translated including urls. You don't need to find and install plugins to make it work.
+        .column
+          %img{ src: "{% editable_file 'sponsor-image1', hint: 'sponsor image, size: 200x50px', priority: 30 %}/samples/pages/sponsors-bbc-logo.png{% endeditable_file %}", alt: "BBC"}
+        .column
+          %img{ src: "{% editable_file 'sponsor-image2', hint: 'sponsor image, size: 200x50px', priority: 30 %}/samples/pages/sponsors-orange-logo.png{% endeditable_file %}", alt: "Orange"}
+        .column
+          %img{ src: "{% editable_file 'sponsor-image3', hint: 'sponsor image, size: 200x50px', priority: 30 %}/samples/pages/sponsors-wattman-logo.png{% endeditable_file %}", alt: "Wattman"}
 
-      %br
+        %a{ href: "http://doc.locomotivecms.com/guides/get-started/requirements", class: "button" }
+          Try LocomotiveCMS Free!
 
-      %p{ style: 'text-align: center' }
-        %strong
-          LocomotiveCMS is designed to save your time and help you focus on what matters : front-end technology, standard development process and no-learning time for your client.
+      {% endblock %}
 
-      %br
-      %br
-      %br
+    %section#home-tests
+      {% block 'testimonials' %}
+      
+      .testimonials
+        %h1
+          %span
+            {% editable_short_text "testimonials-header", priority: 32 %}
+            See what delighted LocomotiveCMS users are saying:
+            {% endeditable_short_text %}
 
-      %h1 Why is LocomotiveCMS different from proprietary solutions?
+        %ul.bxslider
+          {% for testimonial in contents.testimonials %}
+          {% assign position_in_row = forloop.index | modulo: 3 %}
+          %li.column
+            .rounded-picture
+              {% if testimonial.url %}
+              %a{ href: "{{ testimonial.url }}", target: "_blank" }
+                %img{ :src => "{{ testimonial.picture.url | resize: '100x100#' }}", :alt => "{{ testimonial.name }}" }
+              {% else %}
+              %img{ :src => "{{ testimonial.picture.url | resize: '100x100#' }}", :alt => "{{ testimonial.name }}" }
+              {% endif %}
 
-      %br
+            %blockquote {{ testimonial.body }}
 
-      %ul
-        %li LocomotiveCMS is an open source solution, which facilitates adoption by many more users. That means more people to share experiences and solutions with (Join our community on GitHub and Google Groups).
-        %li Developers, you have access to the source code, so you can tweak if to suit your needs.
-        %li Bugs are noticed and fixed more quickly since everyone in the community can contribute.
-        %li We’ll never make claims that you cannot check by yourselves. The visibility of the code behind our open source CMS means you can see for yourself and be confident.
-        %li If we all die in a plane accident (we hope you are not offended by black humor), well, LocomotiveCMS will outlive us. We all have the keys to make it an incredible CMS.
-        %li You have access to the same level of support that proprietary solutions offer.
-        %li We love to talk with you and hear about the great ideas you have for LocomotiveCMS. You can easily have access to the management team of our company.
+            %p.quote-author {{ testimonial.name }}
 
-      %br
-      %br
+            %p.quote-author-cred {{ testimonial.credentials }}
 
-      %p{ style: 'text-align: center' }
-        %strong
-          LocomotiveCMS makes the best of both worlds.
+            {% if testimonial.page_link %}
+            %a.testimonial-link{ href: "{{ testimonial.page_link }}" }
+              Read more.
+            {% endif %}
+          {% endfor %}
 
-      {% endeditable_long_text %}
+      {% endblock %}
+
+
 
     {% endblock %}
 
