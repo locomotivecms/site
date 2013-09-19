@@ -182,7 +182,7 @@ listed: false
           {% assign position_in_row = forloop.index | modulo: 3 %}
           %li.column
             .rounded-picture
-              {% if testimonial.url %}
+              {% if testimonial.url != empty %}
               %a{ href: "{{ testimonial.url }}", target: "_blank" }
                 %img{ :src => "{{ testimonial.picture.url | resize: '100x100#' }}", :alt => "{{ testimonial.name }}" }
               {% else %}
@@ -195,7 +195,7 @@ listed: false
 
             %p.quote-author-cred {{ testimonial.credentials }}
 
-            {% if testimonial.page_link %}
+            {% if testimonial.page_link != empty %}
             %a.testimonial-link{ href: "{{ testimonial.page_link }}" }
               Read more.
             {% endif %}
