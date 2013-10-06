@@ -35,12 +35,11 @@ listed: false
     {{ 'jquery-1.9.1.min' | javascript_tag }}
     {{ 'bootstrap.min' | javascript_tag }}
     {{ 'jquery.bxslider.min' | javascript_tag }}
-    {{ 'home' | javascript_tag }}
 
     {% include twitter %}
 
     {% block 'head' %}
-
+    {{ 'home' | javascript_tag }}
     {% endblock %}
 
     {% include mixpanel %}
