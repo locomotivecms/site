@@ -125,3 +125,35 @@ nav.subnav
 // Affix
 .affix
   position: fixed
+
+// Provide clearing after floated elements
+.clearer
+  clear: both
+  height: 0
+  width: 0
+
+// Hide an element
+.hide
+  display: none
+
+// Section title with underline
+.section-title
+  border-bottom: 1px solid $blue-border
+  color: $section-title
+  font-family: 'OpenSans-Bold'
+  font-size: 11px
+  margin: 50px 0 25px
+  padding: 20px 0 10px
+  text-transform: uppercase
+
+  + article
+    margin-top: 0
+
+// BxSlider carousel
+.bxslider
+  overflow: hidden
+
+  li
+    background: none
+    float: left
+    padding: 0

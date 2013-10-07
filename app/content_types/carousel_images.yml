@@ -1,0 +1,21 @@
+name: Carousel images
+order_by: manually
+slug: carousel_images
+label_field_name: title
+fields:
+- title:
+    label: Title
+    hint: A name for the image to be used in the CMS
+    type: string
+- alt:
+    label: Alt attribute
+    hint: Content to be placed in the image's alt attribute
+    type: string
+- image:
+    label: Image
+    type: file
+    hint: Resized to 583px x 267px
+- case_study:
+    label: Case study
+    type: belongs_to
+    class_name: case_studies

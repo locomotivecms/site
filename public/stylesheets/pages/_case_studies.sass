@@ -1,0 +1,133 @@
+$carousel-border-width: 8px
+$carousel-border-colour: #edeef0
+$carousel-width: 583px
+
+#case-study
+  border-bottom: none
+  margin: 0
+  padding-bottom: 2em
+  width: 100%
+
+  h1
+    color: $main-blue
+    +open-sans-regular
+    font-size: 2em
+    margin-bottom: 1em
+
+  h2
+    color: $light-black
+    +open-sans-bold
+    margin: 1.5em 0 0.5em
+    text-transform: uppercase
+
+#case-study-details
+  border: $carousel-border-width solid $carousel-border-colour
+  @include box-sizing(content-box)
+  float: right
+  padding: 0 20px 20px
+  width: 235px
+
+  a
+    color: $link-colour
+
+  h2, p
+    font-size: 0.9em
+
+#carousel
+  border: $carousel-border-width solid #edeef0
+  margin-bottom: 4.5em
+  width: $carousel-width
+
+  .bx-next,
+  .bx-prev
+    height: 26px
+    margin-top: -20px
+    position: absolute
+    top: 50%
+    width: 27px
+
+  .bx-next
+    background: url(..#{image-url('arrow-right.png', true)}) no-repeat left top
+    right: -27px
+
+  .bx-prev
+    background: url(..#{image-url('arrow-left.png', true)}) no-repeat left bottom
+    left: -27px
+
+  .bx-pager
+    background: url(..#{image-url('pagination-line.png', true)}) repeat-x left 5px
+    bottom: -45px
+    left: $carousel-border-width * -1
+    padding: 0
+    width: $carousel-width
+
+  .bx-pager-item
+    background: #fff
+
+    &:first-of-type
+      padding-left: 10px
+
+    &:last-of-type
+      padding-right: 10px
+
+  .bx-pager-link
+    background: #e3e6e9
+    border: 2px solid #e3e6e9
+    @include border-radius(11px)
+    cursor: pointer
+    display: inline-block
+    height: 11px
+    margin: 0 4px
+    width: 11px
+
+    &.active
+      background: white
+      border: 2px solid #ffc500
+
+  .bxslider
+    overflow: hidden
+    height: 267px
+    width: $carousel-width
+
+    li
+      background: none
+      padding: 0
+
+  .bx-wrapper
+    margin: 0
+
+#home-strip
+  background: none
+  border: none
+  padding-top: 2.5em
+
+  h2
+    display: inline
+    +open-sans-bold
+    font-size: (16px/$base-font-size) * 1em
+
+  .button
+    margin-top: -14px
+
+#main
+  float: left
+  width: 599px
+
+  h2
+    font-size: (14px/$base-font-size) * 1em
+
+#main-content
+  width: $carousel-width
+
+#more-case-studies
+  border-bottom: 1px solid #dde4ea
+  clear: both
+  padding-bottom: 25px
+
+  .more-case-study
+    border: 5px solid $carousel-border-colour
+    float: left
+    margin-left: 34px
+
+    &.first
+      margin-left: 0
