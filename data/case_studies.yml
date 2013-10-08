@@ -1,0 +1,117 @@
+- le WattMan:
+    _slug: le-wattman
+    title: Happier customers and efficient coding!
+    company_name: le WattMan
+    company_description: "<p>Le Wattman is a digital agency founded in 2010, with a strong mission: through inspired, innovative and creative design and the use of cutting-edge technology we are able to build smart interfaces and enhance device efficiency.</p><p>With our new, unique and future-forward vision of the web, a vision based on efficiency, simplicity and our core values, we operate at all different levels on our clients' digital strategy: consulting and budgeting, creation of mobile web and extremely responsive websites, development of user-friendly mobile apps and development of specific technical tailor-made interfaces.</p>"
+    headquarters: Paris, France
+    cms_used: Wordpress / Refinery / Radiant / own CMS
+    example_sites: <p><a href="http://www.anthonyramet.com">http://www.anthonyramet.com</a><br><a href="http://www.praxy.fr">http://www.praxy.fr</a><br><a href="http://artbyblazejr.com/">http://artbyblazejr.com/</a></p>
+    the_problem: <p>It was difficult to boostrap and to maintain our own CMS.  For our customer, the first issue is to be able to modify their content EFFICIENTLY.</p>
+    the_solution: <p>It's easy to propose LocomotiveCMS to our customer after a quick demo of front editing capabilities. And for our team the Wagon is a great tool for maintaining code through Git.</p>
+    the_results: <p>Happier customers and efficient coding!</p>
+    the_strategy: <p>We use only Ruby language and for us choosing LocomotiveCMS is evident. First we are coding a proto w/ Wagon and providing a demo to our customers, then we improve the AD.</p>
+    navigation_image: /samples/case-studies/logo.png
+- le WattMan2:
+    _slug: le-wattman2
+    title: 2 Happier customers and efficient coding!
+    company_name: 2 le WattMan
+    company_description: "<p>Le Wattman is a digital agency founded in 2010, with a strong mission: through inspired, innovative and creative design and the use of cutting-edge technology we are able to build smart interfaces and enhance device efficiency.</p><p>With our new, unique and future-forward vision of the web, a vision based on efficiency, simplicity and our core values, we operate at all different levels on our clients' digital strategy: consulting and budgeting, creation of mobile web and extremely responsive websites, development of user-friendly mobile apps and development of specific technical tailor-made interfaces.</p>"
+    headquarters: Paris, France
+    cms_used: Wordpress / Refinery / Radiant / own CMS
+    example_sites: <p><a href="http://www.anthonyramet.com">http://www.anthonyramet.com</a><br><a href="http://www.praxy.fr">http://www.praxy.fr</a><br><a href="http://artbyblazejr.com/">http://artbyblazejr.com/</a></p>
+    the_problem: <p>It was difficult to boostrap and to maintain our own CMS.  For our customer, the first issue is to be able to modify their content EFFICIENTLY.</p>
+    the_solution: <p>It's easy to propose LocomotiveCMS to our customer after a quick demo of front editing capabilities. And for our team the Wagon is a great tool for maintaining code through Git.</p>
+    the_results: <p>Happier customers and efficient coding!</p>
+    the_strategy: <p>We use only Ruby language and for us choosing LocomotiveCMS is evident. First we are coding a proto w/ Wagon and providing a demo to our customers, then we improve the AD.</p>
+    navigation_image: /samples/case-studies/logo.png
+- le WattMan3:
+    _slug: le-wattman3
+    title: 3 Happier customers and efficient coding!
+    company_name: 3 le WattMan
+    company_description: "<p>Le Wattman is a digital agency founded in 2010, with a strong mission: through inspired, innovative and creative design and the use of cutting-edge technology we are able to build smart interfaces and enhance device efficiency.</p><p>With our new, unique and future-forward vision of the web, a vision based on efficiency, simplicity and our core values, we operate at all different levels on our clients' digital strategy: consulting and budgeting, creation of mobile web and extremely responsive websites, development of user-friendly mobile apps and development of specific technical tailor-made interfaces.</p>"
+    headquarters: Paris, France
+    cms_used: Wordpress / Refinery / Radiant / own CMS
+    example_sites: <p><a href="http://www.anthonyramet.com">http://www.anthonyramet.com</a><br><a href="http://www.praxy.fr">http://www.praxy.fr</a><br><a href="http://artbyblazejr.com/">http://artbyblazejr.com/</a></p>
+    the_problem: <p>It was difficult to boostrap and to maintain our own CMS.  For our customer, the first issue is to be able to modify their content EFFICIENTLY.</p>
+    the_solution: <p>It's easy to propose LocomotiveCMS to our customer after a quick demo of front editing capabilities. And for our team the Wagon is a great tool for maintaining code through Git.</p>
+    the_results: <p>Happier customers and efficient coding!</p>
+    the_strategy: <p>We use only Ruby language and for us choosing LocomotiveCMS is evident. First we are coding a proto w/ Wagon and providing a demo to our customers, then we improve the AD.</p>
+    navigation_image: /samples/case-studies/logo.png
+- le WattMan4:
+    _slug: le-wattman4
+    title: 4 Happier customers and efficient coding!
+    company_name: 4 le WattMan
+    company_description: "<p>Le Wattman is a digital agency founded in 2010, with a strong mission: through inspired, innovative and creative design and the use of cutting-edge technology we are able to build smart interfaces and enhance device efficiency.</p><p>With our new, unique and future-forward vision of the web, a vision based on efficiency, simplicity and our core values, we operate at all different levels on our clients' digital strategy: consulting and budgeting, creation of mobile web and extremely responsive websites, development of user-friendly mobile apps and development of specific technical tailor-made interfaces.</p>"
+    headquarters: Paris, France
+    cms_used: Wordpress / Refinery / Radiant / own CMS
+    example_sites: <p><a href="http://www.anthonyramet.com">http://www.anthonyramet.com</a><br><a href="http://www.praxy.fr">http://www.praxy.fr</a><br><a href="http://artbyblazejr.com/">http://artbyblazejr.com/</a></p>
+    the_problem: <p>It was difficult to boostrap and to maintain our own CMS.  For our customer, the first issue is to be able to modify their content EFFICIENTLY.</p>
+    the_solution: <p>It's easy to propose LocomotiveCMS to our customer after a quick demo of front editing capabilities. And for our team the Wagon is a great tool for maintaining code through Git.</p>
+    the_results: <p>Happier customers and efficient coding!</p>
+    the_strategy: <p>We use only Ruby language and for us choosing LocomotiveCMS is evident. First we are coding a proto w/ Wagon and providing a demo to our customers, then we improve the AD.</p>
+    navigation_image: /samples/case-studies/logo.png
+- le WattMan5:
+    _slug: le-wattman5
+    title: 5 Happier customers and efficient coding!
+    company_name: 5 le WattMan
+    company_description: "<p>Le Wattman is a digital agency founded in 2010, with a strong mission: through inspired, innovative and creative design and the use of cutting-edge technology we are able to build smart interfaces and enhance device efficiency.</p><p>With our new, unique and future-forward vision of the web, a vision based on efficiency, simplicity and our core values, we operate at all different levels on our clients' digital strategy: consulting and budgeting, creation of mobile web and extremely responsive websites, development of user-friendly mobile apps and development of specific technical tailor-made interfaces.</p>"
+    headquarters: Paris, France
+    cms_used: Wordpress / Refinery / Radiant / own CMS
+    example_sites: <p><a href="http://www.anthonyramet.com">http://www.anthonyramet.com</a><br><a href="http://www.praxy.fr">http://www.praxy.fr</a><br><a href="http://artbyblazejr.com/">http://artbyblazejr.com/</a></p>
+    the_problem: <p>It was difficult to boostrap and to maintain our own CMS.  For our customer, the first issue is to be able to modify their content EFFICIENTLY.</p>
+    the_solution: <p>It's easy to propose LocomotiveCMS to our customer after a quick demo of front editing capabilities. And for our team the Wagon is a great tool for maintaining code through Git.</p>
+    the_results: <p>Happier customers and efficient coding!</p>
+    the_strategy: <p>We use only Ruby language and for us choosing LocomotiveCMS is evident. First we are coding a proto w/ Wagon and providing a demo to our customers, then we improve the AD.</p>
+    navigation_image: /samples/case-studies/logo.png
+- le WattMan6:
+    _slug: le-wattman6
+    title: 6 Happier customers and efficient coding!
+    company_name: 6 le WattMan
+    company_description: "<p>Le Wattman is a digital agency founded in 2010, with a strong mission: through inspired, innovative and creative design and the use of cutting-edge technology we are able to build smart interfaces and enhance device efficiency.</p><p>With our new, unique and future-forward vision of the web, a vision based on efficiency, simplicity and our core values, we operate at all different levels on our clients' digital strategy: consulting and budgeting, creation of mobile web and extremely responsive websites, development of user-friendly mobile apps and development of specific technical tailor-made interfaces.</p>"
+    headquarters: Paris, France
+    cms_used: Wordpress / Refinery / Radiant / own CMS
+    example_sites: <p><a href="http://www.anthonyramet.com">http://www.anthonyramet.com</a><br><a href="http://www.praxy.fr">http://www.praxy.fr</a><br><a href="http://artbyblazejr.com/">http://artbyblazejr.com/</a></p>
+    the_problem: <p>It was difficult to boostrap and to maintain our own CMS.  For our customer, the first issue is to be able to modify their content EFFICIENTLY.</p>
+    the_solution: <p>It's easy to propose LocomotiveCMS to our customer after a quick demo of front editing capabilities. And for our team the Wagon is a great tool for maintaining code through Git.</p>
+    the_results: <p>Happier customers and efficient coding!</p>
+    the_strategy: <p>We use only Ruby language and for us choosing LocomotiveCMS is evident. First we are coding a proto w/ Wagon and providing a demo to our customers, then we improve the AD.</p>
+    navigation_image: /samples/case-studies/logo.png
+- le WattMan7:
+    _slug: le-wattman7
+    title: 7 Happier customers and efficient coding!
+    company_name: 7 le WattMan
+    company_description: "<p>Le Wattman is a digital agency founded in 2010, with a strong mission: through inspired, innovative and creative design and the use of cutting-edge technology we are able to build smart interfaces and enhance device efficiency.</p><p>With our new, unique and future-forward vision of the web, a vision based on efficiency, simplicity and our core values, we operate at all different levels on our clients' digital strategy: consulting and budgeting, creation of mobile web and extremely responsive websites, development of user-friendly mobile apps and development of specific technical tailor-made interfaces.</p>"
+    headquarters: Paris, France
+    cms_used: Wordpress / Refinery / Radiant / own CMS
+    example_sites: <p><a href="http://www.anthonyramet.com">http://www.anthonyramet.com</a><br><a href="http://www.praxy.fr">http://www.praxy.fr</a><br><a href="http://artbyblazejr.com/">http://artbyblazejr.com/</a></p>
+    the_problem: <p>It was difficult to boostrap and to maintain our own CMS.  For our customer, the first issue is to be able to modify their content EFFICIENTLY.</p>
+    the_solution: <p>It's easy to propose LocomotiveCMS to our customer after a quick demo of front editing capabilities. And for our team the Wagon is a great tool for maintaining code through Git.</p>
+    the_results: <p>Happier customers and efficient coding!</p>
+    the_strategy: <p>We use only Ruby language and for us choosing LocomotiveCMS is evident. First we are coding a proto w/ Wagon and providing a demo to our customers, then we improve the AD.</p>
+    navigation_image: /samples/case-studies/logo.png
+- le WattMan8:
+    _slug: le-wattman8
+    title: 8 Happier customers and efficient coding!
+    company_name: 8 le WattMan
+    company_description: "<p>Le Wattman is a digital agency founded in 2010, with a strong mission: through inspired, innovative and creative design and the use of cutting-edge technology we are able to build smart interfaces and enhance device efficiency.</p><p>With our new, unique and future-forward vision of the web, a vision based on efficiency, simplicity and our core values, we operate at all different levels on our clients' digital strategy: consulting and budgeting, creation of mobile web and extremely responsive websites, development of user-friendly mobile apps and development of specific technical tailor-made interfaces.</p>"
+    headquarters: Paris, France
+    cms_used: Wordpress / Refinery / Radiant / own CMS
+    example_sites: <p><a href="http://www.anthonyramet.com">http://www.anthonyramet.com</a><br><a href="http://www.praxy.fr">http://www.praxy.fr</a><br><a href="http://artbyblazejr.com/">http://artbyblazejr.com/</a></p>
+    the_problem: <p>It was difficult to boostrap and to maintain our own CMS.  For our customer, the first issue is to be able to modify their content EFFICIENTLY.</p>
+    the_solution: <p>It's easy to propose LocomotiveCMS to our customer after a quick demo of front editing capabilities. And for our team the Wagon is a great tool for maintaining code through Git.</p>
+    the_results: <p>Happier customers and efficient coding!</p>
+    the_strategy: <p>We use only Ruby language and for us choosing LocomotiveCMS is evident. First we are coding a proto w/ Wagon and providing a demo to our customers, then we improve the AD.</p>
+    navigation_image: /samples/case-studies/logo.png
+- le WattMan9:
+    _slug: le-wattman9
+    title: 9 Happier customers and efficient coding!
+    company_name: 9 le WattMan
+    company_description: "<p>Le Wattman is a digital agency founded in 2010, with a strong mission: through inspired, innovative and creative design and the use of cutting-edge technology we are able to build smart interfaces and enhance device efficiency.</p><p>With our new, unique and future-forward vision of the web, a vision based on efficiency, simplicity and our core values, we operate at all different levels on our clients' digital strategy: consulting and budgeting, creation of mobile web and extremely responsive websites, development of user-friendly mobile apps and development of specific technical tailor-made interfaces.</p>"
+    headquarters: Paris, France
+    cms_used: Wordpress / Refinery / Radiant / own CMS
+    example_sites: <p><a href="http://www.anthonyramet.com">http://www.anthonyramet.com</a><br><a href="http://www.praxy.fr">http://www.praxy.fr</a><br><a href="http://artbyblazejr.com/">http://artbyblazejr.com/</a></p>
+    the_problem: <p>It was difficult to boostrap and to maintain our own CMS.  For our customer, the first issue is to be able to modify their content EFFICIENTLY.</p>
+    the_solution: <p>It's easy to propose LocomotiveCMS to our customer after a quick demo of front editing capabilities. And for our team the Wagon is a great tool for maintaining code through Git.</p>
+    the_results: <p>Happier customers and efficient coding!</p>
+    the_strategy: <p>We use only Ruby language and for us choosing LocomotiveCMS is evident. First we are coding a proto w/ Wagon and providing a demo to our customers, then we improve the AD.</p>
+    navigation_image: /samples/case-studies/logo.png

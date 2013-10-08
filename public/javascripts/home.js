@@ -1,21 +1,7 @@
 $(function() {
-  // $("ul.tabs").tabs(".panes > section");
-
-  $('.home-row h1').each(function(index) {
-    $el = $(this)
-    $el.html('<span>' + $el.text() + '</span>')
+  $('.home-row h1, #home-cred h1').each(function() {
+    $(this).html('<span>' + $(this).text() + '</span>')
   })
-
-  $('#home-cred h1').each(function(index) {
-    $el = $(this)
-    $el.html('<span>' + $el.text() + '</span>')
-  })
-
-  // mobile
-  $('#nav-toggle').on('click',function(e){
-    $('#main-nav').toggleClass('expanded');
-    $(this).toggleClass('expanded');
-  });
 
   // BXSlider for Testimonials
   $('.bxslider').bxSlider({

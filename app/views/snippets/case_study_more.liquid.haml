@@ -1,0 +1,11 @@
+{% capture URI %}/case-studies/{{ more_study._slug }}{% endcapture %}
+{% if first_study == false %}
+.more-case-study.first
+  {% assign first_study = true %}
+  %a{ href: "{{ URI }}" }
+    {{ more_study.navigation_image.url | image_tag }}
+{% else %}
+.more-case-study
+  %a{ href: "{{ URI }}" }
+    {{ more_study.navigation_image.url | image_tag }}
+{% endif %}

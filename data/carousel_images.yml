@@ -1,0 +1,12 @@
+- Demo slide 1:
+    _slug: demo-slide-1
+    image: /samples/case-studies/slide1.jpg
+    case_study: le-wattman
+- Demo slide 2:
+    _slug: demo-slide-2
+    image: /samples/case-studies/slide2.jpg
+    case_study: le-wattman
+- Demo slide 3:
+    _slug: demo-slide-3
+    image: /samples/case-studies/slide3.jpg
+    case_study: le-wattman
