@@ -47,6 +47,8 @@ listed: false
     {% inline_editor %}
 
   %body{ data: { spy: 'scroll', target: 'nav.subnav', offset: '300' } }
+    {% include 'bar' %}
+    
     {% include 'nav' %}
 
     {% block 'main' %}
@@ -211,4 +213,3 @@ listed: false
     {% include "footer" %}
 
     {% google_analytics 'UA-17355243-1' %}
-    %script{src: "//s3.amazonaws.com/scripts.hellobar.com/17af3ef1602c50d34a291fccfaa791269d06c045.js", type: "text/javascript"}

@@ -1,0 +1,29 @@
+#main-nav
+  padding-top: 55px
+
+#bar
+  font-family: OpenSans-Regular
+  z-index: 10000
+  line-height: 20px
+  width: 100%
+  position: fixed
+  font-size: 17px
+  background: #784507
+  color: #f8fafd
+  text-align: center
+  padding: 5px
+  border-bottom: 2px solid rgba(255,170,0,0.1)
+  +box-shadow(0px 2px 5px rgba(255,170,0,0.3))
+  
+  a
+    margin-left: 15px
+    text-transform: uppercase
+    background: #ffaa00
+    display: inline-block
+    line-height: 22px
+    padding: 3px 15px
+    +border-radius(14px)
+    &:hover
+      background: lighten(#ffaa00, 10)
+      text-decoration: none
+      color: #f8fafd
