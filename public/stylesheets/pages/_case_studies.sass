@@ -27,11 +27,6 @@ $carousel-width: 583px
   margin-top: 1em
   padding: 0 5%
   width: 85%
-  @media #{$desktop}
-    float: right
-    margin-top: 0
-    padding: 0 20px 20px
-    width: 235px
 
   a
     color: $link-colour
@@ -39,15 +34,11 @@ $carousel-width: 583px
   h2, p
     font-size: 0.9em
     width: 100%
-    @media #{$desktop}
-      width: auto
 
 #carousel
   border: $carousel-border-width solid #edeef0
   margin-bottom: 4.5em
   width: 100%
-  @media #{$desktop}
-    width: $carousel-width
 
   .bx-next,
   .bx-prev
@@ -71,9 +62,6 @@ $carousel-width: 583px
     left: 0
     padding: 0
     width: 100%
-    @media #{$desktop}
-      left: $carousel-border-width * -1
-      width: $carousel-width
 
   .bx-pager-item
     background: #fff
@@ -93,8 +81,6 @@ $carousel-width: 583px
     height: 11px
     margin: 0 8px
     width: 11px
-    @media #{$desktop}
-      margin: 0 4px
 
     &.active
       background: white
@@ -122,14 +108,9 @@ $carousel-width: 583px
     +open-sans-bold
     font-size: (16px/$base-font-size) * 1em
 
-  .button
-    margin-top: -14px
-
 #main
   float: left
   width: 100%
-  @media #{$desktop}
-    width: 599px
 
 
   h2
@@ -137,8 +118,6 @@ $carousel-width: 583px
 
 #main-content
   width: 100%
-  @media #{$desktop}
-    width: $carousel-width
 
 #more-case-studies
   border-bottom: 1px solid #dde4ea
@@ -151,17 +130,51 @@ $carousel-width: 583px
     margin-left: 6%
     margin-bottom: 6%
     width: 47%
-    @media #{$desktop}
-      margin-left: 34px
-      width: auto
       
     &:nth-child(2n)
       margin-left: 0
-      @media #{$desktop}
-        margin-left: 34px
 
     &.first
-      margin-left: 0
+      margin-left: 0 !important
 
     img
       width: 100%
+
+@media #{$desktop}
+  #case-study-details
+    float: right
+    margin-top: 0
+    padding: 0 20px 20px
+    width: 235px
+
+  #case-study-details
+    h2, p
+      width: auto
+
+  #carousel
+    width: $carousel-width
+
+    .bx-pager
+      left: $carousel-border-width * -1
+      width: $carousel-width
+
+    .bx-pager-link
+      margin: 0 4px
+
+  #home-strip
+    .button
+      margin-top: -14px
+
+  #main
+    width: 599px
+
+  #main-content
+    width: $carousel-width
+
+  #more-case-studies
+    .more-case-study
+      margin: 0 0 0 34px
+      width: auto
+
+      &:nth-child(2n)
+        margin-left: 34px
