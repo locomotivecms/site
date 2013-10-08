@@ -23,20 +23,31 @@ $carousel-width: 583px
 #case-study-details
   border: $carousel-border-width solid $carousel-border-colour
   @include box-sizing(content-box)
-  float: right
-  padding: 0 20px 20px
-  width: 235px
+  float: left
+  margin-top: 1em
+  padding: 0 5%
+  width: 85%
+  @media #{$desktop}
+    float: right
+    margin-top: 0
+    padding: 0 20px 20px
+    width: 235px
 
   a
     color: $link-colour
 
   h2, p
     font-size: 0.9em
+    width: 100%
+    @media #{$desktop}
+      width: auto
 
 #carousel
   border: $carousel-border-width solid #edeef0
   margin-bottom: 4.5em
-  width: $carousel-width
+  width: 100%
+  @media #{$desktop}
+    width: $carousel-width
 
   .bx-next,
   .bx-prev
@@ -57,9 +68,12 @@ $carousel-width: 583px
   .bx-pager
     background: url(..#{image-url('pagination-line.png', true)}) repeat-x left 5px
     bottom: -45px
-    left: $carousel-border-width * -1
+    left: 0
     padding: 0
-    width: $carousel-width
+    width: 100%
+    @media #{$desktop}
+      left: $carousel-border-width * -1
+      width: $carousel-width
 
   .bx-pager-item
     background: #fff
@@ -77,8 +91,10 @@ $carousel-width: 583px
     cursor: pointer
     display: inline-block
     height: 11px
-    margin: 0 4px
+    margin: 0 8px
     width: 11px
+    @media #{$desktop}
+      margin: 0 4px
 
     &.active
       background: white
@@ -111,13 +127,18 @@ $carousel-width: 583px
 
 #main
   float: left
-  width: 599px
+  width: 100%
+  @media #{$desktop}
+    width: 599px
+
 
   h2
     font-size: (14px/$base-font-size) * 1em
 
 #main-content
-  width: $carousel-width
+  width: 100%
+  @media #{$desktop}
+    width: $carousel-width
 
 #more-case-studies
   border-bottom: 1px solid #dde4ea
@@ -127,7 +148,20 @@ $carousel-width: 583px
   .more-case-study
     border: 5px solid $carousel-border-colour
     float: left
-    margin-left: 34px
+    margin-left: 6%
+    margin-bottom: 6%
+    width: 47%
+    @media #{$desktop}
+      margin-left: 34px
+      width: auto
+      
+    &:nth-child(2n)
+      margin-left: 0
+      @media #{$desktop}
+        margin-left: 34px
 
     &.first
       margin-left: 0
+
+    img
+      width: 100%
