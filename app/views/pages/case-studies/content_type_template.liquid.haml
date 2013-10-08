@@ -1,0 +1,115 @@
+---
+title: Template of a case study
+templatized: true
+published: true
+listed: false
+content_type: case_studies
+position: 7
+---
+{% extends 'index' %}
+
+{% block 'head' %}
+{{ 'case-studies' | javascript_tag }}
+{% endblock %}
+
+{% block 'main' %}
+%section#main-generic
+  .section-title
+    Case study
+  %article#case-study
+    #main
+      {% assign carousel_height = 300 %}
+      {% assign carousel_width = 640 %}
+      {% capture carousel_style %}height: {{ carousel_height }}px; width: {{ carousel_width }}px;{% endcapture %}
+      {% if case_study.carousel_images.size > 0 %}
+      #carousel
+        %ul.bxslider{ style: "{{ carousel_style }}" }
+          {% for image in case_study.carousel_images %}
+          %li
+            %img{ src: "{{ image.image.url }}", alt: "{{ image.alt }}"}
+          {% endfor %}
+      {% endif %}
+
+      #main-content
+        %h1 Happier customers and efficient coding!
+        {% if case_study.the_problem %}
+        %h2 The problem
+        {{ case_study.the_problem }}
+        {% endif %}
+        {% if case_study.the_solution %}
+        %h2 The solution
+        {{ case_study.the_solution }}
+        {% endif %}
+        {% if case_study.the_results %}
+        %h2 The results
+        {{ case_study.the_results }}
+        {% endif %}
+        {% if case_study.the_strategy %}
+        %h2 The strategy
+        {{ case_study.the_strategy }}
+        {% endif %}
+
+    #case-study-details
+      {% if case_study.company_name %}
+      %h2 Company name
+      %p {{ case_study.company_name }}
+      {% endif %}
+      {% if case_study.company_description %}
+      %h2 Company description
+      {{ case_study.company_description }}
+      {% endif %}
+      {% if case_study.headquarters %}
+      %h2 Headquarters
+      %p {{ case_study.headquarters }}
+      {% endif %}
+      {% if case_study.cms_used %}
+      %h2 Previous/alternative CMS used
+      %p {{ case_study.cms_used }}
+      {% endif %}
+      {% if case_study.example_sites %}
+      %h2 Example of LocomotiveCMS websites:
+      {{ case_study.example_sites }}
+      {% endif %}
+  {% if contents.case_studies.size > 1 %}
+  %nav#more-case-studies
+    .section-title
+      More case studies
+    {% assign studies_to_add = 6 %}
+    {% assign first_study = false %}
+    {% if contents.case_studies.size < (studies_to_add + 1) %}
+    {% for more_study in contents.case_studies %}
+    {% if more_study._slug != case_study._slug %}
+    {% include case_study_more %}
+    {% endif %}
+    {% endfor %}
+    {% else %}
+    {% assign found_this = false %}
+    {% for more_study in contents.case_studies %}
+    {% if found_this == false %}
+    {% if more_study._slug == case_study._slug %}
+    {% assign found_this = true %}
+    {% endif %}
+    {% else %}
+    {% if studies_to_add > 0 %}
+    {% assign studies_to_add = studies_to_add | minus: 1 %}
+    {% include case_study_more %}
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+    {% if studies_to_add > 0 %}
+    {% for more_study in contents.case_studies %}
+    {% if studies_to_add > 0 %}
+    {% assign studies_to_add = studies_to_add | minus: 1 %}
+    {% include case_study_more %}
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+    {% endif %}
+    .clearer
+  #home-strip
+    %h2
+      What if you loved developing for your CMS as much as your clients loved using it?
+    %a{ href: "/tour", class: "button" }
+      GET STARTED
+  {% endif %}
+{% endblock %}

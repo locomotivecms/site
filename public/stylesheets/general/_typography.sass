@@ -2,8 +2,8 @@
 
 body
   color: $dark-black
-  font-size: 13px
-  line-height: 15px
+  font-size: $base-font-size
+  line-height: $base-line-height
 
 h1, h2, h3, h4, h5, h6
   margin-bottom: 20px
@@ -14,7 +14,9 @@ h1
   font-size: 20px
   color: $dark-black
   +proximanova-semi-bold
-  line-height: 20px
+  line-height: 30px
+  @media #{$desktop}
+    line-height: 20px
 h2
   font-size: 20px
   color: $third-black
