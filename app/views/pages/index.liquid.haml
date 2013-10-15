@@ -28,6 +28,7 @@ listed: false
     {{ 'html5shiv' | javascript_tag }}
     <![endif]-->
 
+    %link{href: 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,700,300,600,800', rel: 'stylesheet', type: 'text/css'}
     {{ 'screen' | stylesheet_tag }}
     {{ 'jquery.bxslider' | stylesheet_tag }}
 
@@ -46,15 +47,12 @@ listed: false
 
     {% inline_editor %}
 
-  %body{ data: { spy: 'scroll', target: 'nav.subnav', offset: '300' } }
-    {% include 'bar' %}
-    
+  %body{ data: { spy: 'scroll', target: 'nav.subnav' } }
     {% include 'nav' %}
 
     {% block 'main' %}
     %section#home-tagline
       .inner-container
-        {% block tagline %}
         %header
           %h1
             {% editable_short_text "title", priority: 21 %}
@@ -62,7 +60,7 @@ listed: false
             {% endeditable_short_text %}
         %a{ href: "/tour", class: "button" }
           GET STARTED
-        {% endblock %}
+
     %section#home-image
       #shadow
       .inner-container
@@ -71,86 +69,74 @@ listed: false
         %img{ src: "{% editable_file 'big-screenshot', hint: 'Home screenshot, size: 980x430px', priority: 18 %}/samples/pages/home-tagline-screenshot.jpg{% endeditable_file %}", alt: "screenshot" }
     %section#home-strip
       .inner-container
-        {% block strip %}
         #home-strip-content
           %header
             %h1
               %em What is
               LocomotiveCMS
-          %span.first-line
+          %span
             {% editable_short_text "first-line", priority: 17 %}
-            See how LocomotiveCMS, a free open source CMS built on Rails, can make your dream a reality.
+            LocomotiveCMS is designed to save your time and help you focus on what matters: front-end technology, standard development process and no-learning time for your client.
             {% endeditable_short_text %}
-        {% endblock %}
 
         %a{ href: "http://doc.locomotivecms.com/guides/get-started/requirements", class: "button" }
           Get started
 
     %section#home-columns
-      {% block 'asset_1' %}
-      %section.home-column
-        %img{ src: "{% editable_file 'image', hint: 'round icon, size: 154x154px', priority: 15 %}/samples/pages/icon-tools.png{% endeditable_file %}", alt: ""}
-        %header
-          %h1
-            {% editable_long_text "title", priority: 14 %}
-            Build your website locally. Deploy it instantly.
+      .inner-container
+        %section.home-column
+          %img{ src: "{% editable_file 'image', hint: 'icon, size: 77x77px', priority: 15 %}/samples/pages/icon-tools-sm.png{% endeditable_file %}", alt: ""}
+          %header
+            %h4
+              {% editable_long_text "title", priority: 14 %}
+              Build your website locally. Deploy it instantly.
+              {% endeditable_long_text %}
+            {% editable_long_text "content", priority: 13 %}
+            %p
+              Like to keep using your favorite IDE and development tricks? With LocomotiveCMS you work locally just like any web project. You deploy your site whenever you want and can keep track of your code in your SCM.
             {% endeditable_long_text %}
-        {% editable_long_text "content", priority: 13 %}
-        %p
-          Like to keep using your favorite IDE and development tricks? With LocomotiveCMS you work locally just like any web project. You deploy your site whenever you want and can keep track of your code in your SCM.
-        {% endeditable_long_text %}
-      {% endblock %}
 
-      {% block 'asset_2' %}
-      %section.home-column
-        %img{ src: "{% editable_file 'image', hint: 'round icon, size: 154x154px', priority: 12 %}/samples/pages/icon-edit.png{% endeditable_file %}", alt: ""}
-        %header
-          %h1
-            {% editable_long_text "title", priority: 11 %}
-            Super friendly content editing interface
+        %section.home-column
+          %img{ src: "{% editable_file 'image', hint: 'icon, size: 77x77px', priority: 12 %}/samples/pages/icon-edit-sm.png{% endeditable_file %}", alt: ""}
+          %header
+            %h4
+              {% editable_long_text "title", priority: 11 %}
+              Super friendly content editing interface
+              {% endeditable_long_text %}
+            {% editable_long_text "content", priority: 10 %}
+            %p
+              Your client should be able to edit the content without any training or any skills.
+              The author interface provides non-technical, simple and meaningful options, and most of the content can be edited directly inline. Just switch to editing mode.
             {% endeditable_long_text %}
-        {% editable_long_text "content", priority: 10 %}
-        %p
-          Your client should be able to edit the content without any training or any skills.
-          The author interface provides non-technical, simple and meaningful options, and most of the content can be edited directly inline. Just switch to editing mode.
-        {% endeditable_long_text %}
-      {% endblock %}
-
-      {% block 'asset_3' %}
-      %section.home-column
-        %img{ src: "{% editable_file 'image', hint: 'round icon, size: 154x154px', priority: 9 %}/samples/pages/icon-validate.png{% endeditable_file %}", alt: ""}
-        %header
-          %h1
-            {% editable_long_text "title", priority: 8 %}
-            Don't let your client mess up with your layout
+      
+      .inner-container
+        %section.home-column
+          %img{ src: "{% editable_file 'image', hint: 'icon, size: 77x77px', priority: 9 %}/samples/pages/icon-validate-sm.png{% endeditable_file %}", alt: ""}
+          %header
+            %h4
+              {% editable_long_text "title", priority: 8 %}
+              Don't let your client mess up with your layout
+              {% endeditable_long_text %}
+            {% editable_long_text "content", priority: 7 %}
+            %p
+              … and don’t mess up with the content. Designers can change design, authors can change content. You can keep your development methods, like source code tracking and local development. Don’t be afraid to modify the layout, it won’t affect the content.
             {% endeditable_long_text %}
-        {% editable_long_text "content", priority: 7 %}
-        %p
-          … and don’t mess up with the content. Designers can change design, authors can change content. You can keep your development methods, like source code tracking and local development. Don’t be afraid to modify the layout, it won’t affect the content.
-        {% endeditable_long_text %}
-      {% endblock %}
 
-      {% block 'asset_4' %}
-      %section.home-column
-        %img{ src: "{% editable_file 'image', hint: 'round icon, size: 154x154px', priority: 6 %}/samples/pages/icon-open-source.png{% endeditable_file %}", alt: ""}
-        %header
-          %h1
-            {% editable_long_text "title", priority: 5 %}
-            Open Source with professional support
+        %section.home-column
+          %img{ src: "{% editable_file 'image', hint: 'icon, size: 77x77px', priority: 6 %}/samples/pages/icon-open-source-sm.png{% endeditable_file %}", alt: ""}
+          %header
+            %h4
+              {% editable_long_text "title", priority: 5 %}
+              Open Source with professional support
+              {% endeditable_long_text %}
+            {% editable_long_text "content", priority: 4 %}
+            %p
+              The community helps us build a secured and well-tested CMS. Extend the code to fit your needs, and rely on the community to get help on our forum. And if you need more help, we offer professional support.
             {% endeditable_long_text %}
-        {% editable_long_text "content", priority: 4 %}
-        %p
-          The community helps us build a secured and well-tested CMS. Extend the code to fit your needs, and rely on the community to get help on our forum. And if you need more help, we offer professional support.
-        {% endeditable_long_text %}
-      {% endblock %}
-
-    {% block 'bottom' %}
 
     %section#home-cred
-      {% block 'sponsors' %}
-
-      .sponsors
-        %h1
+      .inner-container
+        %h1.underscored
           %span
             {% editable_short_text "sponsors-header", priority: 31 %}
             They trust LocomotiveCMS.  Try if for yourself.
@@ -163,19 +149,16 @@ listed: false
         .column
           %img{ src: "{% editable_file 'sponsor-image3', hint: 'sponsor image, size: 200x50px', priority: 30 %}/samples/pages/sponsors-wattman-logo.png{% endeditable_file %}", alt: "Wattman"}
 
-        %a{ href: "http://doc.locomotivecms.com/guides/get-started/requirements", class: "button" }
-          Try LocomotiveCMS Free!
-
-      {% endblock %}
+        .button-container
+          %a{ href: "http://doc.locomotivecms.com/guides/get-started/requirements", class: "button" }
+            Try LocomotiveCMS Free!
 
     %section#home-tests
-      {% block 'testimonials' %}
-      
-      .testimonials
-        %h1
+      .inner-container
+        %h1.underscored
           %span
             {% editable_short_text "testimonials-header", priority: 32 %}
-            See what delighted LocomotiveCMS users are saying:
+            See what delighted LocomotiveCMS users are saying
             {% endeditable_short_text %}
 
         %ul.bxslider
@@ -198,15 +181,9 @@ listed: false
 
             {% if testimonial.page_link != empty %}
             %a.testimonial-link{ href: "{{ testimonial.page_link }}" }
-              Read more.
+              Read more
             {% endif %}
           {% endfor %}
-
-      {% endblock %}
-
-
-
-    {% endblock %}
 
     {% endblock %}
 

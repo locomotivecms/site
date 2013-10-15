@@ -1,9 +1,7 @@
-%section{ id: '{{ feature._permalink }}', class: "feature {% cycle 'orientation': 'left', 'right' %} {% if forloop.first %}first{% endif %} {% if forloop.last %}last{% endif %}" }
-  .feature-text
-    %header
-      %h1 {{ feature.long_name }}
-    .feature-description
+%section{ id: '{{ feature._permalink }}', class: "feature {% cycle 'orientation': 'left', 'right' %} {% if forloop.last %}last{% endif %}" }
+  .body
+    %h4 {{ feature.long_name }}
+    .description
       {{ feature.description }}
-  .feature-icon
-    %img{ src: "{{ feature.icon.url }}", class: "" }
-  %img{ src: "{{ feature.thumb.url }}", class: "feature-illustrations" }
+  .image
+    {{ feature.thumb.url | resize: '360x250' | image_tag }}

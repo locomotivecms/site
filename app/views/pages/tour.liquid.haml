@@ -9,8 +9,8 @@ position: 1
 {% block 'main' %}
 
 %section#page-head
-  %section#page-head-content
-    %header
+  .inner-container
+    %h1
       {% editable_short_text "page-head-title", priority: 1 %}
       Find out why our CMS is so special!
       {% endeditable_short_text %}
@@ -18,12 +18,14 @@ position: 1
     %p
       LocomotiveCMS offers an innovative way to create and publish websites.
     {% endeditable_long_text %}
-
-  %aside
-    %a{ href: "http://doc.locomotivecms.com/guides/get-started/requirements" } Get started
+    .link
+      %a{ href: "http://doc.locomotivecms.com/guides/get-started/requirements" } Get started
 
 {% for step in contents.steps %}
 {% include 'tour_item' %}
 {% endfor %}
+
+%section#tour-hosting
+  %a{href: "http://www.locomotivehosting.com"} Try our hosting solution
 
 {% endblock %}

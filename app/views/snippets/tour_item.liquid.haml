@@ -2,10 +2,11 @@
 %section{ :class => "step-item {% cycle 'orientation': 'left', 'right' %}" }
   %section
     %header
-      %h1 {{ forloop.index }}.&nbsp;{{ step.title }}
+      %span.number {{ forloop.index }}
+      %h4 {{ step.title }}
     {% if step.time_saver %}
     %img.time-saver{ :src => "{{ 'time-saver.png' | theme_image_url }}" }
     {% endif %}
     {{ step.description }}
   .step-picture
-    %img{ :src => "{{ step.picture.url }}", :alt => "" }
+    {{ step.picture.url | resize: '360x250' | image_tag }}

@@ -7,6 +7,12 @@
     +span-columns(4 omega, 4)
     header
       +span-columns(4 omega, 4)
+      span.number
+        font-weight: bold
+        font-size: 20px
+        color: $orange
+      h4
+        margin-top: 15px
     .time-saver
       float: right
     b
@@ -15,30 +21,21 @@
       +paypal-button
       margin-bottom: 30px
   .step-picture
+    padding-top: 40px
     +span-columns(4 omega, 4)
     text-align: center
     min-height: 150px
     line-height: 150px
     img
-      vertical-align: middle
+      vertical-align: top
 
-.tour-footer-container
-  +three-cols-grid
-  padding-top: $section-padding
-  section
-    +span-columns(3 omega, 3)
-    header
-      +span-columns(3 omega, 3)
-      margin-bottom: 20px
-    .description
-      .time-saver
-        float: left
-        margin-right: 20px
-      p
-        float: left
-    a
-      +span-columns(3 omega, 3)
-      +small-button
+#tour-hosting
+  +container
+  padding-top: 20px
+  padding-bottom: 30px
+  text-align: center
+  a
+    +big-button
 
 @media #{$desktop}
   .step-item
@@ -48,19 +45,13 @@
       +span-columns(2, 4)
   .step-item.left
     .step-picture
+      text-align: right
       +omega
   .step-item.right
+    .step-picture
+      text-align: left
     section
       +omega
 
-  .tour-footer-container
-    section
-      +span-columns(3, 3)
-      header
-        +span-columns(2, 3)
-      .description
-        +span-columns(2, 3)
-      a
-        +span-columns(1 omega, 3)
 
 

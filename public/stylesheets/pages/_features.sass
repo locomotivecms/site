@@ -1,28 +1,37 @@
 // Feature page
 .feature
-  +five-cols-grid
+  +four-cols-grid
   border-bottom: 1px solid $blue-border
-  .feature-text
-    padding-top: $section-padding
-    padding-bottom: $section-padding
-  .feature-icon
-    display: none
-  .feature-illustrations
-    padding-bottom: $section-padding
 .feature.last
   border-bottom: none
 
 #features-nav-wrapper.affix
-  top: 0px
   width: 100%
+  top: 0px
   background: rgba(255, 255, 255, 0.95)
 
 @media #{$desktop}
-  #features
-    background: url(/images/dotted_pattern.png) repeat-y center
   .feature
+    padding-top: $section-padding
+    padding-bottom: $section-padding
+    .body
+      +span-columns(2,4)
+    .image
+      vertical-align: top
+      padding-top: 15px
+      +span-columns(2,4)
+  .feature.left
+    .body
+      +omega
+    .image
+      text-align: left 
+  .feature.right
+    .image
+      text-align: right
+      +omega
+  
     .feature-text
-      +span-columns(2,5)
+      +span-columns(2,4)
       padding-bottom: $section-padding
       text-align: justify
     .feature-icon
@@ -34,21 +43,3 @@
       +span-columns(2,5)
       padding-top: $section-padding
 
-  // handle left right orientation
-  .feature.left
-    .feature-illustrations
-      +omega
-  .feature.right
-    .feature-icon
-      float: right
-    .feature-text
-      +omega
-  // hide the stripped background above icon for the first item
-  .feature.first
-    .feature-icon
-      background-color: white
-  // same principle for the last item
-  .feature.last
-    background-color: white
-    .feature-icon
-      background: url(/images/dotted_pattern.png) repeat-y center
