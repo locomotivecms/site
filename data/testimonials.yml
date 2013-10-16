@@ -1,0 +1,21 @@
+- "Olivier Thereaux":
+    body: "After much testing we eventually settled on the powerful Locomotive system, an open source CMS with a knack for connecting things together and a nice back-end interface to manage both the content and its complex network of relationships."
+    credentials: "Senior Technologist, BBC R&D"
+    url:
+    page_link: http://www.bbc.co.uk/blogs/internet/posts/New-Research-and-Development-Website
+    picture: /samples/testimonials/thereaux.jpg
+
+- "Miha Kersic":
+    body: "Setting up a new Rails app, development and production environments, git repositories etc. is just too much work and maintenance for small projects. Thanks to LocomotiveCMS, I no longer have to do all of that. We can now take on new projects we used to turn down before."
+    credentials: "CEO, Bitami Designs"
+    url:
+    page_link:
+    picture: /samples/testimonials/kersic.jpg
+
+- "Bernd Hauser":
+    body: "LocomotiveCMS is awesome if you try to publish structured content and if you are not looking for just another WYSIWYG Editor. The way you can expand the CMS, the direct contact to other contributors and the founder of LocomotiveCMS and the chance to influence and discuss the future of the product makes it outstanding besides all the other opportunities."
+    credentials: "Developer, Designhunger"
+    url:
+    page_link:
+    picture: /samples/testimonials/hauser.jpg
+
