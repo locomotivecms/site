@@ -1,7 +1,7 @@
 %footer#footer
   #inner-footer
     %section.footer-item
-      %header
+      .header
         Quick Links
       %ul
         %li
@@ -27,7 +27,7 @@
             Contact
 
     %section.footer-item
-      %header
+      .header
         Follow
         %a{ href: "https://twitter.com/locomotivecms" } @locomotivecms
       .tweets
@@ -36,7 +36,7 @@
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
     %section.footer-item
-      %header
+      .header
         LocomotiveCMS News
       %p
         Stay on top of LocomotiveCMS updates, subscribe to our news.
@@ -45,11 +45,12 @@
           Subscribe
 
     %section.footer-item
-      %header.logo
+      .header.logo
         LOCOMOTIVECMS
       %p
         %em LocomotiveCMS is developed by NoCoffee. LocomotiveCMS is a free software under the MIT license.
       %p
         %strong © {{ today | localized_date: '%Y' }} LocomotiveCMS
+
     %a.back-to-top{ href: "#" }
       BACK TO TOP
