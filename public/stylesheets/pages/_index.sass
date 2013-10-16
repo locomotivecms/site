@@ -66,7 +66,7 @@
       header
         float: left
         width: 70%
-        
+
 #home-cred
   .inner-container
     +three-cols-grid
@@ -119,11 +119,11 @@
         list-style-type: none
         list-style: none
         background: none
-    
+
 @media #{$desktop}
   #home-tagline
     padding-top: 50px
-    padding-bottom: 300px
+    padding-bottom: 450px
     background: url(/images/home_halo.png) bottom center no-repeat
     background-color: $banner-bg
     header
@@ -143,8 +143,9 @@
 
   #home-image
     display: block
-    background-color: $medium-grey
-    position: relative
+    position: absolute
+    width: 100%
+    top: 536px
     #shadow
       width: 100%
       position: absolute
@@ -200,13 +201,13 @@
         width: 73%
     .button
       +span-columns(1 omega, $total-columns)
-      
+
   #home-columns
     padding-top: 25px
     padding-bottom: 50px
     .inner-container
       padding-top: 25px
-      
+
       .home-column
         +span-columns(2, $total-columns)
         +nth-omega(2)
