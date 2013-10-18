@@ -1,0 +1,14 @@
+name: Comparisons
+order_by: manually
+slug: comparisons
+label_field_name: name
+fields:
+- name:
+    label: Name
+    type: string
+- locomotive:
+    label: How it goes in Locomotive
+    type: text
+- wordpress:
+    label: How it goes in Wordpress
+    type: text
