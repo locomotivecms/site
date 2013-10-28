@@ -21,10 +21,33 @@
       font-weight: 800
       font-size: 24px
 
+#conclusion
+  .inner-container
+    padding-top: 40px
+    padding-bottom: 40px    
+    +container
+    .four, .three
+      font-weight: 300
+      text-align: justify
+      font-size: 16px
+      margin-bottom: 40px
+
 @media #{$desktop}
   .comparison
     .locomotive
       +span-columns(1, 2)
     .wordpress
       +span-columns(1 omega, 2)
-    
+
+  #conclusion
+    .inner-container
+      h3
+        font-weight: 800
+        margin-bottom: 40px
+        text-align: center
+      
+      .four
+        +span-columns(4,4)
+        .item
+          +span-columns(1,4)
+          +nth-omega(4)
