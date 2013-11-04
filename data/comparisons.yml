@@ -1,0 +1,24 @@
+- Design Flow:
+    locomotive: "Design pages and assets just like you're used to with your static sites. Then, with our simple-to-learn templating system, turn your site into a powerhouse content management system. It's so seamless, you'll almost forget that you're designing for a CMS. Seriously."
+    wordpress: "Have to ditch your standard development process because some assets are stored in a database, and others are in templates or additional places. So, some of your “design” work has to happen outside the framework of your pages and assets. That separation makes your workflow more tedious."
+- Custom Content Types:
+    locomotive: "Create a content type, a model, for any set of objects without having to code anything. Once you've created these models, you can connect them with relationships. It's that simple."
+    wordpress: "Since WordPress was developed originally as a blogging platform, every post type, even custom ones, are built on the concept of pages and posts. When you want to create a custom post type for a unique set of objects, things get a little murky. You have the sneaking suspicion that you're pushing the system beyond its intention. And forget about trying to make those custom types relate to each other without significant code slinging."
+- Client Experience:
+    locomotive: "With intuitive inline editing, most content changes that clients want to make are done without even visiting the back office. When customers do need to login, though, they experience a beautiful interface with clear, easy-to-understand options. So, if you as the designer set up a model of \"Books,\" they see \"Books\" in the menu, and all of the options are specific to that model. No confusion or muddling through."
+    wordpress: "While WordPress is a familiar interface to many clients, if you've developed custom functionality, it doesn't take long for confusion to set in for your clients. Because custom post types don't have their own unique attributes, clients have to sift through unnecessary clutter to get where they need to be."
+- Development Standards:
+    locomotive: "Develop your site locally. When you need to update code, it's done locally, too. You can have all your code in a Git or Svn repo and keep track of your code evolutions. "
+    wordpress: "You can develop locally with some workarounds, but once you publish, maintaining the live code becomes a chore. If you've worked with WordPress, you already know what we're talking about. Some design is tucked away in the database and others are in the file structure. Ongoing updates and maintenance are a headache."
+- Site Maintenance:
+    locomotive: "Because the design and the content are distinct, you don’t have to worry about content changes that have been made by the site owner. You can simply make your modifications on your local installation, and then push them to the live site, where everything merges beautifully. If you really want the latest content on your local drive, that’s simple too. Using Wagon Sync or Wagon Pull, you can grab the latest data through Locomotive’s Restful API right from Terminal."
+    wordpress: "To make many site changes, you have to download a copy of the database and the entire content folder back to your local installation. And then hope that no changes occur on the live site while you’re making those modifications. Or even worse, you are forced to make code changes on the live production site. That’s a disaster in the making."
+- Multi-Site Capability:
+    locomotive: "Using the powerful LocomotiveCMS engine, you can power as many websites as your server can hold without multiple installations or multiple maintenance overhead."
+    wordpress: "While WordPress has multi-site capability, you often run into compatibility issues that can hamstring the production of your sites. If you choose to build each WordPress site as a stand-alone site, you quickly have a management nightmare on your hands with updating WordPress security fixes, plugin updates, multiple logins, and plenty of administrative hassle."
+- Multi-Lingual Capability:
+    locomotive: "Locomotive is multi-lingual right out of the box. No strange workarounds, or fooling around trying to make plugins work. All parts of the system can be translated easily, including URLs, with a simple option. It's almost magic."
+    wordpress: "You'll have to depend on plugins and considerable \"tweaking\" to make a site acceptable for multi-lingual use. "
+- Security:
+    locomotive: "Since Locomotive is built on Ruby on Rails, you get tons of power without having to rely on a bunch of plugins that can compromise the security of your site."
+    wordpress: "There are a million plugins available that extend your site’s functionality, but each plugin increases your security risk and your maintenance overhead."
