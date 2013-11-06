@@ -4,19 +4,21 @@
 article
   +span-columns(3 omega,3)
   margin-top: $section-padding
-  padding-bottom: $section-padding
-  border-bottom: 1px solid $blue-border
+  padding-bottom: 0
   color: $light-black
   font-size: 13px
   header
     font-size: 12px
     color: $main-blue
     margin-bottom: 15px
-    h1
-      margin-bottom: 5px
+    h2
+      margin-bottom: 10px
+      a:hover
+        text-decoration: none
+        color: lighten($medium-blue, 15%)
     .meta
       line-height: 30px
-      color: $blog-meta
+      color: darken($light-blue, 15%)
       &.name
         font-weight: bold
         img
@@ -29,8 +31,7 @@ article
     .meta
       color: $blog-meta
     a
-      +readmore-button
-      margin-right: 20px
+      +light-blue-rounded-button
   @media #{$desktop}
     +span-columns(2,3)
 
@@ -63,14 +64,6 @@ article
 
   @media #{$desktop}
     margin-bottom: 20px
-    header
-      h1
-        font-size: 36px
-        line-height: 30px
-        color: $fourth-black
-        padding-bottom: 20px
-        margin-bottom: 20px
-        border-bottom: 1px solid $blue-border
     .addthis_toolbox
       margin: 20px 0px
     blockquote
