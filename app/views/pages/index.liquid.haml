@@ -82,28 +82,29 @@ listed: false
         %a{ href: "http://doc.locomotivecms.com/guides/get-started/requirements", class: "button" }
           Get started
 
+    {% block features %}
     %section#home-columns
       .inner-container
         %section.home-column
-          %img{ src: "{% editable_file 'image', hint: 'icon, size: 77x77px', priority: 15 %}/samples/pages/icon-tools-sm.png{% endeditable_file %}", alt: ""}
+          %img{ src: "{% editable_file 'image_1', hint: 'icon, size: 77x77px', priority: 15 %}/samples/pages/icon-tools-sm.png{% endeditable_file %}", alt: ""}
           %header
             %h4
-              {% editable_long_text "title", priority: 14 %}
+              {% editable_long_text "title_1", priority: 14 %}
               Build your website locally. Deploy it instantly.
               {% endeditable_long_text %}
-            {% editable_long_text "content", priority: 13 %}
+            {% editable_long_text "content_1", priority: 13 %}
             %p
               Like to keep using your favorite IDE and development tricks? With LocomotiveCMS you work locally just like any web project. You deploy your site whenever you want and can keep track of your code in your SCM.
             {% endeditable_long_text %}
 
         %section.home-column
-          %img{ src: "{% editable_file 'image', hint: 'icon, size: 77x77px', priority: 12 %}/samples/pages/icon-edit-sm.png{% endeditable_file %}", alt: ""}
+          %img{ src: "{% editable_file 'image_2', hint: 'icon, size: 77x77px', priority: 12 %}/samples/pages/icon-edit-sm.png{% endeditable_file %}", alt: ""}
           %header
             %h4
-              {% editable_long_text "title", priority: 11 %}
+              {% editable_long_text "title_2", priority: 11 %}
               Super friendly content editing interface
               {% endeditable_long_text %}
-            {% editable_long_text "content", priority: 10 %}
+            {% editable_long_text "content_2", priority: 10 %}
             %p
               Your client should be able to edit the content without any training or any skills.
               The author interface provides non-technical, simple and meaningful options, and most of the content can be edited directly inline. Just switch to editing mode.
@@ -111,28 +112,30 @@ listed: false
 
       .inner-container
         %section.home-column
-          %img{ src: "{% editable_file 'image', hint: 'icon, size: 77x77px', priority: 9 %}/samples/pages/icon-validate-sm.png{% endeditable_file %}", alt: ""}
+          %img{ src: "{% editable_file 'image_3', hint: 'icon, size: 77x77px', priority: 9 %}/samples/pages/icon-validate-sm.png{% endeditable_file %}", alt: ""}
           %header
             %h4
-              {% editable_long_text "title", priority: 8 %}
+              {% editable_long_text "title_3", priority: 8 %}
               Don't let your client mess up with your layout
               {% endeditable_long_text %}
-            {% editable_long_text "content", priority: 7 %}
+            {% editable_long_text "content_3", priority: 7 %}
             %p
               … and don’t mess up with the content. Designers can change design, authors can change content. You can keep your development methods, like source code tracking and local development. Don’t be afraid to modify the layout, it won’t affect the content.
             {% endeditable_long_text %}
 
         %section.home-column
-          %img{ src: "{% editable_file 'image', hint: 'icon, size: 77x77px', priority: 6 %}/samples/pages/icon-open-source-sm.png{% endeditable_file %}", alt: ""}
+          %img{ src: "{% editable_file 'image_4', hint: 'icon, size: 77x77px', priority: 6 %}/samples/pages/icon-open-source-sm.png{% endeditable_file %}", alt: ""}
           %header
             %h4
-              {% editable_long_text "title", priority: 5 %}
+              {% editable_long_text "title_4", priority: 5 %}
               Open Source with professional support
               {% endeditable_long_text %}
-            {% editable_long_text "content", priority: 4 %}
+            {% editable_long_text "content_4", priority: 4 %}
             %p
               The community helps us build a secured and well-tested CMS. Extend the code to fit your needs, and rely on the community to get help on our forum. And if you need more help, we offer professional support.
             {% endeditable_long_text %}
+
+    {% endblock features %}
 
     %section#home-cred
       .inner-container
