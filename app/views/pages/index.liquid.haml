@@ -179,7 +179,7 @@ listed: false
 
             %p.quote-author-cred {{ testimonial.credentials }}
 
-            {% if testimonial.page_link %}
+            {% if testimonial.page_link != empty %}
             %a.testimonial-link{ href: "{{ testimonial.page_link }}" }
               Read more
             {% endif %}
