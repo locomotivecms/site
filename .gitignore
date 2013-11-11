@@ -5,3 +5,4 @@ config/deploy.yml
 public/.sass-cache/
 .sass-cache
 log/
+backup/
