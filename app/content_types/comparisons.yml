@@ -6,6 +6,9 @@ fields:
 - name:
     label: Name
     type: string
+- icon:
+    label: Icon
+    type: file
 - locomotive:
     label: How it goes in Locomotive
     type: text
