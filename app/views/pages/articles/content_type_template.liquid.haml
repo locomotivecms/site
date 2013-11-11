@@ -15,7 +15,7 @@ position: 2
   {% include 'sidebar' with sidebar_class %}
   %article.full-article
     %header
-      %h1 {{ article.title }}
+      %h2 {{ article.title }}
       %span.meta.date {{ article.posted_at | localized_date: '%A %d %B %Y' }}
       %span.meta.name
         %img{ src: "{{ article.author.picture.url | resize: '30x30' }}" }

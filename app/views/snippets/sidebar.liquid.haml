@@ -1,20 +1,15 @@
 %aside{ :class => "sidebar {{ sidebar_class }}"}
-  .floating-panel
-    .inner-floating-panel
-      %header
-        %h4
-          Email updates
-      %p Never miss a LocomotiveCMS update again. Subscribe to our newsletter.
-      #sidebar-newsletter
-        %form{ action: "http://locomotivecms.us6.list-manage.com/subscribe/post?u=bbf009a4e985171b092f240ab&amp;id=f469d6bd90", method: 'post', target: '_blank', novalidate: '' }
-          %input#input{ type: 'email', name: 'EMAIL', :placeholder => "Email address" }
-          %input#submit{ type: 'submit', name: 'subscribe', value: "JOIN" }
-
-  .floating-panel
-    .inner-floating-panel
-      %header
-        %h4
-          Stay connected
-      %p Connect with us on Twitter to keep your finger on the LocomotiveCMS pulse.
-      %a.twitter-follow-button{ :href => "https://twitter.com/locomotivecms", "data-show-count" => "false" }
-        Follow @locomotivecms
+  %header
+    %h4
+      Email updates
+  %p Never miss a LocomotiveCMS update again. Subscribe to our newsletter.
+  #sidebar-newsletter
+    %form{ action: "http://locomotivecms.us6.list-manage.com/subscribe/post?u=bbf009a4e985171b092f240ab&amp;id=f469d6bd90", method: 'post', target: '_blank', novalidate: '' }
+      %input.email{ type: 'email', name: 'EMAIL', :placeholder => "Email address" }
+      %input.submit{ type: 'submit', name: 'subscribe', value: "JOIN" }
+  %header
+    %h4
+      Stay connected
+  %p Connect with us on Twitter to keep your finger on the LocomotiveCMS pulse.
+  %a.twitter-follow-button{ :href => "https://twitter.com/locomotivecms", "data-show-count" => "false" }
+    Follow @locomotivecms
