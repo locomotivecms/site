@@ -11,7 +11,7 @@
       {% if mainpage.listed? %}
 
       %li{ class: '{% if mainpage.fullpath == path_segments[1] %}active{% endif %}'}
-        %a{ href: "/{{ mainpage.fullpath }}", target: '{% if mainpage.redirect_url %}blank{% endif %}' }
+        %a{ href: "/{{ mainpage.fullpath }}" }
           {{ mainpage.title }}
 
       {% endif %}
