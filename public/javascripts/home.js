@@ -25,4 +25,6 @@ $(function() {
     slideMargin: 20
   });
 
+  $('#home-tests .bx-controls').hide()
+
 });
