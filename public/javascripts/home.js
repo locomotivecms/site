@@ -18,13 +18,13 @@ $(function() {
   });
 
   // BXSlider for Testimonials
-  $('.bxslider').bxSlider({
+  $('#home-tests .bxslider').bxSlider({
     slideWidth: 295,
     minSlides: 2,
     maxSlides: 3,
     slideMargin: 20
   });
 
-  $('#home-tests .bx-controls').hide()
+  $('#home-tests .bx-controls').hide();
 
 });

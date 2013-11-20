@@ -19,18 +19,17 @@
             %a{ href: "http://doc.locomotivecms.com", target: "_blank" }
               Documentation Site
           %li
-            %a{ href: "/articles" }
-              Blog
+            {% assign case_study = contents.case_studies.first %}
+            {% link_to case_study %}Case studies{% endlink_to %}
           %li
-            %a{ href: "/crew" }
-              Crew
+            %a{ href: "/articles" } Blog
           %li
-            %a{ href: "mailto:support@locomotivecms.com" }
-              Contact
+            %a{ href: "/crew" } Crew
           %li
-            %a{ href: "http://www.hittail.com/sitemap.html" }
-              Sitemap
-        
+            %a{ href: "mailto:support@locomotivecms.com" } Contact
+          // %li
+          //   %a{ href: "http://www.hittail.com/sitemap.html" } Sitemap
+
       %section.newsletter
         %header
           Newsletter
@@ -38,14 +37,14 @@
         .subscribe
           %a{ href: "http://eepurl.com/uX8R9", target: "_blank", class: "btn" }
             Subscribe
-      
+
       %section.tweets
         %header
           Last Tweets
         %a{ class: 'twitter-timeline', href: 'https://twitter.com/locomotivecms', data: { widget_id: '346940464458518528', chrome: 'nofooter noborders noheader transparent', tweet_limit: 2, show_replies: 'true', link_color: '#ffaa00', theme: "dark"  } } Tweets of @locomotivecms
 
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-        
+
 #subfooter
   .left
     %strong © {{ today | localized_date: '%Y' }} LocomotiveCMS

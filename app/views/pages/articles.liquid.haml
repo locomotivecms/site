@@ -8,7 +8,12 @@ position: 6
 
 {% block 'main' %}
 
-/ {% include 'page_head' %}
+%section#page-head
+  .inner-container
+    %h1
+      {% editable_short_text "title", priority: 10 %}
+      Our blog
+      {% endeditable_short_text %}
 
 #main-blog
   {% assign sidebar_class = 'desktop' %}

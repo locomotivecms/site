@@ -1,0 +1,132 @@
+$carousel-border-width: 8px
+$carousel-border-colour: #edeef0
+$carousel-width: 583px
+
+#main-case-study
+  +three-cols-grid
+
+  h3
+    font-weight: bold
+    font-size: 14px
+    text-transform: uppercase
+    margin: 30px 0 10px 0
+
+  .sidebar
+    @media #{$desktop}
+      margin-top: $section-padding
+      padding-top: 0px
+
+    h3
+      font-size: 12px
+
+      &:first-child
+        margin-top: 10px
+
+    p
+      font-size: 13px
+
+#case-study
+  margin-top: $section-padding
+
+  +span-columns(3 omega,3)
+
+  @media #{$desktop}
+    +span-columns(2,3)
+
+  .content
+    +one-column
+
+    h2
+      font-size: 32px
+      margin-bottom: 30px
+
+#carousel
+  border: $carousel-border-width solid #edeef0
+  margin-bottom: 4.5em
+  width: 100%
+
+  .bx-next,
+  .bx-prev
+    height: 26px
+    margin-top: -20px
+    position: absolute
+    top: 50%
+    width: 27px
+
+  .bx-next
+    background: url(/images/arrow-right.png) no-repeat left top
+    right: -27px
+
+  .bx-prev
+    background: url(/images/arrow-left.png) no-repeat left bottom
+    left: -27px
+
+  .bx-pager
+    background: url(/images/pagination-line.png) repeat-x left 5px
+    bottom: -45px
+    left: 0
+    padding: 0
+    width: 100%
+
+  .bx-pager-item
+    background: #fff
+
+    &:first-of-type
+      padding-left: 10px
+
+    &:last-of-type
+      padding-right: 10px
+
+  .bx-pager-link
+    background: #e3e6e9
+    border: 2px solid #e3e6e9
+    @include border-radius(11px)
+    cursor: pointer
+    display: inline-block
+    height: 11px
+    margin: 0 8px
+    width: 11px
+
+    &.active
+      background: white
+      border: 2px solid #ffc500
+
+  .bxslider
+    overflow: hidden
+    height: 267px
+    width: $carousel-width
+
+    li
+      background: none
+      padding: 0
+
+  .bx-wrapper
+    margin: 0
+
+#more-case-studies
+  border-bottom: 1px solid #dde4ea
+  clear: both
+  padding-bottom: 25px
+
+  .more-case-study
+    border: 5px solid $carousel-border-colour
+    float: left
+    margin-right: 33px
+    margin-bottom: 33px
+
+    &:nth-child(7n+0)
+      margin-right: 0
+
+    img
+      width: 100%
+
+@media #{$desktop}
+  #carousel
+    width: $carousel-width
+
+    .bx-pager
+      left: $carousel-border-width * -1
+      width: $carousel-width
+
+    .bx-pager-link
+      margin: 0 4px

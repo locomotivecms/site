@@ -1,0 +1,55 @@
+name: Case studies
+order_by: manually
+slug: case_studies
+label_field_name: company_name
+fields:
+- title:
+    label: Title
+    hint: The main title
+    type: string
+- company_name:
+    label: Company name
+    type: string
+- company_url:
+    label: Company url
+    type: string
+- company_description:
+    label: Company description
+    type: text
+- headquarters:
+    label: Headquarters
+    hint: Where is the company head office?
+    type: string
+- cms_used:
+    label: Previous/alternative CMSs used
+    type: string
+- example_sites:
+    label: Example of LocomotiveCMS websites
+    hint: URLs to live websites powered by LocomotiveCMS
+    type: text
+- the_problem:
+    label: The problem
+    hint: What issue did the company need to solve?
+    type: text
+- the_solution:
+    label: The solution
+    hint: How did LocomotiveCMS solve the problem?
+    type: text
+- the_results:
+    label: The results
+    hint: Describe the outcomes from implementing LocomotiveCMS
+    type: text
+- the_strategy:
+    label: The strategy
+    hint: What factors made LocomotiveCMS a perfect companion and how was it implemented?
+    type: text
+- navigation_image:
+    label: Navigation image
+    type: file
+    hint: Used in the 'More case studies' navigation. Resized to 120px x 95px
+- carousel_images:
+    label: Carousel images
+    type: has_many
+    class_name: carousel_images
+    inverse_of: case_study
+    ui_enabled: true

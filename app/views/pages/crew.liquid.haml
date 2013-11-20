@@ -8,13 +8,15 @@ position: 3
 
 {% block 'main' %}
 
-{% block story %}
-%section.company-section
-  %header
+%section#page-head
+  .inner-container
     %h1
       {% editable_short_text "title", priority: 10 %}
       The story behind LocomotiveCMS
       {% endeditable_short_text %}
+
+{% block story %}
+%section.company-section
   .content
     {% editable_long_text "content", priority: 9 %}
     %p Like many open source projects, LocomotiveCMS began as a way of scratching our own itch. As developers in web agencies, we were frustrated by the lack of options for creating small, static sites. The options were either to use plain HTML files or create a whole new Rails project.

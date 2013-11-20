@@ -22,6 +22,8 @@ listed: false
 
     %link{ href: "{{ 'favicon.ico' | theme_image_url }}", rel: 'shortcut icon', type: 'image/vnd.microsoft.icon' }
 
+    %link{ rel: 'author', href: 'https://google.com/+DidierLafforgue/posts' }
+
     {% seo %}
 
     <!--[if lt IE 9]>
@@ -194,12 +196,12 @@ listed: false
 
     :javascript
       var _dcq = _dcq || [];
-      var _dcs = _dcs || {}; 
+      var _dcs = _dcs || {};
       _dcs.account = '7881253';
 
       (function() {
         var dc = document.createElement('script');
-        dc.type = 'text/javascript'; dc.async = true; 
+        dc.type = 'text/javascript'; dc.async = true;
         dc.src = '//tag.getdrip.com/7881253.js';
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(dc, s);
