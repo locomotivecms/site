@@ -13,7 +13,12 @@ editable_elements:
 
 {% block 'main' %}
 
-{% include 'page_head' %}
+%section#page-head
+  .inner-container
+    %h1
+      {% editable_short_text "page-head-title", priority: 1 %}
+      Privacy Policy
+      {% endeditable_short_text %}
 
 {% block privacy_policy %}
 %section#main-generic
@@ -23,7 +28,7 @@ editable_elements:
 
     %h3 1. Information collection &amp; use
     %h4 Website visitors
-    %p Like most website operators, NoCoffee SARL collects non-personally-identifying information of the sort that web browsers and servers typically make available, such as the browser type, language preference, referring site, and the date and time of each visitor request. NoCoffee SARL’s purpose in collecting non-personally identifying information is to better understand how NoCoffee SARL’s visitors use its website. WORDPRESS NoCoffee SARL also collects potentially personally-identifying information like Internet Protocol (IP) addresses. NoCoffee SARL does not use such information to identify its visitors, however, and does not disclose such information.
+    %p Like most website operators, NoCoffee SARL collects non-personally-identifying information of the sort that web browsers and servers typically make available, such as the browser type, language preference, referring site, and the date and time of each visitor request. NoCoffee SARL’s purpose in collecting non-personally identifying information is to better understand how NoCoffee SARL’s visitors use its website. NoCoffee SARL also collects potentially personally-identifying information like Internet Protocol (IP) addresses. NoCoffee SARL does not use such information to identify its visitors, however, and does not disclose such information.
     %br
     %h4 Newsletter subscribers
     %p You can receive the lastest news and tips on LocomotiveCMS by subscribing to the Newsletter on the website. When you do so, NoCoffee SARL stores your name and email address. You can unsubscribe at any time by clicking on the unsubscribe link at the end of our newsletters.

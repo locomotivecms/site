@@ -16,6 +16,7 @@ fields:
 - company_description:
     label: Company description
     type: text
+    text_formatting: html
 - headquarters:
     label: Headquarters
     hint: Where is the company head office?
@@ -27,22 +28,27 @@ fields:
     label: Example of LocomotiveCMS websites
     hint: URLs to live websites powered by LocomotiveCMS
     type: text
+    text_formatting: html
 - the_problem:
     label: The problem
     hint: What issue did the company need to solve?
     type: text
+    text_formatting: html
 - the_solution:
     label: The solution
     hint: How did LocomotiveCMS solve the problem?
     type: text
+    text_formatting: html
 - the_results:
     label: The results
     hint: Describe the outcomes from implementing LocomotiveCMS
     type: text
+    text_formatting: html
 - the_strategy:
     label: The strategy
     hint: What factors made LocomotiveCMS a perfect companion and how was it implemented?
     type: text
+    text_formatting: html
 - navigation_image:
     label: Navigation image
     type: file

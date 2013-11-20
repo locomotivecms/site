@@ -12,7 +12,12 @@ editable_elements:
 
 {% block 'main' %}
 
-{% include 'page_head' %}
+%section#page-head
+  .inner-container
+    %h1
+      {% editable_short_text "page-head-title", priority: 1 %}
+      TERMS OF USE
+      {% endeditable_short_text %}
 
 {% block terms_of_use %}
 %section#main-generic
