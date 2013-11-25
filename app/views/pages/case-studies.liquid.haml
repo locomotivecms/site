@@ -1,0 +1,102 @@
+---
+title: First case study
+published: true
+listed: false
+---
+{% extends 'parent' %}
+
+{% block 'head' %}
+{{ 'case-studies' | javascript_tag }}
+{% endblock %}
+
+{% block 'main' %}
+
+{% unless page.templatized? %}
+{% assign case_study = contents.case_studies.first %}
+{% endunless %}
+
+%section#page-head
+  .inner-container
+    %h1
+      {% editable_short_text "title", priority: 10 %}
+      Case studies
+      {% endeditable_short_text %}
+
+#main-case-study
+  %aside{ :class => "sidebar desktop"}
+    #case-study-details
+      {% if case_study.company_name %}
+      %h3 Company name
+      %p
+        %a{ href: 'case_study.company_url' }  {{ case_study.company_name }}
+      {% endif %}
+      {% if case_study.company_description %}
+      %h3 Company description
+      {{ case_study.company_description }}
+      {% endif %}
+      {% if case_study.headquarters %}
+      %h3 Headquarters
+      %p {{ case_study.headquarters }}
+      {% endif %}
+      {% if case_study.cms_used %}
+      %h3 Previous/alternative CMS used
+      %p {{ case_study.cms_used }}
+      {% endif %}
+      {% if case_study.example_sites %}
+      %h3 Example of LocomotiveCMS websites:
+      {{ case_study.example_sites }}
+      {% endif %}
+
+  %article#case-study
+    {% assign carousel_height = 300 %}
+    {% assign carousel_width = 640 %}
+    {% capture carousel_style %}height: {{ carousel_height }}px; width: {{ carousel_width }}px;{% endcapture %}
+
+    {% if case_study.carousel_images.size > 0 %}
+    #carousel
+      %ul.bxslider{ style: "{{ carousel_style }}" }
+        {% for image in case_study.carousel_images %}
+        %li{ style: "{% if image.background %}background: {{ image.background }}{% endif %}" }
+          %img{ src: "{{ image.image.url }}", alt: "{{ image.alt }}"}
+        {% endfor %}
+    {% endif %}
+
+    .content
+      %h2 {{ case_study.title }}
+
+      {% if case_study.the_problem %}
+      %h3 The problem
+      {{ case_study.the_problem }}
+      {% endif %}
+      {% if case_study.the_solution %}
+      %h3 The solution
+      {{ case_study.the_solution }}
+      {% endif %}
+      {% if case_study.the_results %}
+      %h3 The results
+      {{ case_study.the_results }}
+      {% endif %}
+      {% if case_study.the_strategy %}
+      %h3 The strategy
+      {{ case_study.the_strategy }}
+      {% endif %}
+
+  {% if contents.case_studies.size > 1 %}
+  %nav#more-case-studies
+    %h2 More case studies
+
+    {% for more_study in contents.case_studies %}
+
+    {% if more_study._slug != case_study._slug %}
+    .more-case-study
+      {% link_to more_study %}
+      {{ more_study.navigation_image.url | resize: "120x95#" | image_tag }}
+      {% endlink_to %}
+    {% endif %}
+
+    {% endfor %}
+
+    .clearer
+
+  {% endif %}
+{% endblock %}

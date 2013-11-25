@@ -10,3 +10,7 @@
     _slug: demo-slide-3
     image: /samples/case-studies/slide3.jpg
     case_study: le-wattman
+- Demo slide 1 bis:
+    image: /samples/case-studies/upglobal.png
+    case_study: up-global
+    background: "#f00"

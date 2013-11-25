@@ -19,3 +19,7 @@ fields:
     label: Case study
     type: belongs_to
     class_name: case_studies
+- background:
+    label: Background color
+    type: string
+    hint: "Example: #000"

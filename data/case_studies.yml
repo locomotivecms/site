@@ -12,20 +12,46 @@
     the_results: <p>Happier customers and efficient coding!</p>
     the_strategy: <p>We use only Ruby language and for us choosing LocomotiveCMS is evident. First we are coding a proto w/ Wagon and providing a demo to our customers, then we improve the AD.</p>
     navigation_image: /samples/case-studies/logo.png
-- le WattMan2:
-    _slug: le-wattman2
-    title: 2 Happier customers and efficient coding!
+- Up global:
+    _slug: up-global
+    title: Up Global
     company_name: 2 le WattMan
-    company_url: http://lewattman.com/
-    company_description: "<p>Le Wattman is a digital agency founded in 2010, with a strong mission: through inspired, innovative and creative design and the use of cutting-edge technology we are able to build smart interfaces and enhance device efficiency.</p><p>With our new, unique and future-forward vision of the web, a vision based on efficiency, simplicity and our core values, we operate at all different levels on our clients' digital strategy: consulting and budgeting, creation of mobile web and extremely responsive websites, development of user-friendly mobile apps and development of specific technical tailor-made interfaces.</p>"
-    headquarters: Paris, France
-    cms_used: Wordpress / Refinery / Radiant / own CMS
-    example_sites: <p><a href="http://www.anthonyramet.com">http://www.anthonyramet.com</a><br><a href="http://www.praxy.fr">http://www.praxy.fr</a><br><a href="http://artbyblazejr.com/">http://artbyblazejr.com/</a></p>
+    company_url: http://www.up.co
+    company_description: "<p>The UP Global family of sites:</p>
+        <ul>
+        <li><a title='website using Locomotive' href='http://www.up.co/' target='_blank'><span style='line-height: 1.5em;'>up.co</span></a></li>
+        <li><a title='Example of Locomotive website' href='http://america.up.co/' target='_blank'><span style='line-height: 1.5em;'>america.up.co</span></a></li>
+        <li><a title='example of LocomotiveCMS website' href='http://europe.up.co/' target='_blank'><span style='line-height: 1.5em;'>europe.up.co</span></a></li>
+        <li><a title='multilingual locomotivecms site' href='http://latam.up.co/' target='_blank'><span style='line-height: 1.5em;'>latam.up.co</span></a></li>
+        </ul>
+        <p><a title='LocomotiveCMS website' href='http://www.swnext.co/' target='_blank'><span style='line-height: 1.5em;'>NEXT</span></a><br /><a title='A new site with LocomotiveCMS' href='http://www.swedu.co/' target='_blank'>SWEDU</a><br /><a title='Powered by Locomotive' href='http://www.globalstartupbattle.co/' target='_blank'>Global Startup Battle</a></p>
+        <p>&nbsp;</p>"
     the_problem: <p>It was difficult to boostrap and to maintain our own CMS.  For our customer, the first issue is to be able to modify their content EFFICIENTLY.</p>
     the_solution: <p>It's easy to propose LocomotiveCMS to our customer after a quick demo of front editing capabilities. And for our team the Wagon is a great tool for maintaining code through Git.</p>
     the_results: <p>Happier customers and efficient coding!</p>
     the_strategy: <p>We use only Ruby language and for us choosing LocomotiveCMS is evident. First we are coding a proto w/ Wagon and providing a demo to our customers, then we improve the AD.</p>
-    navigation_image: /samples/case-studies/logo.png
+    navigation_image: /samples/case-studies/upglobal.png
+    the_problem: "<div class='WordSection1'>
+        <p>Though we had been using Wordpress to allow our business managers to manage simple pages and contentbefore, we were finding some limitations expressing structured content that didn't fit within the Wordpress 'custom post type' paradigm. Moreover, none of our engineers were Wordpress experts and <strong>we were longing for a more delightful development environment that still worked for the rest of the organization beyond the engineering team</strong>.&nbsp;</p>
+        <p>In order of importance, the following issues were the criteria we used when we evaluated alternative CMS solutions:&nbsp;</p>
+        <ul>
+        <li><strong style='line-height: 1.5em;'>Custom content types </strong>- As we examined our upcoming projects, we knew we were going to need custom types to model events, people, and relationships among them all. This feature is something that Craft and Expression Engine also deliver, but custom models and relationship&nbsp;modeling are concepts that come quite naturally in the Rails environment.&nbsp;</li>
+        <li><strong style='line-height: 1.5em;'>Clean separation of concerns for engineering and content management </strong>- One of my biggest frustrations from Wordpress was exposing unnecessary engineering and implementation &nbsp;details to business users. I love the separation of concerns between Wagon and Locomotive CMS. I can manage all the Wagon files in Git and invite other engineers to collaborate without having to train them on the CMS. I love being able to work on the site with my preferred worklflow while still offering a simple, clean, and easy to understand back office for business users.</li>
+        <li><strong style='line-height: 1.5em;'>Open Source </strong>- Making technical decisions for a non-profit has caused me to pretty cost- conscious. The fact that Locomotive CMS has commited to an open source model is important because it allows for flexibility for its customers. It also means I as a software engineer can examine the code base, understand how things work, and customize it to suit our needs. In fact, I have submitted code to the project and have gotten to contribute back to it--which leads me to the next point...</li>
+        <li><strong style='line-height: 1.5em;'>Strong Community </strong>- The active developer community and Google Groups means that this project will be supported both by the project maintainers and those that have invested in the success of this project. The community is always what keeps these open source projects successful and continually improving. The Google Group is a great way to connect with other CMS maintainers who are experiencing successes and struggles alike, and the Github ecoystem is a great way to connect with developers who are adding features and working out bugs. I would have loved to see more activity in the IRC channel when I went, but I'm happy with what is there :)</li>
+        <li><strong style='line-height: 1.5em;'>Language Expertise </strong>- Our team has a strong grasp of JavaScript and Ruby, but not in PHP or Wordpress. The fact that Locomotive CMS is 'just Rails' means that the infrastructure is easier to understand and the issues are easier to troubleshoot. It also means I have many options to choose deployment environments that work for the kind of site we need to build. I have deployed Locomotive CMS to both Heroku and EC2, and have enjoyed familiar Rails test toolkits and build environments.&nbsp;</li>
+        </ul>
+        </div>
+        <p>Again, we had a pretty robust list of features that the perfect CMS would need to give us the ideal mix of flexibility, power, and simplicity, and <strong>LocomotiveCMS got me the most excited about each</strong>.</p>"
+    example_sites: "<p>The UP Global family of sites:</p>
+        <ul>
+        <li><a title='website using Locomotive' href='http://www.up.co/' target='_blank'><span style='line-height: 1.5em;'>up.co</span></a></li>
+        <li><a title='Example of Locomotive website' href='http://america.up.co/' target='_blank'><span style='line-height: 1.5em;'>america.up.co</span></a></li>
+        <li><a title='example of LocomotiveCMS website' href='http://europe.up.co/' target='_blank'><span style='line-height: 1.5em;'>europe.up.co</span></a></li>
+        <li><a title='multilingual locomotivecms site' href='http://latam.up.co/' target='_blank'><span style='line-height: 1.5em;'>latam.up.co</span></a></li>
+        </ul>
+        <p><a title='LocomotiveCMS website' href='http://www.swnext.co/' target='_blank'><span style='line-height: 1.5em;'>NEXT</span></a><br /><a title='A new site with LocomotiveCMS' href='http://www.swedu.co/' target='_blank'>SWEDU</a><br /><a title='Powered by Locomotive' href='http://www.globalstartupbattle.co/' target='_blank'>Global Startup Battle</a></p>
+        <p>&nbsp;</p>"
 - le WattMan3:
     _slug: le-wattman3
     title: 3 Happier customers and efficient coding!

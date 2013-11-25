@@ -94,8 +94,6 @@
     background: none
     background-color: $banner-bg
 
-
-
 // Shared container
 #main-generic
   +three-cols-grid
@@ -107,12 +105,18 @@
     #terms-of-use, #license, #privacy-policy
       +span-columns(2,3)
 
+aside.sidebar
+  ul
+    li
+      margin-bottom: 0px
+
 // Footer
 #footer
   color: $light-blue
   background-color: $medium-blue
   padding-top: 60px
   margin-top: $section-padding
+
   .inner-container
     +container
     .description
@@ -131,10 +135,14 @@
       .quick-links, .newsletter, .tweets
         margin-bottom: 20px
       .quick-links
-
         ul
           li
+            background: none
+            padding-left: 0px
+            margin: 0px
             line-height: 22px
+            color: $light-blue
+            font-size: 13px
             a:hover
               color: lighten($light-blue, 20)
               text-decoration: none
@@ -198,6 +206,6 @@
           padding-right: 30px
         .tweets
           float: left
-          width: 47% 
-        
+          width: 47%
+
 
