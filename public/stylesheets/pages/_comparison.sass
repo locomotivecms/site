@@ -1,7 +1,8 @@
 .comparison
   padding-top: 30px
   +container
-  header
+  header.desktop
+    display: none
     text-align: center
   .body
     +span-columns(2, 2)
@@ -20,6 +21,14 @@
       margin-top: 5px
       font-weight: 800
       font-size: 24px
+
+#comp_header
+  .inner-container
+    h3
+      font-weight: 800
+      margin-bottom: 0px
+      margin-top: 50px
+      text-align: center
 
 #conclusion
   .inner-container
@@ -42,17 +51,14 @@
         
 @media #{$desktop}
   .comparison
+    header.desktop
+      display: block
+    header.mobile
+      display: none
     .locomotive
       +span-columns(1, 2)
     .wordpress
       +span-columns(1 omega, 2)
-  #comp_header
-    .inner-container
-      h3
-        font-weight: 800
-        margin-bottom: 0px
-        margin-top: 50px
-        text-align: center
 
   #conclusion
     .inner-container

@@ -1,9 +1,12 @@
 %section.comparison
-  %header
+  %header.desktop
     %h1.underscored
       %span
         {{ comparison.icon.url | image_tag }}
         {{ comparison.name }}
+  %header.mobile
+    %h3
+      {{ comparison.name }}
   .body
     .locomotive
       %span.intro LocomotiveCMS
