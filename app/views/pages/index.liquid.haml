@@ -62,13 +62,12 @@ listed: false
             {% endeditable_short_text %}
         %a{ href: "/tour", class: "button" }
           GET STARTED
-
-    %section#home-image
       #shadow
-      .inner-container
+      .image-container
         .topbar
           Open Source CMS for Rails
         %img{ src: "{% editable_file 'big-screenshot', hint: 'Home screenshot, size: 980x430px', priority: 18 %}/samples/pages/home-tagline-screenshot.jpg{% endeditable_file %}", alt: "screenshot" }
+        
     %section#home-strip
       .inner-container
         #home-strip-content

@@ -17,8 +17,8 @@
     font-size: 14px
     text-align: center
 
-#home-image
-  display: none
+  .image-container
+    display: none
 
 #home-strip
   margin-top: 0px
@@ -123,8 +123,9 @@
 
 @media #{$desktop}
   #home-tagline
+    position: relative
     padding-top: 50px
-    padding-bottom: 440px
+    //padding-bottom: 440px
     background: url(/images/home_halo.png) bottom center no-repeat
     background-color: $banner-bg
     header
@@ -141,12 +142,6 @@
       display: block
       +big-button
       margin-top: 10px
-
-  #home-image
-    display: block
-    position: absolute
-    width: 100%
-    top: 536px
     #shadow
       width: 100%
       position: absolute
@@ -156,31 +151,26 @@
       height: 6px
       background: transparent
       +box-shadow( 0px -3px 4px rgba($fourth-black, 0.2))
-    .inner-container
+    .image-container
+      display: block
+      padding-top: 20px
       +four-cols-grid
-      position: relative
-      height: 150px
-      text-align: center
+      img
+        vertical-align: bottom
+        max-width: 100%
       .topbar
-        position: absolute
-        top: -271px
-        left: 20px
-        width: 940px
+        width: 100%
         height: 32px
         line-height: 32px
         font-family: arial
         font-size: 10px
         font-weight: 300
         color: $browser-text
+        text-align: center
         +text-shadow(0px 1px 0px rgba(255, 255, 255, 0.6))
         border-bottom: 1px solid $browser-border-bottom
         +border-top-radius(8px)
         +background-image( linear-gradient($browser-gradient-start, $browser-gradient-end) )
-      img
-        position: absolute
-        bottom: 0
-        left: 20px
-        width: 940px
 
   #home-strip
     background: url(/images/home-strip-bg.png) repeat-x top
