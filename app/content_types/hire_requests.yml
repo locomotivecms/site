@@ -1,0 +1,27 @@
+name: Hire Requests
+order_by: created_at
+slug: hire_requests
+label_field_name: email
+raw_item_template: "{{ entry.name }} - {{ entry.company_name }} - {{ entry.email }}"
+fields:
+- name:
+    label: Person Name
+    type: string
+- company_name:
+    label: Company Name
+    type: string
+- email:
+    label: Email
+    type: string
+- description:
+    label: Project Description
+    type: string
+- start:
+    label: Starting at
+    type: string
+- duration:
+    label: Duration of the project
+    type: string
+- budget:
+    label: Budget
+    type: string

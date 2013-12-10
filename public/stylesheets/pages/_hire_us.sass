@@ -1,0 +1,207 @@
+
+
+.hireus-container
+  
+  &.grey
+    background: $light-grey url(/images/hire_us/white-triangle.png) 50% 0 no-repeat
+    .inner-container
+      padding-top: 95px
+  
+  &.white
+    background: url(/images/hire_us/grey-triangle.png) 50% 0 no-repeat
+    .inner-container
+      padding-top: 95px
+    
+  .inner-container
+    +four-cols-grid
+    padding-top: 45px
+    h2
+      margin-top: 50px
+      margin-bottom: 50px
+      font-weight: bold
+      color: $vivid-light-blue
+      line-height: 68px
+      img
+        margin-right: 20px
+        vertical-align: middle
+      strong
+        font-weight: bold
+        color: $medium-blue
+      
+  .column
+    +span-columns(2, 4)
+    +nth-omega(2)
+    
+    &.image-container
+      text-align: center
+      img
+        margin-top: 15px
+    h3
+      line-height: 47px
+      font-size: 17px
+      background: url(/images/hire_us/case-header.png) 0 0 no-repeat
+      img
+        margin-right: 20px
+        vertical-align: top
+    ul
+      margin-bottom: 35px
+      li
+        background: url(/images/hire_us/dot.png) 20px 10px no-repeat
+        padding-left: 60px
+        
+    .accept-container
+      margin-top: 25px
+      padding-left: 60px
+      font-size: 25px
+      font-weight: 300
+      color: $light-blue
+      a
+        margin-top: 10px
+        +big-button
+        width: 100%
+  
+  .delimiter
+    +span-columns(4, 4)
+    margin-top: 70px
+    position: relative
+    text-align: center
+    .caption
+      color: $light-blue
+      font-size: 17px
+      position: relative
+      bottom: -15px      
+    img
+      vertical-align: bottom
+      position: relative
+      bottom: -25px
+      
+  .blue-plate
+    color: white
+    border-radius: 3px
+    font-size: 21px
+    font-weight: 600
+    line-height: 30px
+    background: $vivid-blue
+    padding: 10px 7px
+    margin-top: 5px
+    text-align: center
+    a:hover
+      color: inherit
+      text-decoration: none
+  
+  #form_wrap
+    overflow: hidden
+    position: relative
+    width: 602px
+    margin: 50px auto 0 auto
+    
+    &.open
+      form
+        height: 900px
+        margin-top: 50px
+    
+    .hire
+      padding-top: 20px
+      text-align: center
+      input
+        border: 0
+        +big-button
+    
+    &:before
+      content: ""
+      position: absolute
+      bottom: 128px
+      left: 0px
+      background: url(/images/hire_us/before.png)
+      width: 600px
+      height: 316px
+    
+    &:after
+      content: ""
+      position: absolute
+      bottom: 0px
+      left: 0
+      background: url(/images/hire_us/after.png)
+      width: 600px
+      height: 260px
+      
+    &.hide
+      &:after, &:before
+        display: none
+
+    form
+      background: #FFF
+      position: relative
+      overflow: hidden
+      //height: 800px
+      height: 250px
+      width: 540px
+      //margin-top: 50px
+      margin-top: 200px
+      margin-right: auto
+      margin-left: auto
+      padding: 20px
+      border: 1px solid #fff
+      +border-radius(4px)
+      +box-shadow(0px 0px 3px #9d9d9d, inset 0px 0px 27px #fff)
+      +transition(all 1s ease-in-out .3s)
+    label
+      margin-top: 11px
+      font-size: 16px
+      color: #B3ABA1
+      text-shadow: 0px 1px 0px #FFF
+      display: inline-block
+      padding-bottom: 3px
+    select
+      padding: 3px
+      margin: 0
+      +border-radius(4px)
+      +box-shadow(0 3px 0 #cccccc, 0 -1px white inset)
+      background: #f8f8f8
+      color: #888
+      border: none
+      outline: none
+      display: inline-block
+      -webkit-appearance: none
+      -moz-appearance: none
+      appearance: none
+      cursor: pointer
+    .select
+      position: relative
+      margin-top: 0px !important
+      &:after
+        content: '<>'
+        font: 13px "Consolas", monospace
+        color: #AAA
+        +transform(rotate(90deg))
+        right: 8px
+        top: 9px
+        padding: 0 0 2px
+        position: absolute
+        pointer-events: none
+      &:before
+        content: ''
+        right: 6px
+        top: 0px
+        width: 20px
+        height: 20px
+        position: absolute
+        pointer-events: none
+        display: block
+    input[type=text], textarea, select
+      font: 14px normal normal uppercase helvetica, arial, serif
+      color: #7c7873
+      background: none
+      width: 500px
+      height: 36px
+      padding: 0px 10px
+      margin: 0 0 3px 0
+      +border-radius(5px)
+      +box-shadow(inset 0px 0px 1px #726959)
+      border: 1px solid #f8f5f1
+    textarea
+      height: 80px
+      padding-top: 14px
+      resize: none
+      &:focus
+        background: rgba(255, 255, 255, 0.35)

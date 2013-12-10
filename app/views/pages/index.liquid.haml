@@ -33,11 +33,7 @@ listed: false
     %link{href: 'http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600,800', rel: 'stylesheet', type: 'text/css'}
     {{ 'screen' | stylesheet_tag }}
     {{ 'jquery.bxslider' | stylesheet_tag }}
-
-    {{ 'jquery-1.9.1.min' | javascript_tag }}
-    {{ 'bootstrap.min' | javascript_tag }}
-    {{ 'jquery.bxslider.min' | javascript_tag }}
-    {{ 'home' | javascript_tag }}
+    {{ 'application' |  javascript_tag }}
 
     {% include twitter %}
 
@@ -60,7 +56,7 @@ listed: false
             {% editable_short_text "title", priority: 21 %}
             What if you loved developing for your CMS as much as your clients loved using it?
             {% endeditable_short_text %}
-        %a{ href: "/tour", class: "button" }
+        %a{ href: "http://doc.locomotivecms.com/get-started/", class: "button" }
           GET STARTED
       #shadow
       .image-container
