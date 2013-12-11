@@ -10,143 +10,141 @@ position: 6
 
 %section#page-head
   .inner-container
-    %h1
-      {% editable_text "hire_us_title" %}
-      Can we hire you guys?
-      {% endeditable_text %}
+    {% editable_text "title" %}
+    %h1 Can we hire you guys?
+    {% endeditable_text %}
 
 %section.hireus-container
   .inner-container
+    {% editable_text "intro" %}
     %p
-      {% editable_text "hire_us_intro" %}
       Here at LocomotiveCMS, we commit most of our time to working on the CMS, because there is nothing we enjoy more than working on an awesome open source project that helps web developers everywhere. Due to LocomotiveCMS's ever growing popularity, we are often asked if we are available for hire. We may be able to assist with your project if it meets both of the following requirements.
-      {% endeditable_text %}
+    {% endeditable_text %}
+
+    {% block case_1 %}
+    {% editable_text "title" %}
     %h2
-      {{ 'images/hire_us/case1.png' | image_tag }}
-      {% editable_text "hire_us_case1_hdr" %}
+      %img{ src: '/samples/hire-us/case1.png' }
       We can only work for you
       %strong 5 days / month
-      {% endeditable_text %}
+    {% endeditable_text %}
 
     .inner-columns
       .column.image-container
-        {{ 'images/hire_us/case-img1.png' | image_tag }}
-    
+        %img{ src: '{% editable_file image %}/samples/hire-us/case-img1.png{% endeditable_file %}' }
+
       .column
+        {% editable_text text, rows: 15 %}
         %h3
-          {{ 'images/hire_us/locomotive-project.png' | image_tag }}
-          {% editable_text "hire_us_case1_h3_1" %}
+          %img{ src: '/samples/hire-us/locomotive-project.png' }
           Project exclusively related to LocomotiveCMS
-          {% endeditable_text %}
-        {% editable_text "hire_us_case1_list_1" %}
         %ul
           %li It could mean reviewing your LocomotiveCMS setup, training, developing new LocomotiveCMS features or other tasks specifically related to LocomotiveCMS
-        {% endeditable_text %}
-        
+
         %h3
-          {{ 'images/hire_us/short-project.png' | image_tag }}
-          {% editable_text "hire_us_case1_h3_2" %}
+          %img{ src: '/samples/hire-us/short-project.png' }
           Projects that don't last more than a few days
-          {% endeditable_text %}
-        {% editable_text "hire_us_case1_list_2" %}
         %ul
           %li
             Our team has limited availability and can only devote a handful of days each month to client projects
         {% endeditable_text %}
-            
+
         .accept-container
+          {% editable_text action %}
           Sounds Good!
-          {{ 'images/hire_us/arrow.png' | image_tag }}
+          %img{ src: '/samples/hire-us/arrow.png' }
           %br
           %a{href: "#want-to-hire"} I want to hire the LocomotiveCMS Team
+          {% endeditable_text %}
 
     .delimiter
       .caption
-        {% editable_text "hire_us_case1_doesnt_fit" %}
+        {% editable_text next %}
         Doesn't fit for me!
         {% endeditable_text %}
-      {{ 'images/hire_us/doesnt_fit_arrow.png' | image_tag }}
+
+      {{ 'hire_us/doesnt_fit_arrow.png' | theme_image_tag }}
+
+    {% endblock %}
 
 %section.hireus-container.grey
   .inner-container
+    {% block case_2 %}
+    {% editable_text intro %}
     %p
-      {% editable_text "hire_us_case2_intro" %}
       If your project isn't a good fit for the above requirements, don't worry: we can still help you! One benefit of running a popular open source Rails project like LocomotiveCMS is getting to meet some of the world's best web developers. After all,
-      {% endeditable_text %}
+    {% endeditable_text %}
+
     .blue-plate
-      {% editable_text "hire_us_case2_blue_plate" %}
+      {% editable_text question %}
       Where do great developers hang out if not the GitHub repositories of open source projects?
       {% endeditable_text %}
+
+    {% editable_text title %}
     %h2
-      {{ 'images/hire_us/case2.png' | image_tag }}
-      {% editable_text "hire_us_case2_header" %}
+      %img{ src: '/samples/hire-us/case2.png' }
       Find
       %strong best developer
-      in 
+      in
       %strong 24hrs
       FREE
-      {% endeditable_text %}
-      
+    {% endeditable_text %}
+
     .inner-columns
       .column
+        {% editable_text text, rows: 15 %}
         %h3
-          {{ 'images/hire_us/star.png' | image_tag }}
-          {% editable_text "hire_us_case2_h3_1" %}
+          %img{ src: '/samples/hire-us/star.png' }
           Hire our recommended best developers
-          {% endeditable_text %}
-          
-        {% editable_text "hire_us_case2_list_1" %}
+
         %ul
           %li Be it freelance / agency owner or generalists / specialists in fields across the web development
           %li We only recommend developers whom we trust and have previously hired to work on our own projects
           %li That's right: we did spend our own money with each and everyone of them so we know how much value they can bring to your company
           %li Please note: this service matches clients with high quality developers and is not a good match for those seeking the cheapest solution available
-        {% endeditable_text %}
-        
+
         %h3
-          {{ 'images/hire_us/medal.png' | image_tag }}
-          {% editable_text "hire_us_case2_h3_2" %}
+          %img{ src: '/samples/hire-us/medal.png' }
           Let's meet the best Rails developers
-          {% endeditable_text %}
-            
-        {% editable_text "hire_us_case2_list_1" %}
+
         %ul
           %li Whose quality of work has been validated by the LocomotiveCMS team
           %li Whose code you can review on their GitHub account
           %li Who are immediately available for hire
           %li Who will be in touch with you within 24 hours
-        {% endeditable_text %}
 
         %h3
-          {{ 'images/hire_us/up.png' | image_tag }}
-          {% editable_text "hire_us_case2_h3_3" %}
+          %img{ src: '/samples/hire-us/up.png' }
           We fully endorse them so you need not worry
-          {% endeditable_text %}
-          
-        {% editable_text "hire_us_case2_list_1" %}
+
         %ul
           %li Posting your job to a board (sometimes for a hefty fee) and then keep waiting for qualified responses
           %li Who are immediately available for hire
           %li Coosing a Rails developer with fantastic references but who actually turns out to be terrible
+
+        %br
+        %br
+
         {% endeditable_text %}
-        %br
-        %br
-          
+
       .column.image-container
-        {{ 'images/hire_us/case-img2.png' | image_tag }}
-    
+        %img{ src: '{% editable_file image %}/samples/hire-us/case-img2.png{% endeditable_file %}' }
+
+    {% endblock %}
+
 %section.hireus-container.white
   .inner-container
+    {% block form %}
     .blue-plate
       %a#want-to-hire
         {% editable_text "hire_us_agree" %}
         Fill in the form to get in touch with best Rails developer within 24hrs
         {% endeditable_text %}
-        
+
     #form_wrap
       %form{method: "POST", action: "{{contents.hire_requests.public_submission_url}}"}
         {% csrf_param %}
-        
+
         {% if customer_message.errors %}
         %p The following errors occured:
         %ul
@@ -154,7 +152,7 @@ position: 6
           %li {{error[0] | capitalize}} -  {{error[1]}}
           {% endfor %}
         {% endif %}
-        
+
         %label{for: "r_description"} Short description of your project
         %textarea#r_description{name: "content[description]", value: "{{ hire_request.description }}"}
         %label{for: "r_start"} How soon should the project start?
@@ -166,15 +164,15 @@ position: 6
         %label{for: "r_duration"} Estimated length of project
         %label#r_duration.select
           %select
-            %option 2 -3 Weeks
+            %option 2 - 3 Weeks
             %option Aprrox Month
             %option Within 2 Months
         %label{for: "r_budget"} Estimated Budget
         %label#r_budget.select
           %select
-            %option Around $3000 - $5000
-            %option Around $1000 - $2000
-            %option Less than $1000
+            %option Less than $5000
+            %option Between $5000 - $15000
+            %option More than $15000
         %label{for: "r_name"} Name
         %input#r_name{name: "content[name]", value: "{{ hire_request.name }}", type: "text"}
         %label{for: "r_company_name"} Company name
@@ -183,5 +181,7 @@ position: 6
         %input#r_email{name: "content[email]", value: "{{ hire_request.email }}", type: "text"}
         .hire
           %input{type: "submit", value: "Hire the best developer in 24hrs"}
+
+    {% endblock %}
 
 {% endblock %}
