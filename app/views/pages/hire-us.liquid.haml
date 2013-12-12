@@ -155,7 +155,7 @@ position: 6
 
         %label{for: "r_description"} Short description of your project
         %textarea#r_description{name: "content[description]", value: "{{ hire_request.description }}"}
-        %label{for: "r_start"} How soon should the project start?
+        %label{for: "r_start"} When will the project start?
         %input#r_start{name: "content[start]", value: "{{ hire_request.start }}", type: "text"}
         %label{for: "r_duration"} Estimated length of project
         %input#r_duration{name: "content[duration]", value: "{{ hire_request.duration }}", type: "text"}
@@ -163,8 +163,8 @@ position: 6
         %label#r_budget.select
           %select{name: "content[budget]", value: "{{ hire_request.budget }}"}
             %option Less than $5000
-            %option Between $5000 - $15000
-            %option More than $15000
+            %option $5000 - $15000
+            %option $15000 and up
         %label{for: "r_name"} Name
         %input#r_name{name: "content[name]", value: "{{ hire_request.name }}", type: "text"}
         %label{for: "r_company_name"} Company name
@@ -172,7 +172,7 @@ position: 6
         %label{for: "r_email"} Email address
         %input#r_email{name: "content[email]", value: "{{ hire_request.email }}", type: "text"}
         .hire
-          %input{type: "submit", value: "Hire the best developer in 24hrs"}
+          %input{type: "submit", value: "Hire the best Rails developers in 24 hours"}
 
     {% endblock %}
 
