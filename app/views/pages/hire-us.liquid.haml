@@ -16,17 +16,19 @@ position: 6
 
 %section.hireus-container
   .inner-container
-    {% editable_text "intro" %}
-    %p
-      Here at LocomotiveCMS, we commit most of our time to working on the CMS, because there is nothing we enjoy more than working on an awesome open source project that helps web developers everywhere. Due to LocomotiveCMS's ever growing popularity, we are often asked if we are available for hire. We may be able to assist with your project if it meets both of the following requirements.
-    {% endeditable_text %}
 
+    
     {% block case_1 %}
     {% editable_text "title" %}
     %h2
       %img{ src: '/samples/hire-us/case1.png' }
       We can only work for you
       %strong 5 days / month
+    {% endeditable_text %}
+    
+    {% editable_text "intro" %}
+    %p
+      Here at LocomotiveCMS, we commit most of our time to working on the CMS, because there is nothing we enjoy more than working on an awesome open source project that helps web developers everywhere. Due to LocomotiveCMS's ever growing popularity, we are often asked if we are available for hire. We may be able to assist with your project if it meets both of the following requirements.
     {% endeditable_text %}
 
     .inner-columns
@@ -141,17 +143,14 @@ position: 6
         %p Fill in the form to get in touch with best Rails developer within 24hrs
         {% endeditable_text %}
 
-    #form_wrap
-      %form{method: "POST", action: "{{contents.hire_requests.public_submission_url}}"}
+    #form_wrap.never_open
+      %form{method: "POST", action: "{{contents.hire_requests.public_submission_url}}.json"}
+        .success_container
+          Thanks a lot for reaching out to us. We'll be in touch within the next 24 hours.
+        
         {% csrf_param %}
-
-        {% if customer_message.errors %}
-        %p The following errors occured:
-        %ul
-          {% for error in customer_message.errors %}
-          %li {{error[0] | capitalize}} -  {{error[1]}}
-          {% endfor %}
-        {% endif %}
+        %input{type: "hidden", value: "/hire-us", name: "success_callback"}
+        %input{type: "hidden", value: "/hire-us#want-to-hire", name: "error_callback"}
 
         %label{for: "r_description"} Short description of your project
         %textarea#r_description{name: "content[description]", value: "{{ hire_request.description }}"}
@@ -160,17 +159,19 @@ position: 6
         %label{for: "r_duration"} Estimated length of project
         %input#r_duration{name: "content[duration]", value: "{{ hire_request.duration }}", type: "text"}
         %label{for: "r_budget"} Estimated Budget
-        %label#r_budget.select
-          %select{name: "content[budget]", value: "{{ hire_request.budget }}"}
-            %option Less than $5000
-            %option Between $5000 - $15000
-            %option More than $15000
+        %select#r_budget{name: "content[budget]", value: "{{ hire_request.budget }}"}
+          %option Less than $5000
+          %option Between $5000 - $15000
+          %option More than $15000
         %label{for: "r_name"} Name
         %input#r_name{name: "content[name]", value: "{{ hire_request.name }}", type: "text"}
         %label{for: "r_company_name"} Company name
         %input#r_company_name{name: "content[company_name]", value: "{{ hire_request.company_name }}", type: "text"}
         %label{for: "r_email"} Email address
         %input#r_email{name: "content[email]", value: "{{ hire_request.email }}", type: "text"}
+
+        .errors_container
+        
         .hire
           %input{type: "submit", value: "Hire the best developer in 24hrs"}
 

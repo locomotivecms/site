@@ -2,17 +2,19 @@ name: Hire Requests
 order_by: created_at
 slug: hire_requests
 label_field_name: email
-raw_item_template: "{{ entry.name }} - {{ entry.company_name }} - {{ entry.email }}"
+raw_item_template: "{{ entry.name }} {{ entry.company_name }} {{ entry.email }}"
 fields:
 - name:
     label: Person Name
     type: string
+    required: true
 - company_name:
     label: Company Name
     type: string
 - email:
     label: Email
     type: string
+    required: true
 - description:
     label: Project Description
     type: string
