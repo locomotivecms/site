@@ -17,7 +17,7 @@ position: 6
 %section.hireus-container
   .inner-container
 
-    
+
     {% block case_1 %}
     {% editable_text "title" %}
     %h2
@@ -25,7 +25,7 @@ position: 6
       We can only work for you
       %strong 5 days / month
     {% endeditable_text %}
-    
+
     {% editable_text "intro" %}
     %p
       Here at LocomotiveCMS, we commit most of our time to working on the CMS, because there is nothing we enjoy more than working on an awesome open source project that helps web developers everywhere. Due to LocomotiveCMS's ever growing popularity, we are often asked if we are available for hire. We may be able to assist with your project if it meets both of the following requirements.
@@ -147,7 +147,7 @@ position: 6
       %form{method: "POST", action: "{{contents.hire_requests.public_submission_url}}.json"}
         .success_container
           Thanks a lot for reaching out to us. We'll be in touch within the next 24 hours.
-        
+
         {% csrf_param %}
         %input{type: "hidden", value: "/hire-us", name: "success_callback"}
         %input{type: "hidden", value: "/hire-us#want-to-hire", name: "error_callback"}
@@ -171,9 +171,9 @@ position: 6
         %input#r_email{name: "content[email]", value: "{{ hire_request.email }}", type: "text"}
 
         .errors_container
-        
+
         .hire
-          %input{type: "submit", value: "Hire the best developer in 24hrs"}
+          %input{type: "submit", value: "{% editable_text submit_button, format: raw %}Hire the best Rails developers in 24 hours{% endeditable_text %}"}
 
     {% endblock %}
 
