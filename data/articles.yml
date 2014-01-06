@@ -24,7 +24,61 @@
     _permalink: post-2
     posted_at: 2011-07-22
     excerpt: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam, velit eget egestas facilisis, enim diam feugiat enim, vitae lacinia erat nunc at lacus. Ut ornare elit consectetur augue ultrices ultrices. Proin ultrices, mauris non ornare rhoncus, elit ligula sagittis risus, euismod tempor est augue vitae justo. Nunc non dui nec urna cursus rutrum. Duis ante lectus, tincidunt ac commodo eget, varius et tellus. Vestibulum erat enim, mollis molestie consectetur sed, molestie eget mi. Morbi consectetur semper lectus sed lacinia. Curabitur a libero arcu, sed hendrerit orci. Sed commodo pellentesque arcu eget sagittis.</p>"
-    body: '<p>Great news! So many of you have been looking to connect in real time with the Locomotive team and community, we really wanted to create a centralized place for it.</p>'
+    body: |
+      <p><img src="http://www.locomotivecms.com/sites/518d01737d0cca6914003b78/assets/52b461487d0cca8be2008bd8/restaurant-websites-verticals.jpg" alt="" width="644" height="288" /></p>
+
+      <p>The thing about using any CMS is that on one hand they need to be general and flexible enough that they can be used by a wide range of developers with all kinds of different projects and disparate development styles.</p>
+      <p>But on the other hand, developers want their CMS to fit their needs exactly. For example, if I use <a href="http://www.getbootstrap.com">Bootstrap</a> and <a href="http://www.jquery.com">jQuery</a> for every project, it get kind of tedious, starting every project by going through all the same motions get Boostrap and jQuery setup.</p>
+      <p>Further, if I make restaurant websites for a living, and 99.9% of websites I make include a <em>Location</em> page, a <em>Menu</em> page, a <em>Contact Page</em>, and the usual <em>Privacy Policy</em> and <em>Terms of Use</em> pages, why should I have to setup those pages every single time? As a developer, it would be a lot easier for me if the CMS just came with that stuff.</p>
+      <p>Well, LocomotiveCMS has a feature to solve this very problem. So, put down your copy-paste-edit routine and get ready to learn about site templates.</p>
+      <h3 id="built-in-templates">Built-in Templates</h3>
+      <p>Before we get into making your own site templates, did you know that LocomotiveCMS comes with a few templates already? Run the following command to get a list of available templates:</p>
+      <pre><code>$ wagon list_templates
+      blank - A blank LocomotiveCMS site with the minimal files.
+      bootstrap2 - A LocomotiveCMS site with Twitter Bootstrap (v2.3.2) and Font Awesome (v3.2.1).
+      bootstrap3 - A LocomotiveCMS site powered by Twitter bootstrap (v3.0.0).
+      foundation - A LocomotiveCMS site powered by Foundation (v4.3.2).
+      unzip - Unzip a local or remote (http, https, ftp) zipped LocomotiveCMS site.
+      </code></pre>
+      <p>Cool. As you can see, LocomotiveCMS comes with a few built-in templates, for some really common requirements: people making a site with <a href="http://www.getbootstrap.com">Bootstrap</a> or <a href="http://foundation.zurb.com">Zurb Foundation</a>. To make a new site with one of these nifty templates just use the <code>--template</code> option when you run <code>wagon init</code>.</p>
+      <pre><code>$ wagon init my_new_site --template=bootstrap3
+      </code></pre>
+      <p>Penny pinchers can save another nine characters by using the shorter form shown below.</p>
+      <pre><code>$ wagon init my_new_site -t bootstrap3
+      </code></pre>
+      <p>That was easy, don't you think?</p>
+      <h3 id="create-your-own-site-template">Create your own site template</h3>
+      <p>Of course, LocomotiveCMS can't include a site template for every possible developer work flow and every possible niche of site. Instead, it includes a feature to let you create your own site templates.</p>
+      <p>This feature is hot off the press, so you'll need Wagon version 1.4 or higher.</p>
+      <pre><code>$ wagon version
+      1.4.0
+      </code></pre>
+      <p>Not up to date? Run <code>gem update</code>.</p>
+      <p>First, we need to create a directory that will hold the files we want to serve as a template. To make this guide as short as possible, I'm just going to start are template off using the <code>wagon init</code> command.</p>
+      <pre><code>$ mkdir ~/wagon_generators
+      $ cd ~/wagon_generators
+      $ wagon init my_template
+      </code></pre>
+      <p>Now, add anything you want in the template to the <code>my_template</code> directory. You can change the <code>index.liquid</code> file, add snippets, add javascripts, or even add content types. Once the site looks how you would like your template to be, create a new file, <code>~/wagon_generators/my_template.rb</code>, with the following contents.</p>
+      <pre><code>class MyTemplate &lt; Locomotive::Wagon::Generators::Site::Base
+
+        def self.source_root
+          File.join(File.dirname(__FILE__), 'my_template')
+        end
+
+      end
+
+      Locomotive::Wagon::Generators::Site.register(:my_template, MyTemplate, %{
+        A simple example of a site generator.
+      })
+      </code></pre>
+      <p>And your template is now ready to go. Just use the <code>--lib</code> option when you run <code>wagon init</code>.</p>
+      <pre><code>$ wagon list_templates --lib=~/wagon_generators/my_template.rb
+
+      $ wagon init new_site --lib=~/wagon_generators/my_template.rb
+      </code></pre>
+      <p>Well, that's the basics of using and creating templates. But actually, there's lots more you can do when creating your own site templates, like having the <code>wagon init</code> command prompt for information you use to customize the created site. So head on over to the <a href="http://doc.locomotivecms.com/guides/create-site-template">creating site templates documentation</a> to get the whole story.</p>
+      <p>Happy holidays and happy coding!</p>'
 - Post 3:
     author: Didier Lafforgue
     excerpt: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam, velit eget egestas facilisis, enim diam feugiat enim, vitae lacinia erat nunc at lacus. Ut ornare elit consectetur augue ultrices ultrices. Proin ultrices, mauris non ornare rhoncus, elit ligula sagittis risus, euismod tempor est augue vitae justo. Nunc non dui nec urna cursus rutrum. Duis ante lectus, tincidunt ac commodo eget, varius et tellus. Vestibulum erat enim, mollis molestie consectetur sed, molestie eget mi. Morbi consectetur semper lectus sed lacinia. Curabitur a libero arcu, sed hendrerit orci. Sed commodo pellentesque arcu eget sagittis.</p>"
