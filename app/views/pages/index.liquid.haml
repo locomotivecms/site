@@ -63,7 +63,7 @@ listed: false
         .topbar
           Open Source CMS for Rails
         %img{ src: "{% editable_file 'big-screenshot', hint: 'Home screenshot, size: 980x430px', priority: 18 %}/samples/pages/home-tagline-screenshot.jpg{% endeditable_file %}", alt: "screenshot" }
-        
+
     %section#home-strip
       .inner-container
         #home-strip-content
@@ -202,3 +202,5 @@ listed: false
         s.parentNode.insertBefore(dc, s);
       })();
     {% google_analytics 'UA-17355243-1' %}
+
+    {% block foot %}{% endblock %}

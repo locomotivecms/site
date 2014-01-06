@@ -35,3 +35,13 @@ position: 2
   {% include 'disqus' %}
 
 {% endblock %}
+
+{% block foot %}
+
+{{ 'highlight.pack' | javascript_tag }}
+
+%script
+  hljs.initHighlightingOnLoad();
+
+{% endblock %}
+
