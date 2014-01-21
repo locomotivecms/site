@@ -1,0 +1,161 @@
+.landing-dark
+  background-color: $dark-blue
+  color: white
+
+.landing-medium
+  background: $light-grey
+
+.landing-medium, .landing-light
+  h1
+    color: $dark-blue
+
+.landing
+  .three-cols
+    +three-cols-grid
+
+  .two-cols
+    +four-cols-grid
+      
+
+.landing
+  .inner-container
+    padding-top: 65px
+    padding-bottom: 80px
+    header
+      padding-bottom: 50px
+      h1
+        font-size: 45px
+        padding-bottom: 20px
+        margin-bottom: 0px
+        border-bottom: 2px solid $medium-blue
+      h3
+        font-size: 18px
+        text-align: right
+        font-weight: 300
+        color: $light-blue
+
+    .picture
+      display: none
+    .text
+      h4
+        color: white
+      span
+        font-size: 15px
+        font-weight: 300
+      ul
+        margin: 15px 0 35px 0
+        li
+          padding-left: 0
+          margin-bottom: 5px
+          color: $light-blue
+          font-weight: 300
+          background: none
+          list-style: circle inside
+    .item
+      padding-bottom: 30px
+      .header
+        clear: both
+        img
+          margin-right: 15px
+          float: left
+          border: 5px solid $medium-blue
+        .title
+          font-size: 18px
+          font-weight: 800
+        .twitter
+          font-size: 13px
+          font-weight: 300
+          color: $light-blue
+      .body
+        margin-top: 10px
+        
+    section.company-crew-person
+      //+span-columns(4, 4)
+      header
+        padding-bottom: 0px
+        h1
+          font-size: 18px
+          padding-bottom: 5px
+          margin-bottom: 0px
+          border-bottom: 0
+
+form.getting-guide
+  text-align: center
+  button
+    outline: 0
+    border: 0
+    +big-red-button
+  .input-left, .input-right
+    padding-top: 5px
+    text-align: left
+    padding-bottom: 20px
+    input
+      font-size: 16px
+      font-weight: 300
+      width: 100%
+      border: 5px solid $medium-blue
+      +box-shadow(inset 1x 2px 15px $light-blue)
+      padding: 8px 10px
+      margin: 0 0 10px 0
+      &:first-child
+        margin-right: 15px
+  .policy
+    color: $medium-blue
+    padding-top: 10px
+
+.dont-forget
+  display: block
+  margin: 0 0 0 10px
+  line-height: 50px
+  text-transform: uppercase
+  iframe
+    margin: 0 5px
+    vertical-align: middle
+  &:before
+    position: relative
+    top: 15px
+    margin-right: 10px
+    color: $medium-blue
+    content: "&"
+    font-size: 50px
+
+@media #{$mobile}
+  .landing
+    .company-crew-person
+      +span-columns(4 omega, 4)
+  
+@media #{$desktop}
+  .landing
+    .three-cols
+      .col
+        +span-columns(1, 3)
+        +nth-omega(3)
+    .two-cols
+      .col
+        +span-columns(2, 4)
+        +nth-omega(2)
+
+    .picture
+      display: block !important
+      padding-top: 27px
+      img
+        max-width: 100%
+    
+    .dont-forget
+      display: inline
+      
+    form.getting-guide
+      input
+        width: 100% 
+      .input-container
+        +clearfix
+        .input-left
+          +span-columns(2, 4)
+        .input-right
+          +span-columns(2 omega, 4)
+    
+    .company-crew-person
+      float: left !important
+      +nth-omega(2)
+      +span-columns(2, 4)
+    

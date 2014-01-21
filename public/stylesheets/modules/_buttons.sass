@@ -6,6 +6,13 @@
   font-weight: bold
   text-transform: uppercase
 
+=big-red-button
+  +red-button
+  padding: 17px 25px 16px 25px
+  font-size: 14px
+  font-weight: bold
+  text-transform: uppercase
+
 =orange-rounded-button
   +rounded-button
   background: $orange
@@ -63,6 +70,23 @@
     background: darken($orange, 2%)
     +transform(translate(0, 3px))
     +box-shadow(0px 1px 0px $orange-border)
+
+=red-button
+  display: inline-block
+  color: #fff
+  text-align: center
+  cursor: pointer
+  background: $red
+  +border-radius(5px)
+  +box-shadow(0px 4px 0px $red-border)
+
+  &:hover
+    +background-image(linear-gradient($red, lighten($red, 7%)))
+    text-decoration: none
+  &:active
+    background: darken($red, 2%)
+    +transform(translate(0, 3px))
+    +box-shadow(0px 1px 0px $red-border)
 
 =rounded-button
   display: inline-block

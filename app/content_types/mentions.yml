@@ -1,0 +1,33 @@
+name: Testimonials for Landing
+slug: mentions
+description: Testimonials about LocomotiveCMS for Landing page
+label_field_name: name
+order_by: manually
+
+fields:
+- name:
+    label: Name
+    type: string
+    required: true
+    hint: Name
+    localized: false
+
+- twitter:
+    label: Twitter
+    type: string
+    hint: Twitter account
+
+- body:
+    label: Body
+    type: text
+    required: true
+    hint: Mention full text
+    localized: false
+    text_formatting: text
+
+- picture:
+    label: Picture
+    type: file
+    required: false
+    hint: Image (from twitter)
+    localized: false

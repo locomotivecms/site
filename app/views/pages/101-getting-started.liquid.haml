@@ -1,0 +1,119 @@
+---
+title: "LocomotiveCMS 101: getting started"
+published: true
+listed: false
+position: 99
+---
+{% extends 'index' %}
+
+{% block 'nav' %}
+%nav#main-nav
+  .inner-container
+    %a.logo_container{ href: "/" }
+      %span.logo LOCOMOTIVECMS
+{% endblock %}
+
+{% block 'main' %}
+%section.landing.landing-dark
+  .inner-container.two-cols
+    %header
+      %h1 LocomotiveCMS 101:
+      %h3 All you need to know to start creating your first LocomotiveCMS website
+
+    
+    .col.text
+      %h4 What you'll learn!
+
+      %ul
+        %li What is so special about LocomotiveCMS and why use it
+        %li The LocomotiveCMS workflow
+        %li How to install Wagon and deploy to an Engine
+        %li Where to host your websites
+        %li What to do next to become a LocomotiveCMS veteran in no time
+      
+      %h4 Download your guide
+      %form.getting-guide{action: "http://locomotivecms.us6.list-manage2.com/subscribe/post", method: "POST"}
+        %input{type: "hidden", name: "u", value: "bfa2c3352a779507c3649b899"}
+        %input{type: "hidden", name: "id", value: "b4999f0ce6"}
+        .input-container
+          .input-left
+            %input#MERGE0{type: "email", autocapitalize: "off", autocorrect: "off", name: "MERGE0", size: "25", placeholder: "Email", value: ""}
+          .input-right
+            %input#MERGE1{type: "text", name: "MERGE1", size: "25", placeholder: "Name", value: ""}
+        .button-container
+          %button Read now. It's free
+        .policy
+          We won't send you spam.
+          %br
+          Unsubscribe at any time.
+
+    .col.picture
+      {{ '/samples/101-getting-started/book.png' | image_tag }}
+
+
+%section.landing.landing-medium
+  .inner-container.three-cols
+    %header
+      %h1 Testimonials
+      %h3 What successful developers and designers say about LocomotiveCMS
+
+    {% for mention in contents.mentions limit:3 %}
+    .item.col
+      .header
+        {{ mention.picture.url | resize: "58x58" | image_tag }}
+        .title
+          {{ mention.name }}
+        .twitter
+          {{ mention.twitter }}
+      .body
+        {{ mention.body }}
+        
+        
+    {% endfor %}
+    
+
+%section.landing.landing-light
+  .inner-container.two-cols
+    %header
+      %h1 Written by the core team
+      %h3 Who knows LocomotiveCMS better than its creators?
+    
+    {% with_scope name: "Didier Lafforgue" %}
+    {% assign didier = contents.crew.first %}
+    {% endwith_scope %}
+
+    {% with_scope name: "Jared Lewis" %}
+    {% assign jared = contents.crew.first %}
+    {% endwith_scope %}
+    
+    {% include 'company_person' with person: didier %}
+    {% include 'company_person' with person: jared %}
+
+
+%section.landing.landing-dark
+  .inner-container.two-cols
+    .text
+      %h4 So what are you waiting for?
+      %form.getting-guide{action: "http://locomotivecms.us6.list-manage2.com/subscribe/post", method: "POST"}
+        %input{type: "hidden", name: "u", value: "bfa2c3352a779507c3649b899"}
+        %input{type: "hidden", name: "id", value: "b4999f0ce6"}
+        .input-container
+          .input-left
+            %input#MERGE0{type: "email", autocapitalize: "off", autocorrect: "off", name: "MERGE0", size: "25", placeholder: "Email", value: ""}
+          .input-right
+            %input#MERGE1{type: "text", name: "MERGE1", size: "25", placeholder: "Name", value: ""}
+        .button-container
+          %button Get your book
+          %span.dont-forget
+            Don't forget to
+            %a{href: "https://twitter.com/share", class: "twitter-share-button", data: {url: "http://locomotivecms.com/101-getting-started", text: "LocomotiveCMS 101: learn the basics and start developing your websites with our platform!", via: "locomotivecms", size: "large", count: "none"}}
+            about it
+            :javascript
+              !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+        .policy
+          We won't send you spam. Unsubscribe at any time.
+      
+{% endblock %}
+
+{% block 'footer' %}
+{% endblock %}

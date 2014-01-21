@@ -46,7 +46,9 @@ listed: false
     {% inline_editor %}
 
   %body{ data: { spy: 'scroll', target: 'nav.subnav' } }
+    {% block 'nav' %}
     {% include 'nav' %}
+    {% endblock %}
 
     {% block 'main' %}
     %section#home-tagline
@@ -186,9 +188,10 @@ listed: false
           {% endfor %}
 
     {% endblock %}
-
+    {% block footer %}
     {% include "footer" %}
-
+    {% endblock %}
+    
     :javascript
       var _dcq = _dcq || [];
       var _dcs = _dcs || {};
@@ -202,5 +205,4 @@ listed: false
         s.parentNode.insertBefore(dc, s);
       })();
     {% google_analytics 'UA-17355243-1' %}
-
     {% block foot %}{% endblock %}
