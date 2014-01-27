@@ -54,8 +54,7 @@ position: 99
 %section.landing.landing-medium
   .inner-container.three-cols
     %header
-      %h1 Testimonials
-      %h3 What successful developers and designers say about LocomotiveCMS
+      %h1 What successful developers and designers say
 
     {% for mention in contents.mentions limit:3 %}
     .item.col
@@ -76,7 +75,6 @@ position: 99
   .inner-container.two-cols
     %header
       %h1 Written by the core team
-      %h3 Who knows LocomotiveCMS better than its creators?
     
     {% with_scope name: "Didier Lafforgue" %}
     {% assign didier = contents.crew.first %}
