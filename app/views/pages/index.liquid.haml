@@ -53,18 +53,13 @@ listed: false
     {% block 'main' %}
     %section#home-tagline
       .inner-container
-        %header
-          %h1
-            {% editable_short_text "title", priority: 21 %}
-            What if you loved developing for your CMS as much as your clients loved using it?
-            {% endeditable_short_text %}
-        %a{ href: "http://doc.locomotivecms.com/get-started/", class: "button" }
-          GET STARTED
-      #shadow
-      .image-container
-        .topbar
-          Open Source CMS for Rails
-        %img{ src: "{% editable_file 'big-screenshot', hint: 'Home screenshot, size: 980x430px', priority: 18 %}/samples/pages/home-tagline-screenshot.jpg{% endeditable_file %}", alt: "screenshot" }
+        %h1
+          {% editable_short_text "title", priority: 21 %}
+          What if you loved developing for your CMS as much as your clients loved using it?
+          {% endeditable_short_text %}
+        .button
+          %a{ href: "/101-getting-started/", class: "button" }
+            GET STARTED
 
     %section#home-strip
       .inner-container
@@ -77,9 +72,6 @@ listed: false
             {% editable_short_text "first-line", priority: 17 %}
             LocomotiveCMS is designed to save your time and help you focus on what matters: front-end technology, standard development process and no-learning time for your client.
             {% endeditable_short_text %}
-
-        %a{ href: "http://doc.locomotivecms.com/get-started/what-is-locomotivecms", class: "button" }
-          Get started
 
     {% block features %}
     %section#home-columns

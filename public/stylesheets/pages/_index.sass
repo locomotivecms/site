@@ -1,22 +1,20 @@
 #home-tagline
   background-color: $banner-bg
   color: white
+  padding-top: 30px
+  padding-bottom: 30px
   .inner-container
     +four-cols-grid
-  header
-    +span-columns($total-columns omega, $total-columns)
     h1
+      text-align: center
+      margin-top: 0px
       font-size: 29px
-      line-height: 34px
-      color: white
-  .button
-    display: none
-  #try-out
-    +span-columns($total-columns omega, $total-columns)
-    margin: 25px 0 25px 0
-    font-size: 14px
-    text-align: center
-
+      line-height: 40px
+      +text-shadow(0px 2px 0px black)
+    .button
+      text-align: center
+      a
+        +big-button
   .image-container
     display: none
 
@@ -125,62 +123,20 @@
   #home-tagline
     position: relative
     padding-top: 50px
-    //padding-bottom: 440px
-    background: url(/images/home_halo.png) bottom center no-repeat
+    padding-bottom: 40px
+    background: url(/images/home_halo_new.jpg) 50% 0% no-repeat
     background-color: $banner-bg
-    header
-      +span-columns(3, 4)
-      h1
-        margin-top: 0px
-        font-size: 29px
-        line-height: 40px
-        +text-shadow(0px 2px 0px black)
-    .button,
-    #try-out
-      +span-columns(1 omega, 4)
-    .button
-      display: block
-      +big-button
-      margin-top: 10px
-    #shadow
-      width: 100%
-      position: absolute
-      z-index: 99
-      bottom: -6px
-      left: 0
-      height: 6px
-      background: transparent
-      +box-shadow( 0px -3px 4px rgba($fourth-black, 0.2))
-    .image-container
-      display: block
-      padding-top: 20px
-      +four-cols-grid
-      img
-        vertical-align: bottom
-        max-width: 100%
-      .topbar
-        width: 100%
-        height: 32px
-        line-height: 32px
-        font-family: arial
-        font-size: 10px
-        font-weight: 300
-        color: $browser-text
-        text-align: center
-        +text-shadow(0px 1px 0px rgba(255, 255, 255, 0.6))
-        border-bottom: 1px solid $browser-border-bottom
-        +border-top-radius(8px)
-        +background-image( linear-gradient($browser-gradient-start, $browser-gradient-end) )
 
   #home-strip
     background: url(/images/home-strip-bg.png) repeat-x top
     .inner-container
       padding-bottom: 10px
     #home-strip-content
-      +span-columns(3, $total-columns)
       header
         float: left
-        width: 27%
+        //text-align: right
+        //padding-right: 70px
+        width: 33%
         background: url(/images/home_accolade.png) no-repeat
         background-position: 90% center
 
@@ -189,7 +145,7 @@
         font-size: 17px
         line-height: 21px
         float: left
-        width: 73%
+        width: 67%
     .button
       +span-columns(1 omega, $total-columns)
 
@@ -197,10 +153,8 @@
     padding-top: 25px
     padding-bottom: 50px
     .inner-container
-      padding-top: 25px
-
       .home-column
-        +span-columns(2, $total-columns)
+        +span-columns(2, 4)
         +nth-omega(2)
         img
           float: left
