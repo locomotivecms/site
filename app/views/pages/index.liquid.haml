@@ -45,6 +45,8 @@ listed: false
 
     {% inline_editor %}
 
+    {% include "kiss_metrics" %}
+
   %body{ data: { spy: 'scroll', target: 'nav.subnav' } }
     {% block 'nav' %}
     {% include 'nav' %}
@@ -184,6 +186,8 @@ listed: false
     {% include "footer" %}
     {% endblock %}
     
+    {% include "crazy_egg" %}
+
     :javascript
       var _dcq = _dcq || [];
       var _dcs = _dcs || {};
