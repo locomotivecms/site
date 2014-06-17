@@ -6,3 +6,4 @@ public/.sass-cache/
 .sass-cache
 log/
 backup/
+Gemfile.lock.old

@@ -48,6 +48,10 @@ listed: false
     {% include "kiss_metrics" %}
 
   %body{ data: { spy: 'scroll', target: 'nav.subnav' } }
+    {% block ossbay %}
+    {% include ossbay %}
+    {% endblock %}
+
     {% block 'nav' %}
     {% include 'nav' %}
     {% endblock %}
@@ -185,7 +189,7 @@ listed: false
     {% block footer %}
     {% include "footer" %}
     {% endblock %}
-    
+
     {% include "crazy_egg" %}
 
     :javascript

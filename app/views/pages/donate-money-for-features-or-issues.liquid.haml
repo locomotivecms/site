@@ -1,0 +1,35 @@
+---
+title: Donate money for features or issues
+
+# true if the page is included in the menu
+listed: false
+
+# true if the page is published
+published: true
+
+# sets a redirection to the given url (301)
+# redirect_url: "<url to a page or to a remote url>"
+
+handle: ossbay
+---
+{% extends parent %}
+
+{% block 'head' %}
+{{ 'iframeResizer.min.js' |  javascript_tag }}
+
+:coffeescript
+  $ ->
+    $('#ossbay-iframe-wrapper iframe').iFrameResize
+      log: true
+
+{% endblock %}
+
+{% block ossbay %}{% endblock %}
+
+{% block main %}
+
+%section
+  #ossbay-iframe-wrapper
+    %iframe{ src: 'http://www.ossbay.com/repos/locomotivecms/engine/issues?iframe=true', width: '100%', scrolling: 'no' }
+
+{% endblock %}
