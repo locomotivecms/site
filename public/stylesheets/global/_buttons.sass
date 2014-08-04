@@ -1,0 +1,39 @@
+.btn
+  @include border-radius(22px)
+  @extend .tight-text
+  padding: 11px 18px 8px 18px
+  line-height: 20px
+  vertical-align: middle
+  font-size: 11px
+
+  i
+    vertical-align: middle
+    margin-left: 20px
+    font-size: 18px
+    margin-bottom: 2px
+
+  &.btn-dark
+    background-color: #29313A
+    color: #FFF
+    &:hover
+      background-color: #29313A
+      border-color: #29313A
+    i
+      color: #424D5A
+
+  &.btn-primary
+    &:hover
+      background-color: $brand-primary
+      border-color: $brand-primary
+    i
+      color: #CD531F
+
+  &.btn-default
+    padding: 9px 18px 6px 18px
+    background-color: rgba(0,0,0,0)
+    color: #fff
+    border-width: 3px
+    &:hover
+      color: #fff
+      background-color: rgba(0,0,0,0)
+      border-color: #ccc

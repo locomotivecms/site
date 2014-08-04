@@ -1,0 +1,32 @@
+body.page-cms-comparison
+
+  section.header
+    background-image: url('../images/pages/cms_comparison/header_background.jpg')
+    height: 460px
+    h1
+      margin-top: 150px
+
+  section.points-menu
+    a
+      @extend .tight-text
+      text-align: center
+      display: inline-block
+      color: #97A5B3
+      margin: 10px
+      img
+        display: block
+        margin: 0px auto 5px auto
+      &:hover, &.active
+        text-decoration: none
+        color: #293139
+
+  section.points
+    text-align: left
+    padding-top: 0px
+    @extend .large-text
+    h3
+      color: $brand-primary
+    .point
+      display: none
+      &.active
+        display: block

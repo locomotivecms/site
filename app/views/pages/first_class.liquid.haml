@@ -1,0 +1,229 @@
+---
+title: First Class
+published: true
+listed: false
+---
+{% extends parent %}
+
+{% block 'navigation' %}{% endblock %}
+
+{% block main %}
+
+{% block 'header' %}
+%section.header
+  .row
+    .col-md-12
+      %h1 Your website with top benfits
+{% endblock %}
+
+{% block 'benefits' %}
+%section.benefits
+  %h2 Benefits
+
+  .row
+    .col-sm-6.col-md-5.col-md-offset-1
+      .benefit
+        .icon
+          %img{src: "{{ 'icons/terminal_window.png' | theme_image_url }}", alt: "Powered by LocomotiveCMS"}
+        %h3 Powered by LocomotiveCMS
+        %p Powered by the CMS that thousands of developers in the world love coding for and their clients love using.
+    .col-sm-6.col-md-5
+      .benefit
+        .icon
+          %img{src: "{{ 'icons/wand.png' | theme_image_url }}", alt: "Editing is fun"}
+        %h3 Editing is fun
+        %p It's magic! Our real time editing is the aha feature that's helped our users close tons of deal. Give it a try!
+  .row.second-row
+    .col-sm-6.col-md-5.col-md-offset-1
+      .benefit
+        .icon
+          %img{src: "{{ 'icons/star_in_circle.png' | theme_image_url }}", alt: "VIP perks"}
+        %h3 VIP perks
+        %p Ger fast email support directly from the LocomotiveCMS core development team. Plus, enjoy free access to our line of paid add-ons, including Wagon Desktop.
+    .col-sm-6.col-md-5
+      .benefit
+        .icon
+          %img{src: "{{ 'icons/check_mark_on_window.png' | theme_image_url }}", alt: "Hassle-free solution"}
+        %h3 Hassle-free solution
+        %p Free, automatic LocomotiveCMS upgrades. Maintenance. Daily backups. Hosting. No need to partition servers, install Rails, or setup a database. You provide the site, we take care of the rest.
+{% endblock %}
+
+{% block 'pricing' %}
+%section.pricing
+  .row
+    .col-md-10.col-md-offset-1
+      %h2 Simple pricing
+      %hr
+      %h3 All plans come with free upgrades, daily backups and templates
+      %p.dark In addition to the 20% discount, we migrate all your LocomotiveCMS websites (no matter the version) to Locomotive First Class when you purchase an annual plan.
+
+      %table
+        %thead
+          %tr
+            %th Our Plans
+            %td
+              Personal
+              %span.price
+                $19
+                %span.period /MO
+            %td
+              Freelancer
+              %span.price
+                $49
+                %span.period /MO
+            %td
+              Agency
+              %span.price
+                $119
+                %span.period /MO
+        %tbody
+          %tr
+            %th Sites
+            %td 1
+            %td unlimited
+            %td unlimited
+          %tr
+            %th Users
+            %td unlimited
+            %td unlimited
+            %td unlimited
+          %tr
+            %th Storage
+            %td 1 GB
+            %td 3 GB
+            %td 10 GB
+          %tr
+            %th Bandwidth
+            %td unlimited
+            %td unlimited
+            %td unlimited
+          %tr
+            %th Analytics
+            %td
+              %i.icon-x
+            %td
+              %i.icon-check
+            %td
+              %i.icon-check
+          %tr
+            %th Whitelabel
+            %td
+              %i.icon-x
+            %td
+              %i.icon-x
+            %td
+              %i.icon-check
+          %tr
+            %th Priority Support
+            %td email
+            %td email and skype
+            %td dedicated account manager
+          %tr
+            %th Backups
+            %td daily
+            %td daily
+            %td daily
+{% endblock %}
+
+{% block 'testimonials' %}
+%section.testimonials
+  %h2 Hundreds of happy customers
+  %hr
+  #testimonials-carousel.carousel.slide{"data-ride" => "carousel", "data-wrap" => true}
+    %ol.carousel-indicators
+      %li.active{"data-slide-to" => "0", "data-target" => "#testimonials-carousel"}
+      %li{"data-slide-to" => "1", "data-target" => "#testimonials-carousel"}
+      %li{"data-slide-to" => "2", "data-target" => "#testimonials-carousel"}
+    .carousel-inner
+      .item.active
+        .blockquote
+          .bubble
+            .icon
+              %i.icon-quote-left
+            %p Nullam erat mi, lacinia vitae mauris at, sollicitudin luctus lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer vitae orci sapien.
+          %footer
+            %img{alt: "Tommy Lewis, CEO Local.ch", src: "{{ '/samples/stock_faces/three.png' | theme_image_url | resize: '60x60#' }}"}
+            %span.name Tommy Lewis, CEO Local.ch
+      .item
+        .blockquote
+          .bubble
+            .icon
+              %i.icon-quote-left
+            %p Nullam erat mi, lacinia vitae mauris at, sollicitudin luctus lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer vitae orci sapien.
+          %footer
+            %img{alt: "Tommy Lewis, CEO Local.ch", src: "{{ '/samples/stock_faces/one.png' | theme_image_url | resize: '60x60#' }}"}
+            %span.name Tommy Lewis, CEO Local.ch
+      .item
+        .blockquote
+          .bubble
+            .icon
+              %i.icon-quote-left
+            %p Nullam erat mi, lacinia vitae mauris at, sollicitudin luctus lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer vitae orci sapien.
+          %footer
+            %img{alt: "Tommy Lewis, CEO Local.ch", src: "{{ '/samples/stock_faces/two.png' | theme_image_url | resize: '60x60#' }}"}
+            %span.name Tommy Lewis, CEO Local.ch
+{% endblock %}
+
+{% block 'get-started' %}
+%section.get-started
+  %h2 Start using First Class with all the benefits
+  %hr
+  %a.btn.btn-primary{href: "#"}
+    Start Your Free Trial Today
+    %i.icon-chevron-circle-right
+{% endblock %}
+
+{% block 'get-started' %}
+%section.faq
+  %h2 What you should know
+  %hr
+  .faq-menu
+    -[:invoice, :user_in_circle, :settings].each do |section|
+      %a{href: "#", "data-active-src" => "{{ 'icons/#{section}.png' | theme_image_url }}", "data-inactive-src" => "{{ 'icons/#{section}_blue.png' | theme_image_url }}"}
+        %img{src: "{{ 'icons/#{section}_blue.png' | theme_image_url }}"}
+        =section
+  .row
+    .col-md-10.col-md-offset-1
+      .faq-sections
+        .faq-section
+          .row
+            .col-sm-6
+              %h3 When am I billed?
+              %p.hel Your billing date is on or around the same day of the month your website goes live. For example, if you publish your website on March 5, your billing cycle is from the 5th of each month.
+            .col-sm-6
+              %h3 What name will appear on my bank statement?
+              %p NoCoffee SARL, this is the name of our company.
+          .row
+            .col-sm-6
+              %h3 When am I billed?
+              %p.prox Your billing date is on or around the same day of the month your website goes live. For example, if you publish your website on March 5, your billing cycle is from the 5th of each month.
+            .col-sm-6
+              %h3 What name will appear on my bank statement?
+              %p NoCoffee SARL, this is the name of our company.
+          .row
+            .col-sm-6
+              %h3 When am I billed?
+              %p Your billing date is on or around the same day of the month your website goes live. For example, if you publish your website on March 5, your billing cycle is from the 5th of each month.
+            .col-sm-6
+              %h3 What name will appear on my bank statement?
+              %p NoCoffee SARL, this is the name of our company.
+          .row
+            .col-sm-6
+              %h3 When am I billed?
+              %p Your billing date is on or around the same day of the month your website goes live. For example, if you publish your website on March 5, your billing cycle is from the 5th of each month.
+            .col-sm-6
+              %h3 What name will appear on my bank statement?
+              %p NoCoffee SARL, this is the name of our company.
+          .row
+            .col-sm-6
+              %h3 When am I billed?
+              %p Your billing date is on or around the same day of the month your website goes live. For example, if you publish your website on March 5, your billing cycle is from the 5th of each month.
+            .col-sm-6
+              %h3 What name will appear on my bank statement?
+              %p NoCoffee SARL, this is the name of our company.
+      
+
+
+{% endblock %}
+
+{% endblock %}

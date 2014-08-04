@@ -1,0 +1,40 @@
+@mixin border-radius($size)
+  -webkit-border-radius: $size
+  -moz-border-radius: $size
+  border-radius: $size
+
+// speech buble block quote
+@mixin speech-bubble($width, $border-color)
+  $border-width: 2px
+  $triangle-width: 10px
+  $triangle-height: 10px
+  @include border-radius(10px)
+  width: $width
+  position: relative
+  padding: 15px
+  margin: 0px auto
+  border: $border-width solid $border-color
+  color: #333
+  background: #fff
+  &:before
+    content: ""
+    position: absolute
+    bottom: 0 - $triangle-height /* value = - border-top-width - border-bottom-width */
+    left: $width/2 - $triangle-width /* controls horizontal position */
+    border-width: $triangle-height $triangle-width 0
+    border-style: solid
+    border-color: $border-color transparent
+    /* reduce the damage in FF3.0 */
+    display: block
+    width: 0
+  &:after
+    content: ""
+    position: absolute
+    bottom: ($border-width - $triangle-height) /* value = - border-top-width - border-bottom-width */
+    left: ($width/2 - $triangle-width) + $triangle-width - ($triangle-width - $border-width)  /* value = (: before left) + (: before border-left) - (: after border-left) */
+    border-width: ($triangle-height - $border-width) ($triangle-width - $border-width) 0
+    border-style: solid
+    border-color: #fff transparent
+    /* reduce the damage in FF3.0 */
+    display: block
+    width: 0

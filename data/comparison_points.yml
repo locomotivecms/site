@@ -1,0 +1,47 @@
+- "Design Flow":
+    locomotive_cms: "Omnis rerum doloribus autem vel et totam. Deleniti amet molestiae nihil labore non commodi at dolores. Est ut inventore deserunt necessitatibus. Eum aspernatur sint voluptatem dolore. Magni exercitationem sunt impedit cupiditate suscipit quia distinctio."
+    word_press: "Repellendus explicabo sed quae corporis accusantium odio qui voluptatem. Aspernatur voluptas dolorem laudantium aut ipsum. Non qui et voluptates."
+    inactive_icon: images/icons/pencil_and_ruler_grey.png
+    active_icon: images/icons/pencil_and_ruler.png
+
+- "Custom Content Types":
+    locomotive_cms: "Eos qui et blanditiis sit officiis aperiam molestiae. Sit non id eligendi suscipit necessitatibus beatae non. Magnam temporibus sunt error porro sed vel ut."
+    word_press: "Reprehenderit accusamus veritatis alias sint architecto qui quaerat occaecati. Minima quidem et qui et voluptate sequi numquam libero. Qui exercitationem et est inventore iure provident maiores. Enim sunt occaecati dolores. Eligendi cum quae laudantium."
+    inactive_icon: images/icons/video_camera_grey.png
+    active_icon: images/icons/video_camera.png
+
+- "Client Experience":
+    locomotive_cms: "Distinctio perspiciatis ipsam saepe. Esse sit impedit est at ex maiores est. Delectus ut quasi fugit voluptas beatae natus aut facere. Voluptatibus aut omnis porro distinctio. Similique animi molestias unde facilis et dolore mollitia."
+    word_press: "Dolorum fugiat eligendi saepe sed. Asperiores illo perspiciatis veritatis ut in tempore deleniti. Quia omnis enim beatae exercitationem rem dolore."
+    inactive_icon: images/icons/people_grey.png
+    active_icon: images/icons/people.png
+
+- "Development Standards":
+    locomotive_cms: "Ad necessitatibus aliquam qui at. Omnis eaque sed omnis maiores. Autem in aliquid consequatur numquam ut. Qui ab nisi nesciunt autem."
+    word_press: "Soluta at unde nesciunt aut similique tenetur. Quas consequuntur architecto in impedit. Voluptatum a nisi sed voluptatem in quis eum. Quod deserunt dolorum et cum aut sunt quaerat."
+    inactive_icon: images/icons/laptop_grey.png
+    active_icon: images/icons/laptop.png
+
+- "Site Maintenance":
+    locomotive_cms: "Ad necessitatibus aliquam qui at. Omnis eaque sed omnis maiores. Autem in aliquid consequatur numquam ut. Qui ab nisi nesciunt autem."
+    word_press: "Soluta at unde nesciunt aut similique tenetur. Quas consequuntur architecto in impedit. Voluptatum a nisi sed voluptatem in quis eum. Quod deserunt dolorum et cum aut sunt quaerat."
+    inactive_icon: images/icons/clock_on_window_grey.png
+    active_icon: images/icons/clock_on_window.png
+
+- "Multi-Site Capability":
+    locomotive_cms: "Ad necessitatibus aliquam qui at. Omnis eaque sed omnis maiores. Autem in aliquid consequatur numquam ut. Qui ab nisi nesciunt autem."
+    word_press: "Soluta at unde nesciunt aut similique tenetur. Quas consequuntur architecto in impedit. Voluptatum a nisi sed voluptatem in quis eum. Quod deserunt dolorum et cum aut sunt quaerat."
+    inactive_icon: images/icons/three_windows_grey.png
+    active_icon: images/icons/three_windows.png
+
+- "Site Security":
+    locomotive_cms: "Ad necessitatibus aliquam qui at. Omnis eaque sed omnis maiores. Autem in aliquid consequatur numquam ut. Qui ab nisi nesciunt autem."
+    word_press: "Soluta at unde nesciunt aut similique tenetur. Quas consequuntur architecto in impedit. Voluptatum a nisi sed voluptatem in quis eum. Quod deserunt dolorum et cum aut sunt quaerat."
+    inactive_icon: images/icons/lock_on_window_grey.png
+    active_icon: images/icons/lock_on_window.png
+
+- "Multi-Lingual Capability":
+    locomotive_cms: "Ad necessitatibus aliquam qui at. Omnis eaque sed omnis maiores. Autem in aliquid consequatur numquam ut. Qui ab nisi nesciunt autem."
+    word_press: "Soluta at unde nesciunt aut similique tenetur. Quas consequuntur architecto in impedit. Voluptatum a nisi sed voluptatem in quis eum. Quod deserunt dolorum et cum aut sunt quaerat."
+    inactive_icon: images/icons/speech_bubbles_grey.png
+    active_icon: images/icons/speech_bubbles.png

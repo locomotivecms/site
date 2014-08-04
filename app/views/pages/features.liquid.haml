@@ -1,0 +1,51 @@
+---
+title: Features
+published: true
+listed: true
+position: 2
+---
+{% extends index %}
+
+{% block 'main' %}
+
+%section.header
+  .row
+    .col-md-12
+      %h1 LocomotiveCMS features
+
+%section.features-menu
+  .container
+    %img{alt: "Features", src: "{{ 'icons/empty_browser_window.png' | theme_image_url }}"}
+    .text-center
+      %ul.nav.nav-pills.centered
+        {% for feature in contents.features %}
+        %li
+          %a{href: "\#{{ feature._slug }}"} {{ feature.name }}
+        {% endfor %}
+
+%hr.full
+
+%section.features-list
+  .container
+    {% for feature in contents.features %}
+    {% capture image %}
+    .col-md-6.image
+      %img.img-circle{alt: "{{ feature.name }}", src: "{{ feature.image.url | resize: '330x330#' }}" }
+    {% endcapture  %}
+    {% capture text %}
+    .col-md-6.text
+      .holder
+        .content{id: "{{ feature._slug }}"}
+          %h3 {{ feature.headline }}
+          {{ feature.description }}
+    {% endcapture %}
+    {% capture count_parity %}{% cycle 'odd', 'even' %}{% endcapture %}
+    .row.feature
+      {% if count_parity == 'odd' %}
+      {{ image }}{{ text }}
+      {% else %}
+      {{ text }}{{ image }}
+      {% endif %}
+    {% endfor %}
+{% include 'start_today' %}
+{% endblock %}

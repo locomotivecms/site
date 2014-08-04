@@ -1,0 +1,150 @@
+body.page-index
+
+  text-align: center
+
+  .hero
+    height: 700px
+    background-size: cover
+    background-image: url('../images/pages/home/hero_background.jpg')
+    h1
+      margin: 120px auto 0px auto
+      width: 100%
+      max-width: 680px
+    .buttons
+      .start-trial-btn, .watch-video-btn
+        @extend .btn
+        margin-top: 50px
+      .start-trial-btn
+        @extend .btn-primary
+      .watch-video-btn
+        @extend .btn-default
+
+  .process
+    font-size: 16px
+    .steps
+      .number
+        font-size: 30px
+      .icon
+        margin-top: 50px
+        margin-bottom: 20px
+
+  .benefits
+    h2
+      width: 100%
+      max-width: 400px
+      margin: auto
+    @extend section.dark
+    background-color: #f3f5f7
+    .face-web
+      margin: 20px 0px
+    p
+      text-align: justify
+    h3
+      text-align: left
+      margin-top: 50px
+      color: $brand-primary
+
+  .video-testimonials
+    height: 360px
+    background-size: cover
+    background-image: url('../images/pages/home/video_testimonials_background.jpg')
+    padding-top: 157px
+    .watch-testimonials-btn
+      @extend .btn
+      @extend .btn-default
+
+  .features
+    .feature
+      .icon
+        padding-top: 33px
+        margin: auto
+        background-image: url('../images/icons/rings_background.png')
+        width: 194px
+        height: 114px
+
+  .discover-tools
+    padding: 0px
+    .banner
+      padding-top: 77px
+      height: 180px
+      background-size: cover
+      background-image: url('../images/pages/home/discover_tools_background.jpg')
+      h3
+        color: #fff
+        font-size: 24px
+        padding: 0px
+        margin: 0px 20px
+    .buttons
+      @extend .clearfix
+      background-color: $brand-primary
+      .wagon-btn, .station-btn
+        width: 90%
+        max-width: 335px
+        @extend .btn
+        @extend .btn-default
+        margin: 68.5px 0px
+        border-color: #DC5A21
+        i
+          margin: 0px
+          color: #DC5A21
+        &:hover
+          border-color: #DC5A21
+      .left-half
+        text-align: right
+        border-right-width: 1px
+        border-right-style: solid
+        border-right-color: #DC5A21
+      .right-half
+        text-align: left
+
+  .open-source
+    text-align: justify
+    p.links a
+      margin-right: 20px
+      @extend .tight-text
+    .icons
+      text-align: center
+      line-height: 100%
+      vertical-align: middle
+      img
+        margin-top: 20px
+      .spacer
+        width: 50px
+
+  .text-testimonials
+    @extend section.dark
+    .blockquote
+      > .bubble
+        height: 220px
+        @include speech-bubble(300px, #eaedf0)
+    .logos
+      line-height: 60px
+      vertical-align: middle
+
+  section.pro-tools
+    @extend section.very-dark
+    .tools
+      text-align: justify
+      h3
+        text-align: left
+        border-bottom: 1px solid #374167
+        small
+          @extend .tight-text
+          display: block
+          margin: 10px 0px 20px 0px
+          color: $brand-primary
+      .description
+        min-height: 80px
+      a.go
+        display: block
+        text-align: center
+        @include border-radius(25px)
+        width: 50px
+        height: 50px
+        border: 2px solid #3e4864
+        color: #3e4864
+        line-height: 50px
+        vertical-align: middle
+        &:hover
+          color: #fff
+          border-color: #fff

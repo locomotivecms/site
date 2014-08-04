@@ -1,0 +1,35 @@
+---
+title: CMS Comparison
+published: true
+listed: true
+---
+{% extends index %}
+
+{% block 'main' %}
+%section.header
+  %h1 CMS Comparison
+
+%section.points-menu
+  {% for point in contents.comparison_points %}
+  %a{href: "\#{{ point._slug }}", "data-active-src" => "{{ point.active_icon.url }}", "data-inactive-src" => "{{ point.inactive_icon.url }}", id: "point-menu-item-{{ point._slug }}"}
+    %img{alt: "Design Flow", src: "{{ point.inactive_icon.url }}"}
+    {{ point.title | escape }}
+  {% endfor %}
+
+%section.points
+  .container
+    {% for point in contents.comparison_points %}
+    .point{id: "point-body-{{ point._slug }}"}
+      %h2.text-center {{ point.title }}
+      .row
+        .col-sm-6
+          %h3 LocomotiveCMS
+          {{ point.locomotive_cms }}
+        .col-sm-6
+          %h3 WordPress
+          {{ point.word_press }}
+    {% endfor %}
+
+
+{% include 'start_today' %}
+{% endblock %}

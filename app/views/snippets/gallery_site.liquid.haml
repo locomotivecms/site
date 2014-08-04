@@ -1,0 +1,7 @@
+{% capture item_parity %}{{ forloop.index | modulo: 2 }}{% endcapture  %}
+{% if item_parity == "1" %}
+<div class="row"><div class="col-sm-4 col-sm-offset-2">{% else %}<div class="col-sm-4">
+{% endif %}
+%a.thumbnail{href: "{{ site.url | escape }}"}
+  %img{src: "{{ site.screenshot.url | resize: '600x'  }}", alt: "{{ site.name | escape }}"}
+{% if item_parity == "0" or forloop.last %}</div></div>{% else %}</div>{% endif %}

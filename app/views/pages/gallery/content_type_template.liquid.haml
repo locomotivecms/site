@@ -1,0 +1,18 @@
+---
+title: Gallery Section Template
+published: true
+listed: false
+content_type: gallery_sections
+---
+{% assign body_class = 'page-gallery-section' %}
+{% assign current_section = gallery_section._slug %}
+{% extends parent %}
+
+{% block 'main/gallery_sites' %}
+{% for site in gallery_section.gallery_sites %}
+{% include 'gallery_site' with site, forloop %}
+{% endfor %}
+{% endblock %}
+
+
+

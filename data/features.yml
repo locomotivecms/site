@@ -1,0 +1,55 @@
+- "Wagon":
+    headline: "Wagon. the powerful little engine that can."
+    description: "<p>Developing a CMS site is often tedious, because most solutions completely destroy your production workflow. You have to bend your process to make it work.</p><p>As a developer, you need to use your favorite development environment. You need to track your code in Git. You've simply got to have your go-to tools that make you an efficient coding machine, like HAML, Less, Sass, and Compass.</p><p>Wagon is Locomotive CMS's command line tool that lets you work your way. Your projects. Your local machine. Your tools.</p><p>With Wagon, it's always &quot;Yes, you can.&quot;</p>"
+    image: images/placeholder.png
+
+- "Custom Content":
+    headline: "Content types have an identity of their own."
+    description: "<p>If you're tired of having to work around posts, pages and articles to create a custom post type, here's some welcome relief. LocomotiveCMS allows you to create content types without imposing a specific pre-built structure.</p><p>Need a page for your band's discography?</p><p>Create a new &quot;Recording&quot; content type with a title, year, album cover, and track listing. And you're all set.</p><p>Want your custom types to relate to each other? No problem there either. Where most CMS solutions make it a headache to relate content types to each other, it's a snap in LocomotiveCMS.</p>"
+    image: images/placeholder.png
+
+- "Multi-Site":
+    headline: "Multi-site functionality makes launching new sites a breeze."
+    description: "<p>With a single instance of LocomotiveCMS, you can manage as many websites as your server can handle.</p><p>You deploy your website by simply pointing the website domain to your LocomotiveCMS server.</p><p>You don't have to go through any additional setup steps like setting up new databases or copying files. It's that simple.</p>"
+    image: images/placeholder.png
+
+- "Liquid Templates":
+    headline: "Liquid templating, made even better."
+    description: "<p>LocomotiveCMS uses Liquid, the most common templating language in Ruby, so if you've used Ruby before, you don't have to learn unfamiliar syntax. You already speak the language. If you haven't, you'll be pleasantly surprised at how simple the syntax is to learn.</p><p>Of course, we made something good even better by putting our own spin on templating. We added in the functionality of template inheritance from Python, so now you have even more power and flexibility at your disposal.</p>"
+    image: images/placeholder.png
+
+- "UI":
+    headline: "An interface even your pickiest clients can love."
+    description: "<p>Your clients will actually love using LocomotiveCMS. And you'll love how fast they'll learn to use it.</p><p>With a beautiful user interface that makes sense, your clients can add and update their content easily, without wrecking any of your design.</p>"
+    image: images/placeholder.png
+
+- "Inline Editing":
+    headline: "Your clients can edit content without leaving the page."
+    description: "<p>When we discovered Aloha-Editor, a powerful browser editor, we knew we just had to integrate it into LocomotiveCMS. It makes editing unbelievably simple for your clients.</p><p>You simply define an editable region in your templates. And when your client wants to update the content, they just view the page in their browser, and edit the text directly, without going to a back office.</p><p>It's almost magical.</p>"
+    image: images/placeholder.png
+
+- "Multi-Language":
+    headline: "Multi-language functionality makes your clients comfortable no matter where they are."
+    description: "<p>Your LocomotiveCMS website is at home anywhere in the world. Just define the language or languages you want your site to speak, and with I18n Multi-Language functionality baked in, you're ready to roll.</p><p>Your clients can edit their sites in any language. No hay problema.</p>"
+    image: images/placeholder.png
+
+- "API":
+    headline: "Restful API"
+    description: "<p>Wagon already takes advantage of the new API by giving users the ability to push a theme to any LocomotiveCMS engine.</p><p>Be inspired! We're sure you'll find plenty of other ways to use the built-in API.</p>"
+    image: images/placeholder.png
+
+- "ROR":
+    headline: "Ruby on Rails lets you extend and expand."
+    description: "<p>While your clients may just want &quot;something that works,&quot; you know that the language your site is built on really does matter. We couldn't agree more.</p><p>We built LocomotiveCMS with Ruby on Rails 3, which gives you the ability to build your own applications on top of the LocomotiveCMS engine if you so choose. Since LocomotiveCMS can be integrated into a wide range of applications, let your imagination soar and develop something huge!</p>"
+    image: images/placeholder.png
+
+- "Hosting":
+    headline: "Hosting options put you in the driver’s seat."
+    description: "<p>LocomotiveCMS is a solution for developers that minimizes the hassle of setting up servers. The absolutely simplest way of hosting your LocomotiveCMS site is by using LocomotiveHosting. We handle everything for you. All you do is develop your sites and deploy them with a few simple commands. Your sites can be up and running in seconds.</p><p>Want to do your own cloud solution? That's easy enough, too. You can run LocomotiveCMS on Heroku, the famous Ruby cloud platform. The database is handled by MongoHQ, and the files can be stored on Amazon S3. With this powerful three-some, you have a cheap way to host your LocomotiveCMS site.</p><p>Of course, you're welcome to install LocomotiveCMS on your own server as well. It's that flexible.</p>"
+    image: images/placeholder.png
+
+- "Code":
+    headline: "Beautiful code goes more than skin deep."
+    description: "<p>You know that feeling you get when you look at code that is well written and beautifully laid out? It's kind of a rush, right?</p><p>You've probably given up on seeing that once you started developing sites in a CMS. Most of the code that other CMS's turn out is, well, ugly. It's time to enjoy looking at code again.</p><p>Not only is the core code of Locomotive beautiful, but the HTML it produces is a big batch of eye-candy, too. So, your site is beautiful whether you're looking at the design or under the hood.</p>"
+    image: images/placeholder.png
+

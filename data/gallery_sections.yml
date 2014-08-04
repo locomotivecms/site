@@ -1,0 +1,36 @@
+- "E-Commerce":
+    gallery_sites:
+    - sample-1
+    - sample-2
+    - sample-3
+
+- "Multi-Language":
+    gallery_sites:
+    - sample-4
+    - sample-5
+    - sample-6
+
+- "Portfolio":
+    gallery_sites:
+    - sample-7
+    - sample-8
+    - sample-9
+
+- "Startup":
+    gallery_sites:
+    - sample-10
+    - sample-11
+    - sample-1
+
+- "Corporate":
+    gallery_sites:
+    - sample-2
+    - sample-3
+    - sample-4
+
+- "Responsive":
+    gallery_sites:
+    - sample-5
+    - sample-6
+    - sample-7
+

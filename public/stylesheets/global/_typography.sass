@@ -1,0 +1,52 @@
+h1, h2, h3, h4
+  color: #293139
+  font-family: "Avenir Next"
+  font-weight: normal
+
+h1
+  font-size: 36px
+  color: #fff
+  text-align: center
+
+h2
+  font-size: 30px
+
+h3
+  font-size: 22px
+  font-weight: normal
+
+hr
+  border-color: #EDF3F9
+  width: 30px
+  &.full
+    width: 100%
+
+.tight-text
+  font-size: 12px
+  font-weight: bold
+  text-transform: uppercase
+  font-family: "Avenir Next"
+  letter-spacing: 0.8px
+
+.large-text
+  font-size: 16px
+  line-height: 1.6em
+
+.blockquote
+  .bubble
+    .icon
+      color: $brand-primary
+      margin-bottom: 20px
+      font-size: 20px
+    margin-bottom: 20px
+  margin-bottom: 40px
+  footer
+    @extend .tight-text
+    margin-top: 10px
+    span.name
+      color: $brand-primary
+    img
+      width: 60px
+      height: 60px
+      @extend .img-circle
+      border: 3px solid #eaedf0

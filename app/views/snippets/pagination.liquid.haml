@@ -1,0 +1,11 @@
+{% if paginate.total_pages > 1 %}
+%ul.nav.nav-pills.centered
+  %li{class: "{% unless paginate.previous_page %}disabled{% endunless %}"}
+    %a{href: "{{ paginate.previous.url }}"} &lt;
+  {% for page in paginate.parts %}
+  %li{class: "{% unless page.is_link %}active{% endunless %}"}
+    %a{href:"{{ page.url }}"} {{ page.title }}
+  {% endfor %}
+  %li{class: "{% unless paginate.next_page %}disabled{% endunless %}"}
+    %a{href: "{{ paginate.next.url }}"} &gt;
+{% endif %}

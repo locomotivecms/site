@@ -1,0 +1,44 @@
+---
+title: Gallery
+published: true
+listed: true
+position: 3
+---
+{% extends index %}
+
+{% block 'main' %}
+
+%section.header
+  %h1 Websites Powered by LocomotiveCMS
+
+%section.sections#sections
+  .container
+    .icon
+      %img{src: "{{ 'icons/laptop.png' | theme_image_url }}", alt: "Gallery Sections"}
+    %ul.nav.nav-pills.centered
+      %li{class: "{% unless current_section %}active{% endunless %}"}
+        %a{href: "/gallery#sections"} All
+      {% for section in contents.gallery_sections %}
+      %li{class: "{% if current_section == section._slug %}active{% endif %}"}
+        %a{href: "/gallery/{{ section._slug }}#sections"} {{ section.name }}
+      {% endfor %}
+
+%section.sites
+  {% block 'gallery_sites' %}
+  {% paginate contents.gallery_sites by 6 %}
+  {% for site in paginate.collection %}{% include 'gallery_site' with site, forloop %}{% endfor %}
+  {% include 'pagination' with paginate %}
+  {% endpaginate %}
+  {% endblock %}
+
+%section.submit-site
+  .container
+    .col-xs-6
+      %h2 Want to see your site here?
+    .col-xs-6
+      %a.btn.btn-dark{href: "#"}
+        Submit My Website
+        %i.icon-chevron-circle-right
+
+
+{% endblock %}

@@ -1,0 +1,46 @@
+# Public name of this content type
+name: Gallery sections
+
+# TODO: explain
+slug: gallery_sections
+
+# Explanation for the backoffice
+description: Sections for the Gallery Page
+
+# Default field (e.g title)
+label_field_name: name
+
+# Order of entries
+order_by: manually # default: manually, also available: created_at or any field slug
+
+# Order direction
+# order_direction: asc # default: asc, also available: desc
+
+# Display entries grouped by <field> in the backoffice
+# group_by: <your field>
+
+# Activate public 'create' API (e.g for a contact form)
+# public_submission_enabled: false
+
+# Emails to be notified on new entries using the public API
+# public_submission_accounts: ['john@acme.net']
+
+# Describe each field. The name shoud always be an underscored string
+fields:
+- name:
+    label: Name
+    type: string
+    required: true
+    hint: A description of the field for the editors
+    localized: false
+- gallery_sites:
+    label: Gallery sites
+    type: many_to_many
+    required: false
+    hint: A description of the field for the editors
+    localized: false    # Define the slug of the target content type (eg. comments)
+    class_name: gallery_sites
+    # Define the name of the field referring to Samples in the target content type (eg. post)
+    inverse_of: gallery_sections
+    # If you want to manage the entries of the relationship directly from the source entry
+    ui_enabled: true

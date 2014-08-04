@@ -1,0 +1,52 @@
+img
+  max-width: 100%
+
+section
+  padding-top: 50px
+  padding-bottom: 50px
+  text-align: center
+
+section.dark
+  background-color: #f3f5f7
+  hr
+    border-color: #DFE5EB
+
+section.very-dark
+  background-color: #2F374C
+  hr
+    border-color: #374167
+  color: #fff
+  h2, h3
+    color: #fff
+
+section.orange
+  background-color: #f36128
+  color: #fff
+  hr
+    border-color: #e15521
+  p.dark
+    color: #a53815
+  h2, h3, h4, h5
+    color: white
+
+ul.nav.nav-pills
+  li
+    &.active a
+      color: #fff
+    a
+      @extend .tight-text
+      color: #293139
+      padding-top: 12px
+      padding-bottom: 8px
+      &:hover, &:active
+        color: #fff
+        background-color: #293139
+
+  &.centered
+    text-align: center
+    li
+      float: none
+      display: inline-block
+    a
+      float: left
+

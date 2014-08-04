@@ -1,0 +1,319 @@
+---
+title: Tour
+published: true
+listed: true
+position: 1
+
+editable_elements:
+  "main/process/title_1": Install wagon
+  "main/process/image_1": "/images/icons/arrow_on_disk.png"
+  "main/process/description_1": "Our development tool that lets you create sites with your favorite text and coding tools."
+  "main/process/title_2": Create content
+  "main/process/image_2": "/images/icons/browser_window.png"
+  "main/process/description_2": "Create custom content and freely mark what parts of pages are editable for clients."
+  "main/process/title_3": Deploy site
+  "main/process/image_3": "/images/icons/checkmark_in_circle.png"
+  "main/process/description_3": "With a single click. The back-office editor will be automatically generated for your client."
+  "main/benefits/title_1": "Power to the coders"
+  "main/benefits/description_1": "<p>Edit everything right on your computer with your text editor and source control system. Publish with a single command that syncs all your changes into server.</p>"
+  "main/benefits/title_2": "Structured content"
+  "main/benefits/description_2": "<p>Locomotive CMS let’s you easily define custom content types with custom fields and relationships. No SQL, no muss, no fuss.</p>"
+  "main/benefits/title_3": "Edit in style"
+  "main/benefits/description_3": "<p>Clients love our back-office’s beautiful and intuitive interface where they can manage all of the site’s content. And you can specify exactly what parts are editable.</p>"
+  "main/benefits/title_4": "Beginner friendly"
+  "main/benefits/description_4": "<p>You won’t need to know PHP or SQL. Code pages using plain old HTML and the dead simple Liquid template language.</p>"
+  "main/text_testimonials/source_name_1": "Brian White"
+  "main/text_testimonials/source_company_1": "CEO Squared"
+  "main/text_testimonials/image_1": "/samples/stock_faces/two.png"
+  "main/text_testimonials/testimonial_1": "<p>Nullam erat mi, lacinia vitae mauris at, sollicitudin luctus lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer vitae orci sapien.</p>"
+  "main/text_testimonials/source_name_2": "Tommy Lewis"
+  "main/text_testimonials/source_company_2": "CEO Local.ch"
+  "main/text_testimonials/image_2": "/samples/stock_faces/one.png"
+  "main/text_testimonials/testimonial_2": "<p>Vivamus sed tristique velit, et dapibus erat. Praesent sagittis massa a justo ultrices, sed mattis eros tristique. </p>"
+  "main/text_testimonials/source_name_3": "Patrick Lee"
+  "main/text_testimonials/source_company_3": "Rails Developer"
+  "main/text_testimonials/image_3": "/samples/stock_faces/three.png"
+  "main/text_testimonials/testimonial_3": "<p>Ut mattis iaculis purus vitae convallis. Maecenas adipiscing tellus nec venenatis scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec imperdiet magna quis sapien sollicitudin, vitae adipiscing est sagittis.</p>"
+  "main/pro_tools/title_1": "Wagon"
+  "main/pro_tools/subtitle_1": "Development"
+  "main/pro_tools/url_1": "#"
+  "main/pro_tools/description_1": "<p>Our development tool that lets you create sites with your favorite text  and coding tools.</p>"
+  "main/pro_tools/title_2": "Station"
+  "main/pro_tools/subtitle_2": "Back-End"
+  "main/pro_tools/url_2": "#"
+  "main/pro_tools/description_2": "<p>Proin eu varius nunc. Nulla facilisi. Mauris vitae dolor id diam cursus suscipit quis eu eros.</p>"
+  "main/pro_tools/title_3": "First Class"
+  "main/pro_tools/subtitle_3": "Hosting"
+  "main/pro_tools/url_3": "#"
+  "main/pro_tools/description_3": "<p>Sed ullamcorper, metus sit amet pulvinar venenatis, enim nunc accumsan dui, hendrerit.</p>"
+  "main/pro_tools/title_4": "Hire Us"
+  "main/pro_tools/subtitle_4": "Consulting & Development"
+  "main/pro_tools/url_4": "#"
+  "main/pro_tools/description_4": "<p>Our team is ready to help you with custom development and consulting.</p>"
+
+---
+!!!
+%html{lang: "en"}
+  %head
+    %meta{charset: "utf-8"}
+    %title {{ page.title }} | {{ site.name }}
+    %meta{name: "keywords", value: "{{ site.meta_keywords }}"}
+    %meta{name: "description", value: "{{ site.meta_description }}"}
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1"}
+    {{ 'main.css' | stylesheet_tag }}
+  %body{class: "{% if body_class %}{{ body_class }}{% else %}page-{{ page.slug }}{% endif %}"}
+    {% block 'navigation' %}{% include 'navigation' %}{% endblock %}
+    {% block 'main' %}
+    {% block 'hero' %}
+
+    {% capture hero_message %}
+    {% editable_text "message", format: "raw", rows: "2" %}Love developing for your CMS as much as your clients love using it{% endeditable_text %}
+    {% endcapture %}
+
+    %section.hero
+      .row
+        .col-md-12
+          %h1 {{ hero_message | escape }}
+          .buttons.row
+            .col-sm-4.col-sm-offset-2
+              %a.start-trial-btn{href: "#"}
+                Start your free trial now
+                %i.icon-chevron-circle-right
+            .col-sm-4
+              %a.watch-video-btn{href: "#"}
+                Watch our video
+                %i.icon-play-video
+    {% endblock %}
+
+    {% block 'process' %}
+    {% capture process_section_title %}
+    {% editable_text "section_title", format: "raw", rows: 1, priority: 10 %}Our technology{% endeditable_text %}
+    {% endcapture %}
+    %section.process
+      .container
+        %h2 {{ process_section_title | escape }}
+        %hr
+        .row.steps
+          -3.times do |index|
+            -count = index + 1
+            -position = 9 - (index*3)
+            {% capture step_#{count}_title %}
+            {% editable_text "title_#{count}", format: "raw", rows: 1, priority: #{position} %}Install wagon{% endeditable_text %}
+            {% endcapture %}
+            {% capture step_#{count}_image %}{% editable_file "image_#{count}", priority: #{position - 1} %}images/icons/arrow_on_disk.png{% endeditable_file %}{% endcapture %}
+            .col-sm-4
+              .number=count.times.map { "." }.join(" ")
+              .icon<
+                %img{src: "{{ step_#{count}_image | escape }}", alt: "Install Wagon"}
+              %h3 {{ step_#{count}_title | escape }}
+              {% editable_text "description_#{count}", priority: #{position - 2} %}
+              <p>Our development tool that lets you create sites with your favorite text and coding tools.</p>
+              {% endeditable_text %}
+    {% endblock %}
+
+    {% block 'benefits' %}
+
+    {% capture benefits_section_title %}
+    {% editable_text "section_title", format: "raw", rows: 1, priority: 9 %}The perfect tool for developers and designers{% endeditable_text %}
+    {% endcapture %}
+
+    -4.times do |index|
+      -count = index + 1
+      -position = 8 - index*2
+      {% capture benefit_#{count}_title %}
+      {% editable_text "title_#{count}", format: "raw", rows: 1, priority: #{position} %}Power to the coders{% endeditable_text %}
+      {% endcapture %}
+
+      {% capture benefit_#{count}_description %}
+      {% editable_text "description_#{count}", priority: #{position - 1} %}
+      <p>Edit everything right on your computer with your text editor and source control system. Publish with a single command that syncs all your changes into server.</p>
+      {% endeditable_text %}
+      {% endcapture %}
+
+    %section.benefits
+      .container
+        %h2 {{ benefits_section_title | escape }}
+        %hr
+        .face-web
+          {{ 'pages/home/face_web.png' | theme_image_tag }}
+        .row
+          .col-md-5.col-md-offset-1.col-sm-6
+            %h3 {{ benefit_1_title | escape }}
+            {{ benefit_1_description }}
+
+          .col-md-5.col-sm-6
+            %h3 {{ benefit_2_title | escape }}
+            {{ benefit_2_description }}
+        .row
+          .col-md-5.col-md-offset-1.col-sm-6
+            %h3 {{ benefit_3_title | escape }}
+            {{ benefit_3_description }}
+          .col-md-5.col-sm-6
+            %h3 {{ benefit_4_title | escape }}
+            {{ benefit_4_description }}
+    {% endblock %}
+
+    %section.video-testimonials
+      %a.watch-testimonials-btn
+        How our customers use it
+        %i.icon-play-video
+
+    %section.features
+      %h2 LocomotiveCMS features
+      %hr
+      .container
+        .row
+          .col-sm-4
+            .feature
+              .icon<
+                %img{src: "{{ 'icons/arrow_on_computer.png' | theme_image_url }}", alt: "Easy to add custom content types, no SQL needed"}
+              %p Easy to add custom content types, no SQL needed
+          .col-sm-4
+            .feature
+              .icon<
+                %img{src: "{{ 'icons/browser_window.png' | theme_image_url }}", alt: ""}
+              %p Uses Liquid, a simple and clean templating languaUses Liquid, a simple and clean templating languagege
+          .col-sm-4
+            .feature
+              .icon<
+                %img{src: "{{ 'icons/computer.png' | theme_image_url }}", alt: "Support for SASS, LESS, HAML and Coffee Script"}
+              %p Support for SASS, LESS, HAML and Coffee Script
+        .row
+          .col-sm-4
+            .feature
+              .icon<
+                %img{src: "{{ 'icons/heart_in_bubble.png' | theme_image_url }}", alt: ""}
+              %p Beautiful and intuitive editing interface that clients will loBeautiful and intuitive editing interface that clients will loveve
+          .col-sm-4
+            .feature
+              .icon<
+                %img{src: "{{ 'icons/folder.png' | theme_image_url }}", alt: "Can fully localize all the content and pages"}
+              %p Can fully localize all the content and pages
+          .col-sm-4
+            .feature
+              .icon<
+                %img{src: "{{ 'icons/cycle.png' | theme_image_url }}", alt: "Open Source project with an active community"}
+              %p Open Source project with an active community
+        .row
+          .col-sm-4.col-sm-offset-2
+            .feature
+              .icon<
+                %img{src: "{{ 'icons/arrow_up.png' | theme_image_url }}", alt: "Publish changes just with a single command"}
+              %p Publish changes just with a single command
+          .col-sm-4
+            .feature
+              .icon<
+                %img{src: "{{ 'icons/magnify_glass_on_window.png' | theme_image_url }}", alt: "Develop and preview sites locally with your favorite tools"}
+              %p Develop and preview sites locally with your favorite tools
+
+    %section.discover-tools
+      .banner
+        .row
+          .col-xs-6
+            %h3.text-right Discover Wagon
+          .col-xs-6
+            %h3.text-left Discover Station
+      .buttons
+        .row
+          .left-half.col-xs-6
+            %a.wagon-btn{href: "#"}
+              Development
+              %br.visible-xs
+              tool
+              %i.icon-chevron-circle-left.pull-left.hidden-xs
+          .right-half.col-xs-6
+            %a.station-btn{href: "#"}
+              Back-End
+              %br.visible-xs
+              tool
+              %i.icon-chevron-circle-right.pull-right.hidden-xs
+
+    %section.open-source
+      .container
+        .row
+          .col-md-5.col-md-offset-1
+            %h2 Fully Open Source
+            %p Locomotive CMS is a free software released under the MIT license. It’s also fully loved by a vibrant community of contributors and users. Checkout our GitHub repos and Google group!
+            %p.links
+              %a{href:"https://github.com/locomotivecms"}<
+                GitHub Repositories
+                %i.icon-angle-right
+              %a{href:"https://groups.google.com/d/forum/locomotivecms"}<
+                Google Group
+                %i.icon-angle-right
+          .col-md-5.icons
+            %a.github{href:"https://github.com/locomotivecms"}<
+              %img{alt: "GitHub", src: "{{ 'logos/github.png' | theme_image_url }}"}
+            %span_.spacer.hidden-xs
+            %a.google{href: "https://groups.google.com/d/forum/locomotivecms"}
+              %img{alt: "GitHub", src: "{{ 'logos/google.png' | theme_image_url }}"}
+
+    {% block 'text_testimonials' %}
+    {% capture section_title %}
+    {% editable_text "section_title", format: "raw", rows: 1, priority: 13 %}
+    Trusted by smart companies
+    {% endeditable_text %}
+    {% endcapture %}
+    %section.text-testimonials
+      %h2 {{ section_title | escape }}
+      %hr
+      .container
+        .row
+          - 3.times do |index|
+            -count = index + 1
+            -position = 12 - 4*index
+            {% capture testimonial_#{count}_source_name %}{% editable_text "source_name_#{count}", format: "raw", rows: 1, priority: #{position} %}Brian White{% endeditable_text %}{% endcapture %}
+            {% capture testimonial_#{count}_source_company %}{% editable_text "source_company_#{count}", format: "raw", rows: 1, priority: #{position - 1} %}CEO Squared{% endeditable_text %}{% endcapture %}
+            {% capture testimonial_#{count}_image %}{% editable_file "image_#{count}", priority: #{position - 2} %}images/stock_faces/two.png{% endeditable_file %}{% endcapture %}
+            .col-md-4
+              .blockquote
+                .bubble
+                  .icon
+                    %i.icon-quote-left
+                  {% editable_text "testimonial_#{count}", priority: #{position - 3} %}
+                  <p>Nullam erat mi, lacinia vitae mauris at, sollicitudin luctus lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer vitae orci sapien.</p>
+                  {% endeditable_text %}
+                %footer
+                  %img{alt: "{{ testimonial_#{count}_source_name | escape }}, {{ testimonial_#{count}_source_company| escape }}", src: "{{ testimonial_#{count}_image | resize: '60x60#' }}"}
+                  %span.name {{ testimonial_#{count}_source_name | escape }}
+                  , {{ testimonial_#{count}_source_company | escape }}
+        {% include 'logos' %}
+    {% endblock %}
+
+    {% block 'pro_tools' %}
+    {% capture section_title %}
+    {% editable_text "section_title", format: "raw", rows: 1, priority: 17 %}
+    Pro Tools
+    {% endeditable_text %}
+    {% endcapture %}
+    %section.pro-tools
+      .container
+        %h2 {{ section_title | escape }}
+        %hr
+        .row.tools
+          - 4.times do |index|
+            -count = index + 1
+            -position = 16 - 4*index
+            {% capture tool_#{count}_title %}
+            {% editable_text "title_#{count}", format: "raw", rows: 1, priority: #{position} %}Station{% endeditable_text %}
+            {% endcapture %}
+            {% capture tool_#{count}_subtitle %}
+            {% editable_text "subtitle_#{count}", format: "raw", rows: 1, priority: #{position - 1} %}Back-end{% endeditable_text %}
+            {% endcapture %}
+            {% capture tool_#{count}_url %}{% editable_text "url_#{count}", format: "raw", rows: 1, priority: #{position - 2} %}/{% endeditable_text %}{% endcapture %}
+            .col-md-3.col-sm-6
+              %h3
+                {{ tool_#{count}_title | escape }}
+                %small {{ tool_#{count}_subtitle | escape }}
+              .description
+                {% editable_text "description_#{count}", priority: #{position - 3} %}
+                <p>Our development tool that lets you create sites with your favorite text and coding tools.</p>
+                {% endeditable_text %}
+              %a.go{href: "{{ tool_#{count}_url | escape }}"}<
+                %i.icon-chevron-circle-right
+    {% endblock %}
+    {% endblock %}
+    {% include 'footer' %}
+    %script{type: "text/javascript", src: "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"}
+    %script{type: "text/javascript", src: "//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"}
+    {{ 'main.js' | javascript_tag }}

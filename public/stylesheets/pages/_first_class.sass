@@ -1,0 +1,140 @@
+body.page-first-class
+
+  section.header
+    background-size: cover
+    background-image: url('../images/pages/first_class/header_background.png')
+    height: 360px
+    h1
+      margin-top: 105px
+
+  section.benefits
+    text-align: center
+    .benefit
+      max-width: 400px
+      margin: 20px auto
+      p
+        @extend .large-text
+    .second-row .benefit
+      margin-top: 60px
+
+  section.pricing
+    @extend section.orange
+    table
+      width: 100%
+      th
+        background-color: #f36128
+        text-align: left
+        width: 19%
+      td
+        background-color: #fff
+        color: $gray
+        text-align: center
+        width: 27%
+      > thead
+        th, td
+          height: 100px
+          padding-top: 20px
+          vertical-align: top
+          font-family: "Avenir Next"
+          font-size: 18px
+          font-weight: normal
+        th
+          border-bottom: 1px solid #e15521
+          border-right: 2px solid #d35423
+        td
+          color: #f36128
+          border-bottom: 1px solid $gray-lighter
+          border-right: 1px solid $gray-lighter
+          border-top: 2px solid #d35423
+          &:last-child
+            border-right: 2px solid #d35423
+          span.price
+            margin: 20px auto
+            display: block
+            font-size: 24px
+            font-weight: bold
+            span.period
+              font-size: 14px
+      tbody
+        td, th
+          height: 60px
+          vertical-align: middle
+        th
+          font-family: "Avenir Next"
+          text-transform: uppercase
+          font-size: 12px
+          letter-spacing: 1px
+          background-image: linear-gradient(to right, darken(#e15521, 5%) 40%, rgba(255, 255, 255, 0) 0%)
+          background-position: bottom
+          background-size: 3px 1px
+          background-repeat: repeat-x
+          border-right: 2px solid #d35423
+        td
+          background-image: linear-gradient(to right, $gray-light 40%, rgba(255, 255, 255, 0) 0%)
+          background-position: bottom
+          background-size: 3px 1px
+          background-repeat: repeat-x
+          border-right: 1px solid $gray-lighter
+          &:last-child
+            border-right: 2px solid #d35423
+        tr:last-child
+          > td
+            background-image: none
+            background-size: 0px
+            background-repeat: no-repeat
+            border-bottom: 2px solid #d35423
+          > th
+            background-image: none
+            background-size: 0px
+            background-repeat: no-repeat
+
+  section.testimonials
+    @extend section.dark
+    .blockquote
+      margin-bottom: 100px
+      > .bubble
+        min-height: 150px
+        @media screen and (min-width: $screen-sm-min)
+          @include speech-bubble(500px, #eaedf0)
+        @media screen and (max-width: $screen-xs-max)
+          @include speech-bubble(200px, #eaedf0)
+    ol.carousel-indicators
+      li
+        border: 1px solid #bbc5ce
+        background-color: #bbc5ce
+      li.active
+        border: 1px solid #28313a
+        background-color: #28313a
+
+  section.get-started
+    height: 420px
+    background-image: url("../images/pages/first_class/get_started_background.png")
+    background-repeat: repeat-x
+    background-position: center bottom
+
+  section.faq
+    @extend section.very-dark
+    .faq-menu
+      a
+        @extend .tight-text
+        text-align: center
+        display: inline-block
+        color: #97A5B3
+        margin: 10px 40px
+        img
+          display: block
+          margin: 0px auto 20px auto
+        &:hover, &.active
+          text-decoration: none
+          color: #fff
+    .faq-sections
+      margin-top: 20px
+      padding-top: 20px
+      border-top: 1px solid #374167
+    .faq-section
+      @extend .large-text
+      text-align: justify
+      h3
+        color: $brand-primary
+      p
+        font-weight: lighter

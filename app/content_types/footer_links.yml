@@ -1,0 +1,47 @@
+# Public name of this content type
+name: Footer links
+
+# TODO: explain
+slug: footer_links
+
+# Explanation for the backoffice
+description: Links that appear in the footer
+
+# Default field (e.g title)
+label_field_name: text
+
+# Order of entries
+order_by: manually # default: manually, also available: created_at or any field slug
+
+# Order direction
+# order_direction: asc # default: asc, also available: desc
+
+# Display entries grouped by <field> in the backoffice
+# group_by: <your field>
+
+# Activate public 'create' API (e.g for a contact form)
+# public_submission_enabled: false
+
+# Emails to be notified on new entries using the public API
+# public_submission_accounts: ['john@acme.net']
+
+# Describe each field. The name shoud always be an underscored string
+fields:
+- text:
+    label: Text
+    type: string
+    required: true
+    localized: false
+
+- url:
+    label: Url
+    type: string
+    required: true
+    localized: false
+
+- section:
+    label: Section
+    type: select
+    required: true
+    localized: false
+    select_options: ['Tools', 'Locomotive CMS', 'Resources', 'About Us']

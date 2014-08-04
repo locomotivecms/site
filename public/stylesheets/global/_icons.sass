@@ -1,0 +1,27 @@
+@mixin fa-icon($name)
+  @extend .fa
+  @extend .fa-#{$name}
+
+i.icon-chevron-circle-left
+  @include fa-icon("chevron-circle-left")
+
+i.icon-chevron-circle-right
+  @include fa-icon("chevron-circle-right")
+
+i.icon-angle-left
+  @include fa-icon("angle-left")
+
+i.icon-angle-right
+  @include fa-icon("angle-right")
+
+i.icon-play-video
+  @include fa-icon("video-camera")
+
+i.icon-quote-left
+  @include fa-icon("quote-left")
+
+i.icon-x
+  @include fa-icon("times")
+
+i.icon-check
+  @include fa-icon("check")

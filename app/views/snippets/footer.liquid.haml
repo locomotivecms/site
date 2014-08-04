@@ -1,0 +1,28 @@
+%footer
+  .container
+    .row
+      .col-sm-6.col-md-5.info
+        %h2 LOCOMOTIVE CMS
+        %p Developed by NoCoffee as a free software under the MIT license.
+        .spacer.hidden-xs
+        .legal
+          .row
+            .col-md-6
+              &copy; 2014 LocomotiveCMS
+            .col-md-6
+              %span.links
+                %a{href: "#"} Terms of Use
+                =" / "
+                %a{href: "#"} Privacy Policy
+      .col-sm-6.col-md-7.menu
+        .row
+          -['Tools', 'Locomotive CMS', 'Resources', 'About Us'].each do |section|
+            .col-xs-6.col-md-3
+              %h3=section
+              %ul
+                {% with_scope section: "#{section}" %}
+                {% for link in contents.footer_links %}
+                %li
+                  %a{href: "{{ link.url | escape }}"} {{ link.text | escape }}
+                {% endfor %}
+                {% endwith_scope %}

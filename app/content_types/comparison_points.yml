@@ -1,0 +1,64 @@
+# Public name of this content type
+name: Comparison points
+
+# TODO: explain
+slug: comparison_points
+
+# Explanation for the backoffice
+description: Points comparing LocomotiveCMS and WordPress
+
+# Default field (e.g title)
+label_field_name: title
+
+# Order of entries
+order_by: manually # default: manually, also available: created_at or any field slug
+
+# Order direction
+# order_direction: asc # default: asc, also available: desc
+
+# Display entries grouped by <field> in the backoffice
+# group_by: <your field>
+
+# Activate public 'create' API (e.g for a contact form)
+# public_submission_enabled: false
+
+# Emails to be notified on new entries using the public API
+# public_submission_accounts: ['john@acme.net']
+
+# Describe each field. The name shoud always be an underscored string
+fields:
+- title:
+    label: Title
+    type: string
+    required: true
+    localized: false
+
+- inactive_icon:
+    label: Inactive Icon
+    type: file
+    required: true
+    hint: Shown above the title in the list of points, should be a grey 48x48px PNG
+    localized: false
+
+- active_icon:
+    label: Active Icon
+    type: file
+    required: true
+    hint: The same icon but in orange
+    localized: false
+
+- locomotive_cms:
+    label: LocomotiveCMS
+    type: text
+    required: false
+    hint: How LocomotiveCMS handles the topic in question
+    localized: false
+    text_formatting: html
+
+- word_press:
+    label: WordPress
+    type: text
+    required: false
+    hint: How WordPress handles the topic in question
+    localized: false
+    text_formatting: html

@@ -1,0 +1,74 @@
+- "Sample 1":
+    url: "/"
+    screenshot: samples/placeholder_screenshot.png
+    gallery_sections:
+    - startup
+    - e-commerce
+
+- "Sample 2":
+    url: "/"
+    screenshot: samples/placeholder_screenshot.png
+    gallery_sections:
+    - corporate
+    - e-commerce
+
+- "Sample 3":
+    url: "/"
+    screenshot: samples/placeholder_screenshot.png
+    gallery_sections:
+    - corporate
+    - e-commerce
+
+- "Sample 4":
+    url: "/"
+    screenshot: samples/placeholder_screenshot.png
+    gallery_sections:
+    - corporate
+    - multi-language
+
+- "Sample 5":
+    url: "/"
+    screenshot: samples/placeholder_screenshot.png
+    gallery_sections:
+    - responsive
+    - multi-language
+
+- "Sample 6":
+    url: "/"
+    screenshot: samples/placeholder_screenshot.png
+    gallery_sections:
+    - responsive
+    - multi-language
+
+- "Sample 7":
+    url: "/"
+    screenshot: samples/placeholder_screenshot.png
+    gallery_sections:
+    - responsive
+    - portfolio
+
+- "Sample 8":
+    url: "/"
+    screenshot: samples/placeholder_screenshot.png
+    gallery_sections:
+    - portfolio
+
+- "Sample 9":
+    url: "/"
+    screenshot: samples/placeholder_screenshot.png
+    gallery_sections:
+    - portfolio
+
+- "Sample 10":
+    url: "/"
+    screenshot: samples/placeholder_screenshot.png
+    gallery_sections:
+    - startup
+
+- "Sample 11":
+    url: "/"
+    screenshot: samples/placeholder_screenshot.png
+    gallery_sections:
+    - startup
+
+
