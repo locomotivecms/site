@@ -1,4 +1,4 @@
 log/
 dragonfly.log
 .sass-cache/
-
+config/deploy.yml
