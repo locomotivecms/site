@@ -1,0 +1,23 @@
+- "Question 1":
+    answer: "<p>Distinctio totam earum et quis praesentium delectus. Vero accusantium sit perspiciatis id consequatur. Illo velit nemo qui nostrum consequatur porro.</p>"
+    category: "billing" # Use the value of a select option defined in the app/content_types/Faq items.rb file.
+
+- "Question 2":
+    answer: "<p>Distinctio totam earum et quis praesentium delectus. Vero accusantium sit perspiciatis id consequatur. Illo velit nemo qui nostrum consequatur porro.</p>"
+    category: "billing" # Use the value of a select option defined in the app/content_types/Faq items.rb file.
+
+- "Question 3":
+    answer: "<p>Distinctio totam earum et quis praesentium delectus. Vero accusantium sit perspiciatis id consequatur. Illo velit nemo qui nostrum consequatur porro.</p>"
+    category: "billing" # Use the value of a select option defined in the app/content_types/Faq items.rb file.
+
+- "Question 4":
+    answer: "<p>Distinctio totam earum et quis praesentium delectus. Vero accusantium sit perspiciatis id consequatur. Illo velit nemo qui nostrum consequatur porro.</p>"
+    category: "account" # Use the value of a select option defined in the app/content_types/Faq items.rb file.
+
+- "Question 5":
+    answer: "<p>Distinctio totam earum et quis praesentium delectus. Vero accusantium sit perspiciatis id consequatur. Illo velit nemo qui nostrum consequatur porro.</p>"
+    category: "account" # Use the value of a select option defined in the app/content_types/Faq items.rb file.
+
+- "Question 6":
+    answer: "<p>Distinctio totam earum et quis praesentium delectus. Vero accusantium sit perspiciatis id consequatur. Illo velit nemo qui nostrum consequatur porro.</p>"
+    category: "technical questions" # Use the value of a select option defined in the app/content_types/Faq items.rb file.

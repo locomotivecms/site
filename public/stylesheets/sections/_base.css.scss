@@ -1,0 +1,36 @@
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  font-family: "Lucida Grande";
+
+  h3 {
+    font-family: "Avenir Next";
+    font-size: 22px;
+    font-weight: 300;
+    color: #29313a;
+  }
+
+  h4 {
+    font-family: "Avenir Next";
+    font-size: 18px;
+    font-weight: 300;
+    color: #29313a;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 20px;
+    color: #6a727d;
+  }
+
+  hr {
+    border-color: #edf3f9;
+    width: 30px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border: 0;
+    border-top: 1px solid #eeeeee;
+  }
+}

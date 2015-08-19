@@ -1,0 +1,24 @@
+- "Content types":
+    icon: "/samples/features/arrow_on_computer.png"
+    description: "<p>Easy to add custom content types, no SQL needed.</p>"
+
+- "Templating":
+    icon: "/samples/features/browser_window.png"
+    description: "<p>Use Liquid, a simple and clean templating language.</p>"
+
+- "UI/UX":
+    icon: "/samples/features/heart_in_bubble.png"
+    description: "<p>Beautiful and intuitive editing interface that clients will love.</p>"
+
+- "Development":
+    icon: "/samples/features/magnify_glass_on_window.png"
+    description: "<p>Develop and preview sites locally with your favorite tools.</p>"
+
+- "Localization":
+    icon: "/samples/features/folder.png"
+    description: "<p>Can fully localize all the content and pages.</p>"
+
+- "Workflow":
+    icon: "/samples/features/arrow_up.png"
+    description: "<p>Publish changes just with a single command.</p>"
+

@@ -1,0 +1,16 @@
+- "Free":
+    price: 0
+    description: "<p>Temporibus adipisci pariatur est amet quod ut aspernatur.</p>"
+
+- "Personal":
+    price: 19
+    description: "<p>Temporibus adipisci pariatur est amet quod ut aspernatur.</p>"
+
+- "Freelancer":
+    price: 49
+    description: "<p>Temporibus adipisci pariatur est amet quod ut aspernatur.</p>"
+
+- "Agency":
+    price: 119
+    description: "<p>Temporibus adipisci pariatur est amet quod ut aspernatur.</p>"
+

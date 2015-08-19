@@ -1,0 +1,347 @@
+---
+title: Home page
+published: true
+handle: home
+---
+!!!
+%html{lang: "en"}
+  %head
+    %meta{charset: "utf-8"}
+    %title {{ site.name }}
+    %meta{name: "keywords", value: "{{ site.meta_keywords }}"}
+    %meta{name: "description", value: "{{ site.meta_description }}"}
+
+    {{ 'jquery.min.js' | javascript_tag }}
+
+    {{ 'font-awesome.min.css' | stylesheet_tag }}
+    {{ 'bootstrap.min.css' | stylesheet_tag }}
+    {{ 'bootstrap.min.js' | javascript_tag }}
+
+    {{ 'application.css' | stylesheet_tag }}
+
+    {% seo %}
+
+  %body{ role: 'document' }
+    #header
+      %nav.navbar
+        .container
+          .navbar-header
+            %button.navbar-toggle.collapsed{ type: 'button', data: { toggle: 'collapse', target: '#navbar' }, aria: { expanded: false, controls: 'nabvar' } }
+              %span.sr-only Toggle navigation
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+
+            %a.navbar-brand{ href: "{% path_to 'home' %}" }
+              %img{ src: "{{ 'logo.png' | theme_image_url }}" }
+              Locomotive
+
+          #navbar.navbar-collapse.collapse
+            %ul.nav.navbar-nav.pull-right
+              %li
+                %a{ href: "{% path_to 'home' %}#features" } Features
+              %li
+                %a{ href: "{% path_to 'home' %}#pricing" } Pricing
+              %li
+                %a{ href: "{% path_to 'home' %}#faq" } FAQ
+              %li.sign-in.hidden-xs
+                %span
+                  %a{ href: 'https://locomotive.works/app/sign_in', class: 'btn btn-sm btn-default' } Log in
+              %li.hidden-sm.hidden-md.hidden-lg
+                %a{ href: "https://locomotive.works/app/sign_up" } Sign up
+              %li.hidden-sm.hidden-md.hidden-lg
+                %a{ href: "https://locomotive.works/app/sign_in" } Log in
+
+      {% block content %}
+      .container
+        .jumbotron
+          %h2.text-center {% editable_text "tagline", rows: 1, format: raw %}Develop your website 100% faster{% endeditable_text %}
+          .sign-up.text-center
+            %a{ href: 'https://locomotive.works/app/sign_up', class: 'btn btn-primary btn-md round-button' }
+              {% editable_text "button", rows: 1, format: raw %}Sign up today{% endeditable_text %}
+              %i.fa.fa-arrow-circle-right
+
+      {% endblock %}
+
+    {% block sections %}
+    #technology.section
+      .container{ role: 'section' }
+        {% block technology %}
+        .row
+          .col-md-12
+            %h3.text-center {% editable_text title, rows: 1, format: raw %}Our technology{% endeditable_text %}
+            %hr
+
+            .row
+              .col-md-4.text-center
+                .icon
+                  %i.fa.fa-download
+                {% editable_text column_1 %}
+                %h4 Install wagon
+                %p
+                  Our development tool that lets you create sites with your favorite text and coding tools.
+                {% endeditable_text %}
+
+              .col-md-4.text-center
+                .icon
+                  %i.fa.fa-puzzle-piece
+                {% editable_text column_2 %}
+                %h4 Create content
+                %p
+                  Create custom content and freely mark what parts of pages are editable for clients.
+                {% endeditable_text %}
+
+              .col-md-4.text-center
+                .icon
+                  %i.fa.fa-check-circle-o
+                {% editable_text column_2 %}
+                %h4 Deploy site
+                %p
+                  With a single command, the back-office editor will be automatically generated for your client.
+                {% endeditable_text %}
+
+        {% endblock %}
+
+    #audience.section
+      .container{ role: 'section' }
+        {% block audience %}
+        .row
+          .col-md-12
+            %h3.text-center {% editable_text title, rows: 1, format: raw %}The perfect tool for developers and designers{% endeditable_text %}
+            %hr
+
+            %p.image
+              %img.img-responsive{ src: '{% editable_file banner %}/samples/pages/face_web.png{% endeditable_file %}' }
+
+            .row
+              .col-md-6.text-center
+                {% editable_text column_1 %}
+                %h4 Power to the coders
+                %p
+                  Edit everything right on your computer with your text editor and source control system. Publish with a single command that syncs all your changes into server.
+
+                %br
+
+                %h4 Edit in style
+                %p
+                  Clients love our back-office’s beautiful and intuitive interface where they can manage all of the site's content. And you can specify exactly what parts are editable.
+                {% endeditable_text %}
+
+              .col-md-6.text-center
+                {% editable_text column_2 %}
+                %h4 Structured content
+                %p
+                  Locomotive CMS let’s you easily define custom content types with custom fields and relationships. No SQL, no muss, no fuss.
+                  %br
+                  %br
+
+                %br
+
+                %h4 Beginner friendly
+                %p
+                  You won’t need to know PHP or SQL. Code pages using plain old HTML and the dead simple Liquid template language.
+
+                {% endeditable_text %}
+
+        {% endblock %}
+
+    #features.section
+      .container{ role: 'section'}
+        {% block features %}
+        .row
+          .col-md-12
+            %h3.text-center {% editable_text title, rows: 1, format: raw %}Features{% endeditable_text %}
+            %hr
+
+            .row.list
+              {% for feature in contents.features %}
+              .col-md-4.feature
+                .media.text-center
+                  .media-object
+                    %img{ src: '{{ feature.icon | default: "http://placehold.it/64x64" }}' }
+                  .media-body
+                    %h4.media-heading {{ feature.name }}
+                    .text
+                      {{ feature.description }}
+              {% endfor %}
+
+        {% endblock %}
+
+    #pricing.section
+      .container{ role: 'section'}
+        {% block pricing %}
+        .row
+          .col-md-12
+            %h3.text-center {% editable_text title, rows: 1, format: raw %}Simple pricing{% endeditable_text %}
+            %hr
+
+            .text.text-center
+              {% editable_text description %}
+              %p All paid plans come with free upgrades, daily backups and templates.
+              {% endeditable_text %}
+
+            {% for plan in contents.plans %}
+
+            {% capture plan_names %}
+            {{ plan_names }}
+            %th
+              {{ plan.name }}
+              %span.price {% if plan.price == 0 %}&nbsp;{% else %}{{ plan.price | money: "precision:0" }}<small>/mo</small>{% endif %}
+            {% endcapture %}
+
+            {% capture plan_descriptions %}
+            {{ plan_descriptions }}
+            %td {{ plan.description }}
+            {% endcapture %}
+
+            {% endfor %}
+
+            %table.table
+              %thead
+                %tr {{ plan_names }}
+              %tbody
+                %tr.description {{ plan_descriptions }}
+
+            .signup-now.text-center
+              %a{ href: 'https://locomotive.works/app/sign_up', class: 'btn btn-default round-button' }
+                {% editable_text "Sign up button", format: raw, rows: 1 %}I want to try Locomotive{% endeditable_text %}
+                %i.fa.fa-arrow-circle-right
+
+        {% endblock %}
+
+    #testimonials.section
+      .container{ role: 'section' }
+        {% block testimonials %}
+        .row
+          .col-md-12
+            %h3.text-center {% editable_text title, rows: 1, format: raw %}Hundreds of happy customers{% endeditable_text %}
+            %hr
+
+            .row.list
+              {% for testimonial in contents.testimonials %}
+              .col-md-4
+                .blockquote
+                  .bubble
+                    .icon
+                      %i.fa.fa-quote-left
+                    {{ testimonial.quote }}
+                  %footer
+                    %img{ src: "{{ testimonial.icon.url | default: 'http://placehold.it/60x60' }}", alt: "{{ testimonial.name }} {{ testimonial.title }}" }
+                    %span.name {{ testimonial.name }}
+                    , {{ testimonial.title }}
+              {% endfor %}
+
+        {% endblock %}
+
+    #faq.section
+      .container{ role: 'section' }
+        {% block faq %}
+        .row
+          .col-md-12
+            %h3.text-center {% editable_text title, rows: 1, format: raw %}What you should know{% endeditable_text %}
+            %hr
+
+            %ul.nav.nav-tabs{ role: 'tablist' }
+              %li{ role: 'presentation', class: 'active' }
+                %a{ href: '#faq-billing', data: { toggle: 'tab' }, role: 'tab' }
+                  %i.fa.fa-credit-card
+                  Billing
+              %li{ role: 'presentation' }
+                %a{ href: '#faq-account', data: { toggle: 'tab' }, role: 'tab' }
+                  %i.fa.fa-user
+                  Account
+              %li{ role: 'presentation'  }
+                %a{ href: '#faq-technical-questions', data: { toggle: 'tab' }, role: 'tab' }
+                  %i.fa.fa-cubes
+                  Technical question
+
+            .tab-content
+              #faq-billing.tab-pane.active{ role: 'tabpanel' }
+                .row
+                  {% with_scope category: 'billing' %}
+                  {% for item in contents.faq_items %}
+                  .question.col-md-6
+                    %h4 {{ item.question }}
+                    .answer
+                      {{ item.answer }}
+                  {% endfor %}
+                  {% endwith_scope %}
+
+              #faq-account.tab-pane{ role: 'tabpanel' }
+                .row
+                  {% with_scope category: 'account' %}
+                  {% for item in contents.faq_items %}
+                  .question.col-md-6
+                    %h4 {{ item.question }}
+                    .answer
+                      {{ item.answer }}
+                  {% endfor %}
+                  {% endwith_scope %}
+
+              #faq-technical-questions.tab-pane{ role: 'tabpanel' }
+                .row
+                  {% with_scope category: 'technical questions' %}
+                  {% for item in contents.faq_items %}
+                  .question.col-md-6
+                    %h4 {{ item.question }}
+                    .answer
+                      {{ item.answer }}
+                  {% endfor %}
+                  {% endwith_scope %}
+
+        {% endblock %}
+
+    {% block sections %}
+
+    %footer
+      {% block footer %}
+      .container
+        .row
+          .col-md-4.copyright
+            {% editable_text license, fixed: true %}
+            %h4 Locomotive CMS
+            %p Developed by NoCoffee SARL as free software under the MIT License
+            {% endeditable_text %}
+
+          .col-md-offset-4.col-md-2.resources
+            {% editable_text resources, fixed: true %}
+            %h4 Resources
+            %ul
+              %li
+                %a{ href: 'https://locomotive-v3.readme.io/v1.0/docs' } Documentation
+              %li
+                %a{ href: 'https://github.com/locomotivecms/engine' } Github
+              %li
+                %a{ href: 'https://trello.com/b/kRiy1dZu/locomotive-v3' } Roadmap
+            {% endeditable_text %}
+
+          .col-md-2.resources
+            {% editable_text resources, fixed: true %}
+            %h4 About us
+            %ul
+              %li
+                %a{ href: '#' } Team
+              %li
+                %a{ href: '#' } Contact
+              %li
+                %a{ href: '#' } Blog
+            {% endeditable_text %}
+
+        .row
+          .col-md-6.legal
+            %p
+              &copy; 2015 NoCoffee SARL
+              %span
+                %a{ href: '#' } Terms of use
+                \/
+                %a{ href: '#' } Privacy policy
+
+          .col-md-6.social
+            %p.text-right
+              %a.twitter{ href: 'https://twitter.com/locomotivecms' }
+                %i.fa.fa-twitter
+
+      {% endblock %}
+
+
+

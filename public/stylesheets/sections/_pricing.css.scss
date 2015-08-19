@@ -1,0 +1,78 @@
+#pricing.section {
+  background: #eb6123;
+
+  hr {
+    border-top-color: #db551a;
+  }
+
+  h3 {
+    color: #fff;
+  }
+
+  .text {
+    p {
+      color: #fff;
+      font-size: 16px;
+      font-family: "Avenir Next";
+    }
+  }
+
+  .table {
+    margin-top: 50px;
+    background: #fff;
+    border: 2px solid #cd5420;
+
+    thead {
+      th {
+        padding: 20px 0px;
+        color: #ec6124;
+        font-family: "Avenir Next";
+        font-weight: 300;
+        font-size: 20px;
+        text-align: center;
+        border-left: 1px solid #f3f5f7;
+        border-bottom: 1px solid #f3f5f7;
+
+        .price {
+          display: block;
+          margin-top: 10px;
+          font-size: 24px;
+          font-weight: bold;
+
+          small {
+            text-transform: uppercase;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    tbody {
+      td {
+        padding: 20px;
+        border-left: 1px solid #f3f5f7;
+      }
+    }
+  }
+
+  .signup-now {
+    margin-top: 40px;
+
+    .btn {
+      border-color: #fff;
+      @include border-radius(20px);
+      color: rgba(255, 255, 255, 0.7);
+      background: transparent;
+
+      i {
+        position: relative;
+        top: 1px;
+        margin-left: 20px;
+      }
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
