@@ -10,6 +10,8 @@ is_layout: false
     %meta{ name: "keywords", value: "{{ site.meta_keywords }}" }
     %meta{ name: "description", value: "{{ site.meta_description }}" }
 
+    %link{ rel: "shortcut icon", href: "{{ 'favicon.png' | theme_image_url }}" }
+
     {{ 'jquery.min.js' | javascript_tag }}
 
     {{ 'font-awesome.min.css' | stylesheet_tag }}
