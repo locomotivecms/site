@@ -26,14 +26,14 @@ order_by: manually
 # public_submission_accounts: ['john@example.com']
 
 # Control the display of the content type in the back-office.
-# display_settings:
-#   seo: false              # display the SEO tab for the content entries
-#   advanced: false         # display the Advanced tab for the content entries
-#   position: 1             # position in the sidebar menu
-#   hidden: false           # hidden for authors?
+display_settings:
+  seo: false              # display the SEO tab for the content entries
+  # advanced: false         # display the Advanced tab for the content entries
+  # position: 1             # position in the sidebar menu
+  # hidden: false           # hidden for authors?
 
 # A list describing each field
-fields: 
+fields:
 - name: # The lowercase, underscored name of the field
     label: Name # Human readable name of the field
     type: string

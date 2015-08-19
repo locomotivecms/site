@@ -110,7 +110,7 @@ handle: home
           .col-md-4.feature
             .media.text-center
               .media-object
-                %img{ src: '{{ feature.icon | default: "http://placehold.it/64x64" }}' }
+                %img{ src: '{{ feature.icon.url | default: "http://placehold.it/64x64" }}' }
               .media-body
                 %h4.media-heading {{ feature.name }}
                 .text
