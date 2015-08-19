@@ -1,3 +1,11 @@
+a {
+  color: #ec6124;
+
+  &:hover {
+    color: #ec6124;
+  }
+}
+
 body > footer {
   font-family: "Lucida Grande";
   margin-top: 50px;
@@ -37,6 +45,12 @@ body > footer {
       li {
         margin: 5px 0px;
       }
+    }
+  }
+
+  .copyright {
+    p {
+      font-size: 12px;
     }
   }
 

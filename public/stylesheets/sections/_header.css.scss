@@ -1,6 +1,6 @@
 #header {
   font-family: "Avenir Next";
-  min-height: 250px;
+
   @include background-image(linear-gradient(235deg, #d08e70 10%, #be836c 25%, #75575c 50%, #2d2e4c 80%, #1b2348));
 
   & > .container {
@@ -81,5 +81,11 @@
         }
       }
     }
+  }
+}
+
+body#home-page {
+  #header {
+    min-height: 250px;
   }
 }

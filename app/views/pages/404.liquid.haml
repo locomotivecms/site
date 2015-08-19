@@ -2,10 +2,19 @@
 title: Page not found
 published: true
 ---
-{% extends index %}
+{% extends "layouts/base" %}
 
-{% block 'main' %}
+{% block 'sections' %}
 
-%p Page not found
+.section
+  .container
+    .row
+      .col-md-12
+
+        %h3.text-center Page not found
+
+        %hr
+
+        %h4.text-center Sorry, but we didn't find the page you were looking for
 
 {% endblock %}

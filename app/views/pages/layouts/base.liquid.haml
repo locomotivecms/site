@@ -1,0 +1,107 @@
+---
+title: Base layout
+is_layout: false
+---
+!!!
+%html{ lang: "en" }
+  %head
+    %meta{ charset: "utf-8" }
+    %title {{ site.seo_title }}
+    %meta{ name: "keywords", value: "{{ site.meta_keywords }}" }
+    %meta{ name: "description", value: "{{ site.meta_description }}" }
+
+    {{ 'jquery.min.js' | javascript_tag }}
+
+    {{ 'font-awesome.min.css' | stylesheet_tag }}
+    {{ 'bootstrap.min.css' | stylesheet_tag }}
+    {{ 'bootstrap.min.js' | javascript_tag }}
+
+    {{ 'application.css' | stylesheet_tag }}
+
+    {% seo %}
+
+  %body{ id: '{{ page.handle }}-page', role: 'document' }
+    #header
+      %nav.navbar
+        .container
+          .navbar-header
+            %button.navbar-toggle.collapsed{ type: 'button', data: { toggle: 'collapse', target: '#navbar' }, aria: { expanded: false, controls: 'nabvar' } }
+              %span.sr-only Toggle navigation
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+
+            %a.navbar-brand{ href: "{% path_to 'home' %}" }
+              %img{ src: "{{ 'logo.png' | theme_image_url }}" }
+              Locomotive
+
+          #navbar.navbar-collapse.collapse
+            %ul.nav.navbar-nav.pull-right
+              %li
+                %a{ href: "{% path_to 'home' %}#features" } Features
+              %li
+                %a{ href: "{% path_to 'home' %}#pricing" } Pricing
+              %li
+                %a{ href: "{% path_to 'home' %}#faq" } FAQ
+              %li.sign-in.hidden-xs
+                %span
+                  %a{ href: 'https://locomotive.works/app/sign_in', class: 'btn btn-sm btn-default' } Log in
+              %li.hidden-sm.hidden-md.hidden-lg
+                %a{ href: "https://locomotive.works/app/sign_up" } Sign up
+              %li.hidden-sm.hidden-md.hidden-lg
+                %a{ href: "https://locomotive.works/app/sign_in" } Log in
+
+      {% block header %}{% endblock %}
+
+    {% block sections %}
+    {% endblock %}
+
+    %footer
+      {% block footer %}
+      .container
+        .row
+          .col-md-4.copyright
+            {% editable_text license, fixed: true %}
+            %h4 Locomotive CMS
+            %p Developed by NoCoffee SARL as free software under the MIT License
+            {% endeditable_text %}
+
+          .col-md-offset-4.col-md-2.resources
+            {% editable_text resources, fixed: true %}
+            %h4 Resources
+            %ul
+              %li
+                %a{ href: 'https://locomotive-v3.readme.io/v1.0/docs' } Documentation
+              %li
+                %a{ href: 'https://github.com/locomotivecms/engine' } Github
+              %li
+                %a{ href: 'https://trello.com/b/kRiy1dZu/locomotive-v3' } Roadmap
+            {% endeditable_text %}
+
+          .col-md-2.resources
+            {% editable_text resources, fixed: true %}
+            %h4 About us
+            %ul
+              %li
+                %a{ href: '#' } Team
+              %li
+                %a{ href: 'mailto:contact@locomotivecms.com' } Contact
+              %li
+                %a{ href: '#' } Blog
+            {% endeditable_text %}
+
+        .row
+          .col-md-6.legal
+            %p
+              &copy; 2015 NoCoffee SARL
+              %span
+                %a{ href: '{% path_to "terms-of-use" %}' } Terms of use
+                \/
+                %a{ href: '{% path_to "privacy-policy" %}' } Privacy policy
+
+          .col-md-6.social
+            %p.text-right
+              %a.twitter{ href: 'https://twitter.com/locomotivecms' }
+                %i.fa.fa-twitter
+
+      {% endblock %}
