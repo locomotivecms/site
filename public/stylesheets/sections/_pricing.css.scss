@@ -19,10 +19,10 @@
 
   .table {
     margin-top: 50px;
-    background: #fff;
     border: 2px solid #cd5420;
 
     thead {
+      background: #fff;
       th {
         padding: 20px 0px;
         color: #ec6124;
@@ -32,6 +32,10 @@
         text-align: center;
         border-left: 1px solid #f3f5f7;
         border-bottom: 1px solid #f3f5f7;
+
+        &:first-child {
+          border-left: none;
+        }
 
         .price {
           display: block;
@@ -45,13 +49,51 @@
           }
         }
       }
+
+      tr > td:first-child {
+        border-left: none;
+      }
     }
 
     tbody {
+      background: #fff;
       td {
         padding: 20px;
         border-left: 1px solid #f3f5f7;
+
+        ul {
+          list-style: none;
+          padding: 0px;
+
+          li {
+            color: #6a727d;
+            margin: 15px 0px;
+            b {
+              color: #333;
+            }
+          }
+        }
       }
+
+      tr.common {
+        td {
+          ul {
+            display: block;
+            width: 400px;
+            margin: 0 auto;
+          }
+        }
+      }
+
+      tr > td:first-child {
+        border-left: none;
+      }
+
+
+    }
+
+    td, th {
+      width: 25%;
     }
   }
 

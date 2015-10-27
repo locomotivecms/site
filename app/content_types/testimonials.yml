@@ -48,11 +48,11 @@ fields:
     hint: Explanatory text displayed in the back office
     localized: false
 
-- icon: # The lowercase, underscored name of the field
-    label: Icon # Human readable name of the field
-    type: string
+- picture: # The lowercase, underscored name of the field
+    label: Picture # Human readable name of the field
+    type: file
     required: false
-    hint: Explanatory text displayed in the back office
+    hint: "A picture of the person (size > 120x120 for a good quality)"
     localized: false
 
 - quote: # The lowercase, underscored name of the field

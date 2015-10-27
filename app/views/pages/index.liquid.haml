@@ -10,7 +10,7 @@ handle: home
   .jumbotron
     %h2.text-center {% editable_text "tagline", rows: 1, format: raw %}Develop your website 100% faster{% endeditable_text %}
     .sign-up.text-center
-      %a{ href: 'https://locomotive.works/app/sign_up', class: 'btn btn-primary btn-md round-button' }
+      %a{ href: 'https://station.locomotive.works/_app/sign_up', class: 'btn btn-primary btn-md round-button' }
         {% editable_text "button", rows: 1, format: raw %}Sign up today{% endeditable_text %}
         %i.fa.fa-arrow-circle-right
 {% endblock %}
@@ -46,7 +46,7 @@ handle: home
           .col-md-4.text-center
             .icon
               %i.fa.fa-check-circle-o
-            {% editable_text column_2 %}
+            {% editable_text column_3 %}
             %h4 Deploy site
             %p
               With a single command, the back-office editor will be automatically generated for your client.
@@ -106,6 +106,7 @@ handle: home
         %hr
 
         .row.list
+          {% editable_model features %}
           {% for feature in contents.features %}
           .col-md-4.feature
             .media.text-center
@@ -116,6 +117,7 @@ handle: home
                 .text
                   {{ feature.description }}
           {% endfor %}
+          {% endeditable_model %}
 
     {% endblock %}
 
@@ -132,6 +134,7 @@ handle: home
           %p All paid plans come with free upgrades, daily backups and templates.
           {% endeditable_text %}
 
+        {% editable_model plans %}
         {% for plan in contents.plans %}
 
         {% capture plan_names %}
@@ -147,15 +150,25 @@ handle: home
         {% endcapture %}
 
         {% endfor %}
+        {% endeditable_model %}
 
         %table.table
           %thead
             %tr {{ plan_names }}
           %tbody
             %tr.description {{ plan_descriptions }}
+            %tr.common
+              %td
+              %td{ colspan: "{{ contents.plans.count | minus: 1 }}" }
+                {% editable_text common %}
+                %ul
+                  %li Assets served through CDN
+                  %li Daily backup in your Dropbox <span class="label label-default label-soon">coming soon</span>
+                  %li
+                {% endeditable_text %}
 
         .signup-now.text-center
-          %a{ href: 'https://locomotive.works/app/sign_up', class: 'btn btn-default round-button' }
+          %a{ href: 'https://station.locomotive.works/_app/sign_up', class: 'btn btn-default round-button' }
             {% editable_text "Sign up button", format: raw, rows: 1 %}I want to try Locomotive{% endeditable_text %}
             %i.fa.fa-arrow-circle-right
 
@@ -170,6 +183,7 @@ handle: home
         %hr
 
         .row.list
+          {% editable_model testimonials %}
           {% for testimonial in contents.testimonials %}
           .col-md-4
             .blockquote
@@ -178,10 +192,11 @@ handle: home
                   %i.fa.fa-quote-left
                 {{ testimonial.quote }}
               %footer
-                %img{ src: "{{ testimonial.icon.url | default: 'http://placehold.it/60x60' }}", alt: "{{ testimonial.name }} {{ testimonial.title }}" }
+                %img{ src: "{{ testimonial.picture.url | default: 'https://placehold.it/60x60' | resize: '120x120#' }}", alt: "{{ testimonial.name }} {{ testimonial.title }}" }
                 %span.name {{ testimonial.name }}
                 , {{ testimonial.title }}
           {% endfor %}
+          {% endeditable_model %}
 
     {% endblock %}
 
@@ -207,6 +222,7 @@ handle: home
               %i.fa.fa-cubes
               Technical question
 
+        {% editable_model faq_items %}
         .tab-content
           #faq-billing.tab-pane.active{ role: 'tabpanel' }
             .row
@@ -240,6 +256,7 @@ handle: home
                   {{ item.answer }}
               {% endfor %}
               {% endwith_scope %}
+        {% endeditable_model %}
 
     {% endblock %}
 

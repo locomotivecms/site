@@ -47,11 +47,11 @@ is_layout: false
                 %a{ href: "{% path_to 'home' %}#faq" } FAQ
               %li.sign-in.hidden-xs
                 %span
-                  %a{ href: 'https://locomotive.works/app/sign_in', class: 'btn btn-sm btn-default' } Log in
+                  %a{ href: 'https://station.locomotive.works/_app/sign_in', class: 'btn btn-sm btn-default' } Log in
               %li.hidden-sm.hidden-md.hidden-lg
-                %a{ href: "https://locomotive.works/app/sign_up" } Sign up
+                %a{ href: "https://station.locomotive.works/_app/sign_up" } Sign up
               %li.hidden-sm.hidden-md.hidden-lg
-                %a{ href: "https://locomotive.works/app/sign_in" } Log in
+                %a{ href: "https://station.locomotive.works/_app/sign_in" } Log in
 
       {% block header %}{% endblock %}
 
@@ -81,7 +81,7 @@ is_layout: false
             {% endeditable_text %}
 
           .col-md-2.resources
-            {% editable_text resources, fixed: true %}
+            {% editable_text contact, fixed: true %}
             %h4 About us
             %ul
               %li

@@ -1,16 +1,16 @@
 - "Free":
     price: 0
-    description: "<p>Temporibus adipisci pariatur est amet quod ut aspernatur.</p>"
+    description: "<ul><li>Download the software and install it on your own web server</li><li>Get community support</li><li>Manage all your own updates and code</li></ul>"
 
 - "Personal":
     price: 19
-    description: "<p>Temporibus adipisci pariatur est amet quod ut aspernatur.</p>"
+    description: "<ul><li><b>1</b> site</li><li><b>100MB</b> Storage</li><li>Custom domain</li><li>CDN</li><li><b>25,000 page</b> views</li></ul>"
 
 - "Freelancer":
     price: 49
-    description: "<p>Temporibus adipisci pariatur est amet quod ut aspernatur.</p>"
+    description: "<ul><li><b>Unlimited</b> sites</li><li><b>1GB</b> Storage</li><li>Custom domain</li><li>CDN</li><li><b>150,000</b> page views</li></ul>"
 
 - "Agency":
-    price: 119
-    description: "<p>Temporibus adipisci pariatur est amet quod ut aspernatur.</p>"
+    price: 199
+    description: "<ul><li><b>Unlimited</b> sites</li><li><b>5GB</b> Storage</li><li>Custom domain</li><li>CDN</li><li><b>500,000 page views</b></li><li>Priority support</li><li>White Label</li></ul>"
 

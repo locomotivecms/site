@@ -1,6 +1,7 @@
-- "John Doe":
-    title: "CEO local.ch"
+- "Steve Jobs":
+    title: "Former CEO of Apple"
     quote: "<p>Iste est cupiditate molestiae tenetur et suscipit. Doloribus quasi consequatur. Esse maiores aut quis est voluptate et sed. Incidunt voluptas voluptatem consequatur quia ut.</p>"
+    picture: "/samples/testimonials/steve_jobs.jpeg"
 
 - "John Doe":
     title: "CEO local.ch"
