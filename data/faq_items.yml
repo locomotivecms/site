@@ -1,23 +1,80 @@
-- "Question 1":
-    answer: "<p>Distinctio totam earum et quis praesentium delectus. Vero accusantium sit perspiciatis id consequatur. Illo velit nemo qui nostrum consequatur porro.</p>"
-    category: "billing" # Use the value of a select option defined in the app/content_types/Faq items.rb file.
-
-- "Question 2":
-    answer: "<p>Distinctio totam earum et quis praesentium delectus. Vero accusantium sit perspiciatis id consequatur. Illo velit nemo qui nostrum consequatur porro.</p>"
-    category: "billing" # Use the value of a select option defined in the app/content_types/Faq items.rb file.
-
-- "Question 3":
-    answer: "<p>Distinctio totam earum et quis praesentium delectus. Vero accusantium sit perspiciatis id consequatur. Illo velit nemo qui nostrum consequatur porro.</p>"
-    category: "billing" # Use the value of a select option defined in the app/content_types/Faq items.rb file.
-
-- "Question 4":
-    answer: "<p>Distinctio totam earum et quis praesentium delectus. Vero accusantium sit perspiciatis id consequatur. Illo velit nemo qui nostrum consequatur porro.</p>"
-    category: "account" # Use the value of a select option defined in the app/content_types/Faq items.rb file.
-
-- "Question 5":
-    answer: "<p>Distinctio totam earum et quis praesentium delectus. Vero accusantium sit perspiciatis id consequatur. Illo velit nemo qui nostrum consequatur porro.</p>"
-    category: "account" # Use the value of a select option defined in the app/content_types/Faq items.rb file.
-
-- "Question 6":
-    answer: "<p>Distinctio totam earum et quis praesentium delectus. Vero accusantium sit perspiciatis id consequatur. Illo velit nemo qui nostrum consequatur porro.</p>"
-    category: "technical questions" # Use the value of a select option defined in the app/content_types/Faq items.rb file.
+- When am I billed?:
+    _slug: question-1
+    question: When am I billed?
+    answer: "<p>Your billing date is on or around the same day of the month your website
+      goes live. For example, if you publish your website on March 5, your billing
+      cycle is from the 5th&nbsp;of each month. </p>"
+    category: billing
+- Where can I see my invoices?:
+    _slug: question-2
+    question: Where can I see my invoices?
+    answer: "<p>Log in to your account and click on Billing. Each month, your invoice
+      will be available on or around your billing date.</p>\r\n"
+    category: billing
+- Available payment methods:
+    _slug: question-3
+    question: Available payment methods
+    answer: "<p>Pay online using a credit card. We accept Visa, MasterCard and Carte
+      Bleue.</p>"
+    category: billing
+- Do you offer discounts on yearly plans?:
+    _slug: question-4
+    question: Do you offer discounts on yearly plans?
+    answer: "<p>Yes, pre-pay for a year and you'll get 2 months off!</p>"
+    category: billing
+- What name will appear on my bank statement?:
+    _slug: question-5
+    question: What name will appear on my bank statement?
+    answer: "<p>NoCoffee SARL, this is the name of our company.</p>"
+    category: billing
+- I am a web agency/a developer, can my client pay directly?:
+    _slug: question-6
+    question: I am a web agency/a developer, can my client pay directly?
+    answer: "<p>Absolutely, when you are asked to fill out the billing information,
+      your client can enter his or her name, address and email address as well as
+      his or her credit card information.</p>"
+    category: billing
+- I have several websites hosted by LocomotiveCMS, how often am I billed?:
+    _slug: i-have-several-websites-hosted-by-locomotivecms-how-often-am-i-billed
+    question: I have several websites hosted by LocomotiveCMS, how often am I billed?
+    answer: "<p>At this stage, you have one invoice per website, so you have as many
+      invoices as you have websites but we are working on a solution to issue one
+      single invoice per month if that is more convenient for you.<br></p>"
+    category: billing
+- Are there any set-up fees?:
+    _slug: are-there-any-set-up-fees
+    question: Are there any set-up fees?
+    answer: "<p>No, absolutely not.<br></p>"
+    category: account
+- How long are your contracts?:
+    _slug: how-long-are-your-contracts
+    question: How long are your contracts?
+    answer: "<p>There are no contracts. The billing cycle starts on the day you sign
+      up for a paid account and is automatically renewed every month.<br></p>"
+    category: account
+- What is white label?:
+    _slug: what-is-white-label
+    question: What is white label?
+    answer: "<p>With our white label solution, your clients will never know that Locomotive.works
+      is the technical solution picked to power their websites. You can add your own
+      logo, change the look of the back-office. All we need from you is a SSL certificate
+      and a domain name.&nbsp;<br></p>"
+    category: account
+- Where are your servers located?:
+    _slug: where-are-your-servers-located
+    question: Where are your servers located?
+    answer: "<p>They are located in one of the Digital Ocean data centers in New York.<br></p>"
+    category: technical questions
+- Can I use my own domain name?:
+    _slug: can-i-use-my-own-domain-name
+    question: Can I use my own domain name?
+    answer: "<p>Yes if you use a paid account. If you have a free account, your domain
+      name will be station.locomotive.works/_app/yoursite.<br></p>"
+    category: technical questions
+- What happens to my sites if I want to stop using Locomotive.works?:
+    _slug: what-happens-to-my-sites-if-i-want-to-stop-using-locomotive-dot-works
+    question: What happens to my sites if I want to stop using Locomotive.works?
+    answer: "<p>At any time, you can download a complete copy of your site. You can
+      then host it in another instance of the Locomotive engine which is completely
+      open source.<br></p>"
+    category: technical questions

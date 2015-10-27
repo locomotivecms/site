@@ -1,12 +1,26 @@
-- "Steve Jobs":
-    title: "Former CEO of Apple"
-    quote: "<p>Iste est cupiditate molestiae tenetur et suscipit. Doloribus quasi consequatur. Esse maiores aut quis est voluptate et sed. Incidunt voluptas voluptatem consequatur quia ut.</p>"
-    picture: "/samples/testimonials/steve_jobs.jpeg"
-
-- "John Doe":
-    title: "CEO local.ch"
-    quote: "<p>Iste est cupiditate molestiae tenetur et suscipit. Doloribus quasi consequatur. Esse maiores aut quis est voluptate et sed. Incidunt voluptas voluptatem consequatur quia ut.</p>"
-
-- "John Doe":
-    title: "CEO local.ch"
-    quote: "<p>Iste est cupiditate molestiae tenetur et suscipit. Doloribus quasi consequatur. Esse maiores aut quis est voluptate et sed. Incidunt voluptas voluptatem consequatur quia ut.</p>"
+- Jeremy Seitz:
+    _slug: john-doe
+    name: Jeremy Seitz
+    title: 'Head of Web Engineering at Swisscom, the Swiss official phone book: 4.5
+      million unique visitors everyday in Switzerland'
+    picture: "/samples/content_entries/Jeremy-Seitz.jpeg"
+    quote: "<p>In general, our jobs as developers has become easier. More importantly,
+      we get great support from the people that make Locomotive. They’re always very
+      responsive to us and they’ve helped us a lot with some of the more complex solutions
+      that we’ve tried to build. That’s been a big difference for us.</p>"
+- Paul Eckenrode:
+    _slug: john-doe-1
+    name: Paul Eckenrode
+    title: Owner of 360durango.com
+    quote: "<p>The best feedback from clients when it comes to content management
+      systems is no feedback. That means that everything is working for them.&nbsp;They're
+      amazed that they can actually do some of the things that they can do on their
+      own with very little to no website or development experience.</p>"
+- Christie Roberts:
+    _slug: john-doe-2
+    name: Christie Roberts
+    title: Designer and owner at Under the Sun Graphics
+    picture: "/samples/content_entries/christie-roberts-designer.jpeg"
+    quote: "<p>I love the user friendliness of the back office and the different ways
+      that I can tweak and do testing on my own has made it very successful for me
+      as a designer.</p>"

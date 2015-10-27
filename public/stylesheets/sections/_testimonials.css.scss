@@ -15,7 +15,7 @@
       margin: 0px auto;
       margin-bottom: 20px;
 
-      min-height: 150px;
+      min-height: 222px;
       @include border-radius(10px);
       border: 2px solid #eaedf0;
       color: #333333;
@@ -61,12 +61,18 @@
       text-transform: uppercase;
       font-size: 12px;
 
-      span.name {
-        margin-left: 10px;
-        color: #eb6123;
+      p {
+        margin-left: 75px;
+        padding-top: 20px;
+        color: #333;
+        font-size: 12px;
+        span.name {
+          color: #eb6123;
+        }
       }
 
       img {
+        float: left;
         width: 60px;
         height: 60px;
         border: 3px solid #eaedf0;
