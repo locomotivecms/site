@@ -1,8 +1,10 @@
 source 'https://rubygems.org'
 
-gem 'locomotivecms_steam', path: '~/Documents/LocomotiveCMS/in_progress/steam'
+gem 'locomotivecms_steam', path: '~/Documents/LocomotiveCMS/gems/steam'
 gem 'locomotivecms_wagon', path: '~/Documents/LocomotiveCMS/wagon'
 # gem 'locomotivecms_wagon', '2.0.0-beta.1'
+
+gem 'guard-livereload'
 
 group :development do
   # Mac OS X

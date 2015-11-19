@@ -19,7 +19,6 @@ editable_elements:
     \             </li>\r\n              <li>\r\n                <a rel=\"nofollow\"
     target=\"_blank\" href=\"https://locomotive-v3.readme.io/blog\" title=\"Blog\">Blog</a>\r\n
     \             </li>\r\n            </ul>"
-
 ---
 !!!
 %html{ lang: "en" }
@@ -63,6 +62,8 @@ editable_elements:
               %li
                 %a{ href: "{% path_to 'home' %}#pricing" } Pricing
               %li
+                %a{ href: "http://locomotive-v3.readme.io" } Documentation
+              %li
                 %a{ href: "{% path_to 'home' %}#faq" } FAQ
               %li.sign-in.hidden-xs
                 %span
@@ -87,7 +88,7 @@ editable_elements:
             %p Developed by NoCoffee SARL as free software under the MIT License
             {% endeditable_text %}
 
-          .col-md-offset-4.col-md-2.resources
+          .col-md-offset-6.col-md-2.resources
             {% editable_text resources, fixed: true %}
             %h4 Resources
             %ul
@@ -97,18 +98,8 @@ editable_elements:
                 %a{ href: 'https://github.com/locomotivecms/engine' } Github
               %li
                 %a{ href: 'https://trello.com/b/kRiy1dZu/locomotive-v3' } Roadmap
-            {% endeditable_text %}
-
-          .col-md-2.resources
-            {% editable_text contact, fixed: true %}
-            %h4 About us
-            %ul
-              %li
-                %a{ href: '#' } Team
               %li
                 %a{ href: 'mailto:contact@locomotivecms.com' } Contact
-              %li
-                %a{ href: '#' } Blog
             {% endeditable_text %}
 
         .row
