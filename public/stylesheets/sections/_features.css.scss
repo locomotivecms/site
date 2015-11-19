@@ -2,15 +2,24 @@
 
   .list {
 
+    .media {
+      padding-top: 34px;
+      background: transparent url('../images/rings_background.png') no-repeat top center;
+    }
+
     .media-object {
       height: 60px;
       margin-bottom: 10px;
       vertical-align: center;
     }
 
+    .media-body {
+      padding-top: 25px;
+    }
+
     .feature {
-      margin-top: 25px;
       margin-bottom: 25px;
+      min-height: 205px;
     }
   }
 
