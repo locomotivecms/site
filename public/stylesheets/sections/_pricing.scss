@@ -1,0 +1,118 @@
+#pricing.section {
+  background: #eb6123;
+
+  hr {
+    border-top-color: #db551a;
+  }
+
+  h3 {
+    color: #fff;
+  }
+
+  .text {
+    p {
+      color: #fff;
+      font-size: 16px;
+    }
+  }
+
+  .table {
+    margin-top: 50px;
+    border: 2px solid #cd5420;
+
+    thead {
+      background: #fff;
+      th {
+        padding: 20px 0px;
+        color: #ec6124;
+        font-weight: 300;
+        font-size: 20px;
+        text-align: center;
+        border-left: 1px solid #f3f5f7;
+        border-bottom: 1px solid #f3f5f7;
+
+        &:first-child {
+          border-left: none;
+        }
+
+        .price {
+          display: block;
+          margin-top: 10px;
+          font-size: 24px;
+          font-weight: bold;
+
+          small {
+            text-transform: uppercase;
+            font-size: 12px;
+          }
+        }
+      }
+
+      tr > td:first-child {
+        border-left: none;
+      }
+    }
+
+    tbody {
+      background: #fff;
+      td {
+        padding: 20px;
+        border-left: 1px solid #f3f5f7;
+
+        ul {
+          list-style: none;
+          padding: 0px;
+
+          li {
+            color: #6a727d;
+            margin: 15px 0px;
+            b {
+              color: #333;
+            }
+          }
+        }
+      }
+
+      tr.common {
+        td {
+          ul {
+            display: block;
+            width: 400px;
+            margin: 0 auto;
+          }
+        }
+      }
+
+      tr > td:first-child {
+        border-left: none;
+      }
+
+
+    }
+
+    td, th {
+      width: 25%;
+    }
+  }
+
+  .signup-now {
+    margin-top: 40px;
+
+    .btn {
+      border-color: #fff;
+      @include border-radius(20px);
+      color: rgba(255, 255, 255, 0.7);
+      background: transparent;
+
+      i {
+        position: relative;
+        top: 1px;
+        margin-left: 20px;
+      }
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
