@@ -105,7 +105,8 @@ editable_elements:
         .row
           .col-md-6.legal
             %p
-              &copy; {{ now | date: '%Y' }} NoCoffee SARL
+              &copy; {{ now | date: '%Y' }}
+              %a{ href: 'http://www.nocoffee.fr' } NoCoffee SARL
               %span
                 %a{ href: '{% path_to "terms-of-use" %}' } Terms of use
                 \/
