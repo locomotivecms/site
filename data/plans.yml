@@ -9,13 +9,13 @@
     _slug: personal
     name: Personal
     price: 19
-    description: "<p></p><ul><li><b>1</b> site<br></li><li><b>100MB</b> Storage<br></li><li><b>25,000</b>
+    description: "<p></p><ul><li><b>1</b> site<br></li><li><b>1GB</b> Storage<br></li><li><b>25,000</b>
       page views</li><li>Email support</li></ul><p></p>"
 - Freelancer:
     _slug: freelancer
     name: Freelancer
     price: 69
-    description: "<p></p><ul><li><b>Unlimited </b>sites<b></b><br></li><li><b>1GB</b>&nbsp;Storage<br></li><li><b>150,000</b>
+    description: "<p></p><ul><li><b>Unlimited </b>sites<b></b><br></li><li><b>3GB</b>&nbsp;Storage<br></li><li><b>150,000</b>
       page views</li><li>Email and Skype support</li></ul><p></p><p></p>"
 - Agency:
     _slug: agency
