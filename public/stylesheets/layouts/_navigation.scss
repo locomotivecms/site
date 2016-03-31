@@ -1,0 +1,42 @@
+// =============================================================================
+// Navigation
+// =============================================================================
+
+.navigation {
+  display: block;
+  padding: 50px 150px;
+  text-align: left;
+}
+
+.navigation-brand {
+  display: inline-block;
+  vertical-align: middle;
+  img {
+    display: block;
+    height: 22.5px;
+  }
+}
+
+.navigation-links {
+  float: right;
+  padding: 0;
+  margin: 0;
+  margin-top: -7px;
+  list-style: none;
+  li {
+    display: inline-block;
+    margin-left: 30px;
+    vertical-align: middle;
+    a {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      color: $gray-darkest;
+      text-transform: uppercase;
+      &.button {
+        padding: 12.5px 30px;
+        color: $white;
+      }
+    }
+  }
+}

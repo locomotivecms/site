@@ -1,0 +1,43 @@
+---
+title: Home page
+seo_title: "The number one Content Management System"
+meta_description:
+published: true
+handle: home
+slug: index
+---
+
+{% extends "layouts/base" %}
+
+{% block main %}
+  <header style="background: url({% editable_file 'home-header-image', resize: '1900x900#' %}/samples/pages/header-home.jpg{% endeditable_file %}) center center no-repeat;">
+    <nav class="navigation">
+      <a href="{% path_to home %}" class="navigation-brand">
+        <img src="{{ 'logo-black.png' | theme_image_url }}" alt="{{ site.seo_title }}">
+      </a>
+      <ul class="navigation-links">
+        <li>
+          <a href="#">Features</a>
+        </li>
+        <li>
+          <a href="#">Pricing</a>
+        </li>
+        <li>
+          <a href="#">Documentation</a>
+        </li>
+        <li>
+          <a href="#" class="button button-black">Login</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header-content">
+      <h1>Take care of <br>your websites</h1>
+      <h4>For agencies, individuals and publishers</h4>
+      <p>Locomotive makes it super easy for developers and designers to build what their clients need.</p>
+      <a href="https://station.locomotive.works/_app/sign_in" class="button button-primary">
+        Try for free
+        <i class="fa fa-angle-right"></i>
+      </a>
+    </div>
+  </header>
+{% endblock %}

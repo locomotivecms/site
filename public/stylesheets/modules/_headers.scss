@@ -1,0 +1,29 @@
+// =============================================================================
+// Headers
+// =============================================================================
+
+header {
+  display: block;
+  text-align: left;
+  background-size: cover !important;
+}
+
+.header-content {
+  display: inline-block;
+  width: 100%;
+  max-width: 600px;
+  padding: 200px 0 270px 150px;
+  text-align: left;
+  h1 {
+    color: $gray-darkest;
+  }
+  h4 {
+    margin-top: 10px;
+  }
+  p {
+    max-width: 400px;
+    margin: 45px 0 25px;
+    font-size: 18px;
+    color: $gray-dark;
+  }
+}

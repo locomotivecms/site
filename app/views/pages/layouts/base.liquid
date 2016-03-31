@@ -1,0 +1,51 @@
+---
+title: Base layout
+slug: base
+listed: false
+published: false
+is_layout: false
+---
+
+<!doctype html>
+<html lang="{{ locale }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>{{ site.seo_title }} | {{ page.seo_title }}</title>
+
+  <meta name="description" content="{{ page.meta_description }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="{{ page.seo_title }}">
+  <meta property="og:url" content="{{ url }}">
+  <meta property="og:description" content="{{ page.meta_description }}">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:image" content="{{ 'og-image.jpg' | theme_image_url }}">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="{{ url }}">
+  <meta name="twitter:title" content="{{ page.seo_title }}">
+  <meta name="twitter:description" content="{{ page.meta_description }}">
+  <meta name="twitter:image" content="{{ 'og-image.jpg' | theme_image_url }}">
+
+  <link rel="icon" type="image/x-icon" href="{{ 'favicon.ico' | theme_image_url }}" />
+  <link rel="apple-touch-icon" href="{{ 'apple-touch-icon.png' | theme_image_url }}" />
+
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,300|Noto+Sans:400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  
+  {{ 'application.css' | stylesheet_tag }}
+
+  {% google_analytics 'UA-9364594-3' %}
+</head>
+<body>
+  <!--[if lt IE 8]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  {% block 'main' %}{% endblock %}
+
+  {% include javascripts %}
+</body>
+</html>
