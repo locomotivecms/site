@@ -81,10 +81,6 @@
   @include button-generator($gray-lightest, $base-font-color);
 }
 
-.button-muted {
-  @include button-generator(rgba($white, .2), $white);
-}
-
 .button-danger {
   @include button-generator($brand-danger, $white);
 }
@@ -99,4 +95,8 @@
 
 .button-warning {
   @include button-generator($brand-warning, $white);
+}
+
+.button-black {
+  @include button-generator($gray-darkest, $white);
 }
