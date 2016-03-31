@@ -1,0 +1,24 @@
+name: Companies
+slug: companies
+description: Companies that use Locomotive
+label_field_name: name
+order_by: _position
+
+display_settings:
+  seo: false
+  advanced: false
+
+fields:
+- name:
+    label: Name
+    type: string
+    required: true
+    hint: Name of the company
+    localized: false
+
+- logo:
+    label: Logo
+    type: file
+    required: true
+    hint: "Logo of the company in png"
+    localized: false

@@ -1,0 +1,42 @@
+// =============================================================================
+// Headers
+// =============================================================================
+
+header {
+  display: block;
+  text-align: center;
+  background: $gray-darkest;
+  background-size: cover !important;
+}
+
+.header-content {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  padding: 150px 0 325px;
+  margin: 0 auto;
+  text-align: center;
+  h1 {
+    color: $white;
+  }
+  p {
+    display: block;
+    max-width: 600px;
+    margin: 20px auto 50px;
+    font-size: 18px;
+    color: rgba($white, .8);
+  }
+  &.is-small {
+    padding: 100px 0 175px;
+  }
+}
+
+.header-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 16px;
+  color: rgba($white, .4);
+  &:hover {
+    color: $white;
+  }
+}

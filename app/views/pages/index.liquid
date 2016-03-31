@@ -1,0 +1,189 @@
+---
+title: Home page
+seo_title: "The number one Content Management System"
+meta_description:
+published: true
+handle: home
+slug: index
+---
+
+{% extends "layouts/base" %}
+
+{% block main %}
+  <header style="background: url({% editable_file 'home-header-image', resize: '1900x900#' %}/samples/pages/header-home.jpg{% endeditable_file %}) center center no-repeat;">
+    <div class="grid grid-centered">
+      <div class="grid-cell">
+        {% include navigation %}
+        <div class="header-content">
+          <h1>Craft websites that just work</h1>
+          <p>Locomotive makes it super easy to develop and design exactly what your clients need.</p>
+          <a href="https://station.locomotive.works/_app/sign_in" class="button button-success">
+            Try for free
+          </a>
+          <br>
+          <a href="https://station.locomotive.works/_app/sign_in" class="header-link">
+            <i>View a testimonial</i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="grid grid-centered">
+        <div class="grid-cell with-8col is-middle">
+          <img src="{% editable_file 'home-header-screen' %}/samples/pages/home-screen.png{% endeditable_file %}" alt="">
+        </div>
+        <div class="grid-cell with-4col is-middle">
+          <div class="section-image-intro">
+            <h2>An awesome user interface</h2>
+            <p class="is-justified">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              <br><br>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <a href="#" class="button button-primary">Discover all features</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-dark">
+      <div class="grid grid-centered">
+        <div class="grid-cell is-centered">
+          <h3 class="block-title">Super easy workflow</h3>
+        </div>
+        <div class="grid-cell with-4col">
+          <div class="block">
+            <i class="fa fa-cloud-download" aria-hidden="true"></i>
+            <h5>Install wagon</h5>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div class="block-dots">
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <div class="grid-cell with-4col">
+          <div class="block">
+            <i class="fa fa-paint-brush" aria-hidden="true"></i>
+            <h5>Craft your content</h5>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div class="block-dots">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <div class="grid-cell with-4col">
+          <div class="block">
+            <i class="fa fa-diamond" aria-hidden="true"></i>
+            <h5>Deploy website</h5>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div class="block-dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <div class="grid-cell is-centered">
+          <a href="#" class="button button-primary">Tell me more</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-testimonials" style="background: url({% editable_file 'home-background-testimonials', resize: '1900x900#' %}/samples/pages/home-testimonials.jpg{% endeditable_file %}) center center no-repeat;">
+      <div class="grid grid-centered">
+        <div class="grid-cell with-6col is-middle">
+          <h1>Love developing for you CMS as much as your clients love using it</h1>
+        </div>
+        <div class="grid-cell with-6col is-middle">
+          <div id="carousel-testimonials" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+              {% for testimonial in contents.testimonials %}
+                <div class="item {% if forloop.index0 == 0 %}active{% endif %}">
+                  <div class="testimonial-wrapper">
+                    <div class="testimonial">
+                      <div class="testimonial-box">
+                        {{ testimonial.quote }}
+                      </div>
+                      <h6 class="testimonial-person">
+                        <img src="{{ testimonial.picture.url | resize: '45x45#' }}" alt="{{ testimonial.name }}" />
+                        <strong>
+                          {{ testimonial.name }}
+                          <span>{{ testimonial.company }}</span>
+                        </strong>
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+            <ol class="carousel-indicators">
+              {% for testimonial in contents.testimonials %}
+                <li data-target="#carousel-testimonials" data-slide-to="{{ forloop.index0 }}" class="{% if forloop.index0 == 0 %}active{% endif %}"></li>
+              {% endfor %}
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="section-overlay"></div>
+    </section>
+
+    <section class="section-light">
+      {% for company in contents.companies %}
+        <img src="{{ company.logo.url | resize: 'x35' }}" alt="{{ company.name }}" />
+      {% endfor %}
+    </section>
+
+    <section>
+      <div class="grid grid-centered">
+        <div class="grid-cell is-centered">
+          <div class="section-intro">
+            <h2>Completely Open Source</h2>
+            <p>
+              Locomotive is completely Open Source. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+            </p>
+          </div>
+        </div>
+        <div class="grid-cell with-6col">
+          <div class="block-tools is-right">
+            <img src="{{ 'wagon.png' | theme_image_url }}" alt="" />
+            <h4>Wagon</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <a href="#" class="button button-primary">
+              View on Github
+            </a>
+            <i>v3.1.0</i>
+          </div>
+        </div>
+        <div class="grid-cell with-6col">
+          <div class="block-tools">
+            <img src="{{ 'engine.png' | theme_image_url }}" alt="" />
+            <h4>Engine</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <a href="#" class="button button-primary">
+              View on Github
+            </a>
+            <i>v3.1.0</i>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+{% endblock %}
+
+{% block page_scripts %}
+  {{ "vendor/carousel.js" | javascript_tag }}
+{% endblock %}

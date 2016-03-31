@@ -1,25 +1,25 @@
 - Jeremy Seitz:
     _slug: john-doe
     name: Jeremy Seitz
-    title: 'Head of Web Engineering at Swisscom, the Swiss official phone book: 4.5
-      million unique visitors everyday in Switzerland'
+    company: "Swisscom"
     picture: "/samples/content_entries/Jeremy-Seitz.jpeg"
-    quote: "<p>In general, our jobs as developers has become easier. More importantly,
+    quote: "<p>In general, our jobs as developers have become easier. More importantly,
       we get great support from the people that make Locomotive. They’re always very
-      responsive to us and they’ve helped us a lot with some of the more complex solutions
-      that we’ve tried to build. That’s been a big difference for us.</p>"
+      responsive and they’ve helped us a lot with some of the more complex solutions
+      that we’ve tried to build.</p>"
 - Paul Eckenrode:
     _slug: john-doe-1
     name: Paul Eckenrode
-    title: Owner of 360durango.com
+    company: "360durango.com"
+    picture: "/samples/content_entries/christie-roberts-designer.jpeg"
     quote: "<p>The best feedback from clients when it comes to content management
-      systems is no feedback. That means that everything is working for them.&nbsp;They're
+      systems is zero feedback. They're
       amazed that they can actually do some of the things that they can do on their
       own with very little to no website or development experience.</p>"
 - Christie Roberts:
     _slug: john-doe-2
     name: Christie Roberts
-    title: Designer and owner at Under the Sun Graphics
+    company: "Under the Sun Graphics"
     picture: "/samples/content_entries/christie-roberts-designer.jpeg"
     quote: "<p>I love the user friendliness of the back office and the different ways
       that I can tweak and do testing on my own has made it very successful for me
