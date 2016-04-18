@@ -9,10 +9,11 @@ header {
 }
 
 .header-content {
-  display: inline-block;
+  display: block;
   width: 100%;
   max-width: 1200px;
   padding: 150px 0 325px;
+  margin: 0 auto;
   text-align: center;
   h1 {
     color: $white;
