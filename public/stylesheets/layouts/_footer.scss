@@ -1,0 +1,33 @@
+// =============================================================================
+// Footer
+// =============================================================================
+
+footer {
+  padding: 70px 0;
+  background: $white;
+  border-top: 1px solid $base-border-color;
+}
+
+.footer-links {
+  display: block;
+  padding: 0;
+  margin: 10px 0 0;
+  list-style: none;
+  li {
+    display: block;
+    margin: 5px 0;
+    a {
+      color: $gray;
+      transition: color $base-transition-speed linear;
+      &:hover {
+        color: $gray-darker;
+      }
+    }
+  }
+}
+
+.footer-brand {
+  display: inline-block;
+  height: 17px;
+  text-align: center;
+}

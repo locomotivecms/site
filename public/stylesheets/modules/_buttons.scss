@@ -11,15 +11,15 @@
 
 @mixin button-generator($background, $font) {
   color: $font;
-  background-color: $background;
+  background: linear-gradient(to right, lighten($background, 5), $background);
   &:hover {
     color: $font;
-    background-color: lighten($background, 5);
+    background: linear-gradient(to right, lighten($background, 5), lighten($background, 10));
   }
   &:focus,
   &:active {
     color: $font;
-    background-color: darken($background, 10);
+    background: linear-gradient(to right, darken($background, 5), lighten($background, 10));
     outline: none;
   }
 }
@@ -30,7 +30,7 @@
 .button {
   position: relative;
   display: inline-block;
-  padding: 15px 60px;
+  padding: 20px 60px;
   font-family: $base-font-family;
   font-size: 12px;
   font-weight: 700;
@@ -57,9 +57,18 @@
       outline: none;
     }
   }
-  i {
-    margin-left: 5px;
-    font-size: 16px;
+}
+
+.button-small {
+  padding: 10px 30px 12px;
+  font-size: 11px;
+  color: $gray-darker;
+  background: $white;
+  border: 1px solid $gray-dark;
+  span {
+    display: block;
+    font-size: 8px;
+    color: $gray;
   }
 }
 
@@ -72,8 +81,8 @@
   @include button-generator($gray-lightest, $base-font-color);
 }
 
-.button-black {
-  @include button-generator($gray-darkest, $white);
+.button-muted {
+  @include button-generator(rgba($white, .2), $white);
 }
 
 .button-danger {

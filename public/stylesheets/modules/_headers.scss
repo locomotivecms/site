@@ -4,26 +4,34 @@
 
 header {
   display: block;
-  text-align: left;
+  text-align: center;
   background-size: cover !important;
 }
 
 .header-content {
   display: inline-block;
   width: 100%;
-  max-width: 600px;
-  padding: 200px 0 270px 150px;
-  text-align: left;
+  max-width: 1200px;
+  padding: 150px 0 325px;
+  text-align: center;
   h1 {
-    color: $gray-darkest;
-  }
-  h4 {
-    margin-top: 10px;
+    color: $white;
   }
   p {
-    max-width: 400px;
-    margin: 45px 0 25px;
+    display: block;
+    max-width: 600px;
+    margin: 20px auto 50px;
     font-size: 18px;
-    color: $gray-dark;
+    color: rgba($white, .8);
+  }
+}
+
+.header-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 16px;
+  color: rgba($white, .4);
+  &:hover {
+    color: $white;
   }
 }

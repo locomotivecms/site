@@ -4,7 +4,7 @@
 
 .navigation {
   display: block;
-  padding: 50px 150px;
+  padding: 75px 0;
   text-align: left;
 }
 
@@ -21,20 +21,21 @@
   float: right;
   padding: 0;
   margin: 0;
-  margin-top: -7px;
+  margin-top: -2px;
   list-style: none;
   li {
     display: inline-block;
     margin-left: 30px;
+    color: rgba($white, .4);
     vertical-align: middle;
     a {
       font-size: 12px;
       font-weight: 700;
       letter-spacing: .1em;
-      color: $gray-darkest;
+      color: rgba($white, .8);
       text-transform: uppercase;
-      &.button {
-        padding: 12.5px 30px;
+      transition: color $base-transition-speed linear;
+      &:hover {
         color: $white;
       }
     }

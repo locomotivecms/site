@@ -30,6 +30,9 @@ body {
 p {
   margin: 0;
   font-weight: $base-font-weight;
+  &.is-justified {
+    text-align: justify;
+  }
 }
 
 b,
@@ -45,20 +48,19 @@ h5,
 h6 {
   margin: 0;
   font-family: $sans-serif-brand;
-  font-weight: 400;
-  line-height: 1.15;
-  letter-spacing: -.03em;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -.01em;
+  color: $gray-darker;
   text-rendering: optimizeLegibility;
 }
 
 h1 {
   font-size: 52px;
-  font-weight: 400;
-  text-transform: uppercase;
 }
 
 h2 {
-  font-size: $base-font-size * 2;
+  font-size: 42px;
 }
 
 h3 {
@@ -66,13 +68,11 @@ h3 {
 }
 
 h4 {
-  font-size: 18.2px;
-  color: $brand-warning;
-  text-transform: uppercase;
+  font-size: 22px;
 }
 
 h5 {
-  font-size: $base-font-size * 1.25;
+  font-size: 18px;
 }
 
 h6 {

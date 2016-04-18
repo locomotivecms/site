@@ -10,13 +10,18 @@
 
 // Layouts
 
+@import "layouts/footer";
 @import "layouts/grid";
 @import "layouts/navigation";
 
 // Modules
 
+@import "modules/blocks";
 @import "modules/buttons";
+@import "modules/carousel";
 @import "modules/flashes";
 @import "modules/forms";
 @import "modules/headers";
+@import "modules/sections";
 @import "modules/tables";
+@import "modules/testimonials";

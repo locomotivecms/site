@@ -1,0 +1,64 @@
+// =============================================================================
+// Sections
+// =============================================================================
+
+section {
+  padding: 100px 0;
+}
+
+.section-dark {
+  background: linear-gradient(to right, lighten($gray-darkest, 5), $gray-darkest);
+}
+
+.section-light {
+  padding: 40px 0;
+  text-align: center;
+  background: $gray-lighter;
+  img {
+    display: inline-block;
+    margin: 0 30px;
+    vertical-align: middle;
+  }
+}
+
+.section-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background: rgba($black, .4);
+}
+
+.section-intro {
+  h2 {
+    color: $gray-darker;
+  }
+  p {
+    display: block;
+    max-width: 700px;
+    margin: 15px auto 0;
+    text-align: center;
+  }
+}
+
+.section-image-intro p {
+  margin: 30px 0 50px;
+  font-size: 16px;
+}
+
+.section-testimonials {
+  position: relative;
+  display: block;
+  padding: 250px 0 230px;
+  background-size: cover !important;
+  h1 {
+    font-size: 47px;
+    color: $white;
+  }
+  .grid {
+    position: relative;
+    z-index: 20;
+  }
+}

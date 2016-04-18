@@ -1,0 +1,75 @@
+// =============================================================================
+// Blocks
+// =============================================================================
+
+.block-title {
+  margin-bottom: 50px;
+  color: $white;
+}
+
+.block {
+  display: block;
+  padding: 40px;
+  margin-bottom: 50px;
+  text-align: center;
+  background: lighten($gray-darkest, 7);
+  border-radius: $base-border-radius;
+  .fa {
+    display: inline-block;
+    width: 65px;
+    height: 65px;
+    padding: 15px 0;
+    font-size: 35px;
+    color: lighten($gray-darkest, 7);
+    text-align: center;
+    background: linear-gradient(to right, lighten($brand-primary, 5), $brand-primary);
+    border-radius: $base-border-radius;
+  }
+  h5 {
+    margin: 20px 0 10px;
+    color: $gray-lightest;
+  }
+}
+
+.block-tools {
+  display: block;
+  padding: 50px;
+  margin-top: 50px;
+  text-align: center;
+  background: $gray-lightest;
+  border-radius: $base-border-radius;
+  p {
+    display: block;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  h4 {
+    display: block;
+    margin: 15px 0;
+  }
+  img {
+    display: inline-block;
+    height: 70px;
+  }
+  .button {
+    margin-top: 25px;
+  }
+  i {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+  }
+}
+
+.block-dots {
+  display: block;
+  margin-top: 20px;
+  span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0 2px;
+    background: rgba($white, .2);
+    border-radius: $base-border-radius;
+  }
+}
