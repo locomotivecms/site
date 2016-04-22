@@ -6,7 +6,6 @@ published: true
 handle: home
 slug: index
 ---
-
 {% extends "layouts/base" %}
 
 {% block main %}
@@ -21,13 +20,32 @@ slug: index
             Try for free
           </a>
           <br>
-          <a href="https://station.locomotive.works/_app/sign_in" class="header-link">
+          <a href="#" class="header-link" data-toggle="modal" data-target="#testimonial-modal">
             <i>View a testimonial</i>
           </a>
         </div>
       </div>
     </div>
   </header>
+
+  {% with_scope featured: true %}{% assign testimonial = contents.testimonials.first %}{% endwith_scope %}
+  <div id="testimonial-modal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">{{ testimonial.name }}</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-12 testimonial-video">
+              {{ testimonial.video }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <main>
     <section>
@@ -102,7 +120,7 @@ slug: index
     <section class="section-testimonials" style="background: url({% editable_file 'home-background-testimonials', resize: '1900x900#' %}/samples/pages/home-testimonials.jpg{% endeditable_file %}) center center no-repeat;">
       <div class="grid grid-centered">
         <div class="grid-cell with-6col is-middle">
-          <h1>Love developing for you CMS as much as your clients love using it</h1>
+          <h1>Love developing for your CMS as much as your clients love using it</h1>
         </div>
         <div class="grid-cell with-6col is-middle">
           <div id="carousel-testimonials" class="carousel slide" data-ride="carousel">
