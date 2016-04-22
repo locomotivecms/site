@@ -73,3 +73,46 @@
     border-radius: $base-border-radius;
   }
 }
+
+.block-list {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  list-style: none;
+  li {
+    display: block;
+    margin: 5px 0;
+    color: $gray-lighter;
+    strong {
+      color: $white;
+    }
+  }
+}
+
+.block-price {
+  display: block;
+  margin: 25px 0 50px;
+  font-weight: 100;
+  line-height: 1;
+  span {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: rgba($brand-success, .7);
+  }
+  h1 {
+    display: inline-block;
+    font-size: 70px;
+    line-height: .8;
+    color: $brand-success;
+    vertical-align: middle;
+  }
+  i {
+    display: inline-block;
+    margin-right: -5px;
+    font-size: 20px;
+    font-style: normal;
+    color: $gray-lighter;
+    vertical-align: top;
+  }
+}
