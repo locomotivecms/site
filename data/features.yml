@@ -3,16 +3,16 @@
     name: Content types
     description: "<p>Easy to add custom content types, no SQL needed.</p>"
     icon: "/samples/content_entries/arrow_on_computer.png"
-- Templating:
-    _slug: templating
-    name: Templating
-    description: "<p>Use Liquid, a simple and clean templating language.</p>"
-    icon: "/samples/content_entries/browser_window.png"
 - UI/UX:
     _slug: ui-slash-ux
     name: UI/UX
     description: "<p>Beautiful and intuitive editing interface that clients will love.</p>"
     icon: "/samples/content_entries/heart_in_bubble.png"
+- Templating:
+    _slug: templating
+    name: Templating
+    description: "<p>Use Liquid, a simple and clean templating language.</p>"
+    icon: "/samples/content_entries/browser_window.png"
 - Development:
     _slug: development
     name: Development
@@ -28,3 +28,20 @@
     name: Workflow
     description: "<p>Publish changes just with a single command.</p>"
     icon: "/samples/content_entries/arrow_up.png"
+- Restful API:
+    _slug: restful-api
+    name: Restful API
+    description: "<p>Be inspired! We're sure you'll find plenty of ways to use the
+      built-in API.</p>"
+    icon: "/samples/content_entries/cycle.png"
+- Multi-site:
+    _slug: multi-site
+    name: Multi-site
+    description: "<p>With a single instance of Locomotive, you can manage as many
+      websites as your server can handle. <br></p>"
+    icon: "/samples/content_entries/computer.png"
+- Open Source:
+    _slug: open-source
+    name: Open Source
+    description: "<p>free software released under the MIT license</p>"
+    icon: "/samples/content_entries/heart_in_bubble.png"
