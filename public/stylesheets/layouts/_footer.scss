@@ -31,3 +31,15 @@ footer {
   height: 17px;
   text-align: center;
 }
+
+.footer-copy {
+  display: inline-block;
+  margin-top: 50px;
+  color: $gray-light;
+  a {
+    color: $gray;
+    &:hover {
+      color: $gray-darker;
+    }
+  }
+}

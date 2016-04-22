@@ -62,3 +62,17 @@ section {
     z-index: 20;
   }
 }
+
+.section-legal {
+  p,
+  ul {
+    margin-bottom: 15px;
+  }
+  h5 {
+    margin: 50px 0 15px;
+  }
+  strong {
+    margin-bottom: 5px;
+    color: $gray-darker;
+  }
+}
