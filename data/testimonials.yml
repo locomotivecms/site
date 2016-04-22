@@ -9,17 +9,21 @@
       we get great support from the people that make Locomotive. They’re always very
       responsive and they’ve helped us a lot with some of the more complex solutions
       that we've tried to build.</p>
+    video_transcript: |
+      <p>TODO</p>
 - Paul Eckenrode:
     _slug: john-doe-1
     name: Paul Eckenrode
     company: "360durango.com"
-    picture: "/samples/content_entries/christie-roberts-designer.jpeg"
+    picture: "/samples/content_entries/paul-eckenrode.jpg"
     video: "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/o6A2fBOGNwY\" frameborder=\"0\" allowfullscreen></iframe>"
     quote: |
       <p>The best feedback from clients when it comes to content management
       systems is zero feedback. They're
       amazed that they can actually do some of the things that they can do on their
       own with very little to no website or development experience.</p>
+    video_transcript: |
+      <p>TODO</p>
 - Christie Roberts:
     _slug: john-doe-2
     name: Christie Roberts
@@ -31,3 +35,5 @@
       that I can tweak and do testing on my own has made it very successful for me
       as a designer.</p>
     featured: true
+    video_transcript: |
+      <p>TODO</p>
