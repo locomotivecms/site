@@ -37,6 +37,7 @@
   margin-top: 50px;
   text-align: center;
   background: $gray-lightest;
+  border: 1px solid $base-border-color;
   border-radius: $base-border-radius;
   p {
     display: block;
@@ -74,7 +75,18 @@
   }
 }
 
+.block-white {
+  padding: 60px 20px;
+  background: $white;
+  box-shadow: 0 1px 10px rgba($black, .2);
+  h5 {
+    margin: 0 0 25px;
+    color: $gray-darker;
+  }
+}
+
 .block-list {
+  min-height: 191px;
   padding: 0;
   margin: 0;
   text-align: center;
@@ -82,37 +94,102 @@
   li {
     display: block;
     margin: 5px 0;
-    color: $gray-lighter;
-    strong {
-      color: $white;
-    }
+    color: $gray-dark;
   }
+}
+
+.block-list-divider {
+  display: inline-block;
+  width: 80%;
+  height: 1px;
+  margin: 25px auto;
+  background: $base-border-color;
 }
 
 .block-price {
   display: block;
-  margin: 25px 0 50px;
+  margin: 40px 0 45px;
   font-weight: 100;
   line-height: 1;
   span {
     display: block;
     margin-top: 10px;
     font-size: 14px;
-    color: rgba($brand-success, .7);
+    color: $gray;
   }
   h1 {
     display: inline-block;
-    font-size: 70px;
+    font-size: 60px;
     line-height: .8;
-    color: $brand-success;
+    color: $brand-purple;
     vertical-align: middle;
   }
   i {
     display: inline-block;
-    margin-right: -5px;
+    margin-right: -4px;
     font-size: 20px;
     font-style: normal;
-    color: $gray-lighter;
+    color: $gray-light;
     vertical-align: top;
+  }
+}
+
+.block-outro {
+  display: block;
+  margin-top: -20px;
+  color: rgba($white, .7);
+  text-align: center;
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+}
+
+.block-features {
+  display: block;
+  padding: 0;
+  margin: 0;
+  margin-top: 50px;
+  list-style: none;
+  li {
+    display: block;
+    margin-top: 30px;
+    i {
+      display: inline-block;
+      width: 65px;
+      height: 65px;
+      padding: 15px 0;
+      margin-right: 15px;
+      font-size: 35px;
+      color: $white;
+      text-align: center;
+      vertical-align: middle;
+      background: linear-gradient(to right, lighten($brand-purple, 5), $brand-purple);
+      border-radius: $base-border-radius;
+    }
+    p {
+      display: inline-block;
+      font-size: 18px;
+      vertical-align: middle;
+    }
+  }
+}
+
+.block-faq-title {
+  margin-bottom: 20px;
+  color: $brand-purple;
+}
+
+.block-faq {
+  display: block;
+  margin-top: 40px;
+  strong {
+    display: block;
+    margin-bottom: 3px;
+    color: $gray-dark;
+  }
+  i {
+    padding: 0 3px;
+    background: rgba($brand-purple, .1);
   }
 }

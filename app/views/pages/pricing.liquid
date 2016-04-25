@@ -10,22 +10,17 @@ slug: pricing
 {% extends "layouts/base" %}
 
 {% block main %}
-  <header>
+  <header class="header-primary">
     <div class="grid grid-centered">
       <div class="grid-cell">
         {% include navigation %}
-        <div class="header-content is-small">
+        <div class="header-content">
           <h1>Simple pricing for everyone</h1>
           <p>Locomotive is open and free to use for anyone. We offer a hosted solution with heaps of benefits.</p>
         </div>
       </div>
-    </div>
-  </header>
-
-  <section class="section-dark">
-    <div class="grid grid-centered">
-      <div class="grid-cell with-4col">
-        <div class="block">
+      <div class="grid-cell with-3col">
+        <div class="block block-white">
           <h5>Personal</h5>
           <div class="block-price">
             <i>$</i>
@@ -34,25 +29,34 @@ slug: pricing
           </div>
           <ul class="block-list">
             <li>
-              <strong>1 site</strong>
+              <strong>Max 1 site</strong>
             </li>
             <li>
-              <strong>1GB Storage</strong>
+              1GB Storage
             </li>
             <li>
-              <strong>25.000 pageviews</strong>
+              Max 25.000 pageviews
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="grid-cell with-3col">
+        <div class="block block-white">
+          <h5>Freelancer</h5>
+          <div class="block-price">
+            <i>$</i>
+            <h1>39</h1>
+            <span>each month</span>
+          </div>
+          <ul class="block-list">
+            <li>
+              <strong>Max 3 sites</strong>
             </li>
             <li>
-              Automatic updates
+              3GB Storage
             </li>
             <li>
-              Assets served through CDN
-            </li>
-            <li>
-              Secured back-office
-            </li>
-            <li>
-              SSL certificate for each site
+              Max 75.000 pageviews
             </li>
             <li>
               Email support
@@ -60,51 +64,39 @@ slug: pricing
           </ul>
         </div>
       </div>
-      <div class="grid-cell with-4col">
-        <div class="block">
-          <h5>Freelancer</h5>
+      <div class="grid-cell with-3col">
+        <div class="block block-white">
+          <h5>Agency</h5>
           <div class="block-price">
             <i>$</i>
-            <h1>69</h1>
+            <h1>79</h1>
             <span>each month</span>
           </div>
           <ul class="block-list">
             <li>
-              <strong>Unlimited sites</strong>
+              <strong>Max 10 sites</strong>
             </li>
             <li>
-              <strong>3GB Storage</strong>
+              5GB Storage
             </li>
             <li>
-              <strong>150.000 pageviews</strong>
+              Max 150.000 pageviews
             </li>
             <li>
-              Automatic updates
+              Email and dedicated chat support
             </li>
             <li>
-              Assets served through CDN
-            </li>
-            <li>
-              Secured back-office
-            </li>
-            <li>
-              SSL certificate for each site
-            </li>
-            <li>
-              Email and Skype support
-            </li>
-            <li>
-              Priority support
+              Automated Dropbox backups
             </li>
           </ul>
         </div>
       </div>
-      <div class="grid-cell with-4col">
-        <div class="block">
-          <h5>Agency</h5>
+      <div class="grid-cell with-3col">
+        <div class="block block-white">
+          <h5>Enterprise</h5>
           <div class="block-price">
             <i>$</i>
-            <h1>149</h1>
+            <h1>199</h1>
             <span>each month</span>
           </div>
           <ul class="block-list">
@@ -112,28 +104,19 @@ slug: pricing
               <strong>Unlimited sites</strong>
             </li>
             <li>
-              <strong>5GB Storage</strong>
+              10GB Storage
             </li>
             <li>
-              <strong>500.000 pageviews</strong>
+              Max 500.000 pageviews
             </li>
             <li>
-              Automatic updates
+              Priority Skype and email support
             </li>
             <li>
-              Assets served through CDN
+              Automated Dropbox backups
             </li>
             <li>
-              Secured back-office
-            </li>
-            <li>
-              SSL certificate for each site
-            </li>
-            <li>
-              Account manager
-            </li>
-            <li>
-              Priority support
+              Dedicated account manager
             </li>
             <li>
               White label
@@ -141,6 +124,81 @@ slug: pricing
           </ul>
         </div>
       </div>
+      <div class="grid-cell is-centered">
+        <p class="block-outro">
+          Need a larger plan? <a href="#" title="Contact us">Contact us</a>.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <section class=" is-light">
+    <div class="grid grid-centered">
+      <div class="grid-cell is-centered">
+        <h2>All plans include</h2>
+      </div>
+      <div class="grid-cell with-6col">
+        <ul class="block-features">
+          <li>
+            <i class="fa fa-refresh" aria-hidden="true"></i>
+            <p>
+              Free automatic updates with new features and enhancements.
+            </p>
+          </li>
+          <li>
+            <i class="fa fa-picture-o" aria-hidden="true"></i>
+            <p>
+              Assets served through a CDN for optimal speed.
+            </p>
+          </li>
+          <li>
+            <i class="fa fa-globe" aria-hidden="true"></i>
+            <p>
+              Use your own domainnames.
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="grid-cell with-6col">
+        <ul class="block-features">
+          <li>
+            <i class="fa fa-lock" aria-hidden="true"></i>
+            <p>
+              Very secure back office, protecting your data at all cost.
+            </p>
+          </li>
+          <li>
+            <i class="fa fa-upload" aria-hidden="true"></i>
+            <p>
+              Complete freedom to update your site anytime and anywhere.
+            </p>
+          </li>
+          <li>
+            <i class="fa fa-file-text" aria-hidden="true"></i>
+            <p>
+              No contracts required, opt-in and out at any time.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="with-border">
+    <div class="grid grid-centered">
+      <div class="grid-cell is-centered">
+        <h3 class="block-faq-title">Frequently asked questions</h3>
+      </div>
+      {% for faq in contents.faq_items %}
+        <div class="grid-cell with-6col">
+          <div class="block-faq">
+            <strong>{{ faq.question }}</strong>
+            <p>
+              {{ faq.answer }}
+            </p>
+          </div>
+        </div>
+      {% endfor %}
     </div>
   </section>
 {% endblock %}

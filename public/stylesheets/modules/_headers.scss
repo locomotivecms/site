@@ -40,3 +40,11 @@ header {
     color: $white;
   }
 }
+
+.header-primary {
+  padding-bottom: 100px;
+  background: linear-gradient(to bottom right, lighten($brand-purple, 10), darken($brand-purple, 5));
+  .header-content {
+    padding: 100px 0 50px;
+  }
+}

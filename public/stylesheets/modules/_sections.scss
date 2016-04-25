@@ -4,6 +4,12 @@
 
 section {
   padding: 100px 0;
+  &.with-border {
+    border-top: 1px solid $base-border-color;
+  }
+  &.is-light {
+    background: $gray-lightest;
+  }
 }
 
 .section-dark {
@@ -13,7 +19,9 @@ section {
 .section-light {
   padding: 40px 0;
   text-align: center;
-  background: $gray-lighter;
+  background: $gray-lightest;
+  border-bottom: 1px solid $base-border-color;
+
   img {
     display: inline-block;
     margin: 0 30px;
