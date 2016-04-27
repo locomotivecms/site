@@ -38,6 +38,7 @@ fields:
     required: false
     hint: "The HTML code provided by Youtube or other video platform"
     localized: false
+    text_formatting: raw
 
 - video_transcript:
     label: Video transcript

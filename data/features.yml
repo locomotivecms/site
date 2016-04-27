@@ -2,29 +2,23 @@
     _slug: content-types
     name: Content types
     description: "<p>Easy to add custom content types, no SQL needed.</p>"
-    icon: "/samples/content_entries/arrow_on_computer.png"
 - Templating:
     _slug: templating
     name: Templating
     description: "<p>Use Liquid, a simple and clean templating language.</p>"
-    icon: "/samples/content_entries/browser_window.png"
 - UI/UX:
     _slug: ui-slash-ux
     name: UI/UX
     description: "<p>Beautiful and intuitive editing interface that clients will love.</p>"
-    icon: "/samples/content_entries/heart_in_bubble.png"
 - Development:
     _slug: development
     name: Development
     description: "<p>Develop and preview sites locally with your favorite tools.</p>"
-    icon: "/samples/content_entries/magnify_glass_on_window.png"
 - Localization:
     _slug: localization
     name: Localization
     description: "<p>Can fully localize all the content and pages.</p>"
-    icon: "/samples/content_entries/folder.png"
 - Workflow:
     _slug: workflow
     name: Workflow
     description: "<p>Publish changes just with a single command.</p>"
-    icon: "/samples/content_entries/arrow_up.png"

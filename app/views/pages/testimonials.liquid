@@ -24,6 +24,7 @@ slug: testimonials
   <section>
     <div class="grid grid-centered">
       <div class="grid-cell with-8col with-2off">
+        {% editable_model testimonials %}
         <ul>
           {% for testimonial in contents.testimonials %}
           <li>
@@ -32,6 +33,7 @@ slug: testimonials
           </li>
           {% endfor %}
         </ul>
+        {% endeditable_model %}
       </div>
     </div>
   </section>
