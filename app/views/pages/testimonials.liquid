@@ -1,0 +1,41 @@
+---
+title: Testimonials
+seo_title: "Testimonials"
+meta_description:
+published: true
+handle: testimonials
+slug: testimonials
+---
+{% extends "layouts/base" %}
+
+{% block main %}
+  <header>
+    <div class="grid grid-centered">
+      <div class="grid-cell">
+        {% include navigation %}
+        <div class="header-content is-small">
+          <h1>Testimonials</h1>
+          <p>TODO: find a text here</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="grid grid-centered">
+      <div class="grid-cell with-8col with-2off">
+        {% editable_model testimonials %}
+        <ul>
+          {% for testimonial in contents.testimonials %}
+          <li>
+            <img src="{{ testimonial.picture.url | resize: '100x100#' }}" />
+            <a href="{% path_to testimonial %}">{{ testimonial.name }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endeditable_model %}
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

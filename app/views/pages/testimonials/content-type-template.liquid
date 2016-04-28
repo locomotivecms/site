@@ -1,0 +1,40 @@
+---
+title: Content-type-template
+published: true
+content_type: testimonials
+---
+
+{% extends "layouts/base" %}
+
+{% block main %}
+  <header>
+    <div class="grid grid-centered">
+      <div class="grid-cell">
+        {% include navigation %}
+        <div class="header-content is-small">
+          <h1>{{ testimonial.name }}</h1>
+          <p>{{ testimonial.company }}</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="grid grid-centered">
+      <div class="grid-cell with-8col with-2off">
+        <div class="video-iframe">
+          {{ testimonial.video }}
+        </div>
+
+        <p>
+          <a href="#transcript" data-toggle="collapse">See full transcript here</a>
+        </p>
+
+        <div class="video-transcript collapse" id="transcript">
+          {{ testimonial.video_transcript }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

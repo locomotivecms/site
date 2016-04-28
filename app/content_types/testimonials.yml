@@ -5,8 +5,10 @@ label_field_name: name
 order_by: _position
 
 display_settings:
-  seo: false
+  seo: true
   advanced: false
+
+entry_template: "<a href='{{link}}'>{{entry.name}}</a>&nbsp;&nbsp;{% if entry.featured %}<span class='label default-label'>Featured</span>{% endif %}"
 
 fields:
 - name:
@@ -30,9 +32,29 @@ fields:
     hint: "A picture of the person (size > 120x120 for a good quality)"
     localized: false
 
+- video:
+    label: Video
+    type: text
+    required: false
+    hint: "The HTML code provided by Youtube or other video platform"
+    localized: false
+    text_formatting: raw
+
+- video_transcript:
+    label: Video transcript
+    type: text
+    hint: "Full transcript of the video (when the visitor clicks on \"See full transcript\")."
+    text_formatting: html
+
 - quote:
     label: Quote
     type: text
     required: true
     hint: Explanatory text displayed in the back office
-    localized: true
+    localized: false
+
+- featured:
+    label: Featured
+    type: boolean
+    hint: Tell if this testimonial will be displayed at the top of the home page or not
+    localized: false
