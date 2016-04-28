@@ -81,8 +81,8 @@
   @include button-generator($gray-lightest, $base-font-color);
 }
 
-.button-muted {
-  @include button-generator(rgba($white, .2), $white);
+.button-black {
+  @include button-generator($gray-darkest, $white);
 }
 
 .button-danger {

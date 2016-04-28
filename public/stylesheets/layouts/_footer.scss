@@ -28,8 +28,8 @@ footer {
 
 .footer-brand {
   display: inline-block;
-  height: 17px;
-  text-align: center;
+  width: 100%;
+  max-width: 150px;
 }
 
 .footer-copy {

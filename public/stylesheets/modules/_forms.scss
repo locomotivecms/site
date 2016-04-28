@@ -40,11 +40,11 @@ label {
 input:not([type="submit"]):not([type="file"]):not([type="checkbox"]):not([type="radio"]),
 textarea {
   width: 100%;
-  padding: 10px 15px;
+  padding: 13.5px 25px;
   font-family: $base-font-family;
   color: $base-font-color;
   background-color: $white;
-  border: 1px solid $gray-lighter;
+  border: 1px solid $base-border-color;
   border-radius: $base-border-radius;
   transition: border-color $base-transition-speed linear;
   appearance: none;
@@ -93,4 +93,32 @@ input[type="file"] {
   position: relative;
   display: block;
   margin-bottom: 10px;
+}
+
+.form-subscribe {
+  text-align: center;
+  h5 {
+    margin-bottom: 15px;
+    color: $gray-darker;
+  }
+  input {
+    display: inline-block;
+    width: 100%;
+    max-width: 350px;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  .button {
+    max-width: 200px;
+  }
+  .response {
+    display: block;
+    margin-top: 3px;
+  }
+  .error {
+    color: $brand-danger;
+  }
+  .success {
+    color: $brand-success;
+  }
 }
