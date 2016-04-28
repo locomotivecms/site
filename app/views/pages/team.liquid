@@ -1,0 +1,45 @@
+---
+title: Team
+seo_title: "The awesome team behind LocomotiveCMS"
+meta_description:
+published: true
+handle: team
+slug: team
+---
+{% extends "layouts/base" %}
+
+{% block main %}
+  <header class="header-primary">
+    <div class="grid grid-centered">
+      <div class="grid-cell">
+        {% include navigation %}
+        <div class="header-content">
+          <h1>Meet the team behind LocomotiveCMS</h1>
+        </div>
+      </div>
+      <div class="grid-cell with-12col">
+        <div class="block block-white">
+          {% for category in contents.team_members.group_by_category %}
+            <h2>{{ category.name }}</h2>
+
+            {% if category.entries.size > 0 %}
+              <ul>
+                {% for member in category.entries %}
+                <li>
+                  <img src="{{ member.picture.url | resize: '100x100' }}"/>
+                  <h3>{{ member.name }}</h3>
+                  <p>{{ member.position }}</p>
+                </li>
+                {% endfor %}
+              </ul>
+
+            {% else %}
+              <p>No members yet</p>
+            {% endif %}
+
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </header>
+{% endblock %}
