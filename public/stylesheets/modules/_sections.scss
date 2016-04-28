@@ -10,6 +10,9 @@ section {
   &.is-light {
     background: $gray-lightest;
   }
+  &.is-small {
+    padding: 50px 0;
+  }
 }
 
 .section-dark {
@@ -21,7 +24,6 @@ section {
   text-align: center;
   background: $gray-lightest;
   border-bottom: 1px solid $base-border-color;
-
   img {
     display: inline-block;
     margin: 0 30px;

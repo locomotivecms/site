@@ -3,14 +3,13 @@
 // =============================================================================
 
 .block-title {
-  margin-bottom: 50px;
   color: $white;
 }
 
 .block {
   display: block;
   padding: 40px;
-  margin-bottom: 50px;
+  margin-top: 50px;
   text-align: center;
   background: lighten($gray-darkest, 7);
   border-radius: $base-border-radius;

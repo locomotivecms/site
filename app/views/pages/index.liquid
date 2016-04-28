@@ -30,17 +30,17 @@ slug: index
   </header>
 
   <main>
-    <section class="section-light is-small">
+    <section class="is-light is-small">
       <div class="grid grid-centered">
-        <div class="grid-cell with-4col">
+        <div class="grid-cell is-centered">
           <div class="form-subscribe">
-            <h6>We like to keep you updated. Subscribe and receive occasional emails.</h6>
+            <h5>Subscribe for super awesome occasional updates!</h5>
             {% include 'newsletter_form' %}
           </div>
         </div>
       </div>
     </section>
-    <section>
+    <section class="with-border">
       <div class="grid grid-centered">
         <div class="grid-cell with-8col is-middle">
           <img src="{% editable_file 'home-header-screen' %}/samples/pages/home-screen.png{% endeditable_file %}" alt="">
@@ -102,9 +102,6 @@ slug: index
               <span></span>
             </div>
           </div>
-        </div>
-        <div class="grid-cell is-centered">
-          <a href="#" class="button button-primary">Tell me more</a>
         </div>
       </div>
     </section>
@@ -168,7 +165,7 @@ slug: index
             <img src="{{ 'wagon.png' | theme_image_url }}" alt="" />
             <h4>Wagon</h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              With Wagon, you can scaffold a new Locomotive site and start adding content types and templates you need using any text editor. And thanks to Wagon's built-in web server, you can preview the site with your prefered web browser.
             </p>
             <a href="#" class="button button-primary">
               View on Github
@@ -181,12 +178,12 @@ slug: index
             <img src="{{ 'engine.png' | theme_image_url }}" alt="" />
             <h4>Engine</h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Engine is the Ruby on Rails application, it is dedicated to the creation and editing of content and managing all your sites. Next to that it offers a huge variety of features that helps you or your clients edit their sites with ease.
             </p>
-            <a href="#" class="button button-primary">
+            <a href="https://github.com/locomotivecms/engine" title="Engine" target="_blank" class="button button-primary">
               View on Github
             </a>
-            <i>v3.1.0</i>
+            <i>v3.1.1</i>
           </div>
         </div>
       </div>
