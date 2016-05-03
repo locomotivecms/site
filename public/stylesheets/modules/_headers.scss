@@ -9,6 +9,11 @@ header {
   background-size: cover !important;
 }
 
+.header-overlay {
+  display: block;
+  background: linear-gradient(to bottom, rgba(darken($brand-primary, 10), .8), rgba(darken($brand-primary, 10), .8) 20%, rgba($brand-purple, .8));
+}
+
 .header-content {
   display: block;
   width: 100%;

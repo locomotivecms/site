@@ -21,13 +21,32 @@ slug: index
             Try for free
           </a>
           <br>
-          <a href="https://station.locomotive.works/_app/sign_in" class="header-link">
+          <a href="#" class="header-link" data-toggle="modal" data-target="#testimonial-modal">
             <i>View a testimonial</i>
           </a>
         </div>
       </div>
     </div>
   </header>
+
+  {% with_scope featured: true %}{% assign testimonial = contents.testimonials.first %}{% endwith_scope %}
+  <div id="testimonial-modal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">{{ testimonial.name }}</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-12 testimonial-video">
+              {{ testimonial.video }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <main>
     <section class="is-light is-small">
@@ -120,6 +139,10 @@ slug: index
                     <div class="testimonial">
                       <div class="testimonial-box">
                         {{ testimonial.quote }}
+                        <a href="{% path_to testimonial %}" class="testimonial-read" title="Read full testimonial">
+                          Read full testimonial
+                          <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </a>
                       </div>
                       <h6 class="testimonial-person">
                         <img src="{{ testimonial.picture.url | resize: '45x45#' }}" alt="{{ testimonial.name }}" />
@@ -170,7 +193,7 @@ slug: index
             <a href="#" class="button button-primary">
               View on Github
             </a>
-            <i>v2.1.0</i>
+            <i>v2.1.1</i>
           </div>
         </div>
         <div class="grid-cell with-6col">

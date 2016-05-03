@@ -64,3 +64,41 @@
     }
   }
 }
+
+.testimonial-video {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  text-align: center;
+  iframe {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}
+
+.testomonial-transcript h3 {
+  margin-bottom: 25px;
+}
+
+.testimonial-read {
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 10px;
+  font-size: 12px;
+  color: $gray;
+  text-transform: uppercase;
+  i {
+    display: inline-block;
+    margin: -2px 0 0 3px;
+    font-size: 16px;
+    vertical-align: middle;
+  }
+}
