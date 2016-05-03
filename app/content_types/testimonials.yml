@@ -46,6 +46,13 @@ fields:
     hint: "Full transcript of the video (when the visitor clicks on \"See full transcript\")."
     text_formatting: html
 
+- header_picture:
+    label: Header picture
+    type: file
+    required: true
+    hint: "Header picture for the detail shot"
+    localized: false
+
 - quote:
     label: Quote
     type: text

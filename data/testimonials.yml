@@ -3,20 +3,20 @@
     name: Jeremy Seitz
     company: "Swisscom"
     picture: "/samples/content_entries/Jeremy-Seitz.jpeg"
-    video: "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dANvXClebg4\" frameborder=\"0\" allowfullscreen></iframe>"
+    video: "<iframe src=\"https://www.youtube.com/embed/dANvXClebg4\" frameborder=\"0\" allowfullscreen></iframe>"
     quote: |
       <p>In general, our jobs as developers have become easier. More importantly,
       we get great support from the people that make Locomotive. They’re always very
       responsive and they’ve helped us a lot with some of the more complex solutions
       that we've tried to build.</p>
-    video_transcript: |
-      <p>TODO</p>
+    video_transcript: <p>TODO</p>
+    header_picture: "/samples/content_entries/jeremy-header.jpg"
 - Paul Eckenrode:
     _slug: john-doe-1
     name: Paul Eckenrode
     company: "360durango.com"
     picture: "/samples/content_entries/paul-eckenrode.jpg"
-    video: "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/o6A2fBOGNwY\" frameborder=\"0\" allowfullscreen></iframe>"
+    video: "<iframe src=\"https://www.youtube.com/embed/o6A2fBOGNwY\" frameborder=\"0\" allowfullscreen></iframe>"
     quote: |
       <p>The best feedback from clients when it comes to content management
       systems is zero feedback. They're
@@ -24,12 +24,13 @@
       own with very little to no website or development experience.</p>
     video_transcript: |
       <p>TODO</p>
+    header_picture: "/samples/content_entries/paul-header.jpg"
 - Christie Roberts:
     _slug: john-doe-2
     name: Christie Roberts
     company: "Under the Sun Graphics"
     picture: "/samples/content_entries/christie-roberts-designer.jpeg"
-    video: "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/KRSagoaIbwI\" frameborder=\"0\" allowfullscreen></iframe>"
+    video: "<iframe src=\"https://www.youtube.com/embed/KRSagoaIbwI\" frameborder=\"0\" allowfullscreen></iframe>"
     quote: |
       <p>I love the user friendliness of the back office and the different ways
       that I can tweak and do testing on my own has made it very successful for me
@@ -37,3 +38,4 @@
     featured: true
     video_transcript: |
       <p>TODO</p>
+    header_picture: "/samples/content_entries/christie-header.jpg"
