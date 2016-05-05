@@ -1,9 +1,10 @@
 - Jeremy Seitz:
     _slug: john-doe
     name: Jeremy Seitz
+    type: Enterprise
     company: "Swisscom"
     picture: "/samples/content_entries/Jeremy-Seitz.jpeg"
-    video: "<iframe src=\"https://www.youtube.com/embed/dANvXClebg4\" frameborder=\"0\" allowfullscreen></iframe>"
+    video: dANvXClebg4
     quote: |
       <p>In general, our jobs as developers have become easier. More importantly,
       we get great support from the people that make Locomotive. They’re always very
@@ -14,9 +15,10 @@
 - Paul Eckenrode:
     _slug: john-doe-1
     name: Paul Eckenrode
+    type: Digital agency
     company: "360durango.com"
     picture: "/samples/content_entries/paul-eckenrode.jpg"
-    video: "<iframe src=\"https://www.youtube.com/embed/o6A2fBOGNwY\" frameborder=\"0\" allowfullscreen></iframe>"
+    video: o6A2fBOGNwY
     quote: |
       <p>The best feedback from clients when it comes to content management
       systems is zero feedback. They're
@@ -28,9 +30,10 @@
 - Christie Roberts:
     _slug: john-doe-2
     name: Christie Roberts
+    type: Designer
     company: "Under the Sun Graphics"
     picture: "/samples/content_entries/christie-roberts-designer.jpeg"
-    video: "<iframe src=\"https://www.youtube.com/embed/KRSagoaIbwI\" frameborder=\"0\" allowfullscreen></iframe>"
+    video: KRSagoaIbwI
     quote: |
       <p>I love the user friendliness of the back office and the different ways
       that I can tweak and do testing on my own has made it very successful for me

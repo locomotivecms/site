@@ -1,0 +1,95 @@
+---
+title: Testimonials
+seo_title: "Testimonials"
+meta_description:
+published: true
+handle: testimonials
+slug: testimonials
+---
+
+{% extends "layouts/base" %}
+
+{% block main %}
+  <header style="background: url({% editable_file 'home-header-image', resize: '1900x900#' %}/samples/pages/header-testimonials.jpg{% endeditable_file %}) center center no-repeat;">
+    <div class="header-overlay">
+      <div class="grid grid-centered">
+        <div class="grid-cell">
+          {% include navigation %}
+          <div class="header-content is-small">
+            <h1>Real users, all over the world</h1>
+            <p>Discover how people use and love LocomotiveCMS.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="is-small">
+      <div class="grid grid-centered">
+        {% for testimonial in contents.testimonials %}
+          {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+          {% if thecycle == 'even' %}
+            <div class="grid-cell with-6col is-middle">
+              <div class="testimonial-info">
+                <h3>
+                  {{ testimonial.name }}
+                  <label>{{ testimonial.type }}</label>
+                </h3>
+                <h6>{{ testimonial.company }}</h6>
+                <p>
+                  {{ testimonial.quote }}
+                </p>
+                <a href="{% path_to testimonial %}" title="Read the transcript" class="testimonial-link">
+                  Read the transcript
+                  <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+            <div class="grid-cell with-5col with-1off is-middle">
+              <div class="video testimonial-video">
+                <div style="background: url({{ testimonial.header_picture.url | resize: '400x300#' }}) center center no-repeat; background-size: cover;" class="video-overlay video-click" data-video-id="{{ testimonial.video }}">
+                  <div class="video-play">
+                    <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                  </div>
+                </div>
+                <div class="video-iframe"></div>
+              </div>
+            </div>
+          {% else %}
+            <div class="grid-cell with-5col is-middle">
+              <div class="video testimonial-video">
+                <div style="background: url({{ testimonial.header_picture.url | resize: '400x300#' }}) center center no-repeat; background-size: cover;" class="video-overlay video-click" data-video-id="{{ testimonial.video }}">
+                  <div class="video-play">
+                    <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                  </div>
+                </div>
+                <div class="video-iframe"></div>
+              </div>
+            </div>
+            <div class="grid-cell with-6col with-1off is-middle">
+              <div class="testimonial-info">
+                <h3>
+                  {{ testimonial.name }}
+                  <label>{{ testimonial.type }}</label>
+                </h3>
+                <h6>{{ testimonial.company }}</h6>
+                <p>
+                  {{ testimonial.quote }}
+                </p>
+                <a href="{% path_to testimonial %}" title="Read the transcript" class="testimonial-link">
+                  Read the transcript
+                  <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+  </main>
+{% endblock %}
+
+{% block page_scripts %}
+  {{ "video.js" | javascript_tag }}
+{% endblock %}

@@ -25,6 +25,13 @@ fields:
     hint: Company where the testimonial owner works at
     localized: false
 
+- type:
+    label: Type
+    type: string
+    required: true
+    hint: Which type of user is this testimonial?
+    localized: true
+
 - picture:
     label: Picture
     type: file

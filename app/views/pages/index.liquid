@@ -20,33 +20,10 @@ slug: index
           <a href="https://station.locomotive.works/_app/sign_in" class="button button-success">
             Try for free
           </a>
-          <br>
-          <a href="#" class="header-link" data-toggle="modal" data-target="#testimonial-modal">
-            <i>View a testimonial</i>
-          </a>
         </div>
       </div>
     </div>
   </header>
-
-  {% with_scope featured: true %}{% assign testimonial = contents.testimonials.first %}{% endwith_scope %}
-  <div id="testimonial-modal" class="modal fade" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">{{ testimonial.name }}</h4>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-md-12 testimonial-video">
-              {{ testimonial.video }}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <main>
     <section class="is-light is-small">

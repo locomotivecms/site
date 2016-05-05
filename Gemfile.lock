@@ -31,7 +31,7 @@ GEM
       sass (>= 3.3.0, < 3.5)
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
-    concurrent-ruby (1.0.1)
+    concurrent-ruby (1.0.2)
     crass (1.0.2)
     daemons (1.2.3)
     dragonfly (1.0.12)
@@ -56,7 +56,7 @@ GEM
     i18n (0.7.0)
     json (1.8.3)
     kramdown (1.10.0)
-    listen (3.0.6)
+    listen (3.0.7)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9.7)
     locomotivecms-liquid (4.0.0)
@@ -112,7 +112,7 @@ GEM
     minitest (5.8.4)
     moneta (0.8.0)
     morphine (0.1.1)
-    multi_json (1.11.3)
+    multi_json (1.12.0)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     netrc (0.10.3)
@@ -156,7 +156,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  locomotivecms_wagon (~> 2.1.0)
+  locomotivecms_wagon (~> 2.1.1)
 
 BUNDLED WITH
    1.11.2
