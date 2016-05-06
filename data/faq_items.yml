@@ -1,8 +1,10 @@
 - When am I billed?:
     _slug: question-1
-    question: Many payments are annoying! Can I be billed annually?
-    answer: "<p>Yes you can, plus we'll give you <i>2 months for free</i> if you decide to pay for a year in advance.</p>"
-    category: account
+    question: When am I billed?
+    answer: "<p>Your billing date is on or around the same day of the month your website
+      goes live. For example, if you publish your website on March 5, your billing
+      cycle is from the 5th&nbsp;of each month. </p>"
+    category: billing
 - Where can I see my invoices?:
     _slug: question-2
     question: Where can I see my invoices?
@@ -19,6 +21,11 @@
     _slug: question-4
     question: Do you offer discounts on yearly plans?
     answer: "<p>Yes, pre-pay for a year and you'll get 2 months off!</p>"
+    category: billing
+- What name will appear on my bank statement?:
+    _slug: question-5
+    question: What name will appear on my bank statement?
+    answer: "<p>NoCoffee SARL, this is the name of our company.</p>"
     category: billing
 - I am a web agency/a developer, can my client pay directly?:
     _slug: question-6
@@ -39,24 +46,12 @@
     question: Are there any set-up fees?
     answer: "<p>No, absolutely not.<br></p>"
     category: account
-- What name will appear on my bank statement?:
-    _slug: question-5
-    question: What name will appear on my bank statement?
-    answer: "<p>NoCoffee SARL, this is the name of our company.</p>"
-    category: billing
 - How long are your contracts?:
     _slug: how-long-are-your-contracts
     question: How long are your contracts?
     answer: "<p>There are no contracts. The billing cycle starts on the day you sign
       up for a paid account and is automatically renewed every month.<br></p>"
     category: account
-- What happens to my sites if I want to stop using Locomotive.works?:
-    _slug: what-happens-to-my-sites-if-i-want-to-stop-using-locomotive-dot-works
-    question: What happens to my sites if I want to stop using Locomotive.works?
-    answer: "<p>At any time, you can download a complete copy of your site. You can
-      then host it in another instance of the Locomotive engine which is completely
-      open source.<br></p>"
-    category: technical questions
 - What is white label?:
     _slug: what-is-white-label
     question: What is white label?
@@ -65,21 +60,21 @@
       logo, change the look of the back-office. All we need from you is a SSL certificate
       and a domain name.&nbsp;<br></p>"
     category: account
-- When am I billed?:
-    _slug: question-1
-    question: When am I billed?
-    answer: "<p>Your billing date is on or around the same day of the month your website
-      goes live. For example, if you publish your website on March 5, your billing
-      cycle is from the 5th&nbsp;of each month. </p>"
-    category: billing
+- Where are your servers located?:
+    _slug: where-are-your-servers-located
+    question: Where are your servers located?
+    answer: "<p>They are located in one of the Digital Ocean data centers in New York.<br></p>"
+    category: technical questions
 - Can I use my own domain name?:
     _slug: can-i-use-my-own-domain-name
     question: Can I use my own domain name?
     answer: "<p>Yes if you use a paid account. If you have a free account, your domain
       name will be station.locomotive.works/_app/yoursite.<br></p>"
     category: technical questions
-- Where are your servers located?:
-    _slug: where-are-your-servers-located
-    question: Where are your servers located?
-    answer: "<p>They are located in one of the Digital Ocean data centers in New York.<br></p>"
+- What happens to my sites if I want to stop using Locomotive.works?:
+    _slug: what-happens-to-my-sites-if-i-want-to-stop-using-locomotive-dot-works
+    question: What happens to my sites if I want to stop using Locomotive.works?
+    answer: "<p>At any time, you can download a complete copy of your site. You can
+      then host it in another instance of the Locomotive engine which is completely
+      open source.<br></p>"
     category: technical questions

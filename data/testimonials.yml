@@ -1,44 +1,462 @@
 - Jeremy Seitz:
     _slug: john-doe
     name: Jeremy Seitz
-    type: Enterprise
-    company: "Swisscom"
+    company: 'Local.ch, now Swisscom, Zürich, Switzerland: 4.5M unique visitors a
+      day'
     picture: "/samples/content_entries/Jeremy-Seitz.jpeg"
-    video: dANvXClebg4
-    quote: |
-      <p>In general, our jobs as developers have become easier. More importantly,
-      we get great support from the people that make Locomotive. They’re always very
-      responsive and they’ve helped us a lot with some of the more complex solutions
-      that we've tried to build.</p>
-    video_transcript: <p>TODO</p>
     header_picture: "/samples/content_entries/jeremy-header.jpg"
+    video: dANvXClebg4
+    video_transcript: "<p><b>LocomotiveCMS</b>: Hello Jeremy, please introduce yourself
+      and your company</p><p><b>Jeremy Seitz</b>:&nbsp;My name is Jeremy Seitz. I'm
+      the Head of Web Engineering here at Local.ch. We are the official phone book
+      in Switzerland and we have about four and a half million unique users in the
+      country that use our website everyday.</p><p><b></b></p><p><b>LocomotiveCMS:
+      </b>How did you first heard about locomotive CMS?</p><p><b>Jeremy Seitz</b>:&nbsp;I
+      first heard about LocomotiveCMS through other developers here in Zurich. In
+      2012 we were looking for a solution that was compatible with our Ruby on Rails
+      platform through the website which we launched in that year. One of the things
+      that was attractive to me about it was that it was actually built in rails.
+      We tried it out first as an experiment and very quickly began to adopt it in
+      a more broad way throughout the company.</p><b><p></p></b><p></p><p></p><p><b></b><b>LocomotiveCMS</b>:&nbsp;What
+      other tools and products did you use before that have been replaced by LocomotiveCMS?</p><p><b>Jeremy
+      Seitz</b>:&nbsp;Before LocomotiveCMS we were using a whole lot of different
+      things. We had WordPress installations, we had custom CMSs, we had static files
+      that were maintained by hand and this was a lot of pain actually because it
+      required different interfaces, different strengths and weaknesses for each product
+      and it was a nightmare to manage. We're able to replace nearly all of those
+      with Locomotive. Personally, I was using Radiant and Refinery on the Rail Side
+      as well for CMS projects before.</p><p><b>LocomotiveCMS</b>:&nbsp;What were
+      your greatest challenges when creating websites for yourself or your clients
+      before you started using LocomotiveCMS?</p><p><b></b></p><p><b><b>Jeremy Seitz</b></b>:&nbsp;Some
+      of the biggest challenges were trying to figure out how to customize things
+      as CMSs often came with a lot of features and were very rigid. The challenge
+      was you felt like you have to bend or break the CMS into doing what you wanted
+      it to do.&nbsp;</p><p>Locomotive, on the other hand, starts very simple and
+      very small and it's up to you to build it out.</p><p>The other challenge that
+      we had was one of support and maintenance. We had products that were not open
+      source, which made it difficult to troubleshoot problems and make changes and
+      improve things. We're dependent on external vendors to do stuff for us.&nbsp;
+      Another issue was just architectural. &nbsp;Locomotive out of the box was built
+      on Rails, which was something we're already familiar with and hosting in high
+      performance environment. In addition, it used MongoDB which was the database
+      that we also had chosen to use.</p><b><p></p>LocomotiveCMS</b>:&nbsp;How is
+      LocomotiveCMS different from comparable tools you have used before?<p></p><p>
+      </p><p><b>Jeremy Seitz</b>: Locomotive is very different from the products we
+      used before because it's based on something that is centered around models.
+      In addition to having page content, which all CMSs have, it has this concept
+      of models and the models can be customized. This gave us great flexibility when
+      we we're building out new features and it also made the editing and maintaining
+      the content very easy.&nbsp;</p><p>The other thing about it that was nice was
+      the fact that in the back office we could customize the content areas that people
+      edited in a way that made it really resemble what was on the page. They didn't
+      have to learn special formatting, they didn't have to learn tricks or whatever
+      to make the content look the way the designer wanted it to look. They could
+      simply enter the content in the right places.&nbsp;</p><p>In addition, it provided
+      a much better compatibility. We have to support four languages as a Swiss company
+      and out of the box it was very good at internationalization and supporting translations
+      strings &nbsp;and things like that. Quite a lot more features and architecturally,
+      the design of it, the way it interacted with the database and the tool wagon,
+      which is this command line tool that we use to pull and push content, means
+      that we can edit templates using our editors like developers like to do. They're
+      not forced to use the web based interface to do everything. That was a big win
+      for us.&nbsp;</p><p>We could also check the content into source control, which
+      was a huge win as well. There are many features that are really just super valuable
+      for us.</p><b>LocomotiveCMS</b>:&nbsp;What has your experience using LocomotiveCMS
+      been like so far and since starting to use LocomotiveCMS, what has changed about
+      your work?<p></p><p></p><p><b>Jeremy Seitz</b>: So far we’ve had a good experience
+      with Locomotive. We were able to use it very quickly and also we were able to
+      very quickly train and help the people that have to use it every day. Initially,
+      Locomotive was only used in a couple of places here at Local. As of today, it’s
+      now used to host most of our content-driven public websites including things
+      like user information and guides and help and things like that. This is an advantage
+      for us because we can customize each solution based on what it is that is needed
+      and it makes it easier for us to support people because we know that we have
+      a common interface, a common set of tools that everyone is using for the content
+      across the platform.&nbsp;</p><p>In addition, the fact that everything is stored
+      in Mongo is great for us because MongoDB is the database that we use across
+      our organization now for the web and mobile so this makes it easier on our system
+      administrators as well that they don’t have to maintain separate databases for
+      CMS.</p>In general, our job as developers has become easier. More importantly,
+      we get great support from the people that make Locomotive. They’re always very
+      responsive to us and they’ve helped us a lot with some of the more complex solutions
+      that we’ve tried to build. That’s been a big difference for us.<br><p></p><p><b>LocomotiveCMS</b>:&nbsp;How
+      do use LocomotiveCMS in your work?</p><p></p><p>We use Locomotive in our work
+      everyday not only for just editing and maintaining content that appears on the
+      homepage or on various content areas of the site but we also use it in a number
+      of kind of unusual ways. We use it sometimes as a database for storing things
+      like images that need to be displayed. We sometimes use it like an API for storing
+      things like categories or bits of content that need to appear in certain parts
+      of an application. It’s a very flexible tool in the sense that we’re not just
+      storing pages of content in it. We’re actually using it like an API and this
+      gives us the flexibility to be able to manage things in a central interface
+      but the results are all over the website.&nbsp;</p><p>Generally, through the
+      web team, we do deployments to the website applications and we treat the CMS
+      deployment separately. This decoupling has actually made it much more flexible
+      for us. In the past, it was common to have your CMS be your application and
+      one of the primary differences is that Locomotive is essentially CMS as a service.
+      This means that we can decouple the content from the application completely
+      and when we make changes or improvements to the CMS, we can deploy them separately
+      from our applications. That gives us increased flexibility in our day to day
+      work.</p><b>LocomotiveCMS</b>:&nbsp;What feedback have you gotten from your
+      clients from the LocomotiveCMS back office and do they find it easy to use?*<p></p><p></p><p><b></b>As
+      we rolled out Locomotive throughout our organization, we generally got very
+      positive feedback from people that they were able to work with it very quickly.
+      Some people felt it was very similar to the interface that they used before.
+      Other people it was a big change but because the interface of the back office
+      is fairly simple, that made the transition pretty easy. In general, we’ve had
+      a good reaction for people having to do common tasks like uploading images or
+      managing content in multiple languages. These tasks are pretty easy. In general,
+      people at Local who have to use Locomotive find it pretty easy to use so that’s
+      been the majority of the feedback that we’ve gotten from the users here. &nbsp;<br><br><b>LocomotiveCMS</b>:
+      What was your aha moment or the moment you knew you loved LocomotiveCMS?</p><p><b>Jeremy
+      Seitz</b>:&nbsp;The real aha moment for me with Locomotive was when we were
+      working with it and we suddenly realized that it was also an API meaning that
+      we can not only use it as a CMS but we could use it as a service and for me
+      this was a game changer because in the past if someone said, we need to store
+      a bunch of data and it needs to be available to different applications, we would
+      need to build something for them. We’d have to build a database. We’d have to
+      build an app. We’d have to deploy it somewhere and test it. With Locomotive,
+      we have a CMS instant support. We can simply create a new model. We can then
+      create a template that returns data in HTML or JSON &nbsp;and this is immediately
+      usable by our web and mobile applications so it’s a huge time saver in the sense
+      that it allows us to quickly create APIs and to add new data to our apps without
+      having to do a lot of work. The content management part of it is already taken
+      care of.\t<br><br><b>LocomotiveCMS</b>:&nbsp;How do you see yourself working
+      with LocomotiveCMS in the future?</p><p></p><p><b></b></p><p>We’re definitely
+      planning on expanding our use of Locomotive. We’re currently replacing more
+      legacy applications that we have that are using Locomotive. We are going to
+      be rolling it out further within the organization. We were very excited about
+      the upgrades that are planned in the new back office interface and we intend
+      to use that. We’re also adding single sign-on, which will be very helpful for
+      our users so they don’t need special accounts for Locomotive. They can use their
+      normal company account to log in, which makes it easy. More importantly, we
+      plan to push our content in general online and Locomotive is a big part of that
+      strategy.</p>* This video was shot before we released V3 and our new WYSIWYG
+      / real time editing interface<br><p></p><p><br><br></p><p></p><p><b></b><br><br></p><p></p><p><b></b><br><br></p><p></p><p><b></b><b><br></b><br></p><p></p><p><b></b><br><br></p><p><b></b></p><p><b><br></b></p><br><p></p>"
+    quote: "<p>In general, our jobs as developers have become easier. More importantly,\r\nwe
+      get great support from the people that make Locomotive. They’re always very\r\nresponsive
+      and they’ve helped us a lot with some of the more complex solutions\r\nthat
+      we've tried to build.</p>"
 - Paul Eckenrode:
     _slug: john-doe-1
     name: Paul Eckenrode
-    type: Digital agency
-    company: "360durango.com"
-    picture: "/samples/content_entries/paul-eckenrode.jpg"
-    video: o6A2fBOGNwY
-    quote: |
-      <p>The best feedback from clients when it comes to content management
-      systems is zero feedback. They're
-      amazed that they can actually do some of the things that they can do on their
-      own with very little to no website or development experience.</p>
-    video_transcript: |
-      <p>TODO</p>
+    company: 360durango.com, Durango, CO, USA
+    picture: "/samples/content_entries/Paul-eckenrode.png"
     header_picture: "/samples/content_entries/paul-header.jpg"
+    video: o6A2fBOGNwY
+    video_transcript: "<p><b>LocomotiveCMS</b>: Hello Paul, can you please introduce
+      yourself?</p><p><b>Paul Eckenrode</b>:&nbsp;My name is Paul Eckenrode and I’m
+      the owner of 360Durango.com</p><p><b>LocomotiveCMS</b>: Tell us why you made
+      a switch to LocomotiveCMS</p><p><b>Paul Eckenrode</b>: We began using LocomotiveCMS
+      because we had the opportunity to really customize the back end. We could educate
+      clients on how to change their content on their website they way they wanted
+      to change it. That customization feature is really unique and that's why we
+      made the change.</p><p><b>LocomotiveCMS</b>:&nbsp;What were your greatest challenges
+      in creating websites for yourself or your clients before LocomotiveCMS?<br></p><p><b>Paul
+      Eckenrode</b>:&nbsp;The biggest challenges that we were looking to overcome
+      was the fact that we were usually locked within a template and we couldn't totally
+      customize, either the front end or the back end, just the way that the client
+      wanted it to be.</p><p><b>LocomotiveCMS</b>:&nbsp;How was LocomotiveCMS different
+      from comparable tools you have used before?<b>&nbsp;</b>What problems does LocomotiveCMS
+      solve or what does it make easier?</p><p></p><p></p><p><b><b><b><b></b></b></b>Paul
+      Eckenrode</b>:&nbsp;The thing that LocomotiveCMS makes much easier for companies
+      like mine and the clients that we serve is that we can really customize how
+      they can go about changing the content. There may be a particular way that they
+      want to go about changing, maybe a different piece of inventory or a product
+      or a different property that they're trying to feature, they way they want to
+      change that and how they want that to look and function, we're able to customize
+      that for them. That is a really nice feature for us.</p><p>LocomotiveCMS: What
+      has your experience using LocomotiveCMS been like so far and since starting
+      to use LocomotiveCMS, what has changed about your work?<br></p><p>Using Locomotive
+      CMS has been great. I can see that my skill set has really changed and developed
+      because I'm not a developer. I'm not a programmer. I'm not even a graphic designer.
+      What I do is really try to figure out what our clients are trying to do with
+      a website and help them figure out how the best way to achieve that is.&nbsp;</p><p>One
+      of the things Locomotive has changed about my work is it's given me a new tool
+      in the tool belt that I didn't have before. I can go a little bit further with
+      the customization of websites. We can get things a little bit more dialed in.
+      The Back Office is really easy to use and I can make manipulations in the websites
+      that I was not able to do before.</p><b>LocomotiveCMS</b>:&nbsp;How do you use
+      Locomotive CMS in your work?<p></p><p><b>Paul Eckenrode</b>:&nbsp;I use Locomotive
+      CMS every day in my work whether it's &nbsp;continuing to build new websites
+      or tweak things or train clients on how to use it.</p><p><b>LocomotiveCMS</b>:&nbsp;What
+      feedback have you gotten from your clients from the Locomotive CMS Back Office?
+      Do they find it easy to use?</p><p></p><p><b>Paul Eckenrode</b>:&nbsp;The best
+      feedback from clients when it comes to content management systems is no feedback.
+      That means that everything is working for them. The feedback that we have received
+      is it's just exactly what they were looking for. They're amazed that they can
+      actually do some of the things that they can do on their own with very little
+      to no website or development experience.</p><p><b>LocomotiveCMS</b>:&nbsp;What
+      was your 'aha' moment? The moment that you knew you loved Locomotive CMS?</p><p><b>Paul
+      Eckenrode</b>:&nbsp;The 'aha' moment for me with Locomotive CMS was when we
+      actually started developing these models and I could change and reorder cabins
+      and photos and prices so easily on the back side. It was just ... It blew my
+      mind.</p><p></p><p><b>LocomotiveCMS</b>:&nbsp;How do you see yourself working
+      with Locomotive CMS in the future?&nbsp;</p><p><b>Paul Eckenrode</b>:&nbsp;Going
+      forward, we'd like to continue to push the envelope of where Locomotive CMS
+      is capable of going. We love the ability to customize different features within
+      it, including searchable functions of the different models that are created.
+      One of the things that we really like is the ability, once again, to customize
+      the models, the front end, the Back Office and that's a great tool to have in
+      your tool belt when you're talking about marketing.</p><p><b>LocomotiveCMS</b>:&nbsp;Why
+      did you chose to use First Class?*</p><p><b>Paul Eckenrode</b>:&nbsp;The decision
+      to move all of our websites over to the hosting service First Class was an easy
+      one. We don't have to worry about any down time with our websites. The servers
+      are maintained by people who work specifically on servers that are built and
+      designed for LocomotiveCMS. We really like that. Another reason why we went
+      for First Class is because of the ability to level out our expenditures on server
+      maintenance. Sometimes if you're in a web business and you've got a bunch of
+      different websites being hosted, you might have an abrupt server maintenance
+      that might interrupt your cash flow a little bit. By leveling it out working
+      with First Class, has been a good decision.</p><p></p><p>Working with First
+      Class is really about the service. Quite honestly, it is first class. The thing
+      we like is the responsiveness from their team, the stability of their platform,
+      and it's just a great operation. No regrets.</p><b>LocomotiveCMS</b>: Thanks
+      Paul, would you like to add anything else?<p></p><p><b>Paul Eckenrode</b>:&nbsp;\tThe
+      thing I like best about LocomotiveCMS is how customizable the platform is for
+      our clients. We can figure out what they want to change, how they want to change
+      it, and we can work back from there because it's a clean slate from the beginning.
+      That's the best part is we're really able to meet the needs and objectives of
+      our clients with a fully customized solution. That's what I like the best about
+      LocomotiveCMS.<br><br></p><p><i>* Fist Class is the former name of LocomotiveCMS's
+      hosting solution.</i><br></p><p></p><p><b></b><br><br><b><br></b><br></p><p></p><p><br></p><p></p><p><b></b><br><br><br><br></p><p></p><p><b></b><br><br></p><p></p><p><br></p><p></p><p><b><b><b><b></b></b></b></b><b><b><b><br><br><br><br></b></b></b></p><p></p><p><br></p><br><p></p>"
+    quote: "<p>The best feedback from clients when it comes to content management\r\nsystems
+      is zero feedback. They're\r\namazed that they can actually do some of the things
+      that they can do on their\r\nown with very little to no website or development
+      experience.</p>"
 - Christie Roberts:
     _slug: john-doe-2
     name: Christie Roberts
-    type: Designer
-    company: "Under the Sun Graphics"
+    company: Under the Sun Graphics, Durango, CO, USA
     picture: "/samples/content_entries/christie-roberts-designer.jpeg"
-    video: KRSagoaIbwI
-    quote: |
-      <p>I love the user friendliness of the back office and the different ways
-      that I can tweak and do testing on my own has made it very successful for me
-      as a designer.</p>
-    featured: true
-    video_transcript: |
-      <p>TODO</p>
     header_picture: "/samples/content_entries/christie-header.jpg"
+    video: KRSagoaIbwI
+    video_transcript: '<p><b>LocomotiveCMS</b>: Hello Christie, can you please introduce
+      yourself and your company?</p><p><b>Christie Roberts</b>: Hi,&nbsp;I''m Christie
+      Roberts from Under the Sun Graphic and Web Design.</p><p><b>LocomotiveCMS</b>:&nbsp;
+      What were your greatest challenges when creating websites for yourself or your
+      clients before using LocomotiveCMS?</p><p><b>Christie Roberts</b>: I''ve used
+      a few different Content Management Systems and never really found anything that
+      I thought works very well as a whole for the client. Maybe it worked in some
+      aspects but not others.</p><p>Before Locomotive, it was also a matter of determining
+      the capabilities of my clients - their own computer and technical skills - so
+      that when I left them with the end product would they be able to continue making
+      their edits and other changes for their website like they requested. I found
+      with some of the content management systems that I had been using in the past,
+      I was getting a lot of phone calls from my clients to make the changes for them,
+      which negates the purpose. It defeats the entire purpose of having a content
+      management system for my clients. I don''t feel like i had a lot of successful
+      solutions and results from those.&nbsp;</p><p><b></b></p><p>Now, I''m finding
+      that when I don''t get the phone calls, that to me is a measurement of success
+      when, after my initial training, I don''t hear from them for months unless they
+      have a minor question or they just want me to add a feature to their content
+      management system.<b><br></b></p><p><b>LocomotiveCMS</b>:&nbsp;What has been
+      your experience using LocomotiveCMS so far?</p><p><b>Christie Roberts</b>:&nbsp;I''ve
+      had a really good experience because coming from the designer''s standpoint,
+      I really was looking to move more into the develop standpoint rather than always
+      having to work with the development team. Sometimes my deadlines aren''t the
+      same as my developers'' deadlines, and I really needed to be able to do that
+      myself. With Locomotive, I had the confidence to be able to start the development
+      end on my own and be able to create and complete entire websites without the
+      help of the developer.</p><p><b><b></b></b></p><p>What I really like about Locomotive
+      from a designer standpoint is I''m able to start from a clean slate and design
+      from the ground up and only add the features and coding that I want in there.
+      I''m also able to be free of a template kind of system where I may not be able
+      to create the type of branding strategy for my client or do a seamless continuation
+      of their branding.</p><p> I have found that with Locomotive is fully customizable
+      because you can start from a clean slate and not have extraneous files that
+      you need to work with and customize. That goes two fold because in the back
+      office, the only features that are there are what you put there for your client.
+      It makes it a lot easier and user-friendly to work back there and not to mention
+      that the interface is well organized and easy to find, what you need to find.<b><b><br><br></b></b>Locomotive
+      offers me the ability to just completely serve my clients and their needs effectively
+      without having to wrestle with any other extraneous codes, extraneous templates,
+      extraneous files.&nbsp;<br>I find that to be my biggest success and then just
+      the user friendliness of the back office and the different ways that I can tweak
+      and do testing on my own has made it very successful for me as a designer.</p><p></p><p><b>LocomotiveCMS</b>:&nbsp;Since
+      starting to use Locomotive CMS, what has changed about your work?</p><p><b><b>Christie
+      Roberts</b></b>:&nbsp;One of the things that''s changed about my work is that
+      I''m more confident in recommending features for my clients and understanding
+      how the end result is going to play out for them and knowing that I can develop
+      and design a certain feature that they''re asking for. With other content management
+      systems, there''s not that confidence and ability that what is available on
+      the templates, if it''s a template type of system, is really going to work with
+      the requests that I have from the clients.</p><p><b><b><b>LocomotiveCMS</b></b></b>:&nbsp;What
+      was your "aha" moment, the moment that you knew you loved Locomotive CMS?</p><p><b><b><b><b>Christie
+      Roberts</b></b></b></b>:&nbsp;My very first aha moment was when I created a
+      simple YAML file and was able to &nbsp;create an entire model that worked right
+      from the get-go with some very simple code. That''s one of the options. The
+      other option is to work directly in the back office, which I have done as well
+      with great success. My second aha moment was when my clients didn''t require
+      extra training after I turned the website over to them. It was just a very simple
+      training, about 10 to 15 minutes or so, and they were off and running. When
+      I didn''t receive phone call after phone call, I really experienced my second
+      aha moment that yes, this is indeed is a very good solution for most of my clients.</p><p><b><b><b><b><b>LocomotiveCMS</b></b></b></b></b>:&nbsp;
+      Why did you choose to use First Class?*</p><p><b><b><b><b><b><b>Christie Roberts</b></b></b></b></b></b>:&nbsp;Using
+      First Class for my LocomotiveCMS sites was, to me, a very valid solution because
+      they take care of all the issues. Literally, from the development standpoint
+      to production, it was completely seamless. It was a click of a few buttons and
+      my site was ready to go. <br></p><p></p><p><b><b><b><b><b><b>LocomotiveCMS</b></b></b></b></b></b>:
+      Thanks Christie, would you like to add anything else?</p><p><b><b><b><b><b><b>Christie
+      Roberts</b></b></b></b></b></b>:&nbsp;I would definitely recommend LocomotiveCMS
+      to other designers, especially designers that have been hesitant in the past
+      to move into the development arena and also other developers that are looking
+      to find something that''s versatile and very usable for their clients.</p><p><i>*First
+      Class is the former name of our hosting solution.</i><b><b><b><br></b></b></b></p><b><p></p><p></p></b><br><p></p>'
+    quote: "<p>I love the user friendliness of the back office and the different ways\r\nthat
+      I can tweak and do testing on my own has made it very successful for me\r\nas
+      a designer.</p>"
+    featured: true
+- David Pierce:
+    _slug: david-pierce
+    name: David Pierce
+    company: UP Global, now Techstars, Seattle, WA, USA
+    picture: "/samples/content_entries/David-Pierce.png"
+    video: 0cPAFqhInFk
+    video_transcript: "<p>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n</p><p><b>LocomotiveCMS</b>:
+      Hello David, can you please introduce yourself and your company?</p><p><b>David
+      Pierce</b>:\tHi, my name is David Pierce. I’m the Technical Director here at
+      UP Global. UP Global exists to improve the global human condition by empowering
+      entrepreneurial communities. We do that by providing networks, education opportunities
+      and overall resources to community leaders to make entrepreneurship more accessible
+      to everyone. </p>\r\n<p><b>LocomotiveCMS</b>:\tHow did you first hear about
+      Locomotive?</p>\r\n<p><b>David Pierce</b>:\tI found out about Locomotive mostly
+      by searching around on the internet. We had a upcoming big site build that I
+      needed to plan and provide resources for. I knew that the technologies we had
+      available weren’t really going to fit all of our problems and so I spent a lot
+      of time researching on the internet. Most of the CMS landscape is very much
+      dominated by PHP solutions but I was really interested in seeing if we could
+      find something that was powered by Ruby. By doing that I’d found a couple more
+      solutions and just researched more and after a while I found out that Locomotive
+      actually really fit a lot of our needs. </p>\r\n<p><b>LocomotiveCMS</b>:\tWhat
+      other tools/products did you use before are being replaced by Locomotive?</p><p>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n</p><p><b>David
+      Pierce</b>: Before Locomotive, we used a wide range of tools to build our different
+      sites. I’m a huge proponent of making sure that we find the right tool to fit
+      the problem and so from static site generators all the way up to things like
+      Wordpress, I use a lot of different tools on the dev team to accomplish the
+      right goal. Like I mentioned, we did a lot of just handcrafted static sites
+      and there’s different tools for that but for this discussion, we spent a lot
+      of time and investments in Wordpress because it’s kind of one of the better
+      known solutions out there for building sites that have a lot of content management
+      problems. </p>\r\n<p><b>LocomotiveCMS</b>:\tWhat were your greatest challenges
+      when creating websites for yourself or your clients before?</p><p><b>David Pierce</b>:
+      One of the biggest challenges that we found before was again finding a tool
+      that could be as flexible and as complex as the business problems that we wanted
+      to solve for. What I really mean by that is Wordpress is a great tool and it’s
+      good at what it does but after a while you’d start to run into challenges trying
+      to make Wordpress do things it wasn’t designed to do. Now Wordpress does have
+      some good extensions for custom post types but I’d often would be encountered
+      with business problems that had the model data that just hadn’t really been
+      considered before and so that was really one of the biggest challenges. Then
+      another big challenge I wanted to solve for managing all that complexity and
+      being as flexible as we needed to be while also keeping our developers happy.
+      We’re mostly a JavaScript and Ruby shop here and we could have done a lot of
+      the PHP solutions and made it work but ultimately our developers are happy when
+      they’re using tools that are Ruby based or JavaScript based and so those two
+      big things, developer happiness and then honestly business happiness, those
+      are two things that I really want to be sure that I was solving for appropriately
+      and again, Locomotive really helped us find that good mix.\r\n\r\n\r\n</p><p>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n</p><p><b>LocomotiveCMS:</b>\tHow
+      is Locomotive different from comparable solutions you’ve used before? What problems
+      does LocomotiveCMS solve for or does it make easy?</p>\r\n<p><b>David Pierce:</b>\tThe
+      thing that helps Locomotive stand out for me is considerations to how developers
+      think, how they work and what their workflow looks like. I really hadn’t seen
+      a CMS or any platform before that’s so elegantly divided: business concerns
+      and developer concerns and so through its use of tools and the separation of
+      concerns, we’re allowed to really keep environments that keep everyone happy.
+      That thing really stood out to me. </p>\r\n<p>The other thing that really stood
+      to me is its commitment to open source. A lot of frameworks that I’ve looked
+      at are open source as well but finding something that was as polished for the
+      business users and had so much design consideration built into the back office
+      but then also too had a lot of really good elegant decisions put into how developers
+      work. That was great and being able to crack open the code and see how it worked
+      and see how I could contribute back to the community so that other LocomotiveCMS
+      users could also benefit from what I’ve learned and that was really attractive
+      to me as well. &nbsp;</p><p><b>LocomotiveCMS</b>: what has changed about your
+      work since you started using LocomotiveCMS?</p><p>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n</p><p><b>David
+      Pierce</b>:\tMy experience so far, it’s actually been pretty positive. It’s
+      been flexible enough and intuitive enough for my business users but it’s also
+      been the kind of thing that if I’m having to bring in developers or extra help
+      or resources into the problem, you don’t have to learn the entire CMS to contribute
+      to a site build. If all that you really want to learn is how to work with CSS,
+      SaaS or JavaScript, Wagon is really nice in that you don’t have to learn the
+      entire stack to contribute to a site. It’s made it really easy to be flexible
+      with how I pulled resources into a particular site, ranging from a very big
+      site that needs a lot of investment to just kind of a small site that I need
+      to kick out a couple pages, I can really be flexible with that. </p>\r\n<p></p>\r\n<p>The
+      other thing that I really enjoyed about this is Locomotive does content modeling
+      very well and so I can sit down with the business users and really understand
+      what structured editable content needs to look like, what parts of the page
+      they might need to change, just how flexible the back office needs to be and
+      so that’s really great that I can just sit down and think about all of that
+      and know that that directly match the things that Locomotive are very good at.
+      </p>\r\n<p><b>LocomotiveCMS</b>:\tHow do you use LocomotiveCMS in your work?</p>\r\n<p><b>David
+      Pierce</b>:\tThe way that we use it now is I usually start by sitting with …
+      My clients are internal clients so I start by understanding their business needs,
+      what problems that they’re trying to solve, what kind of message and story they
+      want to tell and really what I’m looking for is what structured content do I
+      need to make available in the back office. When I sit down and understand all
+      the requirements and say does this fit within the range that Locomotive will
+      excel at? If it’s a smaller site that just needs not … like pretty static content
+      then I can direct them in other places but once they start figuring out the
+      stories that they want to tell and what data goes into that I can start mapping
+      that out to models and we can start designing basically what all the requirements
+      are and then we just build out the page or pages and then I can sit down and
+      say like, “What is missing? What extra things do you need?” Since Locomotive
+      is so flexible, we can add those back in. It’s very cheap. It’s not as time
+      consuming to sit down and make changes. That makes the developer and business
+      interchange pretty quick.  &nbsp;</p>\r\n<p><b>LocomotiveCMS</b>:\tWhat feedback
+      have you gotten from your clients for the LocomotiveCMS back office? Do they
+      find it easy to use?</p>\r\n<p><b>David Pierce</b>:\tYes, the latest feedback
+      that I’ve gotten, because I check in with my business users quite a bit is that
+      it’s intuitive in that it’s flexible. If something isn’t there that needs to
+      be there, it really doesn’t require much of a code change to make it happen
+      and what’s really nice about that is I can take those requirements back over
+      to developers. We add in some code and we push it to production and it all just
+      works. </p>\r\n<p>The business users really like that flexibility where they
+      don’t have to adjust their paradigm to kind of suit the framework. The framework
+      adjusts to fir their paradigm. Again, that’s the best thing that I can really
+      offer to my business users is that each back office for each problem that we
+      solve is custom-tailored to the problems that they’re trying to solve. That’s
+      been really good. It’s like a system that grows and learns with them and it’s
+      what they expect to see when they log in and have to manage their content. &nbsp;<br><b>LocomotiveCMS</b>:\tWhat
+      was your aha moment, the moment you knew you loved LocomotiveCMS?</p><p></p>\r\n<p></p>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n<p><b>David
+      Pierce</b>: I was first really inspired to explore Locomotive a lot more when,
+      as I was coming through its features and what it could do, I realized that I
+      can actually look at the code and see how it works and just seeing that it was
+      Ruby. It was understandable and I really liked to think about the fact that
+      under the hood, it’s just Rails and it can do what I want it to do and there’s
+      a lot of really good best practices and knowledge built up around it. Knowing
+      that I can use standard industry tools like New Relic and various distribution
+      and deployment platforms, that’s all really compelling. </p>\r\n<p>Also seeing
+      the commitment to design and seeing a lot of the contributors onto the project
+      and seeing that designers that I … names that I knew and recognized were contributing
+      to the success of that project, that was a really good aha but really what’s
+      inspiring and this is all inspiring to developers what was really inspiring
+      was knowing that I could custom tailor the backend and make it as close to my
+      colleague’s problems as possible and knowing that I could really deliver something
+      that was very rich and faithful to my non-technical colleagues. That was really
+      exciting too and again, the open source part, there’s lots of reasons that I
+      fell in love with Locomotive pretty early on. </p>\r\n<p>There isn't a single
+      aha moment or me it’s just to further that the more that I spent time looking
+      at Locomotive and what it could do and how it was built and the different philosophies
+      that it committed to, all of those really kind of came together and really helped
+      inspire me to pursue that further. &nbsp; &nbsp;</p>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n<p>Our
+      plans for Locomotive as we grow as a company are just effectively to continue
+      using it as we’re using it now. It’s part of my toolkit that I can bring to
+      the table when I’m considering problems and how we want to solve them. It’s
+      really good. It’s fitting a good sweet spot for smaller to medium-sized builds.
+      It’s also really helpful when I’m considering a lot of managed content for our
+      business users and so it’s going to continue to be a pretty strong player when
+      I’m considering alternatives to help solve our problems internally. </p>\r\n<p>I
+      also expect to find and exploit more of the ways that we can save a lot of our
+      infrastructure costs. There are really smart ways that I can host multiple small
+      sites on one installation with Locomotive. What I’m thinking as a technical
+      director, that saves our company money, that saves us maintenance costs and
+      I can really can share and spread out a lot of the costs of maintaining websites
+      into one place and so that’s really exciting too.</p>\r\n<p>\tThe other ways
+      that I expect our company to grow is to continue to contribute back to help
+      be a part of making Locomotive better for engineers but also for business users
+      and just being a part of the Locomotive community as well. </p>\r\n\r\n\r\n<br><p></p>\r\n\r\n\r\n<br><p></p>\r\n\r\n\r\n<br><p></p>\r\n\r\n\r\n<br><p></p>"
+    quote: "<p>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n</p><p>I really hadn’t
+      seen a CMS or any platform before that’s so elegantly divided: business concerns
+      and developer concerns.</p>\r\n\r\n\r\n<p></p>"

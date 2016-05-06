@@ -19,111 +19,19 @@ slug: pricing
           <p>Locomotive is open and free to use for anyone. We offer a hosted solution with heaps of benefits.</p>
         </div>
       </div>
-      <div class="grid-cell with-3col">
-        <div class="block block-white">
-          <h5>Personal</h5>
-          <div class="block-price">
-            <i>$</i>
-            <h1>19</h1>
-            <span>each month</span>
+      {% for plan in contents.plans %}
+        <div class="grid-cell with-3col">
+          <div class="block block-white">
+            <h5>{{ plan.name }}</h5>
+            <div class="block-price">
+              <i>$</i>
+              <h1>{{ plan.price }}</h1>
+              <span>each month</span>
+            </div>
+            {{ plan.description }}
           </div>
-          <ul class="block-list">
-            <li>
-              <strong>Max 1 site</strong>
-            </li>
-            <li>
-              1GB Storage
-            </li>
-            <li>
-              Max 25.000 pageviews
-            </li>
-          </ul>
         </div>
-      </div>
-      <div class="grid-cell with-3col">
-        <div class="block block-white">
-          <h5>Freelancer</h5>
-          <div class="block-price">
-            <i>$</i>
-            <h1>39</h1>
-            <span>each month</span>
-          </div>
-          <ul class="block-list">
-            <li>
-              <strong>Max 3 sites</strong>
-            </li>
-            <li>
-              3GB Storage
-            </li>
-            <li>
-              Max 75.000 pageviews
-            </li>
-            <li>
-              Email support
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="grid-cell with-3col">
-        <div class="block block-white">
-          <h5>Agency</h5>
-          <div class="block-price">
-            <i>$</i>
-            <h1>79</h1>
-            <span>each month</span>
-          </div>
-          <ul class="block-list">
-            <li>
-              <strong>Max 10 sites</strong>
-            </li>
-            <li>
-              5GB Storage
-            </li>
-            <li>
-              Max 150.000 pageviews
-            </li>
-            <li>
-              Email and dedicated chat support
-            </li>
-            <li>
-              Automated Dropbox backups
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="grid-cell with-3col">
-        <div class="block block-white">
-          <h5>Enterprise</h5>
-          <div class="block-price">
-            <i>$</i>
-            <h1>199</h1>
-            <span>each month</span>
-          </div>
-          <ul class="block-list">
-            <li>
-              <strong>Unlimited sites</strong>
-            </li>
-            <li>
-              10GB Storage
-            </li>
-            <li>
-              Max 500.000 pageviews
-            </li>
-            <li>
-              Priority Skype and email support
-            </li>
-            <li>
-              Automated Dropbox backups
-            </li>
-            <li>
-              Dedicated account manager
-            </li>
-            <li>
-              White label
-            </li>
-          </ul>
-        </div>
-      </div>
+      {% endfor %}
       <div class="grid-cell is-centered">
         <p class="block-outro">
           Need a larger plan? <a href="#" title="Contact us">Contact us</a>.

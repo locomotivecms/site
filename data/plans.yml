@@ -1,25 +1,48 @@
-- Free:
-    _slug: free
-    name: Free
-    price: 0
-    description: "<ul><li>Download the application and install it on your own web
-      server.</li><li>Manage all your own updates and code<br></li><li>Get community
-      support</li></ul><br><p></p>"
 - Personal:
     _slug: personal
     name: Personal
     price: 19
-    description: "<p></p><ul><li><b>1</b> site<br></li><li><b>1GB</b> Storage<br></li><li><b>25,000</b>
-      page views</li><li>Email support</li></ul><p></p>"
+    description: |
+      <ul class="block-list">
+      <li><strong>Max 1 site</strong></li>
+      <li>1GB Storage</li>
+      <li>Max 25.000 pageviews</li>
+      </ul>
 - Freelancer:
     _slug: freelancer
     name: Freelancer
-    price: 69
-    description: "<p></p><ul><li><b>Unlimited </b>sites<b></b><br></li><li><b>3GB</b>&nbsp;Storage<br></li><li><b>150,000</b>
-      page views</li><li>Email and Skype support</li></ul><p></p><p></p>"
+    price: 39
+    description: >
+      <ul class="block-list">
+      <li><strong>Max 3 sites</strong></li>
+      <li>3GB Storage</li>
+      <li>Max 75.000 pageviews</li>
+      <li>Email support</li>
+      </ul>
 - Agency:
     _slug: agency
     name: Agency
-    price: 149
-    description: "<ul><li><b>Unlimited </b>sites<b></b><br></li><li><b>5GB</b> Storage<br></li><li><b>500,000</b>
-      page views</li><li>Dedicated Account Manager</li><li>White Label</li></ul>"
+    price: 79
+    description: >
+      <ul class="block-list">
+      <li><strong>Max 10 sites</strong></li>
+      <li>5GB Storage</li>
+      <li>Max 150.000 pageviews</li>
+      <li>Email and dedicated chat support</li>
+      <li>Automated Dropbox backups</li>
+      </ul>
+- Enterprise:
+    _slug: enterprise
+    name: Enterprise
+    price: 199
+    description: >
+      <ul class="block-list">
+      <li><strong>Unlimited sites</strong></li>
+      <li>10GB Storage</li>
+      <li>Max 500.000 pageviews</li>
+      <li>Priority Skype and email support</li>
+      <li>Automated Dropbox backups</li>
+      <li>Dedicated account manager</li>
+      <li>White label
+      </li>
+      </ul>
