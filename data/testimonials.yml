@@ -1,8 +1,9 @@
 - Jeremy Seitz:
-    _slug: john-doe
+    _slug: jeremy-seitz
     name: Jeremy Seitz
     company: 'Local.ch, now Swisscom, Zürich, Switzerland: 4.5M unique visitors a
       day'
+    type: Enterprise
     picture: "/samples/content_entries/Jeremy-Seitz.jpeg"
     header_picture: "/samples/content_entries/jeremy-header.jpg"
     video: dANvXClebg4
@@ -138,9 +139,10 @@
       and they’ve helped us a lot with some of the more complex solutions\r\nthat
       we've tried to build.</p>"
 - Paul Eckenrode:
-    _slug: john-doe-1
+    _slug: paul-eckenrode
     name: Paul Eckenrode
     company: 360durango.com, Durango, CO, USA
+    type: Digital agency
     picture: "/samples/content_entries/Paul-eckenrode.png"
     header_picture: "/samples/content_entries/paul-header.jpg"
     video: o6A2fBOGNwY
@@ -225,9 +227,10 @@
       that they can do on their\r\nown with very little to no website or development
       experience.</p>"
 - Christie Roberts:
-    _slug: john-doe-2
+    _slug: christie-roberts
     name: Christie Roberts
     company: Under the Sun Graphics, Durango, CO, USA
+    type: Designer
     picture: "/samples/content_entries/christie-roberts-designer.jpeg"
     header_picture: "/samples/content_entries/christie-header.jpg"
     video: KRSagoaIbwI
@@ -312,6 +315,7 @@
     name: David Pierce
     company: UP Global, now Techstars, Seattle, WA, USA
     picture: "/samples/content_entries/David-Pierce.png"
+    type: Enterprise
     video: 0cPAFqhInFk
     video_transcript: "<p>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n</p><p><b>LocomotiveCMS</b>:
       Hello David, can you please introduce yourself and your company?</p><p><b>David

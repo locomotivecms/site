@@ -6,7 +6,7 @@ order_by: _position
 
 display_settings:
   seo: true
-  advanced: false
+  advanced: true
 
 entry_template: "<a href='{{link}}'>{{entry.name}}</a>&nbsp;&nbsp;{% if entry.featured %}<span class='label default-label'>Featured</span>{% endif %}"
 
@@ -28,9 +28,9 @@ fields:
 - type:
     label: Type
     type: string
-    required: true
+    required: false
     hint: Which type of user is this testimonial?
-    localized: true
+    localized: false
 
 - picture:
     label: Picture
@@ -56,7 +56,7 @@ fields:
 - header_picture:
     label: Header picture
     type: file
-    required: true
+    required: false
     hint: "Header picture for the detail shot"
     localized: false
 
