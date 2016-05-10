@@ -1,0 +1,14 @@
+<div class="testimonial-info">
+  <h3>
+    {{ testimonial.name }}
+    <label>{{ testimonial.type }}</label>
+  </h3>
+  <h6>{{ testimonial.company }}</h6>
+  <p>
+    {{ testimonial.quote }}
+  </p>
+  <a href="{% path_to testimonial %}" title="{{ button }}" class="testimonial-link">
+    {{ button }}
+    <i class="fa fa-angle-right" aria-hidden="true"></i>
+  </a>
+</div>
