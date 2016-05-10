@@ -14,88 +14,93 @@ slug: pricing
     <div class="grid grid-centered">
       <div class="grid-cell">
         {% include navigation %}
+        {% block header %}
         <div class="header-content">
-          <h1>Simple pricing for everyone</h1>
-          <p>Locomotive is open and free to use for anyone. We offer a hosted solution with heaps of benefits.</p>
+          <h1>{% editable_text "headline", format: raw, rows: 1 %}Simple pricing for everyone{% endeditable_text %}</h1>
+          <p>{% editable_text "tagline", format: raw, rows: 3 %}Locomotive is open and free to use for anyone. We offer a hosted solution with heaps of benefits.{% endeditable_text %}</p>
         </div>
+        {% endblock %}
       </div>
-      {% for plan in contents.plans %}
-        <div class="grid-cell with-3col">
-          <div class="block block-white">
-            <h5>{{ plan.name }}</h5>
-            <div class="block-price">
-              <i>$</i>
-              <h1>{{ plan.price }}</h1>
-              <span>each month</span>
+      {% block plans %}
+        {% editable_model plans %}
+          {% for plan in contents.plans %}
+            <div class="grid-cell with-3col">
+              <div class="block block-white">
+                <h5>{{ plan.name }}</h5>
+                <div class="block-price">
+                  <i>$</i>
+                  <h1>{{ plan.price }}</h1>
+                  <span>each month</span>
+                </div>
+                {{ plan.description }}
+              </div>
             </div>
-            {{ plan.description }}
-          </div>
+          {% endfor %}
+        {% endeditable_model %}
+        <div class="grid-cell is-centered">
+          <p class="block-outro">
+            {% editable_text "contact us", format: raw, rows: 3 %}Need a larger plan? <a href="mailto:contact@locomotivecms.com" title="Contact us">Contact us</a>.
+            {% endeditable_text %}
+          </p>
         </div>
-      {% endfor %}
-      <div class="grid-cell is-centered">
-        <p class="block-outro">
-          Need a larger plan? <a href="#" title="Contact us">Contact us</a>.
-        </p>
-      </div>
+      {% endblock %}
     </div>
   </header>
 
+  {% block features %}
   <section class=" is-light">
     <div class="grid grid-centered">
       <div class="grid-cell is-centered">
-        <h2>All plans include</h2>
+        <h2>{% editable_text "title", format: raw, rows: 1 %}All plans include{% endeditable_text %}</h2>
       </div>
       <div class="grid-cell with-6col">
-        <ul class="block-features">
-          <li>
-            <i class="fa fa-refresh" aria-hidden="true"></i>
-            <p>
-              Free automatic updates with new features and enhancements.
-            </p>
-          </li>
-          <li>
-            <i class="fa fa-picture-o" aria-hidden="true"></i>
-            <p>
-              Assets served through a CDN for optimal speed.
-            </p>
-          </li>
-          <li>
-            <i class="fa fa-globe" aria-hidden="true"></i>
-            <p>
-              Use your own domainnames.
-            </p>
-          </li>
-        </ul>
-      </div>
-      <div class="grid-cell with-6col">
-        <ul class="block-features">
-          <li>
-            <i class="fa fa-lock" aria-hidden="true"></i>
-            <p>
-              Very secure back office, protecting your data at all cost.
-            </p>
-          </li>
-          <li>
-            <i class="fa fa-upload" aria-hidden="true"></i>
-            <p>
-              Complete freedom to update your site anytime and anywhere.
-            </p>
-          </li>
-          <li>
-            <i class="fa fa-file-text" aria-hidden="true"></i>
-            <p>
-              No contracts required, opt-in and out at any time.
-            </p>
-          </li>
-        </ul>
-      </div>
+        {% editable_model hosting_features %}
+          {% for feature in contents.hosting_features %}
+            {% assign column = forloop.index0 | modulo: 2 %}
+
+            {% if column == 0 %}
+              {% capture column_1 %}
+                {{ column_1 }}
+                <li>
+                  <i class="fa fa-{{ feature.icon }}" aria-hidden="true"></i>
+                  <p>
+                    {{ feature.label }}
+                  </p>
+                </li>
+              {% endcapture %}
+            {% else %}
+              {% capture column_2 %}
+                {{ column_2 }}
+                <li>
+                  <i class="fa fa-{{ feature.icon }}" aria-hidden="true"></i>
+                  <p>
+                    {{ feature.label }}
+                  </p>
+                </li>
+              {% endcapture %}
+            {% endif %}
+
+          {% endfor %}
+
+          <ul class="block-features">
+            {{ column_1 }}
+          </ul>
+        </div>
+        <div class="grid-cell with-6col">
+          <ul class="block-features">
+            {{ column_2 }}
+          </ul>
+        </div>
+      {% endeditable_model %}
     </div>
   </section>
+  {% endblock %}
 
+  {% block faq %}
   <section class="with-border">
     <div class="grid grid-centered">
       <div class="grid-cell is-centered">
-        <h3 class="block-faq-title">Frequently asked questions</h3>
+        <h3 class="block-faq-title">{% editable_text "title", format: raw, rows: 1 %}Frequently asked questions{% endeditable_text %}</h3>
       </div>
       {% for faq in contents.faq_items %}
         <div class="grid-cell with-6col">
@@ -109,4 +114,6 @@ slug: pricing
       {% endfor %}
     </div>
   </section>
+  {% endblock %}
+
 {% endblock %}
