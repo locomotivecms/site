@@ -1,0 +1,20 @@
+- "Didier":
+    picture: /samples/team_members/did.jpg # Path to a file in the public/samples folder or to a remote and external file.
+    position: "Founder, Developer"
+    category: 'Core team' # Use the value of a select option defined in the app/content_types/Team members.rb file.
+
+- "Estelle":
+    picture: /samples/team_members/estelle.jpg # Path to a file in the public/samples folder or to a remote and external file.
+    position: "Founder, Sales & Support"
+    category: 'Core team' # Use the value of a select option defined in the app/content_types/Team members.rb file.
+
+- "Nielsen":
+    picture: /samples/team_members/nielsen.jpg # Path to a file in the public/samples folder or to a remote and external file.
+    position: 'Designer, Marketing'
+    category: 'Core team'
+
+- "Nic Boie":
+    picture: /samples/team_members/nic.png # Path to a file in the public/samples folder or to a remote and external file.
+    position: "API developer"
+    category: 'Contributors' # Use the value of a select option defined in the app/content_types/Team members.rb file.
+
