@@ -32,16 +32,19 @@ slug: pricing
                   <h1>{{ plan.price }}</h1>
                   <span>each month</span>
                 </div>
-                {{ plan.description }}
+                <div class="block-white-description">
+                  {{ plan.description }}
+                </div>
               </div>
             </div>
           {% endfor %}
         {% endeditable_model %}
         <div class="grid-cell is-centered">
-          <p class="block-outro">
-            {% editable_text "contact us", format: raw, rows: 3 %}Need a larger plan? <a href="mailto:contact@locomotivecms.com" title="Contact us">Contact us</a>.
+          <div class="block-outro">
+            {% editable_text "contact-us" %}
+              Need a larger plan? <a href="mailto:contact@locomotivecms.com" title="Contact us">Contact us</a>.
             {% endeditable_text %}
-          </p>
+          </div>
         </div>
       {% endblock %}
     </div>
