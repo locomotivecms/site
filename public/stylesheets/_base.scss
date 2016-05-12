@@ -16,6 +16,7 @@ html {
 }
 
 body {
+  min-width: 1150px;
   margin: 0 auto;
   font-family: $base-font-family;
   -webkit-font-smoothing: antialiased;
