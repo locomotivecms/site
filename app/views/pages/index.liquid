@@ -52,13 +52,20 @@ slug: index
         <div class="grid-cell with-4col is-middle">
           <div class="section-image-intro">
             <h2>{% editable_text "title", format: raw, rows: 1 %}An awesome user interface{% endeditable_text %}</h2>
-            <p class="is-justified">
+            <div class="is-justified">
               {% editable_text "description", format: html, rows: 5, line_break: false %}
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               <br><br>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               {% endeditable_text %}
-            </p>
+            </div>
+            <br/>
+            <br/>
+            <a href="{% path_to features %}" class="button button-primary">
+              {% editable_text "button", format: raw, rows: 1 %}
+                Discover all features
+              {% endeditable_text %}
+            </a>
           </div>
         </div>
       </div>

@@ -41,6 +41,10 @@ slug: pricing
         {% endeditable_model %}
         <div class="grid-cell is-centered">
           <div class="block-outro">
+            <br/>
+            <a href="https://station.locomotive.works/_app/sign_up" class="button button-black">Sign up</a>
+            <br/>
+            <br/>
             {% editable_text "contact-us" %}
               Need a larger plan? <a href="mailto:contact@locomotivecms.com" title="Contact us">Contact us</a>.
             {% endeditable_text %}
@@ -56,35 +60,34 @@ slug: pricing
       <div class="grid-cell is-centered">
         <h2>{% editable_text "title", format: raw, rows: 1 %}All plans include{% endeditable_text %}</h2>
       </div>
-      <div class="grid-cell with-6col">
-        {% editable_model hosting_features %}
-          {% for feature in contents.hosting_features %}
-            {% assign column = forloop.index0 | modulo: 2 %}
+      {% editable_model hosting_features %}
+        {% for feature in contents.hosting_features %}
+          {% assign column = forloop.index0 | modulo: 2 %}
 
-            {% if column == 0 %}
-              {% capture column_1 %}
-                {{ column_1 }}
-                <li>
-                  <i class="fa fa-{{ feature.icon }}" aria-hidden="true"></i>
-                  <p>
-                    {{ feature.label }}
-                  </p>
-                </li>
-              {% endcapture %}
-            {% else %}
-              {% capture column_2 %}
-                {{ column_2 }}
-                <li>
-                  <i class="fa fa-{{ feature.icon }}" aria-hidden="true"></i>
-                  <p>
-                    {{ feature.label }}
-                  </p>
-                </li>
-              {% endcapture %}
-            {% endif %}
+          {% if column == 0 %}
+            {% capture column_1 %}
+              {{ column_1 }}
+              <li>
+                <i class="fa fa-{{ feature.icon }}" aria-hidden="true"></i>
+                <p>
+                  {{ feature.label }}
+                </p>
+              </li>
+            {% endcapture %}
+          {% else %}
+            {% capture column_2 %}
+              {{ column_2 }}
+              <li>
+                <i class="fa fa-{{ feature.icon }}" aria-hidden="true"></i>
+                <p>
+                  {{ feature.label }}
+                </p>
+              </li>
+            {% endcapture %}
+          {% endif %}
+        {% endfor %}
 
-          {% endfor %}
-
+        <div class="grid-cell with-6col">
           <ul class="block-features">
             {{ column_1 }}
           </ul>
