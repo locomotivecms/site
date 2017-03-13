@@ -25,7 +25,7 @@ content_type: testimonials
     <div class="grid grid-centered">
       <div class="grid-cell with-8col with-2off">
         <div class="testomonial-transcript">
-          <h3>Full transcript</h3>
+          <h3>{% editable_text "title", format: raw, rows: 1 %}Full transcript{% endeditable_text %}</h3>
           {{ testimonial.video_transcript }}
           <br>
           <a href="{% path_to testimonials %}" class="testimonial-link is-left" title="Back to testimonials">
