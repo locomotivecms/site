@@ -1,0 +1,43 @@
+---
+title: Features
+handle: features
+seo_title: Features
+---
+{% extends "layouts/base" %}
+
+{% block main %}
+  <header class="header-primary">
+    <div class="grid grid-centered">
+      <div class="grid-cell">
+        {% include navigation %}
+        {% block header %}
+        <div class="header-content is-small">
+          <h1>{% editable_text "headline", format: raw, rows: 1 %}Develop your website 100% faster{% endeditable_text %}</h1>
+          <p>
+            {% editable_text "tagline", format: raw, rows: 3 %}
+
+            {% endeditable_text %}
+          </p>
+        </div>
+        {% endblock %}
+      </div>
+    </div>
+  </header>
+
+  {% block features %}
+  <section class=" is-light">
+    <div class="grid grid-centered">
+      <div class="grid-cell is-centered">
+        <h2>{% editable_text "title", format: raw, rows: 1 %}All plans include{% endeditable_text %}</h2>
+      </div>
+      <div class="grid-cell with-6col">
+        TODO
+      </div>
+      <div class="grid-cell with-6col">
+        TODO
+      </div>
+    </div>
+  </section>
+  {% endblock %}
+
+{% endblock %}
