@@ -3,3 +3,6 @@ dragonfly.log
 .sass-cache/
 config/deploy.yml
 .DS_Store
+node_modules
+public/samples/_production/
+data/production/

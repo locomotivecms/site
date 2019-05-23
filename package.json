@@ -1,0 +1,37 @@
+{
+  "name": "WagonAssets",
+  "version": "1.0.0",
+  "description": "Assets source for the Wagon site",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --config app/assets/webpack.dev.js --progress --colors --watch",
+    "build:dev": "webpack --config app/assets/webpack.dev.js --progress",
+    "build:prod": "NODE_ENV=production webpack --config app/assets/webpack.prod.js --progress --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wagon",
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "^0.7.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/preset-env": "^7.4.3",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "image-webpack-loader": "^4.3.0",
+    "mini-css-extract-plugin": "^0.4.0",
+    "node-sass": "^4.9.0",
+    "optimize-css-assets-webpack-plugin": "^4.0.2",
+    "postcss-flexbugs-fixes": "^3.3.1",
+    "postcss-loader": "^2.1.5",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1",
+    "webpack-livereload-plugin": "^2.2.0",
+    "webpack-merge": "^4.1.4"
+  }
+}

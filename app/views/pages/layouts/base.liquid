@@ -36,7 +36,7 @@ is_layout: false
   <link href="https://fonts.googleapis.com/css?family=Muli:400,300|Noto+Sans:400,700" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-  {{ 'application.css' | stylesheet_tag }}
+  {{ 'bundle.css' | stylesheet_tag }}
 
   {% google_analytics 'UA-17355243-1' %}
 </head>
@@ -47,8 +47,10 @@ is_layout: false
 
   {% block 'main' %}{% endblock %}
 
+  {% comment %}
   {% include footer %}
 
   {% include javascripts %}
+  {% endcomment %}
 </body>
 </html>

@@ -6,10 +6,10 @@ published: true
 handle: home
 slug: index
 ---
-
 {% extends "layouts/base" %}
 
 {% block main %}
+  {% comment %}
   {% block header %}
   <header style="background: url({% editable_file 'home-header-image', resize: '1900x900#' %}/samples/pages/header-home.jpg{% endeditable_file %}) center center no-repeat;">
     <div class="grid grid-centered">
@@ -233,8 +233,12 @@ slug: index
     {% endblock %}
   </main>
 
+  {% endcomment %}
+
 {% endblock %}
 
-{% block page_scripts %}
-  {{ "vendor/carousel.js" | javascript_tag }}
-{% endblock %}
+{% comment %}
+  {% block page_scripts %}
+    {{ "vendor/carousel.js" | javascript_tag }}
+  {% endblock %}
+{% endcomment %}
