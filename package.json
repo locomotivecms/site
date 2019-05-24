@@ -12,7 +12,9 @@
   "author": "Wagon",
   "license": "ISC",
   "dependencies": {
-    "bulma": "^0.7.5"
+    "bulma": "^0.7.5",
+    "jquery": "^3.4.1",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",

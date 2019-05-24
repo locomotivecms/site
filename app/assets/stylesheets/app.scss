@@ -5,6 +5,10 @@
 @import '~bulma/bulma.sass';
 @import './bulma_global';
 
+// Plugins
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 // General
 @import './global';
 
@@ -13,3 +17,4 @@
 @import './sections/hero';
 @import './sections/clients';
 @import './sections/features';
+@import './sections/quotes';

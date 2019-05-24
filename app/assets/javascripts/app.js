@@ -1,7 +1,12 @@
 // === Wagon main javascript file ===
 
+import $ from 'jquery';
+
 // Tell Webpack to load the style
 import '../stylesheets/app.scss';
+
+// Set jQuery global
+window.$ = window.jQuery = $;
 
 // Import the classes required to handle sections
 import SectionsManager from './sections/_manager';
@@ -13,6 +18,7 @@ document.addEventListener('DOMContentLoaded', event => {
   const sectionsManager = new SectionsManager();
 
   // Register sections here. DO NOT REMOVE OR UPDATE THIS LINE
+  sectionsManager.registerSection('quotes', Sections.Quotes);
   sectionsManager.registerSection('features', Sections.Feature);
   sectionsManager.registerSection('clients', Sections.Client);
   sectionsManager.registerSection('hero', Sections.Hero);

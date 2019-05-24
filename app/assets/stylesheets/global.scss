@@ -1,6 +1,11 @@
 main {
 }
 
+.is-vcentered {
+  display: flex;
+  align-items: center;
+}
+
 .has-top-divider {
   &:before {
     content: '';
