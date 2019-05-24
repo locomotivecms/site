@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', event => {
   const sectionsManager = new SectionsManager();
 
   // Register sections here. DO NOT REMOVE OR UPDATE THIS LINE
+  sectionsManager.registerSection('services', Sections.Service);
   sectionsManager.registerSection('quotes', Sections.Quotes);
   sectionsManager.registerSection('features', Sections.Feature);
   sectionsManager.registerSection('clients', Sections.Client);

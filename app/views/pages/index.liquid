@@ -101,6 +101,34 @@ sections_content: >
         "background_image": "/samples/sections/home-testimonials.jpg"
       },
       "blocks": []
+    },
+    "services": {
+      "settings": {
+        "title": "Completely Open Source",
+        "message": "<p>LocomotiveCMS is completely Open Source. It's a free software released under the MIT license. Use is as you like. Copy it, modify it, tweak it and resell it. You're free to use it however you like, as long as the copyright notices remain in tact.</p>"
+      },
+      "blocks": [
+        {
+          "type": "service",
+          "settings": {
+            "name": "Wagon",
+            "description": "<p>With Wagon, you can scaffold a new Locomotive site and start adding content types and templates you need using any text editor. And thanks to Wagon's built-in web server, you can preview the site with your prefered web browser.</p>",
+            "icon": "/samples/sections/wagon.png",
+            "button_label": "View on Github",
+            "button_link": "https://github.com/locomotivecms/wagon"
+          }
+        },
+        {
+          "type": "service",
+          "settings": {
+            "name": "Engine",
+            "description": "<p>Engine is the Ruby on Rails application, it is dedicated to the creation and editing of content and managing all your sites. Next to that it offers a huge variety of features that helps you or your clients edit their sites with ease.</p>",
+            "icon": "/samples/sections/engine.png",
+            "button_label": "View on Github",
+            "button_link": "https://github.com/locomotivecms/engine"
+          }
+        }
+      ]
     }
   }
 ---
@@ -115,6 +143,8 @@ sections_content: >
   {% section 'features' %}
 
   {% section 'quotes' %}
+
+  {% section 'services' %}
 
 {% endblock %}
 

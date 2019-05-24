@@ -9,3 +9,4 @@ export { default as Hero } from './hero';
 export { default as Client } from './clients';
 export { default as Feature } from './features';
 export { default as Quotes } from './quotes';
+export { default as Service } from './services';

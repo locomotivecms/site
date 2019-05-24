@@ -1,0 +1,118 @@
+---
+{
+  "name": "Services",
+  "class": "section-services has-top-divider",
+  "icon": "list",
+  "keep_icon": true,
+  "keep_label": false,
+  "blocks_label": "List",
+  "settings": [
+    {
+      "label": "Title",
+      "id": "title",
+      "type": "text"
+    },
+    {
+      "label": "Message",
+      "id": "title",
+      "type": "text",
+      "html": true
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Service",
+      "type": "service",
+      "settings": [
+        {
+          "label": "Name",
+          "id": "name",
+          "type": "text",
+          "default": "Name"
+        },
+        {
+          "label": "Description",
+          "id": "description",
+          "type": "text",
+          "html": true,
+          "default": "Description"
+        },
+        {
+          "label": "Icon",
+          "id": "icon",
+          "type": "image_picker"
+        },
+        {
+          "label": "Button label",
+          "id": "button_label",
+          "type": "text",
+          "default": "CTA"
+        },
+        {
+          "label": "Button link",
+          "id": "button_link",
+          "type": "url",
+          "default": "#"
+        }
+      ]
+    }
+  ],
+  "dropzone_presets": [
+    {
+      "name": "Services",
+      "category": "Content",
+      "settings": {
+        "title": "Title",
+        "message": "<p>Introduction</p>"
+      },
+      "blocks": [
+        {
+          "type": "service",
+          "settings": {
+            "name": "Service #1",
+            "description": "<p>Description</p>",
+            "button_label": "Call to action",
+            "button_link": "#"
+          }
+        },
+        {
+          "type": "service",
+          "settings": {
+            "name": "Service #2",
+            "description": "<p>Description</p>",
+            "button_label": "Call to action",
+            "button_link": "#"
+          }
+        }
+      ]
+    }
+  ]
+}
+---
+<div class="container has-text-centered">
+  <h2 class="title is-size-2">{{ section.settings.title }}</h2>
+  <div class="service-message is-size-5 has-text-grey">
+    {{ section.settings.message }}
+  </div>
+
+  <div class="service-list">
+    {% for block in section.blocks %}
+      <div class="service-item" {{ block.locomotive_attributes }}>
+        <div class="service-item-inner">
+          <div class="service-item-icon">
+            <img src="{{ block.settings.icon | resize: 'x200' }}" title="{{ block.settings.name }}" />
+          </div>
+          <h3 class="title is-size-3">{{ block.settings.name }}</h3>
+          <div class="service-item-description is-size-5 has-text-grey">
+            {{ block.settings.description }}
+          </div>
+          <div class="service-item-cta">
+            <a class="button is-link" href="{{ block.settings.button_link }}" {{ block.settings.button_link_new_window_attribute }}>
+              {{ block.settings.button_label }}
+            </a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
