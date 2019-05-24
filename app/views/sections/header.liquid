@@ -1,0 +1,100 @@
+---
+{
+  "name": "Header",
+  "icon": "header",
+  "keep_icon": true,
+  "keep_name": true,
+  "blocks_label": "Menu",
+  "class": "section-header",
+  "settings": [
+  ],
+  "blocks": [
+    {
+      "name": "Page",
+      "type": "page",
+      "settings": [
+        {
+          "label": "Label",
+          "id": "text",
+          "type": "text",
+          "default": "Page"
+        },
+        {
+          "label": "Link",
+          "id": "link",
+          "type": "url",
+          "default": "#"
+        }
+      ]
+    }
+  ],
+  "global_content": {
+    "settings": {
+    },
+    "blocks": [
+      {
+        "type": "page",
+        "settings": {
+          "text": "Features",
+          "link": "/features"
+        }
+      },
+      {
+        "type": "page",
+        "settings": {
+          "text": "Testimonials",
+          "link": "/testimonials"
+        }
+      },
+      {
+        "type": "page",
+        "settings": {
+          "text": "Pricing",
+          "link": "/pricing"
+        }
+      },
+      {
+        "type": "page",
+        "settings": {
+          "text": "Documentation",
+          "link": "https://doc.locomotivecms.com"
+        }
+      }
+    ]
+  }
+}
+---
+<div class="container">
+  <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="{% path_to home %}">
+        <img src="{{ 'logo-white.png' | theme_image_url }}" alt="{{ site.seo_title }}">
+      </a>
+
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbar-menu" class="navbar-menu">
+      <div class="navbar-end">
+        {% for block in section.blocks %}
+          <a class="navbar-item" href="{{ block.settings.link }}" {{ block.settings.link_new_window_attribute }} {{ block.locomotive_attributes }} >
+            {{ block.settings.text }}
+          </a>
+        {% endfor %}
+
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-primary is-inverted is-outlined">
+              Sign in
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </nav>
+</div>

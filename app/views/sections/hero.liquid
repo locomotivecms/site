@@ -1,0 +1,93 @@
+---
+{
+  "name": "Hero",
+  "icon": "image_text",
+  "class": "section-hero",
+  "keep_icon": false,
+  "keep_name": false,
+  "blocks_label": "Buttons",
+  "settings": [
+    {
+      "label": "Title",
+      "id": "title",
+      "type": "text"
+    },
+    {
+      "label": "Paragraph",
+      "id": "paragraph",
+      "type": "text",
+      "html": true
+    },
+    {
+      "label": "Screenshot",
+      "id": "screenshot",
+      "type": "image_picker",
+      "html": true
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Button",
+      "type": "button",
+      "settings": [
+        {
+          "label": "Title",
+          "id": "label",
+          "type": "text"
+        },
+        {
+          "label": "Link",
+          "id": "link",
+          "type": "url"
+        }
+      ]
+    }
+  ],
+  "dropzone_presets": [
+    {
+      "name": "Hero with screenshot",
+      "category": "Hero",
+      "settings": {
+        "title": "My Title",
+        "paragraph": "<p>My message</p>",
+        "screenshot": "/samples/sections/backoffice_screenshot.png"
+      },
+      "blocks": [
+        {
+          "type": "button",
+          "settings": {
+            "title": "Call to action",
+            "link": "#"
+          }
+        }
+      ]
+    }
+  ]
+}
+---
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-three-fifths has-text-centered">
+          <h1 class="title has-text-white is-size-1">
+            {{ section.settings.title }}
+          </h1>
+          <div class="subtitle is-size-4">
+            {{ section.settings.paragraph }}
+          </div>
+          <div class="hero-buttons">
+            {% for block in section.blocks %}
+              <a class="button is-primary has-shadow" {{ block.locomotive_attributes }}>
+                {{ block.settings.title }}
+              </a>
+            {% endfor %}
+          </div>
+          <div class="hero-media">
+            <img src="{{ section.settings.screenshot | resize: '1280x' }}" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

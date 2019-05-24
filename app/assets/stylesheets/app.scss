@@ -3,3 +3,11 @@
 // Bulma
 @import './bulma_variables';
 @import '~bulma/bulma.sass';
+@import './bulma_global';
+
+// General
+@import './global';
+
+// Sections
+@import './sections/header';
+@import './sections/hero';

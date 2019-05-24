@@ -37,15 +37,25 @@ is_layout: false
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
   {{ 'bundle.css' | stylesheet_tag }}
+  {{ 'bundle.js' | javascript_tag }}
 
   {% google_analytics 'UA-17355243-1' %}
+
+  {% if wagon %}
+    <script src="http://localhost:35729/livereload.js"></script>
+  {% endif %}
 </head>
 <body>
   <!--[if lt IE 8]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  {% block 'main' %}{% endblock %}
+  {% global_section 'header' %}
+
+    <main>
+      {% block 'main' %}
+      {% endblock %}
+    </main>
 
   {% comment %}
   {% include footer %}

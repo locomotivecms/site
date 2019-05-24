@@ -1,15 +1,25 @@
+// General
 $family-sans-serif: "Noto Sans", sans-serif;
+$body-size: 13px;
 
 // Colors
-$lighter-blue: #bdd1e4;
-$light-blue: #8aacd4;
-$dark-blue: #224261;
-$dark-grey: #636466;
-$light-grey: #a7a9ac;
-$brown-orange: #E3A346;
+// $lighter-blue: #bdd1e4;
+// $light-blue: #8aacd4;
+// $dark-blue: #224261;
+// $dark-grey: #636466;
+// $light-grey: #a7a9ac;
+// $brown-orange: #E3A346;
 
-$primary: $dark-blue;
-$warning: $brown-orange;
+// $primary: $dark-blue;
+// $warning: $brown-orange;
 
 // Navbar
-$navbar-height: 7.25rem !default;
+$navbar-background-color: transparent;
+$navbar-height: 5.25rem !default;
+$navbar-item-color: rgba(255, 255, 255, 0.8);
+$navbar-item-hover-color: #fff;
+$navbar-item-img-max-height: 1.25rem;
+
+// Button
+$button-border-width: 1px;
+$button-padding-horizontal: 1rem;

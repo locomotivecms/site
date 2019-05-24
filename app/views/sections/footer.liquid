@@ -1,0 +1,73 @@
+---
+{
+  "name": "Footer",
+  "class": "my-css-classname",
+  "icon": "footer",
+  "keep_icon": true,
+  "settings": [
+    {
+      "label": "My awesome title",
+      "id": "title",
+      "type": "text"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "List item",
+      "type": "list_item",
+      "settings": [
+        {
+          "label": "Item title",
+          "id": "title",
+          "type": "text"
+        }
+      ]
+    }
+  ],
+  "global_content": {
+    "settings": {
+      "title": "Hello world"
+    },
+    "blocks": [
+      {
+        "type": "list_item",
+        "settings": {
+          "title": "Item #1"
+        }
+      },
+      {
+        "type": "list_item",
+        "settings": {
+          "title": "Item #2"
+        }
+      },
+      {
+        "type": "list_item",
+        "settings": {
+          "title": "Item #3"
+        }
+      }
+    ]
+  }
+}
+---
+{% comment %}
+Above is the JSON definition of your section filled with random settings and blocks.
+The setting's type can be one of the following values : checkbox, image_picker, index, radio, tezt, select, url.
+Modify it to match your needs. Please visit: https://doc.locomotivecms.com/v4.0/docs/json-definition.
+
+To use your global section, just add the following code in your layout template:
+
+  {% global_section footer %}
+
+{% endcomment %}
+<div>
+  <h2>{{ section.settings.title }}</h2>
+  <ul>
+    {% for block in section.blocks %}
+    <li {{ block.locomotive_attributes }}>
+      {{ block.settings.title }}
+    </li>
+    {% endfor %}
+  </ul>
+</div>

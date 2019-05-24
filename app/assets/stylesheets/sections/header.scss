@@ -1,0 +1,84 @@
+.section-header {
+  background: linear-gradient(57deg, #9d8fe5 0%, #6750d7 100%);
+
+  .navbar-item {
+    text-transform: uppercase;
+  }
+
+  .button {
+  }
+}
+
+// Mobile & Tablet
+@include until($desktop) {
+  .section-header {
+
+    .navbar-menu {
+      height: 0;
+      display: block;
+      box-shadow: none;
+      overflow: hidden;
+      padding: 0;
+
+      & > .navbar-end {
+        height: 100%;
+        margin-top: 4rem;
+
+        .navbar-item {
+          text-align: center;
+        }
+
+        .buttons {
+          padding-top: 2rem;
+          justify-content: center;
+        }
+      }
+    }
+
+    .navbar-menu.is-inactive {
+      animation: navFoldMenuAnim .2s ease-in-out;
+      animation-fill-mode: forwards;
+      background-color: #242E3B;
+    }
+
+    .navbar-menu.is-active {
+      animation: navUnFoldMenuAnim .2s ease-in-out;
+      animation-fill-mode: forwards;
+      background-color: #242E3B;
+    }
+  }
+}
+
+
+@keyframes navUnFoldMenuAnim {
+  0% {
+    display: none;
+    opacity: 0;
+    height: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    height: calc(100vh - #{$navbar-height});
+  }
+}
+
+@keyframes navFoldMenuAnim {
+  0% {
+    display: block !important;
+    opacity: 1;
+    height: calc(100vh - #{$navbar-height});
+  }
+  1% {
+    display: block !important;
+    opacity: 1;
+  }
+  100% {
+    display: block !important;
+    opacity: 0;
+    height: 0;
+  }
+}
