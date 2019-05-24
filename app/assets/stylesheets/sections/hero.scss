@@ -71,9 +71,11 @@
 
 // Mobile & Tablet
 @include until($desktop) {
+
   .section-hero {
     &:before {
       height: calc(#{$navbar-height} + 80%);
     }
   }
+
 }

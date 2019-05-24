@@ -1,0 +1,113 @@
+---
+{
+  "name": "Features",
+  "class": "section-features has-top-divider",
+  "icon": "list",
+  "keep_name": true,
+  "keep_icon": true,
+  "blocks_label": "List of features",
+  "settings": [
+    {
+      "label": "Title",
+      "id": "title",
+      "type": "text"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Feature",
+      "type": "feature",
+      "settings": [
+        {
+          "label": "Title",
+          "id": "title",
+          "type": "text"
+        },
+        {
+          "label": "Description",
+          "id": "description",
+          "type": "text"
+        },
+        {
+          "label": "Icon",
+          "id": "icon",
+          "type": "select",
+          "options": [
+            {
+              "label": "Download",
+              "value": "fa fa-cloud-download"
+            },
+            {
+              "label": "Paint",
+              "value": "fa fa-paint-brush"
+            },
+            {
+              "label": "Diamond",
+              "value": "fa fa-diamond"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dropzone_presets": [
+    {
+      "name": "Features",
+      "category": "Category 1",
+      "settings": {
+        "title": "Hello world"
+      },
+      "blocks": [
+        {
+          "type": "list_item",
+          "settings": {
+            "title": "Item #1",
+            "description": "Description #1",
+            "icon": "fa fa-diamond"
+          }
+        },
+        {
+          "type": "list_item",
+          "settings": {
+            "title": "Item #2",
+            "description": "Description #2",
+            "icon": "fa fa-diamond"
+          }
+        },
+        {
+          "type": "list_item",
+          "settings": {
+            "title": "Item #3",
+            "description": "Description #3",
+            "icon": "fa fa-diamond"
+          }
+        }
+      ]
+    }
+  ]
+}
+---
+<div class="container has-text-centered">
+  <h2 class="title is-size-2">{{ section.settings.title }}</h2>
+
+  <div class="feature-list">
+    {% for block in section.blocks %}
+      <div class="feature-item" {{ block.locomotive_attributes }}>
+        <div class="feature-item-inner">
+          <div class="feature-item-icon">
+            <i class="{{ block.settings.icon }}"></i>
+          </div>
+          <h3 class="title is-size-4">{{ block.settings.title }}</h3>
+          <div class="feature-item-description is-size-5 has-text-grey">
+            {{ block.settings.description }}
+          </div>
+          <div class="feature-item-dots">
+            {% for num in (1..forloop.index) %}
+              <span></span>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

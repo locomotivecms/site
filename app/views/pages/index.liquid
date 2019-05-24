@@ -63,6 +63,37 @@ sections_content: >
           }
         }
       ]
+    },
+    "features": {
+      "settings": {
+        "title": "Super easy workflow"
+      },
+      "blocks": [
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Install Wagon",
+            "description": "Our development tool that lets you create sites with your favorite text and coding tools.",
+            "icon": "fa fa-cloud-download"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Craft your content",
+            "description": "Create custom content and freely mark what parts of pages are editable for your clients.",
+            "icon": "fa fa-paint-brush"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Deploy website",
+            "description": "With a single command, the back-office editor will be automatically generated for your client.",
+            "icon": "fa fa-diamond"
+          }
+        }
+      ]
     }
   }
 ---
@@ -73,6 +104,8 @@ sections_content: >
   {% section 'hero' %}
 
   {% section 'clients' %}
+
+  {% section 'features' %}
 
 {% endblock %}
 

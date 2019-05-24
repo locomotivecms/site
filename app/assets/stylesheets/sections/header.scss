@@ -11,6 +11,7 @@
 
 // Mobile & Tablet
 @include until($desktop) {
+
   .section-header {
 
     .navbar-menu {
@@ -47,8 +48,8 @@
       background-color: #242E3B;
     }
   }
-}
 
+}
 
 @keyframes navUnFoldMenuAnim {
   0% {
