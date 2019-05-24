@@ -1,0 +1,34 @@
+.section-clients {
+  position: relative;
+  background: #fff;
+  padding: 4rem 0;
+
+  .clients {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    img {
+      display: block;
+      max-height: 2.75rem;
+    }
+  }
+}
+
+// Mobile & Tablet
+@include until($desktop) {
+
+  .section-clients {
+    padding: 2rem 0;
+
+    .clients {
+      flex-direction: column;
+
+      img {
+        margin: 1rem 0;
+      }
+    }
+  }
+
+}

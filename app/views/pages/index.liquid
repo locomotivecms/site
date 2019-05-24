@@ -29,6 +29,40 @@ sections_content: >
           }
         }
       ]
+    },
+    "clients": {
+      "settings": {
+      },
+      "blocks": [
+        {
+          "type": "client",
+          "settings": {
+            "name": "European Resuscitation Council",
+            "logo": "/samples/sections/erc.png"
+          }
+        },
+        {
+          "type": "client",
+          "settings": {
+            "name": "Niko Group",
+            "logo": "/samples/sections/nikogroup.png"
+          }
+        },
+        {
+          "type": "client",
+          "settings": {
+            "name": "University of Chicago",
+            "logo": "/samples/sections/universitychicago.png"
+          }
+        },
+        {
+          "type": "client",
+          "settings": {
+            "name": "UpGlobal",
+            "logo": "/samples/sections/upglobal.png"
+          }
+        }
+      ]
     }
   }
 ---
@@ -37,6 +71,8 @@ sections_content: >
 {% block main %}
 
   {% section 'hero' %}
+
+  {% section 'clients' %}
 
 {% endblock %}
 

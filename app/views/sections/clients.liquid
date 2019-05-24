@@ -1,0 +1,163 @@
+---
+{
+  "name": "Clients",
+  "class": "section-clients has-top-divider",
+  "icon": "list",
+  "keep_name": true,
+  "keep_icon": true,
+  "blocks_label": "List",
+  "settings": [
+    {
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Client",
+      "type": "client",
+      "settings": [
+        {
+          "label": "Name",
+          "id": "name",
+          "type": "text"
+        },
+        {
+          "label": "Logo",
+          "id": "logo",
+          "type": "image_picker"
+        }
+      ]
+    }
+  ],
+  "dropzone_presets": [
+    {
+      "name": "Clients",
+      "category": "Content",
+      "settings": {
+      },
+      "blocks": [
+        {
+          "type": "client",
+          "settings": {
+            "name": "European Resuscitation Council",
+            "logo": "/samples/sections/erc.png"
+          }
+        },
+        {
+          "type": "client",
+          "settings": {
+            "name": "Niko Group",
+            "logo": "/samples/sections/nikogroup.png"
+          }
+        },
+        {
+          "type": "client",
+          "settings": {
+            "name": "University of Chicago",
+            "logo": "/samples/sections/universitychicago.png"
+          }
+        },
+        {
+          "type": "client",
+          "settings": {
+            "name": "UpGlobal",
+            "logo": "/samples/sections/upglobal.png"
+          }
+        }
+      ]
+    }
+  ]
+}
+---
+<div class="container">
+  <div class="clients">
+    {% for block in section.blocks %}
+      <img src="{{ block.settings.logo | resize: 'x120' }}" alt="{{ block.settings.name }}" {{ block.locomotive_attributes }} />
+    {% endfor %}
+  </div>
+</div>
+
+{% comment %}
+Above is the JSON definition of your section filled with random settings and blocks.
+The setting's type can be one of the following values : checkbox, image_picker, index, radio, text, select, url.
+Modify it to match your needs. Please visit: https://doc.locomotivecms.com/v4.0/docs/json-definition.
+
+To use your section, 2 possibilites:
+
+1. within a dropzone
+
+Make sure that your layouts includes the following liquid tag:
+
+  {% sections_dropzone %}
+
+If you want to test this section in your Wagon site, add the following
+lines in the YAML section of any page including the {% sections_dropzone %}
+(or inheriting from a layout including it):
+
+sections_dropzone_content: >
+  [
+    {
+      "type": "clients",
+      "settings": {
+        "title": "My awesome section"
+      },
+      "blocks": [
+        {
+          "type": "list_item",
+          "settings": {
+            "title": "Item #1"
+          }
+        },
+        {
+          "type": "list_item",
+          "settings": {
+            "title": "Item #2"
+          }
+        },
+        {
+          "type": "list_item",
+          "settings": {
+            "title": "Item #3"
+          }
+        }
+      ]
+    }
+  ]
+
+2. as stand-alone section
+
+  {% section clients %}
+
+If you want to test this section in your Wagon site, add the following
+lines in the YAML section of the page including the statement above or complete it.
+
+sections_content: >
+  {
+    "clients": {
+      "settings": {
+        "title": "My awesome Clients section"
+      },
+      "blocks": [
+        {
+          "type": "list_item",
+          "settings": {
+            "title": "Item #1"
+          }
+        },
+        {
+          "type": "list_item",
+          "settings": {
+            "title": "Item #2"
+          }
+        },
+        {
+          "type": "list_item",
+          "settings": {
+            "title": "Item #3"
+          }
+        }
+      ]
+    }
+  }
+
+{% endcomment %}
+

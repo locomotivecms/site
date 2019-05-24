@@ -25,10 +25,15 @@
     }
   }
 
+  .column {
+    padding-bottom: 0;
+  }
+
   .hero {
 
     &-body {
       padding-top: 6rem;
+      padding-bottom: 0rem;
     }
 
     &-buttons {
@@ -67,8 +72,6 @@
 // Mobile & Tablet
 @include until($desktop) {
   .section-hero {
-    position: relative;
-
     &:before {
       height: calc(#{$navbar-height} + 80%);
     }
