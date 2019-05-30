@@ -50,12 +50,14 @@ is_layout: false
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  {% global_section 'header' %}
+  {% global_section 'header', placement: 'top' %}
 
-    <main>
-      {% block 'main' %}
-      {% endblock %}
-    </main>
+  <main>
+    {% block 'main' %}
+    {% endblock %}
+  </main>
+
+  {% global_section 'footer', placement: 'bottom' %}
 
   {% comment %}
   {% include footer %}
