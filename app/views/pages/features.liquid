@@ -9,6 +9,51 @@ sections_content: >
         "headline": "Our features",
         "tagline": "Focus on what matters: front-end technology, standard development process and no learning time for your client."
       }
+    },
+    "detailed_features": {
+      "settings": {},
+      "blocks": [
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Multi-site",
+            "description": "<p>Multi-site functionality makes launching new sites a breeze.</p><p>With a single instance of LocomotiveCMS, you can manage as many websites as your server can handle.</p><p>You deploy your website by simply pointing the website domain to your LocomotiveCMS server.</p><p>You don't have to go through any additional setup steps like setting up new databases or copying files. It's that simple.</p>",
+            "picture": "https://picsum.photos/800/800"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Sections",
+            "description": "<p>TODO</p>",
+            "picture": "https://picsum.photos/800/800"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Content types",
+            "description": "<p>If you're tired of having to work around posts, pages and articles to create a custom post type, here's some welcome relief. LocomotiveCMS allows you to create content types without imposing a specific pre-built structure.</p><p>Need a page for your band's discography?</p><p>Create a new \"Recording\" content type with a title, year, album cover, and track listing. And you're all set.</p><p>Want your custom types to relate to each other? No problem there either. Where most CMS solutions make it a headache to relate content types to each other, it's a snap in LocomotiveCMS. No SQL needed!</p>",
+            "picture": "https://picsum.photos/800/800"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Templating",
+            "description": "<p>LocomotiveCMS uses Liquid, the exact same template engine as for Shopify, one of the best hosted e-commerce solution in the market.</p><p>Of course, we made something good even better by putting our own spin on templating. We added in the functionality of template inheritance from Python, so now you have even more power and flexibility at your disposal.</p><p>To help speed development, we also created helper tags to embed Google Analytics, resize an image, enable pagination in collections, and grab and display content from an external web service and so much more...</p>",
+            "picture": "https://picsum.photos/800/800"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Localization",
+            "description": "<p>Your LocomotiveCMS website is at home anywhere in the world. Just define the language or languages you want your site to speak, and with I18n Multi-Language functionality baked in, you're ready to roll.</p><p>Your clients can edit their sites (pages and content entries) in any language. No hay problema.</p>",
+            "picture": "https://picsum.photos/800/800"
+          }
+        }
+      ]
     }
   }
 ---
@@ -17,6 +62,8 @@ sections_content: >
 {% block main %}
 
   {% section 'simple_hero' %}
+
+  {% section 'detailed_features' %}
 
   {% comment %}
   <header class="header-primary">

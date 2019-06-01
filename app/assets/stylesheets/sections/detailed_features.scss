@@ -1,0 +1,66 @@
+.section-detailed-features {
+
+  position: relative;
+  background: #fff;
+  padding: 4rem 0 8rem;
+
+  .feature-item {
+    margin: 4rem 0 8rem;
+
+    &-picture {
+      margin: 0 4rem;
+
+      img {
+        box-shadow: 0 16px 48px #E3E7EB;
+        mix-blend-mode: multiply;
+      }
+    }
+
+    .title {
+      text-align: left;
+    }
+
+    &-description {
+      margin-top: 2rem;
+      text-align: left;
+
+      p {
+        margin-bottom: 1rem;
+
+        &:last-child {
+          margin-bottom: 0rem;
+        }
+      }
+    }
+
+  }
+}
+
+// Mobile & Tablet
+@include until($desktop) {
+
+  .section-detailed-features {
+
+    .columns.is-vcentered {
+      display: block;
+    }
+
+    .feature-item {
+      margin: 0rem 0 6rem;
+
+      &-picture {
+        margin: 0;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      &-description {
+        text-align: center;
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,118 @@
+---
+{
+  "name": "Detailed features",
+  "class": "section section-detailed-features",
+  "icon": "list",
+  "keep_name": true,
+  "keep_icon": true,
+  "blocks_label": "List of features",
+  "settings": [
+  ],
+  "blocks": [
+    {
+      "name": "Feature",
+      "type": "feature",
+      "settings": [
+        {
+          "label": "Title",
+          "id": "title",
+          "type": "text"
+        },
+        {
+          "label": "Description",
+          "id": "description",
+          "type": "text"
+        },
+        {
+          "label": "Picture",
+          "id": "picture",
+          "type": "image_picker"
+        }
+      ]
+    }
+  ],
+  "dropzone_presets": [
+    {
+      "name": "Detailed features",
+      "category": "Content",
+      "settings": {
+      },
+      "blocks": [
+        {
+          "type": "list_item",
+          "settings": {
+            "title": "Feature #1",
+            "description": "Description #1",
+            "picture": "https://picsum.photos/800/800"
+          }
+        },
+        {
+          "type": "list_item",
+          "settings": {
+            "title": "Feature #2",
+            "description": "Description #2",
+            "icon": "https://picsum.photos/800/800"
+          }
+        },
+        {
+          "type": "list_item",
+          "settings": {
+            "title": "Feature #3",
+            "description": "Description #3",
+            "icon": "https://picsum.photos/800/800"
+          }
+        }
+      ]
+    }
+  ]
+}
+---
+<div class="section">
+  <div class="container has-text-centered">
+    <div class="feature-list">
+      {% for block in section.blocks %}
+        <div class="feature-item" {{ block.locomotive_attributes }}>
+          <div class="columns is-vcentered">
+            {% assign mod = forloop.index | modulo: 2 %}
+
+            {% capture touch_picture_column %}
+              <div class="column is-full-touch is-hidden-desktop">
+                <div class="feature-item-picture">
+                  <img src="{{ block.settings.picture }}" />
+                </div>
+              </div>
+            {% endcapture %}
+
+            {% capture picture_column %}
+              <div class="column is-full-touch is-hidden-touch">
+                <div class="feature-item-picture">
+                  <img src="{{ block.settings.picture }}" />
+                </div>
+              </div>
+            {% endcapture %}
+
+            {% capture text_column %}
+              <div class="column is-full-touch">
+                <h3 class="title is-size-2">{{ block.settings.title }}</h3>
+                <div class="feature-item-description is-size-4 has-text-grey">
+                  {{ block.settings.description }}
+                </div>
+              </div>
+            {% endcapture %}
+
+            {% if mod == 0 %}
+              {{ touch_picture_column }}
+              {{ picture_column }}
+              {{ text_column }}
+            {% else %}
+              {{ touch_picture_column }}
+              {{ text_column }}
+              {{ picture_column }}
+            {% endif %}
+
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
