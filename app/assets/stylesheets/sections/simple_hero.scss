@@ -1,0 +1,36 @@
+.section-simple-hero {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: -#{$navbar-height};
+    left: 0;
+    width: 100%;
+    height: calc(#{$navbar-height} + 100%);
+    background: #6750d7;
+    background: linear-gradient(57deg, #9d8fe5 0%, #6750d7 100%);
+  }
+
+  .subtitle {
+    margin-top: 2rem !important;
+    line-height: 2.25rem;
+    color: rgba(255, 255, 255, 0.8);
+
+    strong, b {
+      font-weight: bold;
+      color: #fff;
+    }
+  }
+
+  .hero {
+
+    &-body {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+
+  }
+
+}
+

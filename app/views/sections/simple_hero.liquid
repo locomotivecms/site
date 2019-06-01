@@ -1,0 +1,149 @@
+---
+{
+  "name": "Simple hero",
+  "class": "section-simple-hero",
+  "icon": "text",
+  "keep_name": false,
+  "keep_icon": true,
+  "settings": [
+    {
+      "label": "Headline",
+      "id": "headline",
+      "type": "text"
+    },
+    {
+      "label": "Tagline",
+      "id": "tagline",
+      "type": "text"
+    },
+    {
+      "label": "Background image",
+      "id": "background_image",
+      "type": "image_picker"
+    }
+  ],
+  "blocks": [],
+  "dropzone_presets": [
+    {
+      "name": "Simple hero",
+      "category": "Hero",
+      "settings": {
+        "headline": "Headline",
+        "tagline": "Tagline"
+      },
+      "blocks": []
+    }
+  ]
+}
+---
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-three-fifths has-text-centered">
+          <h1 class="title has-text-white is-size-1">
+            {{ section.settings.headline }}
+          </h1>
+          <div class="subtitle is-size-4">
+            {{ section.settings.tagline }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% comment %}
+Above is the JSON definition of your section filled with random settings and blocks.
+The setting's type can be one of the following values: checkbox, image_picker, index, radio, text, select, url.
+Modify it to match your needs. Please visit: https://doc.locomotivecms.com/v4.0/docs/json-definition.
+
+To use your section, 2 possibilites:
+
+1. within a dropzone
+
+Make sure that your layouts includes the following liquid tag:
+
+  {% sections_dropzone %}
+
+If you want to test this section in your Wagon site, add the following
+lines in the YAML section of any page including the {% sections_dropzone %}
+(or inheriting from a layout including it):
+
+sections_dropzone_content: >
+  [
+    {
+      "type": "simple_hero",
+      "settings": {
+        "title": "My awesome section"
+      },
+      "blocks": [
+        {
+          "type": "list_item",
+          "settings": {
+            "title": "Item #1"
+          }
+        },
+        {
+          "type": "list_item",
+          "settings": {
+            "title": "Item #2"
+          }
+        },
+        {
+          "type": "list_item",
+          "settings": {
+            "title": "Item #3"
+          }
+        }
+      ]
+    }
+  ]
+
+2. as stand-alone section
+
+  {% section simple_hero %}
+
+If you want to test this section in your Wagon site, add the following
+lines in the YAML section of the page including the statement above or complete it.
+
+sections_content: >
+  {
+    "simple_hero": {
+      "settings": {
+        "title": "My awesome Simple hero section"
+      },
+      "blocks": [
+        {
+          "type": "list_item",
+          "settings": {
+            "title": "Item #1"
+          }
+        },
+        {
+          "type": "list_item",
+          "settings": {
+            "title": "Item #2"
+          }
+        },
+        {
+          "type": "list_item",
+          "settings": {
+            "title": "Item #3"
+          }
+        }
+      ]
+    }
+  }
+
+{% endcomment %}
+<div>
+  <h2>{{ section.settings.title }}</h2>
+  <ul>
+    {% for block in section.blocks %}
+    <li {{ block.locomotive_attributes }}>
+      {{ block.settings.title }}
+    </li>
+    {% endfor %}
+  </ul>
+</div>

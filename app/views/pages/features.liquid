@@ -2,10 +2,23 @@
 title: Features
 handle: features
 seo_title: Features
+sections_content: >
+  {
+    "simple_hero": {
+      "settings": {
+        "headline": "Our features",
+        "tagline": "Focus on what matters: front-end technology, standard development process and no learning time for your client."
+      }
+    }
+  }
 ---
 {% extends "layouts/base" %}
 
 {% block main %}
+
+  {% section 'simple_hero' %}
+
+  {% comment %}
   <header class="header-primary">
     <div class="grid grid-centered">
       <div class="grid-cell">
@@ -81,5 +94,7 @@ seo_title: Features
       </div>
     </section>
   {% endblock %}
+
+  {% endcomment %}
 
 {% endblock %}
