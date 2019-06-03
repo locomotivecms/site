@@ -1,0 +1,228 @@
+---
+{
+  "name": "Tabbed features",
+  "class": "section section-tabbed-features has-top-divider",
+  "icon": "list",
+  "keep_name": true,
+  "keep_icon": true,
+  "blocks_label": "List of features",
+  "settings": [
+    {
+      "label": "Title",
+      "id": "title",
+      "type": "text"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Feature",
+      "type": "feature",
+      "settings": [
+        {
+          "label": "Tab title",
+          "id": "tab_title",
+          "type": "text"
+        },
+        {
+          "label": "Title",
+          "id": "title",
+          "type": "text"
+        },
+        {
+          "label": "Description",
+          "id": "description",
+          "type": "text"
+        },
+        {
+          "label": "Icon",
+          "id": "icon",
+          "type": "select",
+          "options": [
+            {
+              "label": "Download",
+              "value": "fa fa-cloud-download"
+            },
+            {
+              "label": "Paint",
+              "value": "fa fa-paint-brush"
+            },
+            {
+              "label": "Diamond",
+              "value": "fa fa-diamond"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dropzone_presets": [
+    {
+      "name": "Tabbed features",
+      "category": "Content",
+      "settings": {
+        "title": "Title"
+      },
+      "blocks": [
+        {
+          "type": "list_item",
+          "settings": {
+            "tab_title": "Title #1",
+            "title": "Item #1",
+            "description": "Description #1",
+            "icon": "fa fa-diamond"
+          }
+        },
+        {
+          "type": "list_item",
+          "settings": {
+            "tab_title": "Title #2",
+            "title": "Item #2",
+            "description": "Description #2",
+            "icon": "fa fa-diamond"
+          }
+        },
+        {
+          "type": "list_item",
+          "settings": {
+            "tab_title": "Title #3",
+            "title": "Item #3",
+            "description": "Description #3",
+            "icon": "fa fa-diamond"
+          }
+        }
+      ]
+    }
+  ]
+}
+---
+<div class="section">
+  <div class="container">
+    <h2 class="title is-size-2 has-text-centered">{{ section.settings.title }}</h2>
+
+    <div class="columns feature-tabs-container">
+      <div class="column is-4">
+        <nav class="feature-tab-links">
+          {% for block in section.blocks %}
+            <a href="#tab-pane-{{ forloop.index0 }}" class="{% if forloop.first %}is-active{% endif %}" {{ block.locomotive_attributes }}>
+              {% if block.settings.icon.size > 0 %}
+                <i class="{{ block.settings.icon }}"></i>
+              {% endif %}
+
+              <span>{{ block.settings.tab_title }}</span>
+            </a>
+          {% endfor %}
+        </nav>
+      </div>
+
+      <div class="column is-8">
+        {% for block in section.blocks %}
+          <div class="feature-tab-pane {% if forloop.first %}is-active{% endif %}" id="tab-pane-{{ forloop.index0 }}" {{ block.locomotive_attributes }}>
+            <h2 class="title is-size-3">
+              {{ block.settings.title }}
+            </h2>
+
+            <div class="feature-description is-size-4 has-text-grey">
+              {{ block.settings.description }}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% comment %}
+Above is the JSON definition of your section filled with random settings and blocks.
+The setting's type can be one of the following values: checkbox, image_picker, index, radio, text, select, url.
+Modify it to match your needs. Please visit: https://doc.locomotivecms.com/v4.0/docs/json-definition.
+
+To use your section, 2 possibilites:
+
+1. within a dropzone
+
+Make sure that your layouts includes the following liquid tag:
+
+  {% sections_dropzone %}
+
+If you want to test this section in your Wagon site, add the following
+lines in the YAML section of any page including the {% sections_dropzone %}
+(or inheriting from a layout including it):
+
+sections_dropzone_content: >
+  [
+    {
+      "type": "tabbed_features",
+      "settings": {
+        "title": "My awesome section"
+      },
+      "blocks": [
+        {
+          "type": "list_item",
+          "settings": {
+            "title": "Item #1"
+          }
+        },
+        {
+          "type": "list_item",
+          "settings": {
+            "title": "Item #2"
+          }
+        },
+        {
+          "type": "list_item",
+          "settings": {
+            "title": "Item #3"
+          }
+        }
+      ]
+    }
+  ]
+
+2. as stand-alone section
+
+  {% section tabbed_features %}
+
+If you want to test this section in your Wagon site, add the following
+lines in the YAML section of the page including the statement above or complete it.
+
+sections_content: >
+  {
+    "tabbed_features": {
+      "settings": {
+        "title": "My awesome Tabbed features section"
+      },
+      "blocks": [
+        {
+          "type": "list_item",
+          "settings": {
+            "title": "Item #1"
+          }
+        },
+        {
+          "type": "list_item",
+          "settings": {
+            "title": "Item #2"
+          }
+        },
+        {
+          "type": "list_item",
+          "settings": {
+            "title": "Item #3"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+<div>
+  <h2>{{ section.settings.title }}</h2>
+  <ul>
+    {% for block in section.blocks %}
+    <li {{ block.locomotive_attributes }}>
+      {{ block.settings.title }}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endcomment %}

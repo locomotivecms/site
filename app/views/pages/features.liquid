@@ -44,13 +44,48 @@ sections_content: >
             "description": "<p>LocomotiveCMS uses Liquid, the exact same template engine as for Shopify, one of the best hosted e-commerce solution in the market.</p><p>Of course, we made something good even better by putting our own spin on templating. We added in the functionality of template inheritance from Python, so now you have even more power and flexibility at your disposal.</p><p>To help speed development, we also created helper tags to embed Google Analytics, resize an image, enable pagination in collections, and grab and display content from an external web service and so much more...</p>",
             "picture": "https://picsum.photos/800/800"
           }
+        }
+      ]
+    },
+    "tabbed_features": {
+      "settings": {
+        "title": "There is more..."
+      },
+      "blocks": [
+        {
+          "type": "feature",
+          "settings": {
+            "tab_title": "Frontend",
+            "title": "Webpack out of the box",
+            "description": "<p>TODO</p>",
+            "icon": "fa fa-cloud-download"
+          }
         },
         {
           "type": "feature",
           "settings": {
+            "tab_title": "Localization",
             "title": "Localization",
             "description": "<p>Your LocomotiveCMS website is at home anywhere in the world. Just define the language or languages you want your site to speak, and with I18n Multi-Language functionality baked in, you're ready to roll.</p><p>Your clients can edit their sites (pages and content entries) in any language. No hay problema.</p>",
-            "picture": "https://picsum.photos/800/800"
+            "icon": "fa fa-cloud-download"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "tab_title": "SEO",
+            "title": "SEO",
+            "description": "<p>TODO</p>",
+            "icon": "fa fa-cloud-download"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "tab_title": "Third-party integrations",
+            "title": "Google reCaptcha, Algolia, ...",
+            "description": "<p>TODO</p>",
+            "icon": "fa fa-cloud-download"
           }
         }
       ]
@@ -64,6 +99,8 @@ sections_content: >
   {% section 'simple_hero' %}
 
   {% section 'detailed_features' %}
+
+  {% section 'tabbed_features' %}
 
   {% comment %}
   <header class="header-primary">

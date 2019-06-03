@@ -7,6 +7,10 @@
   .feature-item {
     margin: 4rem 0 8rem;
 
+    &:last-child {
+      margin-bottom: 0rem;
+    }
+
     &-picture {
       margin: 0 4rem;
 
@@ -40,6 +44,7 @@
 @include until($desktop) {
 
   .section-detailed-features {
+    padding: 4rem 0 4rem;
 
     .columns.is-vcentered {
       display: block;
