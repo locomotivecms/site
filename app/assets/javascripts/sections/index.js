@@ -13,3 +13,4 @@ export { default as Service } from './services';
 export { default as SimpleHero } from './simple_hero';
 export { default as DetailedFeature } from './detailed_features';
 export { default as TabbedFeature } from './tabbed_features';
+export { default as SimpleCallToAction } from './simple_call_to_action';

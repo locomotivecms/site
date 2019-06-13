@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', event => {
   const sectionsManager = new SectionsManager();
 
   // Register sections here. DO NOT REMOVE OR UPDATE THIS LINE
+  sectionsManager.registerSection('simple_call_to_action', Sections.SimpleCallToAction);
   sectionsManager.registerSection('tabbed_features', Sections.TabbedFeature);
   sectionsManager.registerSection('detailed_features', Sections.DetailedFeature);
   sectionsManager.registerSection('simple_hero', Sections.SimpleHero);
