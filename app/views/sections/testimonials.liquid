@@ -52,7 +52,7 @@
             {% capture video_column %}
               <div class="column is-full-touch is-hidden-touch">
                 <div class="testimonial-video">
-                  <div style="background: url({{ testimonial.header_picture.url | resize: '400x300#' }}) center center no-repeat; background-size: cover;" class="testimonial-video-overlay video-click" data-video-id="{{ testimonial.video }}">
+                  <div style="background: url({{ testimonial.header_picture.url | resize: '400x300#' }}) center center no-repeat; background-size: cover;" class="testimonial-video-overlay testimonial-video-click" data-video-id="{{ testimonial.video }}">
                     <div class="testimonial-video-play">
                       <i class="fa fa-play-circle-o" aria-hidden="true"></i>
                     </div>

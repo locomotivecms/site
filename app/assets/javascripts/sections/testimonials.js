@@ -3,14 +3,14 @@ import { enableYoutubeVideo, createVideoPlayerWithId } from '../video'
 const Section = {
 
   load: (section) => {
+    // Init the YT Player (just once)
     enableYoutubeVideo()
 
-    // Play videos
-
+    // Play the video
     $('.testimonial-video-click', section).on('click', event => {
       event.preventDefault()
 
-      var $this = $(event.target);
+      var $this = $(event.target).closest('.testimonial-video-click');
       var videoId = $this.data('video-id');
 
       function onPlayerReady(event) {
@@ -24,7 +24,7 @@ const Section = {
       }
 
       var player = createVideoPlayerWithId(
-        $this.next('.video-iframe').get(0),
+        $this.next('.testimonial-video-iframe').get(0),
         videoId,
         onPlayerReady,
         onPlayerStateChange
