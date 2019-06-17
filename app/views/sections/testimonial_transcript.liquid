@@ -1,0 +1,38 @@
+---
+{
+  "name": "Testimonial transcript",
+  "class": "section section-testimonial-transcript",
+  "icon": "text",
+  "keep_name": true,
+  "keep_icon": true,
+  "settings": [
+    {
+      "label": "Title",
+      "id": "title",
+      "type": "text"
+    },
+    {
+      "label": "Interviewer",
+      "id": "interviewer",
+      "type": "text"
+    }
+  ],
+  "blocks": []
+}
+---
+<div class="section">
+  <div class="container">
+    <h2 class="title is-size-2">{{ section.settings.title }}</h2>
+
+    <div class="testimonial-transcript">
+      {{ testimonial.video_transcript }}
+    </div>
+
+    <div class="testimonial-transcript-back-btn">
+      <a href="{% path_to testimonials %}">
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+        BACK TO TESTIMONIALS
+      </a>
+    </div>
+  </div>
+</div>

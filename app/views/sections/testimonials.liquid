@@ -1,0 +1,102 @@
+---
+{
+  "name": "Testimonials",
+  "class": "section-testimonials",
+  "icon": "list",
+  "keep_name": true,
+  "keep_icon": true,
+  "settings": [
+    {
+      "label": "Manage the testimonials",
+      "id": "testimonials",
+      "type": "content_type"
+    }
+  ],
+  "blocks": [],
+  "dropzone_presets": [
+    {
+      "name": "Testimonials",
+      "category": "Content",
+      "settings": {},
+      "blocks": []
+    }
+  ]
+}
+---
+<div class="section">
+  <div class="container">
+    <div class="testimonial-list">
+      {% for testimonial in contents.testimonials %}
+        <div class="testimonial">
+          <div class="columns is-vcentered">
+            {% assign mod = forloop.index | modulo: 2 %}
+
+            {% capture touch_video_column %}
+              <div class="column is-full-touch is-hidden-desktop">
+                <div class="testimonial-video">
+                  <div style="background: url({{ testimonial.header_picture.url | resize: '400x300#' }}) center center no-repeat; background-size: cover;" class="testimonial-video-overlay video-click" data-video-id="{{ testimonial.video }}">
+                    <div class="testimonial-video-play">
+                      <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="testimonial-video-iframe"></div>
+                </div>
+                <div class="testimonial-video-transcript">
+                  <a href="{% path_to testimonial %}">
+                    Read the transcript <i class="fa fa-angle-right" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            {% endcapture %}
+
+            {% capture video_column %}
+              <div class="column is-full-touch is-hidden-touch">
+                <div class="testimonial-video">
+                  <div style="background: url({{ testimonial.header_picture.url | resize: '400x300#' }}) center center no-repeat; background-size: cover;" class="testimonial-video-overlay video-click" data-video-id="{{ testimonial.video }}">
+                    <div class="testimonial-video-play">
+                      <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="testimonial-video-iframe"></div>
+                </div>
+                <div class="testimonial-video-transcript">
+                  <a href="{% path_to testimonial %}">
+                    Read the transcript <i class="fa fa-angle-right" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            {% endcapture %}
+
+            {% capture text_column %}
+              <div class="column is-full-touch">
+                <div class="testimonial-quote is-size-4 has-text-grey">
+                  {{ testimonial.quote }}
+                </div>
+                <div class="testimonial-person">
+                  <div class="testimonial-person--name">
+                    {{ testimonial.name }}
+                    <span class="tag is-primary">{{ testimonial.type }}</span>
+                  </div>
+                  <div class="testimonial-person--company">
+                    {{ testimonial.company }}
+                  </div>
+                </div>
+              </div>
+            {% endcapture %}
+
+            {% if mod == 0 %}
+              {{ touch_video_column }}
+              {{ text_column }}
+              {{ video_column }}
+            {% else %}
+              {{ touch_video_column }}
+              {{ video_column }}
+              {{ text_column }}
+            {% endif %}
+
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

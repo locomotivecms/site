@@ -14,3 +14,5 @@ export { default as SimpleHero } from './simple_hero';
 export { default as DetailedFeature } from './detailed_features';
 export { default as TabbedFeature } from './tabbed_features';
 export { default as SimpleCallToAction } from './simple_call_to_action';
+export { default as Testimonials } from './testimonials';
+export { default as TestimonialTranscript } from './testimonial_transcript';
