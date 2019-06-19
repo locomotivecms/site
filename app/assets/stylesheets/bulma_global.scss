@@ -21,4 +21,10 @@
       box-shadow: 0 8px 24px rgba(32,43,54,0.25);
     }
   }
+
+  &.is-slick {
+    font-weight: 700;
+    letter-spacing: -.05em;
+    padding: calc(1.5em - 1px) 2rem;
+  }
 }

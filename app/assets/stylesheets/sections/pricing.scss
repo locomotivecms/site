@@ -1,0 +1,71 @@
+.section-pricing {
+  padding: 4rem 0rem;
+
+  .plan {
+    padding: 2rem 2rem;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      box-shadow: 0 16px 48px #E3E7EB;
+      mix-blend-mode: multiply;
+    }
+
+    &-name {
+      color: #000;
+      font-size: 1.5rem;
+      font-family: "Muli",sans-serif;
+      font-weight: 700;
+      letter-spacing: -.01em;
+    }
+
+    &-price {
+      display: flex;
+      align-items: flex-end;
+      margin-top: 1rem;
+
+      &--currency {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+      }
+
+      &--value {
+        font-size: 3.25rem;
+        font-weight: 700;
+        line-height: 3.25rem;
+      }
+
+      &--periodicity {
+        font-size: 1.25rem;
+      }
+    }
+
+    &-description {
+      position: relative;
+      margin: 2rem 0rem;
+      padding-top: 2rem;
+
+      font-size: 1.25rem;
+
+      // https://every-layout.dev/layouts/stack/
+      & > * + * {
+        margin-top: 0.5rem;
+      }
+    }
+
+    &-cta {
+      margin-top: auto;
+      text-align: center;
+    }
+  }
+
+}

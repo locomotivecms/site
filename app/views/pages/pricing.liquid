@@ -5,11 +5,123 @@ meta_description:
 published: true
 handle: pricing
 slug: pricing
+sections_content: >
+  {
+    "simple_hero": {
+      "settings": {
+        "headline": "Affordable pricing for everyone",
+        "tagline": "Locomotive is open source and free to use for everyone. By using our hosting solution you save time & stress and you contribute to future open source development."
+      }
+    },
+    "pricing": {
+      "settings": {
+      },
+      "blocks": [
+        {
+          "type": "plan",
+          "settings": {
+            "name": "Personal",
+            "price": "19",
+            "description": "<p><strong>Max 1 site</strong></p><p>1GB Storage</p><p>Max 25.000 pageviews</p><p>Email support</p>",
+            "cta_label": "Get started",
+            "cta_link": "https://station.locomotive.works/_app/sign_up"
+          }
+        },
+        {
+          "type": "plan",
+          "settings": {
+            "name": "Freelancer",
+            "price": "39",
+            "description": "<p><strong>Max 3 sites</strong></p><p>3GB Storage</p><p>Max 75.000 pageviews</p><p>Email support</p>",
+            "cta_label": "Get started",
+            "cta_link": "https://station.locomotive.works/_app/sign_up"
+          }
+        },
+        {
+          "type": "plan",
+          "settings": {
+            "name": "Agency",
+            "price": "79",
+            "description": "<p><strong>Max 10 sites</strong></p><p>5GB Storage</p><p>Max 150.000 pageviews</p><p>Email and dedicated chat support</p>",
+            "cta_label": "Get started",
+            "cta_link": "https://station.locomotive.works/_app/sign_up"
+          }
+        },
+        {
+          "type": "plan",
+          "settings": {
+            "name": "Enterprise",
+            "price": "199",
+            "description": "<p><strong>Max 100 sites</strong></p><p>10GB Storage</p><p>Max 500.000 pageviews</p><p>Priority Skype and email support</p><p>Dedicated account manager</p><p>White Label</p>",
+            "cta_label": "Get started",
+            "cta_link": "https://station.locomotive.works/_app/sign_up"
+          }
+        }
+      ]
+    },
+    "icon_features": {
+      "settings": {
+        "title": "All plans include"
+      },
+      "blocks": [
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Free automatic updates with new features and enhancements.",
+            "icon": "fa fa-refresh"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Very secure back office (SSL), protecting your data at all cost.",
+            "icon": "fa fa-lock"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Assets served through a CDN for optimal speed.",
+            "icon": "fa fa-picture-o"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Automatic free SSL certificate for each site.",
+            "icon": "fa fa-upload"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Use your own domain names.",
+            "icon": "fa fa-globe"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "title": "No contracts required, opt-in and out at any time.",
+            "icon": "fa fa-file-text"
+          }
+        }
+      ]
+    }
+  }
 ---
 
 {% extends "layouts/base" %}
 
 {% block main %}
+
+  {% section 'simple_hero' %}
+
+  {% section 'pricing' %}
+
+  {% section 'icon_features' %}
+
+  {% comment %}
   <header class="header-primary">
     <div class="grid grid-centered">
       <div class="grid-cell">
@@ -121,5 +233,7 @@ slug: pricing
     </div>
   </section>
   {% endblock %}
+
+  {% endcomment %}
 
 {% endblock %}

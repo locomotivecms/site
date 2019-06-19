@@ -1,0 +1,110 @@
+---
+{
+  "name": "Features with icons",
+  "class": "section-icon-features",
+  "icon": "list",
+  "keep_name": false,
+  "keep_icon": true,
+  "settings": [
+    {
+      "label": "Title",
+      "id": "title",
+      "type": "text"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Feature",
+      "type": "feature",
+      "settings": [
+        {
+          "label": "Title",
+          "id": "title",
+          "type": "text"
+        },
+        {
+          "label": "Icon",
+          "id": "icon",
+          "type": "select",
+          "options": [
+            {
+              "label": "Refresh",
+              "value": "fa fa-refresh"
+            },
+            {
+              "label": "Picture",
+              "value": "fa fa-picture-o"
+            },
+            {
+              "label": "Globe",
+              "value": "fa fa-globe"
+            },
+            {
+              "label": "Lock",
+              "value": "fa fa-lock"
+            },
+            {
+              "label": "Upload",
+              "value": "fa fa-upload"
+            },
+            {
+              "label": "Text",
+              "value": "fa fa-file-text"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dropzone_presets": [
+    {
+      "name": "Icon features",
+      "category": "Content",
+      "settings": {
+        "title": "Features with icons"
+      },
+      "blocks": [
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Feature #1",
+            "icon": "fa fa-refresh"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Feature #2",
+            "icon": "fa fa-refresh"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Feature #3",
+            "icon": "fa fa-refresh"
+          }
+        }
+      ]
+    }
+  ]
+}
+---
+<div class="section">
+  <div class="container">
+    <h2 class="title is-size-2">{{ section.settings.title }}</h2>
+
+    <div class="columns is-multiline">
+      {% for block in section.blocks %}
+        <div class="column is-half" {{ block.locomotive_attributes }}>
+          <div class="feature">
+            <div class="feature-icon">
+              <i class="{{ block.settings.icon }}"></i>
+            </div>
+            <div class="feature-title">{{ block.settings.title }}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

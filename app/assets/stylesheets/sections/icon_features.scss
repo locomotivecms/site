@@ -1,0 +1,40 @@
+.section-icon-features {
+  padding: 4rem 0rem;
+  background: #f7f8f9;
+
+  .section {
+    padding: 0 1.5rem;
+  }
+
+  .title {
+    font-family: "Muli",sans-serif;
+    text-align: center;
+  }
+
+  .columns {
+    margin-top: 4rem;
+  }
+
+  .feature {
+    display: flex;
+    align-items: center;
+
+    &-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 4rem;
+      height: 4rem;
+      background: linear-gradient(to right,#8b7ae1,#7965dc);
+      border-radius: 2px;
+      color: #fff;
+      font-size: 2rem;
+      margin-right: 2rem;
+    }
+
+    &-title {
+      font-size: 1.25rem;
+    }
+  }
+
+}

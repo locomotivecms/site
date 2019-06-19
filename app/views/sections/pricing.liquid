@@ -1,0 +1,107 @@
+---
+{
+  "name": "Pricing",
+  "class": "section-pricing",
+  "icon": "list",
+  "keep_name": true,
+  "keep_icon": true,
+  "settings": [
+  ],
+  "blocks_label": "Plans",
+  "blocks": [
+    {
+      "name": "Plan",
+      "type": "plan",
+      "settings": [
+        {
+          "label": "Name",
+          "id": "name",
+          "type": "text"
+        },
+        {
+          "label": "Price",
+          "id": "price",
+          "type": "text"
+        },
+        {
+          "label": "Description",
+          "id": "description",
+          "type": "text",
+          "html": true
+        },
+        {
+          "label": "CTA label",
+          "id": "cta_label",
+          "type": "text"
+        },
+        {
+          "label": "CTA ",
+          "id": "cta_label",
+          "type": "text"
+        }
+      ]
+    }
+  ],
+  "dropzone_presets": [
+    {
+      "name": "Pricing",
+      "category": "Content",
+      "settings": {
+      },
+      "blocks": [
+        {
+          "type": "plan",
+          "settings": {
+            "name": "Plan #1",
+            "price": "42",
+            "description": "<p>description</p>"
+          }
+        },
+        {
+          "type": "plan",
+          "settings": {
+            "name": "Plan #2",
+            "price": "42",
+            "description": "<p>description</p>"
+          }
+        },
+        {
+          "type": "plan",
+          "settings": {
+            "name": "Plan #3",
+            "price": "42",
+            "description": "<p>description</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+---
+<div class="section">
+  <div class="container">
+    <div class="columns">
+      {% for block in section.blocks %}
+        <div class="column" {{ block.locomotive_attributes }}>
+          <div class="plan">
+            <div class="plan-name">{{ block.settings.name }}</div>
+            <div class="plan-price">
+              <span class="plan-price--currency">$</span>
+              <span class="plan-price--value">{{ block.settings.price }}</span>
+              <span class="plan-price--periodicity">/month</span>
+            </div>
+            <div class="plan-description has-top-divider">
+              {{ block.settings.description }}
+            </div>
+            <div class="plan-cta">
+              <a class="button is-primary has-shadow is-slick" href="{{ block.settings.cta_link }}" {{ block.settings.cta_link.new_window_attribute }}>
+                {{ block.settings.cta_label }}
+              </a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+

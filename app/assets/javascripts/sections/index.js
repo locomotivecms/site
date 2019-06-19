@@ -16,3 +16,5 @@ export { default as TabbedFeature } from './tabbed_features';
 export { default as SimpleCallToAction } from './simple_call_to_action';
 export { default as Testimonials } from './testimonials';
 export { default as TestimonialTranscript } from './testimonial_transcript';
+export { default as Pricing } from './pricing';
+export { default as IconFeature } from './icon_features';
