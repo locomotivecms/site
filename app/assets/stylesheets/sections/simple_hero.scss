@@ -34,3 +34,15 @@
 
 }
 
+
+// Pages
+
+body.privacy-policy-page, body.terms-of-use-page {
+
+  .section-simple-hero {
+    &:before {
+      background: #292d34;
+    }
+  }
+}
+

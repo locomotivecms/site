@@ -19,3 +19,4 @@ export { default as TestimonialTranscript } from './testimonial_transcript';
 export { default as Pricing } from './pricing';
 export { default as IconFeature } from './icon_features';
 export { default as Faq } from './faq';
+export { default as LongText } from './long_text';

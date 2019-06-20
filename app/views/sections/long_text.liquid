@@ -1,0 +1,35 @@
+---
+{
+  "name": "Long text",
+  "class": "section-long-text",
+  "icon": "text",
+  "keep_name": true,
+  "keep_icon": true,
+  "settings": [
+    {
+      "label": "Content",
+      "id": "content",
+      "type": "text",
+      "html": true
+    }
+  ],
+  "blocks": [],
+  "dropzone_presets": [
+    {
+      "name": "Long text",
+      "category": "Content",
+      "settings": {
+        "content": "<p>Lorem ipsum...</p>"
+      },
+      "blocks": []
+    }
+  ]
+}
+---
+<div class="section">
+  <div class="container">
+    <div class="content">
+      {{ section.settings.content }}
+    </div>
+  </div>
+</div>
