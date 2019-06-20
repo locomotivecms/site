@@ -1,0 +1,29 @@
+.section-faq {
+  padding: 4rem 0rem;
+
+  .title {
+    font-family: "Muli",sans-serif;
+    text-align: center;
+    color: $brand-purple;
+  }
+
+  .columns {
+    margin-top: 4rem;
+  }
+
+  .faq {
+    padding-bottom: 2rem;
+
+    &-question {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #000;
+    }
+
+    &-answer {
+      margin-top: 1rem;
+      font-size: 1.25rem;
+    }
+  }
+
+}

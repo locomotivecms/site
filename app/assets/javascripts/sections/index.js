@@ -18,3 +18,4 @@ export { default as Testimonials } from './testimonials';
 export { default as TestimonialTranscript } from './testimonial_transcript';
 export { default as Pricing } from './pricing';
 export { default as IconFeature } from './icon_features';
+export { default as Faq } from './faq';

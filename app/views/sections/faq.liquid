@@ -1,0 +1,88 @@
+---
+{
+  "name": "Frequently Asked Questions",
+  "class": "section-faq",
+  "icon": "list",
+  "keep_name": true,
+  "keep_icon": true,
+  "settings": [
+    {
+      "label": "Title",
+      "id": "title",
+      "type": "text"
+    }
+  ],
+  "blocks_label": "Question/Answers",
+  "blocks": [
+    {
+      "name": "FAQ item",
+      "type": "faq",
+      "settings": [
+        {
+          "label": "Question",
+          "id": "question",
+          "type": "text"
+        },
+        {
+          "label": "Answer",
+          "id": "answer",
+          "type": "text",
+          "html": true
+        }
+      ]
+    }
+  ],
+  "dropzone_presets": [
+    {
+      "name": "Frequently Asked Questions",
+      "category": "FAQ",
+      "settings": {
+        "title": "My title"
+      },
+      "blocks": [
+        {
+          "type": "faq",
+          "settings": {
+            "question": "Question #1",
+            "answer": "Answer #1"
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "question": "Question #2",
+            "answer": "Answer #2"
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "question": "Question #3",
+            "answer": "Answer #3"
+          }
+        }
+      ]
+    }
+  ]
+}
+---
+<div class="section">
+  <div class="container">
+    <h2 class="title is-size-2">{{ section.settings.title }}</h2>
+
+    <div class="columns is-multiline">
+      {% for block in section.blocks %}
+        <div class="column is-half" {{ block.locomotive_attributes }}>
+          <div class="faq">
+            <div class="faq-question">
+              {{ block.settings.question }}
+            </div>
+            <div class="faq-answer">
+              {{ block.settings.answer }}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

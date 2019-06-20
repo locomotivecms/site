@@ -107,6 +107,111 @@ sections_content: >
           }
         }
       ]
+    },
+    "simple_call_to_action": {
+      "settings": {
+        "sentence": "Need a larger plan?",
+        "button_label": "Contact Us!",
+        "button_link": "#"
+      }
+    },
+    "faq": {
+      "settings": {
+        "title": "Frequently asked questions"
+      },
+      "blocks": [
+        {
+          "type": "faq",
+          "settings": {
+            "question": "When am I billed?",
+            "answer": "<p>Your billing date is on or around the same day of the month your website goes live. For example, if you publish your website on March 5, your billing cycle is from the 5th of each month.</p>"
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "question": "Where can I see my invoices?",
+            "answer": "<p>Log in to your account and click on Billing. Each month, your invoice will be available on or around your billing date.</p>"
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "question": "Available payment methods",
+            "answer": "<p>Pay online using a credit card. We accept Visa, MasterCard and Carte Bleue.</p>"
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "question": "Do you offer discounts on yearly plans?",
+            "answer": "<p>Yes, pre-pay for a year and you'll get 2 months off!</p>"
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "question": "What name will appear on my bank statement?",
+            "answer": "<p>NoCoffee SARL, this is the name of our company.</p>"
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "question": "I am a web agency/a developer, can my client pay directly?",
+            "answer": "<p>Absolutely, when you are asked to fill out the billing information, your client can enter his or her name, address and email address as well as his or her credit card information.</p>"
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "question": "I have several websites hosted by LocomotiveCMS, how often am I billed?",
+            "answer": "<p>At this stage, you have one invoice per website, so you have as many invoices as you have websites but we are working on a solution to issue one single invoice per month if that is more convenient for you.</p>"
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "question": "Are there any set-up fees?",
+            "answer": "<p>No, absolutely not.</p>"
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "question": "How long are your contracts?",
+            "answer": "<p>There are no contracts. The billing cycle starts on the day you sign up for a paid account and is automatically renewed every month.</p>"
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "question": "What is white label?",
+            "answer": "<p>With our white label solution, your clients will never know that Locomotive.works is the technical solution picked to power their websites. You can add your own logo, change the look of the back-office. All we need from you is a SSL certificate and a domain name.</p>"
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "question": "Where are your servers located?",
+            "answer": "<p>They are located in one of the Digital Ocean data centers in New York.</p>"
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "question": "Can I use my own domain name?",
+            "answer": "<p>Yes if you use a paid account. If you have a free account, your domain name will be station.locomotive.works/_app/yoursite.</p>"
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "question": "What happens to my sites if I want to stop using Locomotive.works?",
+            "answer": "<p>At any time, you can download a complete copy of your site. You can then host it in another instance of the Locomotive engine which is completely open source.</p>"
+          }
+        }
+      ]
     }
   }
 ---
@@ -120,6 +225,10 @@ sections_content: >
   {% section 'pricing' %}
 
   {% section 'icon_features' %}
+
+  {% section 'simple_call_to_action' %}
+
+  {% section 'faq' %}
 
   {% comment %}
   <header class="header-primary">
