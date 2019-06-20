@@ -46,3 +46,17 @@ body.privacy-policy-page, body.terms-of-use-page {
   }
 }
 
+body.not-found-page {
+
+  .section-simple-hero {
+    min-height: calc(100vh - #{$navbar-height});
+    display: flex;
+    align-items: center;
+
+    .hero {
+      width: 100%;
+    }
+  }
+
+}
+

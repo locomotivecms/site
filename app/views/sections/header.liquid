@@ -88,8 +88,9 @@
     <div id="navbar-menu" class="navbar-menu">
       <div class="navbar-end">
         {% for block in section.blocks %}
-          <a class="navbar-item" href="{{ block.settings.link }}" {{ block.settings.link_new_window_attribute }} {{ block.locomotive_attributes }} >
-            {{ block.settings.text }}
+          {% capture link %}{{ block.settings.link }}{% endcapture %}
+          <a class="navbar-item {% if link contains page.fullpath %}is-active{% endif %}" href="{{ link }}" {{ block.settings.link_new_window_attribute }} {{ block.locomotive_attributes }} >
+            <span>{{ block.settings.text }}</span>
           </a>
         {% endfor %}
 
@@ -105,3 +106,4 @@
 
   </nav>
 </div>
+

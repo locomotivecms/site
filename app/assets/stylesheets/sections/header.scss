@@ -2,10 +2,32 @@
   background: linear-gradient(57deg, #9d8fe5 0%, #6750d7 100%);
 
   .navbar-item {
+    position: relative;
+    top: 1px;
     text-transform: uppercase;
-  }
 
-  .button {
+    span {
+      display: block;
+
+      &:after {
+        display: block;
+        content: '';
+        border-bottom: solid 1px #fff;
+        transform: scaleX(0);
+        transition: transform 250ms ease-in-out;
+      }
+    }
+
+    &.is-active, &:hover {
+      span {
+        color: #fff;
+      }
+    }
+
+    &:hover span:after {
+      transform: scaleX(1);
+    }
+
   }
 }
 
@@ -27,6 +49,15 @@
 
         .navbar-item {
           text-align: center;
+          top: 0px;
+
+          span:after {
+            display: none;
+          }
+
+          &.is-active, &:hover {
+            background: transparent;
+          }
         }
 
         .buttons {
