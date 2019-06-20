@@ -1,3 +1,3 @@
 source "https://rubygems.org"
 
-gem "locomotivecms_wagon", "~> 2.1.1"
+gem "locomotivecms_wagon", "~> 3.0.0.rc0"

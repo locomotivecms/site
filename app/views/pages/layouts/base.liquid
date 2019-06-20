@@ -45,7 +45,7 @@ is_layout: false
     <script src="http://localhost:35729/livereload.js"></script>
   {% endif %}
 </head>
-<body>
+<body class="{% if page.handle.size > 0 %}{{ page.handle }}-page{% endif %}">
   <!--[if lt IE 8]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
