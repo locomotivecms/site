@@ -58,11 +58,12 @@
         display: block;
       }
 
-      &-description {
+      .feature-description {
         margin-top: 2rem;
         text-align: left;
 
         p {
+          font-size: 1.25rem;
           margin-bottom: 1rem;
 
           &:last-child {

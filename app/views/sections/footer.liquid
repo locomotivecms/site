@@ -165,7 +165,7 @@
     <div class="columns is-multiline is-mobile">
       <div class="column is-full-touch">
         <a href="{% path_to home %}" class="footer-brand">
-          <img src="{{ 'logo-black.png' | theme_image_url }}" alt="{{ site.seo_title }}">
+          <img src="{{ 'logo-black.png' | theme_image_url | resize: '280x>' }}" alt="{{ site.seo_title }}">
         </a>
       </div>
 

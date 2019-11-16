@@ -78,7 +78,7 @@
             {% capture touch_picture_column %}
               <div class="column is-full-touch is-hidden-desktop">
                 <div class="feature-item-picture">
-                  <img src="{{ block.settings.picture }}" />
+                  <img src="{{ block.settings.picture | resize: '1024x>' }}" />
                 </div>
               </div>
             {% endcapture %}
@@ -86,7 +86,7 @@
             {% capture picture_column %}
               <div class="column is-full-touch is-hidden-touch">
                 <div class="feature-item-picture">
-                  <img src="{{ block.settings.picture }}" />
+                  <img src="{{ block.settings.picture | resize: '1024x>' }}" />
                 </div>
               </div>
             {% endcapture %}

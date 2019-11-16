@@ -32,7 +32,7 @@
       "settings": [
         {
           "label": "Title",
-          "id": "label",
+          "id": "title",
           "type": "text"
         },
         {
@@ -78,7 +78,7 @@
           </div>
           <div class="hero-buttons">
             {% for block in section.blocks %}
-              <a class="button is-primary has-shadow is-slick" {{ block.locomotive_attributes }}>
+              <a class="button is-primary has-shadow is-slick" href="{{ block.settings.link }}" {{ block.settings.link.new_window_attribute }} {{ block.locomotive_attributes }}>
                 {{ block.settings.title }}
               </a>
             {% endfor %}

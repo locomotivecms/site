@@ -18,15 +18,15 @@ sections_content: >
           "settings": {
             "title": "Multi-site",
             "description": "<p>Multi-site functionality makes launching new sites a breeze.</p><p>With a single instance of LocomotiveCMS, you can manage as many websites as your server can handle.</p><p>You deploy your website by simply pointing the website domain to your LocomotiveCMS server.</p><p>You don't have to go through any additional setup steps like setting up new databases or copying files. It's that simple.</p>",
-            "picture": "https://picsum.photos/800/800"
+            "picture": "/samples/sections/feature_multisites.jpg"
           }
         },
         {
           "type": "feature",
           "settings": {
             "title": "Sections",
-            "description": "<p>TODO</p>",
-            "picture": "https://picsum.photos/800/800"
+            "description": "<p>Slice your pages into what we call sections. Sections are UI components that can re-used in other pages.</p><p>As a HTML integrator, you're absolutely free to define any kind of sections for your clients. Just describe the attributes that you want to display in your section as well as the Liquid template and you're good to go.</p><p>As a content editor, building a new page will feel like Lego (c).",
+            "picture": "/samples/sections/feature_sections.jpg"
           }
         },
         {
@@ -34,7 +34,7 @@ sections_content: >
           "settings": {
             "title": "Content types",
             "description": "<p>If you're tired of having to work around posts, pages and articles to create a custom post type, here's some welcome relief. LocomotiveCMS allows you to create content types without imposing a specific pre-built structure.</p><p>Need a page for your band's discography?</p><p>Create a new \"Recording\" content type with a title, year, album cover, and track listing. And you're all set.</p><p>Want your custom types to relate to each other? No problem there either. Where most CMS solutions make it a headache to relate content types to each other, it's a snap in LocomotiveCMS. No SQL needed!</p>",
-            "picture": "https://picsum.photos/800/800"
+            "picture": "/samples/sections/feature_content_types.jpg"
           }
         },
         {
@@ -42,7 +42,7 @@ sections_content: >
           "settings": {
             "title": "Templating",
             "description": "<p>LocomotiveCMS uses Liquid, the exact same template engine as for Shopify, one of the best hosted e-commerce solution in the market.</p><p>Of course, we made something good even better by putting our own spin on templating. We added in the functionality of template inheritance from Python, so now you have even more power and flexibility at your disposal.</p><p>To help speed development, we also created helper tags to embed Google Analytics, resize an image, enable pagination in collections, and grab and display content from an external web service and so much more...</p>",
-            "picture": "https://picsum.photos/800/800"
+            "picture": "/samples/sections/feature_templating.jpg"
           }
         }
       ]
@@ -57,7 +57,7 @@ sections_content: >
           "settings": {
             "tab_title": "Frontend",
             "title": "Webpack out of the box",
-            "description": "<p>TODO</p>",
+            "description": "<p>Webpack has become the new standard to manage assets in web projects. It is both incredibly powerful but also overwhelming and frustrating for beginners.</p><p>So, when you start a new Wagon site, we bundle Webpack in a way that you only have to focus on writing your CSS and JS.</p>",
             "icon": "fa fa-cloud-download"
           }
         },
@@ -75,7 +75,7 @@ sections_content: >
           "settings": {
             "tab_title": "SEO",
             "title": "SEO",
-            "description": "<p>TODO</p>",
+            "description": "<p>In LocomotiveCMS, we embed the minimal tools that you will need to make sure you clients web sites are well optimized for Google and all the other engines: url redirections, hreflang annotations for multi-language sites, title for pages and content entries, ...etc.</p>",
             "icon": "fa fa-cloud-download"
           }
         },
@@ -83,8 +83,8 @@ sections_content: >
           "type": "feature",
           "settings": {
             "tab_title": "Third-party integrations",
-            "title": "Google reCaptcha, Algolia, ...",
-            "description": "<p>TODO</p>",
+            "title": "Google reCaptcha, Authentication, Algolia, ...",
+            "description": "<p>Instead of relying on a massive and bloated plugins system to enhance LocomotiveCMS, we chose to build directly in the core of LocomotiveCMS the functionalities that almost any website will require.</p><p>For example, we implemented Google reCaptcha v3 to filter spams. And if you need to protect a part of your site with an authentication system, we've got this as well.</p>",
             "icon": "fa fa-cloud-download"
           }
         }
@@ -110,84 +110,5 @@ sections_content: >
   {% section 'tabbed_features' %}
 
   {% section 'simple_call_to_action' %}
-
-  {% comment %}
-  <header class="header-primary">
-    <div class="grid grid-centered">
-      <div class="grid-cell">
-        {% include navigation %}
-        {% block header %}
-        <div class="header-content is-small">
-          <h1>{% editable_text "headline", format: raw, rows: 1 %}Our features{% endeditable_text %}</h1>
-          <p>
-            {% editable_text "tagline", format: raw, rows: 3 %}
-            Focus on what matters: front-end technology, standard development process and no learning time for your client.
-            {% endeditable_text %}
-          </p>
-        </div>
-        {% endblock %}
-      </div>
-    </div>
-  </header>
-
-  {% block features %}
-    {% editable_model features %}
-      {% for feature in contents.features %}
-        {% assign left = forloop.index | modulo: 2 %}
-        <section class="with-border">
-          <div class="grid grid-centered">
-            {% capture image %}
-              <div class="grid-cell with-7col is-middle">
-                <img src="{{ feature.image.url }}" alt="">
-              </div>
-            {% endcapture %}
-            {% capture text %}
-              <div class="grid-cell with-5col">
-                <div class="section-image-intro">
-                  <h2>{{ feature.name }}</h2>
-                  <div class="is-justified">
-                    {{ feature.description}}
-                  </div>
-                </div>
-              </div>
-            {% endcapture %}
-
-            {% if left == 0 %}
-              {{ image }}
-              {{ text }}
-            {% else %}
-              {{ text }}
-              {{ image }}
-            {% endif %}
-          </div>
-        </section>
-      {% endfor %}
-    {% endeditable_model %}
-  {% endblock %}
-
-  {% block "contact-us" %}
-    <section class="section-dark">
-      <div class="grid grid-centered">
-        <div class="grid-cell is-centered">
-          <h3 class="block-title">
-            {% editable_text "title", format: raw, rows: 1 %}
-              Wondering if LocomotiveCMS does X,Y or Z?
-            {% endeditable_text %}
-          </h3>
-        </div>
-        <div class="grid-cell is-centered">
-          <br/>
-          <br/>
-          <a href="mailto:contact@locomotivecms.com" class="button button-primary">
-            {% editable_text "button", format: raw, rows: 1 %}
-              Contact us!
-            {% endeditable_text %}
-          </a>
-        </div>
-      </div>
-    </section>
-  {% endblock %}
-
-  {% endcomment %}
 
 {% endblock %}
