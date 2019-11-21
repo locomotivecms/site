@@ -26,6 +26,24 @@
           "default": "#"
         }
       ]
+    },
+    {
+      "name": "Button",
+      "type": "button",
+      "settings": [
+        {
+          "label": "Label",
+          "id": "text",
+          "type": "text",
+          "default": "Action"
+        },
+        {
+          "label": "Link",
+          "id": "link",
+          "type": "url",
+          "default": "#"
+        }
+      ]
     }
   ],
   "global_content": {
@@ -59,6 +77,13 @@
           "text": "Documentation",
           "link": "https://doc.locomotivecms.com"
         }
+      },
+      {
+        "type": "button",
+        "settings": {
+          "text": "Sign in",
+          "link": "https://station.locomotive.works/_app/sign_in"
+        }
       }
     ]
   }
@@ -81,17 +106,23 @@
     <div id="navbar-menu" class="navbar-menu">
       <div class="navbar-end">
         {% for block in section.blocks %}
-          {% capture link %}{{ block.settings.link }}{% endcapture %}
-          <a class="navbar-item {% if link contains page.fullpath %}is-active{% endif %}" href="{{ link }}" {{ block.settings.link_new_window_attribute }} {{ block.locomotive_attributes }} >
-            <span>{{ block.settings.text }}</span>
-          </a>
+          {% if block.type == 'page' %}
+            {% capture link %}{{ block.settings.link }}{% endcapture %}
+            <a class="navbar-item {% if link contains page.fullpath %}is-active{% endif %}" href="{{ link }}" {{ block.settings.link_new_window_attribute }} {{ block.locomotive_attributes }} >
+              <span>{{ block.settings.text }}</span>
+            </a>
+          {% endif %}
         {% endfor %}
 
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-primary is-inverted is-outlined">
-              Sign in
-            </a>
+            {% for block in section.blocks %}
+              {% if block.type == 'button' %}
+                <a class="button is-primary is-inverted is-outlined" href="{{ block.settings.link }}" {{ block.locomotive_attributes }} {{ block.locomotive_attributes }}>
+                  {{ block.settings.text }}
+                </a>
+              {% endif %}
+            {% endfor %}
           </div>
         </div>
       </div>
