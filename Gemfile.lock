@@ -139,7 +139,7 @@ GEM
     pony (1.13.1)
       mail (>= 2.0)
     public_suffix (3.1.0)
-    rack (2.0.7)
+    rack (2.0.8)
     rack-cache (1.7.2)
       rack (>= 0.4)
     rack-rewrite (1.5.1)
