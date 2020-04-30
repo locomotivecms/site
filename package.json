@@ -13,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "bulma": "^0.7.5",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
